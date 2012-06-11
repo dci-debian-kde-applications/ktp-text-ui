@@ -1,0 +1,213 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ni Hui <shuizhuyuanluo@126.com>, 2012.
+# Weng Xuetian <wengxt@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-05-15 04:37+0200\n"
+"PO-Revision-Date: 2012-04-20 02:12+0800\n"
+"Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
+"Language-Team: Chinese Simplified <kde-i18n-doc@kde.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: adium-theme-view.cpp:86
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr "加载可用主题失败。您的安装已损坏。请检查您的 KDE 路径。现在将会崩溃。"
+
+#: adium-theme-view.cpp:145
+msgid "Missing required file Template.html - check your installation."
+msgstr "缺少需要的 Template.html - 请检查您的安装。"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE 中国"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-china@kde.org"
+
+#: chat-search-bar.cpp:36
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "下一个(&N)"
+
+#: chat-search-bar.cpp:37
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "上一个(&P)"
+
+#: chat-search-bar.cpp:45
+msgid "Insert search text..."
+msgstr "插入搜索文本..."
+
+#: chat-search-bar.cpp:54
+msgid "Case sensitive"
+msgstr "区分大小写"
+
+#: chat-widget.cpp:98
+msgid "Show format options"
+msgstr "显示格式化选项"
+
+#: chat-widget.cpp:286
+msgid "Connection closed"
+msgstr "连接已关闭"
+
+#: chat-widget.cpp:288
+msgctxt "Connected to IM service"
+msgid "Connected"
+msgstr "已连接"
+
+#: chat-widget.cpp:481
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr "因联系人被屏蔽发送消息“%1”失败"
+
+#: chat-widget.cpp:485
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr "因联系人离线发送消息“%1”失败"
+
+#: chat-widget.cpp:491
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr "因联系人被屏蔽发送消息失败"
+
+#: chat-widget.cpp:494
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr "因联系人离线发送消息失败"
+
+#: chat-widget.cpp:501
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr "因联系人无效发送消息“%1”失败"
+
+#: chat-widget.cpp:505
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr "因联系人无效发送消息失败"
+
+#: chat-widget.cpp:511
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr "因您无权在此聊天室发言消息“%1”发送失败"
+
+#: chat-widget.cpp:515
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr "因您无权在此聊天室发言消息发送失败"
+
+#: chat-widget.cpp:521
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr "因消息过长发送“%1”消息失败"
+
+#: chat-widget.cpp:525
+msgid "Delivery of a message failed because it was too long"
+msgstr "因消息过长发送失败"
+
+#: chat-widget.cpp:531
+#, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr "发送消息“%1”失败：%2"
+
+#: chat-widget.cpp:535
+#, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr "发送消息失败：%1"
+
+#: chat-widget.cpp:640
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 向您发送了消息"
+
+#: chat-widget.cpp:661
+msgid "View"
+msgstr "查看"
+
+#: chat-widget.cpp:692
+msgid "You have sent a message"
+msgstr "您发送了消息"
+
+#: chat-widget.cpp:733
+#, kde-format
+msgid "%1 has left the chat"
+msgstr "%1 离开了聊天"
+
+#: chat-widget.cpp:776
+#, kde-format
+msgid "You are now marked as %1"
+msgstr "您已经标为 %1"
+
+#: chat-widget.cpp:780
+#, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr "%1 现在是 %2"
+
+#: chat-widget.cpp:782
+#, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr "%1 现在是 %2 - %3"
+
+#: chat-widget.cpp:812
+#, kde-format
+msgid "You are now known as %1"
+msgstr "您现在的名字是 %1"
+
+#: chat-widget.cpp:820
+#, kde-format
+msgid "%1 is now known as %2"
+msgstr "%1 现在的名字是 %2"
+
+#: chat-widget.cpp:843
+#, kde-format
+msgid "%1 is now blocked."
+msgstr "%1 已被屏蔽。"
+
+#: chat-widget.cpp:845
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr "%1 已取消屏蔽。"
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr "普通"
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "下载"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "取消"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "播放"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "另存为"
+
+#~ msgid "&Send"
+#~ msgstr "发送(&S)"

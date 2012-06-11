@@ -1,0 +1,237 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-05-15 04:37+0200\n"
+"PO-Revision-Date: 2012-05-01 10:05+0300\n"
+"Last-Translator: Marek Laane <bald@smail.ee>\n"
+"Language-Team: Estonian <kde-et@linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: adium-theme-view.cpp:86
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr ""
+"Korrektse teema laadimine nurjus. Paigaldus on katkine. Kontrolli KDE "
+"asukohta. Praegu ootab ees krahh."
+
+#: adium-theme-view.cpp:145
+msgid "Missing required file Template.html - check your installation."
+msgstr "Nõutav fail Template.html puudub - kontrolli paigaldust."
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marek Laane"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "bald@smail.ee"
+
+#: chat-search-bar.cpp:36
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "&Järgmine"
+
+#: chat-search-bar.cpp:37
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "&Eelmine"
+
+#: chat-search-bar.cpp:45
+msgid "Insert search text..."
+msgstr "Kirjuta otsingutekst..."
+
+#: chat-search-bar.cpp:54
+msgid "Case sensitive"
+msgstr "Tõstutundlik"
+
+#: chat-widget.cpp:98
+msgid "Show format options"
+msgstr "Näita vorminduvalikuid"
+
+#: chat-widget.cpp:286
+msgid "Connection closed"
+msgstr "Ühendus suletud"
+
+#: chat-widget.cpp:288
+msgctxt "Connected to IM service"
+msgid "Connected"
+msgstr "Ühendatud"
+
+#: chat-widget.cpp:481
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr "Sõnumi \"%1\" edastamine nurjus, sest kontakt on blokeeritud"
+
+#: chat-widget.cpp:485
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr "Sõnumi \"%1\" edastamine nurjus, sest kontakt ei ole võrgus"
+
+#: chat-widget.cpp:491
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr "Sõnumi edastamine nurjus, sest kontakt on blokeeritud"
+
+#: chat-widget.cpp:494
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr "Sõnumi edastamine nurjus, sest kontakt ei ole võrgus"
+
+#: chat-widget.cpp:501
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr "Sõnumi \"%1\" edastamine nurjus, sest kontakt ei ole kehtiv"
+
+#: chat-widget.cpp:505
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr "Sõnumi edastamine nurjus, sest kontakt ei ole kehtiv"
+
+#: chat-widget.cpp:511
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr ""
+"Sõnumi \"%1\" edastamine nurjus, sest sul ei ole õigust selles toas kõnelda"
+
+#: chat-widget.cpp:515
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr "Sõnumi edastamine nurjus, sest sul ei ole õigust selles toas kõnelda"
+
+#: chat-widget.cpp:521
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr "Sõnumi \"%1\" edastamine nurjus, sest see oli liiga pikk"
+
+#: chat-widget.cpp:525
+msgid "Delivery of a message failed because it was too long"
+msgstr "Sõnumi edastamine nurjus, sest see oli liiga pikk"
+
+#: chat-widget.cpp:531
+#, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr "Sõnumi \"%1\" edastamine nurjus: %2"
+
+#: chat-widget.cpp:535
+#, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr "Sõnumi edastamine nurjus: %1"
+
+#: chat-widget.cpp:640
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 saatis sulle sõnumi"
+
+#: chat-widget.cpp:661
+msgid "View"
+msgstr "Vaata"
+
+#: chat-widget.cpp:692
+msgid "You have sent a message"
+msgstr "Sa saatsid sõnumi"
+
+#: chat-widget.cpp:733
+#, kde-format
+msgid "%1 has left the chat"
+msgstr "%1 lahkus vestlusest"
+
+#: chat-widget.cpp:776
+#, kde-format
+msgid "You are now marked as %1"
+msgstr "Sinu olek on nüüd %1"
+
+#: chat-widget.cpp:780
+#, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr "%1 on %2"
+
+#: chat-widget.cpp:782
+#, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr "%1 on %2 - %3"
+
+#: chat-widget.cpp:812
+#, kde-format
+msgid "You are now known as %1"
+msgstr "Sa kannad nüüd nime %1"
+
+#: chat-widget.cpp:820
+#, kde-format
+msgid "%1 is now known as %2"
+msgstr "%1 kannab nüüd nime %2"
+
+#: chat-widget.cpp:843
+#, kde-format
+msgid "%1 is now blocked."
+msgstr "%1 on nüüd blokeeritud."
+
+#: chat-widget.cpp:845
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr "%1 on nüüd blokeerimata."
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr "Tavaline"
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "Laadi alla"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "Loobu"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "Esita"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "Salvesta kui"
+
+#~ msgid "&Send"
+#~ msgstr "&Saada"
+
+#~ msgid "%1 is offline"
+#~ msgstr "%1 pole võrgus"
+
+#, fuzzy
+#~| msgid "You are now marked as offline"
+#~ msgid "You went offline"
+#~ msgstr "Sinu olek on nüüd võrgust väljas"
+
+#~ msgid "You are now marked as online"
+#~ msgstr "Sinu olek on nüüd võrgus"
+
+#~ msgid "%1 is away"
+#~ msgstr "%1 on eemal"
+
+#~ msgid "You are now marked as away"
+#~ msgstr "Sinu olek on nüüd eemal"
+
+#, fuzzy
+#~| msgid "You are now marked as online"
+#~ msgid "You are now marked as not available"
+#~ msgstr "Sinu olek on nüüd võrgus"

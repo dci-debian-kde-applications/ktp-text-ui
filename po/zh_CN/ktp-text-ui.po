@@ -1,0 +1,165 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ni Hui <shuizhuyuanluo@126.com>, 2012.
+# Weng Xuetian <wengxt@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-06-02 03:32+0200\n"
+"PO-Revision-Date: 2012-04-20 02:05+0800\n"
+"Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
+"Language-Team: Chinese Simplified <kde-i18n-doc@kde.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: chat-window.cpp:115
+msgid "Close"
+msgstr "关闭"
+
+#: chat-window.cpp:116
+msgid "Detach Tab"
+msgstr "漂移标签"
+
+#: chat-window.cpp:117
+msgid "Move Tab Left"
+msgstr "左移标签"
+
+#: chat-window.cpp:118
+msgid "Move Tab Right"
+msgstr "右移标签"
+
+#: chat-window.cpp:565
+msgid "&Next Tab"
+msgstr "下一个标签(&N)"
+
+#: chat-window.cpp:569
+msgid "&Previous Tab"
+msgstr "上一个标签(&P)"
+
+#: chat-window.cpp:573
+msgid "&Audio Call"
+msgstr "语音(&A)"
+
+#: chat-window.cpp:574
+msgctxt "Toolbar icon tooltip"
+msgid "Start an audio call with this contact"
+msgstr ""
+
+#: chat-window.cpp:577 chat-window.cpp:815
+msgid "&Block Contact"
+msgstr "屏蔽联系人(&B)"
+
+#: chat-window.cpp:579
+msgctxt "Toolbar icon tooltip"
+msgid ""
+"Blocking means that this contact will not see you online and you will not "
+"receive any messages from this contact"
+msgstr ""
+
+#: chat-window.cpp:582
+msgid "&Send File"
+msgstr "发送文件(&S)"
+
+#: chat-window.cpp:583
+msgctxt "Toolbar icon tooltip"
+msgid "Send a file to this contact"
+msgstr ""
+
+#: chat-window.cpp:586
+msgid "&Invite to Chat"
+msgstr "邀请聊天(&I)"
+
+#: chat-window.cpp:587
+msgctxt "Toolbar icon tooltip"
+msgid "Invite any other contacts to join this chat"
+msgstr ""
+
+#: chat-window.cpp:590
+msgid "&Video Call"
+msgstr "视频(&V)"
+
+#: chat-window.cpp:591
+msgctxt "Toolbar icon tooltip"
+msgid "Start a video call with this contact"
+msgstr ""
+
+#: chat-window.cpp:594
+msgid "Share My &Desktop"
+msgstr "共享桌面(&D)"
+
+#: chat-window.cpp:595
+msgctxt "Toolbar icon tooltip"
+msgid "Start an application that allows this contact to see your desktop"
+msgstr ""
+
+#: chat-window.cpp:606
+msgid "Choose Spelling Language"
+msgstr "选择拼写语言"
+
+#: chat-window.cpp:609
+#, fuzzy
+#| msgid "&Previous Tab"
+msgctxt "Action to open the log viwer with a specified contact"
+msgid "&Previous conversations"
+msgstr "上一个标签(&P)"
+
+#: chat-window.cpp:613
+msgid "Account Icon"
+msgstr "账户图标"
+
+#: chat-window.cpp:721
+#, kde-format
+msgid "Choose files to send to %1"
+msgstr "选择要发送给 %1 的文件"
+
+#: chat-window.cpp:774
+#, kde-format
+msgctxt "String prepended in window title, arg is contact's name"
+msgid "Typing... %1"
+msgstr "正在输入... %1"
+
+#: chat-window.cpp:776
+#, kde-format
+msgctxt "String appended in window title, arg is contact's name"
+msgid "%1 has entered text"
+msgstr "%1 已输入文本"
+
+#: chat-window.cpp:808
+msgid "&Unblock Contact"
+msgstr "取消联系人屏蔽(&U)"
+
+#: main.cpp:37
+msgid "Telepathy Text Ui"
+msgstr "Telepathy 文本界面"
+
+#: main.cpp:39
+msgid "David Edmundson"
+msgstr "David Edmundson"
+
+#: main.cpp:39 main.cpp:40 main.cpp:41
+msgid "Developer"
+msgstr "开发者"
+
+#: main.cpp:40
+msgid "Dominik Schmidt"
+msgstr "Dominik Schmidt"
+
+#: main.cpp:41
+msgid "Francesco Nwokeka"
+msgstr "Francesco Nwokeka"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE 中国"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-china@kde.org"

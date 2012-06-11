@@ -1,0 +1,228 @@
+# Copyright © 2012 This_file_is_part_of_KDE
+# This file is distributed under the same license as the ktp-text-ui package.
+#
+# Tommi Nieminen <translator@legisign.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktpchat\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-05-15 04:37+0200\n"
+"PO-Revision-Date: 2012-04-15 23:59+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: adium-theme-view.cpp:86
+#, fuzzy
+#| msgid ""
+#| "Failed to load a valid theme. Please make sure you run the chat window "
+#| "configuration program first. Will now crash."
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr ""
+"Kelvollista teemaa ei saatu ladatuksi. Varmista, että ajat ensin chat-"
+"ikkunan asetusohjelman. Ohjelma kaatuu nyt."
+
+#: adium-theme-view.cpp:145
+#, fuzzy
+#| msgid "Missing required file template.html - check your installation."
+msgid "Missing required file Template.html - check your installation."
+msgstr "Vaadittu tiedosto template.html puuttuu – tarkista asennuksesi."
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Tommi Nieminen"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "translator@legisign.org"
+
+#: chat-search-bar.cpp:36
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "&Seuraava"
+
+#: chat-search-bar.cpp:37
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "&Edellinen"
+
+#: chat-search-bar.cpp:45
+msgid "Insert search text..."
+msgstr "Lisää etsittävä teksti..."
+
+#: chat-search-bar.cpp:54
+msgid "Case sensitive"
+msgstr "Erota pien- ja suuraakkoset"
+
+#: chat-widget.cpp:98
+msgid "Show format options"
+msgstr "Näytä muotoiluvalinnat"
+
+#: chat-widget.cpp:286
+msgid "Connection closed"
+msgstr "Yhteys suljettu"
+
+#: chat-widget.cpp:288
+msgctxt "Connected to IM service"
+msgid "Connected"
+msgstr "Yhdistetty"
+
+#: chat-widget.cpp:481
+#, fuzzy, kde-format
+#| msgid ""
+#| "Delivery of the message \"%1\" failed because the remote contact is "
+#| "offline"
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr "Viestin ”%1” välitys epäonnistui, koska etäkäyttäjä ei ole verkossa"
+
+#: chat-widget.cpp:485
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr "Viestin ”%1” välitys epäonnistui, koska etäkäyttäjä ei ole verkossa"
+
+#: chat-widget.cpp:491
+#, fuzzy
+#| msgid "Delivery of a message failed because the remote contact is offline"
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr "Viestin välitys epäonnistui, koska etäkäyttäjä ei ole verkossa"
+
+#: chat-widget.cpp:494
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr "Viestin välitys epäonnistui, koska etäkäyttäjä ei ole verkossa"
+
+#: chat-widget.cpp:501
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr "Viestin ”%1” välitys epäonnistui, koska etäkäyttäjä ei ole kelvollinen"
+
+#: chat-widget.cpp:505
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr "Viestin välitys epäonnistui, koska etäkäyttäjä ei ole kelvollinen"
+
+#: chat-widget.cpp:511
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr ""
+"Viestin ”%1” välitys epäonnistui, koska sinulla ei ole puheoikeuksia tässä "
+"huoneessa"
+
+#: chat-widget.cpp:515
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr ""
+"Viestin välitys epäonnistui, koska sinulla ei ole puheoikeuksia tässä "
+"huoneessa"
+
+#: chat-widget.cpp:521
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr "Viestin ”%1” välitys epäonnistui, koska se oli liian pitkä"
+
+#: chat-widget.cpp:525
+msgid "Delivery of a message failed because it was too long"
+msgstr "Viestin välitys epäonnistui, koska se oli liian pitkä"
+
+#: chat-widget.cpp:531
+#, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr "Viestin ”%1” välitys epäonnistui: %2"
+
+#: chat-widget.cpp:535
+#, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr "Viestin välitys epäonnistui: %1"
+
+#: chat-widget.cpp:640
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 lähetti sinulle viestin"
+
+#: chat-widget.cpp:661
+msgid "View"
+msgstr "Näytä"
+
+#: chat-widget.cpp:692
+msgid "You have sent a message"
+msgstr "Olet lähettänyt viestin"
+
+#: chat-widget.cpp:733
+#, kde-format
+msgid "%1 has left the chat"
+msgstr "%1 poistui chatistä"
+
+#: chat-widget.cpp:776
+#, kde-format
+msgid "You are now marked as %1"
+msgstr "Sinut on nyt merkitty: %1"
+
+#: chat-widget.cpp:780
+#, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr "%1 on %2"
+
+#: chat-widget.cpp:782
+#, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr "%1 on %2 – %3"
+
+#: chat-widget.cpp:812
+#, kde-format
+msgid "You are now known as %1"
+msgstr "Uusi nimimerkkisi on %1"
+
+#: chat-widget.cpp:820
+#, kde-format
+msgid "%1 is now known as %2"
+msgstr "%1 vaihtoi nimimerkikseen %2"
+
+#: chat-widget.cpp:843
+#, kde-format
+msgid "%1 is now blocked."
+msgstr ""
+
+#: chat-widget.cpp:845
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr ""
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr ""
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "Lataa"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "Soita"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "Tallenna nimellä"
+
+#~ msgid "&Send"
+#~ msgstr "&Lähetä"

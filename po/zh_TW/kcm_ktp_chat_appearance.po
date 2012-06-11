@@ -1,0 +1,146 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin Weng <franklin@mail.everfocus.com.tw>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-05-16 04:02+0200\n"
+"PO-Revision-Date: 2012-03-03 10:15+0800\n"
+"Last-Translator: Franklin Weng <franklin@mail.everfocus.com.tw>\n"
+"Language-Team: Chinese Traditional <zh-l10n@linux.org.tw>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: appearance-config.cpp:46
+msgid "A demo chat"
+msgstr "示範聊天"
+
+#: appearance-config.cpp:47 appearance-config.cpp:184
+#: appearance-config.cpp:192 appearance-config.cpp:200
+#: appearance-config.cpp:208 appearance-config.cpp:215
+#: appearance-config.cpp:221 appearance-config.cpp:229
+#: appearance-config.cpp:237 appearance-config.cpp:247
+#: appearance-config.cpp:255 appearance-config.cpp:262
+#: appearance-config.cpp:269
+msgid "Jabber"
+msgstr "Jabber"
+
+#: appearance-config.cpp:181
+#, fuzzy
+#| msgid "Ok!"
+msgctxt "Example message in preview conversation"
+msgid "Ok!"
+msgstr "確定"
+
+#: appearance-config.cpp:189
+msgid "Bye Bye"
+msgstr "Bye Bye"
+
+#: appearance-config.cpp:197
+msgid "Have fun!"
+msgstr "祝您愉快！"
+
+#: appearance-config.cpp:205
+msgid "cya"
+msgstr "cya"
+
+#: appearance-config.cpp:219 appearance-config.cpp:267
+msgid "Ted Example has left the chat."
+msgstr "Ted Example 已離開此聊天室。"
+
+#: appearance-config.cpp:226
+msgid "Hello"
+msgstr "Hello"
+
+#: appearance-config.cpp:234
+msgid "What's up?"
+msgstr "發生什麼事？"
+
+#: appearance-config.cpp:242
+msgid ""
+"Check out which cool adium themes work <a href=\"http://community.kde.org/"
+"Real-Time_Communication_and_Collaboration/Components/Chat_Window/Themes"
+"\">here</a>!"
+msgstr ""
+"請檢查看看哪個<a href=\"http://community.kde.org/Real-"
+"Time_Communication_and_Collaboration/Components/Chat_Window/Themes\">很酷的 "
+"adium 主題</a>可以在此運作。"
+
+#: appearance-config.cpp:245
+msgid "ted@example.com"
+msgstr "ted@example.com"
+
+#: appearance-config.cpp:246
+msgid "Ted Example"
+msgstr "Ted Example"
+
+#: appearance-config.cpp:252
+msgid "A different example message"
+msgstr "不同的範例訊息"
+
+#: appearance-config.cpp:260
+msgid "Ted Example is now Away."
+msgstr "Ted Example 已離開。"
+
+#. i18n: file: appearance-config.ui:29
+#. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
+#: rc.cpp:3
+msgid "Use Custom Font Settings"
+msgstr "使用自訂字型設定"
+
+#. i18n: file: appearance-config.ui:41
+#. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
+#: rc.cpp:6
+msgid "Select Font: "
+msgstr "選擇字型："
+
+#. i18n: file: appearance-config.ui:54
+#. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
+#: rc.cpp:9
+msgid "Select Size: "
+msgstr "選擇大小："
+
+#. i18n: file: appearance-config.ui:90
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:12
+msgid "Style"
+msgstr "樣式"
+
+#. i18n: file: appearance-config.ui:99
+#. i18n: ectx: property (text), widget (QLabel, styleLabel)
+#: rc.cpp:15
+msgid "Message Style:"
+msgstr "訊息樣式："
+
+#. i18n: file: appearance-config.ui:125
+#. i18n: ectx: property (text), widget (QLabel, variantLabel)
+#: rc.cpp:18
+msgid "Variant:"
+msgstr "變異："
+
+#. i18n: file: appearance-config.ui:151
+#. i18n: ectx: property (text), widget (QCheckBox, showHeader)
+#: rc.cpp:21
+msgid "Show Header"
+msgstr "顯示標頭"
+
+#~ msgid "BobMarley@yahoo.com"
+#~ msgstr "BobMarley@yahoo.com"
+
+#~ msgid "Bob Marley"
+#~ msgstr "Bob Marley"
+
+#~ msgid "larry@example.com"
+#~ msgstr "larry@example.com"
+
+#~ msgid "Larry Demo"
+#~ msgstr "Larry Demo"
+
+#~ msgid "Ted Example waves."
+#~ msgstr "Ted Example 向您揮手。"

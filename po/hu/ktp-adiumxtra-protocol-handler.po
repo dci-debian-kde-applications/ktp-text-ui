@@ -1,0 +1,92 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-03-22 03:36+0100\n"
+"PO-Revision-Date: 2012-03-17 23:19+0100\n"
+"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
+msgid "Package type not recognized or not supported"
+msgstr "A csomagtípus ismeretlen vagy nem támogatott"
+
+#: adiumxtra-protocol-handler.cpp:83 adiumxtra-protocol-handler.cpp:152
+#: chat-style-installer.cpp:153 emoticon-set-installer.cpp:126
+msgid "OK"
+msgstr "OK"
+
+#: chat-style-installer.cpp:123
+#, kde-format
+msgid "Install Chatstyle %1"
+msgstr "A(z) %1 csevegőstílus telepítése"
+
+#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+msgid "Install"
+msgstr "Telepítés"
+
+#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: chat-style-installer.cpp:146
+#, kde-format
+msgid "Installed Chatstyle %1 successfully."
+msgstr "A(z) %1 csevegőstílus sikeresen telepítve."
+
+#: chat-style-installer.cpp:150
+#, kde-format
+msgid "Installation of Chatstyle %1 failed."
+msgstr "A(z) %1 csevegőstílus telepítése nem sikerült."
+
+#: emoticon-set-installer.cpp:104
+#, kde-format
+msgid "Install Emoticonset %1"
+msgstr "A(z) %1 hangulatjel-csomag telepítése"
+
+#: emoticon-set-installer.cpp:124
+#, kde-format
+msgid "Installed Emoticonset %1 successfully."
+msgstr "A(z) %1 hangulatjelcsomag sikeresen telepítve."
+
+#: main.cpp:30
+msgid "AdiumXtra Protocol Handler"
+msgstr "AdiumXtra protokollkezelő"
+
+#: main.cpp:32
+msgid "Dominik Schmidt"
+msgstr "Dominik Schmidt"
+
+#: main.cpp:32 main.cpp:33
+msgid "Developer"
+msgstr "Fejlesztő"
+
+#: main.cpp:33
+msgid "Daniele E. Domenichelli"
+msgstr ""
+
+#: main.cpp:38
+#, fuzzy
+#| msgid "Install Adium packages"
+msgid "Adium package to install"
+msgstr "Adium csomagok telepítése"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@kubuntu.org"

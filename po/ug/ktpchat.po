@@ -1,0 +1,212 @@
+# Uyghur translation for ktelepathy_chat_lib.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ktelepathy_chat_lib\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-05-15 04:37+0200\n"
+"PO-Revision-Date: 2011-05-09 19:00+0900\n"
+"Last-Translator: Sahran <sahran@live.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: adium-theme-view.cpp:86
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr ""
+
+#: adium-theme-view.cpp:145
+msgid "Missing required file Template.html - check your installation."
+msgstr ""
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+
+#: chat-search-bar.cpp:36
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "كېيىنكى(&N)"
+
+#: chat-search-bar.cpp:37
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "ئالدىنقى(&P)"
+
+#: chat-search-bar.cpp:45
+msgid "Insert search text..."
+msgstr ""
+
+#: chat-search-bar.cpp:54
+msgid "Case sensitive"
+msgstr "چوڭ كىچىك يېزىلىشنى پەرقلەندۈر"
+
+#: chat-widget.cpp:98
+msgid "Show format options"
+msgstr ""
+
+#: chat-widget.cpp:286
+msgid "Connection closed"
+msgstr "باغلىنىش تاقالدى"
+
+#: chat-widget.cpp:288
+msgctxt "Connected to IM service"
+msgid "Connected"
+msgstr "باغلاندى"
+
+#: chat-widget.cpp:481
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr ""
+
+#: chat-widget.cpp:485
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr ""
+
+#: chat-widget.cpp:491
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr ""
+
+#: chat-widget.cpp:494
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr ""
+
+#: chat-widget.cpp:501
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr ""
+
+#: chat-widget.cpp:505
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr ""
+
+#: chat-widget.cpp:511
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr ""
+
+#: chat-widget.cpp:515
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr ""
+
+#: chat-widget.cpp:521
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr ""
+
+#: chat-widget.cpp:525
+msgid "Delivery of a message failed because it was too long"
+msgstr ""
+
+#: chat-widget.cpp:531
+#, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr ""
+
+#: chat-widget.cpp:535
+#, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr ""
+
+#: chat-widget.cpp:640
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr ""
+
+#: chat-widget.cpp:661
+msgid "View"
+msgstr "كۆرۈنۈش"
+
+#: chat-widget.cpp:692
+msgid "You have sent a message"
+msgstr ""
+
+#: chat-widget.cpp:733
+#, kde-format
+msgid "%1 has left the chat"
+msgstr ""
+
+#: chat-widget.cpp:776
+#, kde-format
+msgid "You are now marked as %1"
+msgstr ""
+
+#: chat-widget.cpp:780
+#, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr ""
+
+#: chat-widget.cpp:782
+#, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr ""
+
+#: chat-widget.cpp:812
+#, kde-format
+msgid "You are now known as %1"
+msgstr ""
+
+#: chat-widget.cpp:820
+#, kde-format
+msgid "%1 is now known as %2"
+msgstr ""
+
+#: chat-widget.cpp:843
+#, kde-format
+msgid "%1 is now blocked."
+msgstr ""
+
+#: chat-widget.cpp:845
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr ""
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr ""
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "چۈشۈرۈش"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "ئەمەلدىن قالدۇرۇش"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "قوي"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "باشقا ئاتتا ساقلا"
+
+#~ msgid "&Send"
+#~ msgstr "ئەۋەت(&S)"

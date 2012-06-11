@@ -1,0 +1,220 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2011, 2012.
+# Marcus Gama <marcus.gama@gmail.com>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-05-15 04:37+0200\n"
+"PO-Revision-Date: 2012-04-14 08:41-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: adium-theme-view.cpp:86
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr ""
+"Não foi possível carregar um tema válido. A sua instalação está corrompida. "
+"Verifique a sua instalação no KDE. Agora será interrompido."
+
+#: adium-theme-view.cpp:145
+msgid "Missing required file Template.html - check your installation."
+msgstr ""
+"Falta o arquivo obrigatório Template.html - verifique a sua instalação."
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "André Marcelo Alvarenga"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "andrealvarenga@gmx.net"
+
+#: chat-search-bar.cpp:36
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "&Próximo"
+
+#: chat-search-bar.cpp:37
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "&Anterior"
+
+#: chat-search-bar.cpp:45
+msgid "Insert search text..."
+msgstr "Inserir texto da procura..."
+
+#: chat-search-bar.cpp:54
+msgid "Case sensitive"
+msgstr "Diferenciar maiúsculas de minúsculas"
+
+#: chat-widget.cpp:98
+msgid "Show format options"
+msgstr "Mostrar as opções do formato"
+
+#: chat-widget.cpp:286
+msgid "Connection closed"
+msgstr "Conexão encerrada"
+
+#: chat-widget.cpp:288
+msgctxt "Connected to IM service"
+msgid "Connected"
+msgstr "Conectado"
+
+#: chat-widget.cpp:481
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr "Envio da mensagem \"%1\" falhou porque o contato remoto está bloqueado"
+
+#: chat-widget.cpp:485
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr ""
+"Envio da mensagem \"%1\" falhou porque o contato remoto está desconectado"
+
+#: chat-widget.cpp:491
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr "Envio de uma mensagem falhou porque o contato remoto está bloqueado"
+
+#: chat-widget.cpp:494
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr "Envio de uma mensagem falhou porque o contato remoto está desconectado"
+
+#: chat-widget.cpp:501
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr "Envio da mensagem \"%1\" falhou porque o contato remoto não é válido"
+
+#: chat-widget.cpp:505
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr "Envio da mensagem falhou porque o contato remoto não é válido"
+
+#: chat-widget.cpp:511
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr ""
+"Envio da mensagem \"%1\" falhou porque você não tem permissão de falar nesta "
+"sala"
+
+#: chat-widget.cpp:515
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr ""
+"Envio da mensagem falhou porque você não tem permissão de falar nesta sala"
+
+#: chat-widget.cpp:521
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr "Envio da mensagem \"%1\" falhou porque ela era muito longa"
+
+#: chat-widget.cpp:525
+msgid "Delivery of a message failed because it was too long"
+msgstr "Envio da mensagem falhou porque ela era muito longa"
+
+#: chat-widget.cpp:531
+#, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr "Envio da mensagem \"%1\" falhou: %2"
+
+#: chat-widget.cpp:535
+#, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr "Envio da mensagem falhou: %1"
+
+#: chat-widget.cpp:640
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 enviou-lhe uma mensagem"
+
+#: chat-widget.cpp:661
+msgid "View"
+msgstr "Exibir"
+
+#: chat-widget.cpp:692
+msgid "You have sent a message"
+msgstr "Você enviou uma mensagem"
+
+#: chat-widget.cpp:733
+#, kde-format
+msgid "%1 has left the chat"
+msgstr "%1 deixou o bate-papo"
+
+#: chat-widget.cpp:776
+#, kde-format
+msgid "You are now marked as %1"
+msgstr "Você foi marcado como %1"
+
+#: chat-widget.cpp:780
+#, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr "%1 está %2"
+
+#: chat-widget.cpp:782
+#, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr "%1 está %2 - %3"
+
+#: chat-widget.cpp:812
+#, kde-format
+msgid "You are now known as %1"
+msgstr "Agora você é conhecido como %1"
+
+#: chat-widget.cpp:820
+#, kde-format
+msgid "%1 is now known as %2"
+msgstr "%1 é agora conhecido como %2"
+
+#: chat-widget.cpp:843
+#, kde-format
+msgid "%1 is now blocked."
+msgstr "%1 está agora bloqueado."
+
+#: chat-widget.cpp:845
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr "%1 está agora desbloqueado."
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr "Normal"
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "Baixar"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "Reproduzir"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "Salvar como"
+
+#~ msgid "&Send"
+#~ msgstr "&Enviar"

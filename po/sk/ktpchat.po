@@ -1,0 +1,216 @@
+# translation of ktpchat.po to Slovak
+# Richard Frič <Richard.Fric@kdemail.net>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktpchat\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-05-15 04:37+0200\n"
+"PO-Revision-Date: 2012-03-05 13:52+0100\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: adium-theme-view.cpp:86
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr ""
+
+#: adium-theme-view.cpp:145
+msgid "Missing required file Template.html - check your installation."
+msgstr ""
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Roman Paholík"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "wizzardsk@gmail.com"
+
+#: chat-search-bar.cpp:36
+#, fuzzy
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "&Nasledujúca"
+
+#: chat-search-bar.cpp:37
+#, fuzzy
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "&Predchádzajúci"
+
+#: chat-search-bar.cpp:45
+#, fuzzy
+msgid "Insert search text..."
+msgstr "Vložiť textový súbor..."
+
+#: chat-search-bar.cpp:54
+#, fuzzy
+msgid "Case sensitive"
+msgstr "Rozlišovať veľkosť písmen"
+
+#: chat-widget.cpp:98
+#, fuzzy
+msgid "Show format options"
+msgstr "Zobraziť pokročilé možnosti"
+
+#: chat-widget.cpp:286
+#, fuzzy
+msgid "Connection closed"
+msgstr "Pripojenie bolo ukončené"
+
+#: chat-widget.cpp:288
+#, fuzzy
+msgctxt "Connected to IM service"
+msgid "Connected"
+msgstr "Pripojené"
+
+#: chat-widget.cpp:481
+#, fuzzy, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr "Poslanie správy zlyhalo"
+
+#: chat-widget.cpp:485
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr ""
+
+#: chat-widget.cpp:491
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr ""
+
+#: chat-widget.cpp:494
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr ""
+
+#: chat-widget.cpp:501
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr ""
+
+#: chat-widget.cpp:505
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr ""
+
+#: chat-widget.cpp:511
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr ""
+
+#: chat-widget.cpp:515
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr ""
+
+#: chat-widget.cpp:521
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr ""
+
+#: chat-widget.cpp:525
+msgid "Delivery of a message failed because it was too long"
+msgstr ""
+
+#: chat-widget.cpp:531
+#, fuzzy, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr "Poslanie správy zlyhalo"
+
+#: chat-widget.cpp:535
+#, fuzzy, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr "Poslanie správy zlyhalo"
+
+#: chat-widget.cpp:640
+#, fuzzy, kde-format
+msgid "%1 has sent you a message"
+msgstr "Bola odoslaná odchádzajúca správa"
+
+#: chat-widget.cpp:661
+#, fuzzy
+msgid "View"
+msgstr "Zobraziť"
+
+#: chat-widget.cpp:692
+#, fuzzy
+msgid "You have sent a message"
+msgstr "Odoslaná správa"
+
+#: chat-widget.cpp:733
+#, fuzzy, kde-format
+msgid "%1 has left the chat"
+msgstr "%1 opustil rozhovor."
+
+#: chat-widget.cpp:776
+#, fuzzy, kde-format
+msgid "You are now marked as %1"
+msgstr "Teraz ste označený ako %1."
+
+#: chat-widget.cpp:780
+#, fuzzy, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr "Je"
+
+#: chat-widget.cpp:782
+#, fuzzy, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr "Je"
+
+#: chat-widget.cpp:812
+#, fuzzy, kde-format
+msgid "You are now known as %1"
+msgstr "Teraz ste známy ako %1."
+
+#: chat-widget.cpp:820
+#, fuzzy, kde-format
+msgid "%1 is now known as %2"
+msgstr "%1 je odteraz známy ako %2"
+
+#: chat-widget.cpp:843
+#, kde-format
+msgid "%1 is now blocked."
+msgstr ""
+
+#: chat-widget.cpp:845
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr ""
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr ""
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "Stiahnuť"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "Prehrať"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "Uložiť ako"

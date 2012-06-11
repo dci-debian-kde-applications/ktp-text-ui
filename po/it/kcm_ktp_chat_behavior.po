@@ -1,0 +1,112 @@
+# translation of telepathy-chat-window-config.po to Italian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Pino Toscano <toscano.pino@tiscali.it>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: telepathy-chat-window-config\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-01-17 05:23+0100\n"
+"PO-Revision-Date: 2011-10-13 10:22+0200\n"
+"Last-Translator: Pino Toscano <toscano.pino@tiscali.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: file: behavior-config.ui:17
+#. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
+#: rc.cpp:3
+msgid "Tabs"
+msgstr "Schede"
+
+#. i18n: file: behavior-config.ui:23
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:6
+msgid "Open new conversations in :"
+msgstr "Apri nuove conversazioni in:"
+
+#. i18n: file: behavior-config.ui:30
+#. i18n: ectx: property (text), widget (QRadioButton, radioNew)
+#: rc.cpp:9
+msgid "A new window"
+msgstr "Una nuova finestra"
+
+#. i18n: file: behavior-config.ui:40
+#. i18n: ectx: property (text), widget (QRadioButton, radioZero)
+#: rc.cpp:12
+msgid "A new tab in the first window"
+msgstr "Una nuova scheda nella prima finestra"
+
+#. i18n: file: behavior-config.ui:50
+#. i18n: ectx: property (text), widget (QRadioButton, radioLast)
+#: rc.cpp:15
+msgid "A new tab in the last focused window"
+msgstr "Una nuova scheda nell'ultima finestra con il focus"
+
+#~ msgid "A demo chat"
+#~ msgstr "Una chat demo"
+
+#~ msgid "Jabber"
+#~ msgstr "Jabber"
+
+#~ msgid "BobMarley@yahoo.com"
+#~ msgstr "BobMarley@yahoo.com"
+
+#~ msgid "Bob Marley"
+#~ msgstr "Bob Marley"
+
+#~ msgid "Bye Bye"
+#~ msgstr "Ciao ciao"
+
+#~ msgid "larry@example.com"
+#~ msgstr "mario@esempio.it"
+
+#~ msgid "Larry Demo"
+#~ msgstr "Mario Rossi"
+
+#~ msgid "cya"
+#~ msgstr "ciao"
+
+#~ msgid "ted@example.com"
+#~ msgstr "davide@esempio.it"
+
+#~ msgid "Ted Example"
+#~ msgstr "Davide Verdi"
+
+#~ msgid "Hello"
+#~ msgstr "Ciao"
+
+#~ msgid "A different example message"
+#~ msgstr "Un messaggio d'esempio differente"
+
+#~ msgid "Ted Example has left the chat."
+#~ msgstr "Davide Verdi ha lasciato la chat."
+
+#~ msgid "Use Custom Font Settings"
+#~ msgstr "Usa impostazioni personalizzate dei caratteri"
+
+#~ msgid "Select Font: "
+#~ msgstr "Scegli carattere:"
+
+#~ msgid "Select Size: "
+#~ msgstr "Scegli dimensione:"
+
+#~ msgid "Style"
+#~ msgstr "Stile"
+
+#~ msgid "Message Style:"
+#~ msgstr "Stile dei messaggi:"
+
+#~ msgid "Variant:"
+#~ msgstr "Variante:"
+
+#~ msgid "Show Header"
+#~ msgstr "Mostra intestazione"
+
+#~ msgid "Show User Icons"
+#~ msgstr "Mostra icone degli utenti"

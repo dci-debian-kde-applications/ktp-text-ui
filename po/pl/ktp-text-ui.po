@@ -1,0 +1,169 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-06-02 03:32+0200\n"
+"PO-Revision-Date: 2012-05-18 16:18+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: chat-window.cpp:115
+msgid "Close"
+msgstr "Zamknij"
+
+#: chat-window.cpp:116
+msgid "Detach Tab"
+msgstr "Odłącz kartę"
+
+#: chat-window.cpp:117
+msgid "Move Tab Left"
+msgstr "Przesuń kartę w lewo"
+
+#: chat-window.cpp:118
+msgid "Move Tab Right"
+msgstr "Przesuń kartę w prawo"
+
+#: chat-window.cpp:565
+msgid "&Next Tab"
+msgstr "&Następna karta"
+
+#: chat-window.cpp:569
+msgid "&Previous Tab"
+msgstr "&Poprzednia karta"
+
+#: chat-window.cpp:573
+msgid "&Audio Call"
+msgstr "Rozmowa głosow&a"
+
+#: chat-window.cpp:574
+msgctxt "Toolbar icon tooltip"
+msgid "Start an audio call with this contact"
+msgstr "Rozpocznij rozmowę głosową z tym kontaktem"
+
+#: chat-window.cpp:577 chat-window.cpp:815
+msgid "&Block Contact"
+msgstr "&Blokuj kontakt"
+
+#: chat-window.cpp:579
+msgctxt "Toolbar icon tooltip"
+msgid ""
+"Blocking means that this contact will not see you online and you will not "
+"receive any messages from this contact"
+msgstr ""
+"Blokowanie oznacza, że ten kontakt nie będzie widział ciebie dostępnego oraz "
+"to, że nie otrzymasz żadnych wiadomości od tego kontaktu"
+
+#: chat-window.cpp:582
+msgid "&Send File"
+msgstr "&Wyślij plik"
+
+#: chat-window.cpp:583
+msgctxt "Toolbar icon tooltip"
+msgid "Send a file to this contact"
+msgstr "Wyślij plik do tego kontaktu"
+
+#: chat-window.cpp:586
+msgid "&Invite to Chat"
+msgstr "&Zaproś do rozmowy"
+
+#: chat-window.cpp:587
+msgctxt "Toolbar icon tooltip"
+msgid "Invite any other contacts to join this chat"
+msgstr "Zaproś jakieś inne kontakty do dołączenia do rozmowy"
+
+#: chat-window.cpp:590
+msgid "&Video Call"
+msgstr "Rozmowa &wideo"
+
+#: chat-window.cpp:591
+msgctxt "Toolbar icon tooltip"
+msgid "Start a video call with this contact"
+msgstr "Rozpocznij rozmowę wideo z tym kontaktem"
+
+#: chat-window.cpp:594
+msgid "Share My &Desktop"
+msgstr "Współdziel mój &pulpit"
+
+#: chat-window.cpp:595
+msgctxt "Toolbar icon tooltip"
+msgid "Start an application that allows this contact to see your desktop"
+msgstr ""
+"Uruchom program, który pozwala temu kontaktowi na zobaczenie twojego pulpitu"
+
+#: chat-window.cpp:606
+msgid "Choose Spelling Language"
+msgstr "Wybierz język pisowni"
+
+#: chat-window.cpp:609
+msgctxt "Action to open the log viwer with a specified contact"
+msgid "&Previous conversations"
+msgstr "&Poprzednia rozmowa"
+
+#: chat-window.cpp:613
+msgid "Account Icon"
+msgstr "Ikona konta"
+
+#: chat-window.cpp:721
+#, kde-format
+msgid "Choose files to send to %1"
+msgstr "Wybierz pliki do wysłania do %1"
+
+#: chat-window.cpp:774
+#, kde-format
+msgctxt "String prepended in window title, arg is contact's name"
+msgid "Typing... %1"
+msgstr "Pisze... %1"
+
+#: chat-window.cpp:776
+#, kde-format
+msgctxt "String appended in window title, arg is contact's name"
+msgid "%1 has entered text"
+msgstr "%1 wpisał tekst"
+
+#: chat-window.cpp:808
+msgid "&Unblock Contact"
+msgstr "&Odblokuj kontakt"
+
+#: main.cpp:37
+msgid "Telepathy Text Ui"
+msgstr "Interfejs użytkownika tekstu Telepathy"
+
+#: main.cpp:39
+msgid "David Edmundson"
+msgstr "David Edmundson"
+
+#: main.cpp:39 main.cpp:40 main.cpp:41
+msgid "Developer"
+msgstr "Programista"
+
+#: main.cpp:40
+msgid "Dominik Schmidt"
+msgstr "Dominik Schmidt"
+
+#: main.cpp:41
+msgid "Francesco Nwokeka"
+msgstr "Francesco Nwokeka"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Łukasz Wojniłowicz"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lukasz.wojnilowicz@gmail.com"
+
+#~ msgid "Choose a file"
+#~ msgstr "Wybierz plik"

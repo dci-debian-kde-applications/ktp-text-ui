@@ -1,0 +1,165 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-06-02 03:32+0200\n"
+"PO-Revision-Date: 2012-05-14 10:47+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: chat-window.cpp:115
+msgid "Close"
+msgstr "Sluiten"
+
+#: chat-window.cpp:116
+msgid "Detach Tab"
+msgstr "Tabblad losmaken"
+
+#: chat-window.cpp:117
+msgid "Move Tab Left"
+msgstr "Tabblad naar links verplaatsen"
+
+#: chat-window.cpp:118
+msgid "Move Tab Right"
+msgstr "Tabblad naar rechts verplaatsen"
+
+#: chat-window.cpp:565
+msgid "&Next Tab"
+msgstr "Volge&nde tabblad"
+
+#: chat-window.cpp:569
+msgid "&Previous Tab"
+msgstr "&Vorige tabblad"
+
+#: chat-window.cpp:573
+msgid "&Audio Call"
+msgstr "&Geluidsoproep"
+
+#: chat-window.cpp:574
+msgctxt "Toolbar icon tooltip"
+msgid "Start an audio call with this contact"
+msgstr "Start een geluidsoproep met deze contactpersoon"
+
+#: chat-window.cpp:577 chat-window.cpp:815
+msgid "&Block Contact"
+msgstr "Contactpersoon &blokkeren"
+
+#: chat-window.cpp:579
+msgctxt "Toolbar icon tooltip"
+msgid ""
+"Blocking means that this contact will not see you online and you will not "
+"receive any messages from this contact"
+msgstr ""
+"Blokkeren betekent dat deze contactpersoon u niet online zal zien en u "
+"krijgt van deze contactpersoon geen berichten"
+
+#: chat-window.cpp:582
+msgid "&Send File"
+msgstr "Be&stand verzenden"
+
+#: chat-window.cpp:583
+msgctxt "Toolbar icon tooltip"
+msgid "Send a file to this contact"
+msgstr "Stuur een bestand naar contactpersoon"
+
+#: chat-window.cpp:586
+msgid "&Invite to Chat"
+msgstr "U&itnodiging voor een chat"
+
+#: chat-window.cpp:587
+msgctxt "Toolbar icon tooltip"
+msgid "Invite any other contacts to join this chat"
+msgstr "Nodig elke andere contactpersoon uit om mee te doen met deze chat"
+
+#: chat-window.cpp:590
+msgid "&Video Call"
+msgstr "&Video-oproep"
+
+#: chat-window.cpp:591
+msgctxt "Toolbar icon tooltip"
+msgid "Start a video call with this contact"
+msgstr "Start een video-oproep met deze contactpersoon"
+
+#: chat-window.cpp:594
+msgid "Share My &Desktop"
+msgstr "Mijn bureaublad &delen"
+
+#: chat-window.cpp:595
+msgctxt "Toolbar icon tooltip"
+msgid "Start an application that allows this contact to see your desktop"
+msgstr ""
+"Start een toepassing die toestaat dat deze contactpersoon uw bureaublad ziet"
+
+#: chat-window.cpp:606
+msgid "Choose Spelling Language"
+msgstr "Taal voor spellingcontrole kiezen"
+
+#: chat-window.cpp:609
+msgctxt "Action to open the log viwer with a specified contact"
+msgid "&Previous conversations"
+msgstr "&Vorige gesprekken"
+
+#: chat-window.cpp:613
+msgid "Account Icon"
+msgstr "Pictogram voor account"
+
+#: chat-window.cpp:721
+#, kde-format
+msgid "Choose files to send to %1"
+msgstr "De te verzenden bestanden naar %1 kiezen"
+
+#: chat-window.cpp:774
+#, kde-format
+msgctxt "String prepended in window title, arg is contact's name"
+msgid "Typing... %1"
+msgstr "Bezig met typen... %1"
+
+#: chat-window.cpp:776
+#, kde-format
+msgctxt "String appended in window title, arg is contact's name"
+msgid "%1 has entered text"
+msgstr "%1 heeft tekst ingevoerd"
+
+#: chat-window.cpp:808
+msgid "&Unblock Contact"
+msgstr "Blokkering van contactpersoon &opheffen"
+
+#: main.cpp:37
+msgid "Telepathy Text Ui"
+msgstr "Tekstinterface voor Telepathy"
+
+#: main.cpp:39
+msgid "David Edmundson"
+msgstr "David Edmundson"
+
+#: main.cpp:39 main.cpp:40 main.cpp:41
+msgid "Developer"
+msgstr "Ontwikkelaar"
+
+#: main.cpp:40
+msgid "Dominik Schmidt"
+msgstr "Dominik Schmidt"
+
+#: main.cpp:41
+msgid "Francesco Nwokeka"
+msgstr "Francesco Nwokeka"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Freek de Kruijf"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "freekdekruijf@kde.nl"

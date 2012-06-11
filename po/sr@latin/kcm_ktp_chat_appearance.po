@@ -1,0 +1,133 @@
+# Translation of kcm_ktp_chat_appearance.po into Serbian.
+# Mladen Pejakovic <pejakm@gmail.com>, 2012.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_ktp_chat_appearance\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-05-16 04:02+0200\n"
+"PO-Revision-Date: 2012-03-19 19:43+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: appearance-config.cpp:46
+msgid "A demo chat"
+msgstr "Primer ćaskanja"
+
+#: appearance-config.cpp:47 appearance-config.cpp:184
+#: appearance-config.cpp:192 appearance-config.cpp:200
+#: appearance-config.cpp:208 appearance-config.cpp:215
+#: appearance-config.cpp:221 appearance-config.cpp:229
+#: appearance-config.cpp:237 appearance-config.cpp:247
+#: appearance-config.cpp:255 appearance-config.cpp:262
+#: appearance-config.cpp:269
+msgid "Jabber"
+msgstr "Jabber"
+
+#: appearance-config.cpp:181
+#, fuzzy
+#| msgid "Ok!"
+msgctxt "Example message in preview conversation"
+msgid "Ok!"
+msgstr "Dobro!"
+
+#: appearance-config.cpp:189
+msgid "Bye Bye"
+msgstr "Zdravo zdravo"
+
+#: appearance-config.cpp:197
+msgid "Have fun!"
+msgstr "Zabavite se!"
+
+#: appearance-config.cpp:205
+msgid "cya"
+msgstr "vidimo se"
+
+#: appearance-config.cpp:219 appearance-config.cpp:267
+msgid "Ted Example has left the chat."
+msgstr "Marko Marković napusti ćaskanje."
+
+#: appearance-config.cpp:226
+msgid "Hello"
+msgstr "Zdravo"
+
+#: appearance-config.cpp:234
+msgid "What's up?"
+msgstr "Šta ima?"
+
+#: appearance-config.cpp:242
+msgid ""
+"Check out which cool adium themes work <a href=\"http://community.kde.org/"
+"Real-Time_Communication_and_Collaboration/Components/Chat_Window/"
+"Themes\">here</a>!"
+msgstr ""
+"Proverite <a href=\"http://community.kde.org/Real-"
+"Time_Communication_and_Collaboration/Components/Chat_Window/Themes\">ovde</"
+"a> koje Adiumove teme rade!"
+
+#: appearance-config.cpp:245
+msgid "ted@example.com"
+msgstr "marko@primer.com"
+
+#: appearance-config.cpp:246
+msgid "Ted Example"
+msgstr "Marko Marković"
+
+#: appearance-config.cpp:252
+msgid "A different example message"
+msgstr "Drugi primer poruke"
+
+#: appearance-config.cpp:260
+msgid "Ted Example is now Away."
+msgstr "Marko Marković je sada odsutan."
+
+#. i18n: file: appearance-config.ui:29
+#. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
+#: rc.cpp:3
+msgid "Use Custom Font Settings"
+msgstr "Posebne postavke za font"
+
+#. i18n: file: appearance-config.ui:41
+#. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
+#: rc.cpp:6
+msgid "Select Font: "
+msgstr "Izaberite font: "
+
+#. i18n: file: appearance-config.ui:54
+#. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
+#: rc.cpp:9
+msgid "Select Size: "
+msgstr "Izaberite veličinu: "
+
+#. i18n: file: appearance-config.ui:90
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:12
+msgid "Style"
+msgstr "Stil"
+
+#. i18n: file: appearance-config.ui:99
+#. i18n: ectx: property (text), widget (QLabel, styleLabel)
+#: rc.cpp:15
+msgid "Message Style:"
+msgstr "Stil poruke:"
+
+#. i18n: file: appearance-config.ui:125
+#. i18n: ectx: property (text), widget (QLabel, variantLabel)
+#: rc.cpp:18
+msgid "Variant:"
+msgstr "Varijanta:"
+
+#. i18n: file: appearance-config.ui:151
+#. i18n: ectx: property (text), widget (QCheckBox, showHeader)
+#: rc.cpp:21
+msgid "Show Header"
+msgstr "Prikaži zaglavlje"

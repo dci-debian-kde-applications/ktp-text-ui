@@ -1,0 +1,91 @@
+# translation of ktp-adiumxtra-protocol-handler.po to Français
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Joëlle Cornavin <jcorn@free.fr>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktp-adiumxtra-protocol-handler\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-03-22 03:36+0100\n"
+"PO-Revision-Date: 2012-04-19 00:46+0200\n"
+"Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
+"Language-Team: French <kde-francophone@kde.orh>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
+msgid "Package type not recognized or not supported"
+msgstr "Impossible de reconnaître ou de prendre en charge le type de paquetage"
+
+#: adiumxtra-protocol-handler.cpp:83 adiumxtra-protocol-handler.cpp:152
+#: chat-style-installer.cpp:153 emoticon-set-installer.cpp:126
+msgid "OK"
+msgstr "Ok"
+
+#: chat-style-installer.cpp:123
+#, kde-format
+msgid "Install Chatstyle %1"
+msgstr "Installer le style de discussion %1"
+
+#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+msgid "Install"
+msgstr "Installer"
+
+#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+msgid "Cancel"
+msgstr "Annuler"
+
+#: chat-style-installer.cpp:146
+#, kde-format
+msgid "Installed Chatstyle %1 successfully."
+msgstr "Le style de discussion %1 a été installé avec succès."
+
+#: chat-style-installer.cpp:150
+#, kde-format
+msgid "Installation of Chatstyle %1 failed."
+msgstr "L'installation du style de discussion %1 a échoué."
+
+#: emoticon-set-installer.cpp:104
+#, kde-format
+msgid "Install Emoticonset %1"
+msgstr "Installer l'ensemble d'émoticônes %1"
+
+#: emoticon-set-installer.cpp:124
+#, kde-format
+msgid "Installed Emoticonset %1 successfully."
+msgstr "L'ensemble d'émoticônes %1 a été installé avec succès."
+
+#: main.cpp:30
+msgid "AdiumXtra Protocol Handler"
+msgstr "Gestionnaire de protocoles AdiumXtra"
+
+#: main.cpp:32
+msgid "Dominik Schmidt"
+msgstr "Dominik Schmidt"
+
+#: main.cpp:32 main.cpp:33
+msgid "Developer"
+msgstr "Développeur"
+
+#: main.cpp:33
+msgid "Daniele E. Domenichelli"
+msgstr "Daniele E. Domenichelli"
+
+#: main.cpp:38
+msgid "Adium package to install"
+msgstr "Paquetage Adium à installer"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Joëlle Cornavin"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "jcorn@free.fr"

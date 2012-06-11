@@ -1,0 +1,51 @@
+# Translation of kcm_ktp_chat_behavior.po to Catalan
+# Copyright (C) 2012 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep Ma. Ferrer <txemaq@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_ktp_chat_behavior\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-01-17 05:23+0100\n"
+"PO-Revision-Date: 2012-03-25 17:24+0200\n"
+"Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#. i18n: file: behavior-config.ui:17
+#. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
+#: rc.cpp:3
+msgid "Tabs"
+msgstr "Pestanyes"
+
+#. i18n: file: behavior-config.ui:23
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:6
+msgid "Open new conversations in :"
+msgstr "Obre les converses noves en:"
+
+#. i18n: file: behavior-config.ui:30
+#. i18n: ectx: property (text), widget (QRadioButton, radioNew)
+#: rc.cpp:9
+msgid "A new window"
+msgstr "Una finestra nova"
+
+#. i18n: file: behavior-config.ui:40
+#. i18n: ectx: property (text), widget (QRadioButton, radioZero)
+#: rc.cpp:12
+msgid "A new tab in the first window"
+msgstr "Una pestanya nova de la primera finestra"
+
+#. i18n: file: behavior-config.ui:50
+#. i18n: ectx: property (text), widget (QRadioButton, radioLast)
+#: rc.cpp:15
+msgid "A new tab in the last focused window"
+msgstr "Una pestanya nova de la darrera finestra amb focus"

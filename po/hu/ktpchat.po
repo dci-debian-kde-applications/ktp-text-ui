@@ -1,0 +1,234 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-05-15 04:37+0200\n"
+"PO-Revision-Date: 2012-02-02 01:08+0100\n"
+"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: adium-theme-view.cpp:86
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr ""
+"Nem sikerült betölteni érvényes témát. Bizonyosodjon meg róla, hogy előbb a "
+"csevegőablak beállítóprogramját futtatta. Most összeomlok."
+
+#: adium-theme-view.cpp:145
+#, fuzzy
+#| msgid "Missing required file template.html - check your installation."
+msgid "Missing required file Template.html - check your installation."
+msgstr "Hiányzó template.html fájl - ellenőrizze a telepítést."
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@kubuntu.org"
+
+#: chat-search-bar.cpp:36
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "&Következő"
+
+#: chat-search-bar.cpp:37
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "&Előző"
+
+#: chat-search-bar.cpp:45
+msgid "Insert search text..."
+msgstr "Keresőszöveg…"
+
+#: chat-search-bar.cpp:54
+msgid "Case sensitive"
+msgstr "Nagybetűérzékeny"
+
+#: chat-widget.cpp:98
+msgid "Show format options"
+msgstr "Formázási beállítások megjelenítése"
+
+#: chat-widget.cpp:286
+msgid "Connection closed"
+msgstr "A kapcsolat lezárva"
+
+#: chat-widget.cpp:288
+msgctxt "Connected to IM service"
+msgid "Connected"
+msgstr "Kapcsolódva"
+
+#: chat-widget.cpp:481
+#, fuzzy, kde-format
+#| msgid ""
+#| "Delivery of the message \"%1\" failed because the remote contact is "
+#| "offline"
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr ""
+"Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel a távoli partner nem "
+"elérhető"
+
+#: chat-widget.cpp:485
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr ""
+"Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel a távoli partner nem "
+"elérhető"
+
+#: chat-widget.cpp:491
+#, fuzzy
+#| msgid "Delivery of a message failed because the remote contact is offline"
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr ""
+"Nem sikerült kézbesíteni egy üzenetet, mivel a távoli partner nem elérhető"
+
+#: chat-widget.cpp:494
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr ""
+"Nem sikerült kézbesíteni egy üzenetet, mivel a távoli partner nem elérhető"
+
+#: chat-widget.cpp:501
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr ""
+"Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel a távoli partner "
+"érvénytelen"
+
+#: chat-widget.cpp:505
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr ""
+"Nem sikerült kézbesíteni egy üzenetet, mivel a távoli partner érvénytelen"
+
+#: chat-widget.cpp:511
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr ""
+"Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel nincs joga beszélni ebben "
+"a szobában"
+
+#: chat-widget.cpp:515
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr ""
+"Nem sikerült kézbesíteni egy üzenetet, mivel nincs joga beszélni ebben a "
+"szobában"
+
+#: chat-widget.cpp:521
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel az túl hosszú"
+
+#: chat-widget.cpp:525
+msgid "Delivery of a message failed because it was too long"
+msgstr "Nem sikerült kézbesíteni az üzenetet, mivel az túl hosszú"
+
+#: chat-widget.cpp:531
+#, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr "Nem sikerült kézbesíteni a(z) „%1” üzenetet: %2"
+
+#: chat-widget.cpp:535
+#, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr "Nem sikerült kézbesíteni az üzenetet: %1"
+
+#: chat-widget.cpp:640
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 üzenetet küldött"
+
+#: chat-widget.cpp:661
+msgid "View"
+msgstr "Nézet"
+
+#: chat-widget.cpp:692
+msgid "You have sent a message"
+msgstr "Üzenetet küldött"
+
+#: chat-widget.cpp:733
+#, kde-format
+msgid "%1 has left the chat"
+msgstr "%1 elhagyta a csevegést"
+
+#: chat-widget.cpp:776
+#, kde-format
+msgid "You are now marked as %1"
+msgstr "Ön most már így van megjelölve: %1"
+
+#: chat-widget.cpp:780
+#, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr "%1 %2"
+
+#: chat-widget.cpp:782
+#, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr "%1 %2 - %3"
+
+#: chat-widget.cpp:812
+#, kde-format
+msgid "You are now known as %1"
+msgstr "Ön most már ezen a néven ismert: %1"
+
+#: chat-widget.cpp:820
+#, kde-format
+msgid "%1 is now known as %2"
+msgstr "%1 most már ezen a néven ismert: %2"
+
+#: chat-widget.cpp:843
+#, kde-format
+msgid "%1 is now blocked."
+msgstr ""
+
+#: chat-widget.cpp:845
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr ""
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr ""
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "Letöltés"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "Lejátszás"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "Mentés másként"
+
+#~ msgid "&Send"
+#~ msgstr "&Küldés"
