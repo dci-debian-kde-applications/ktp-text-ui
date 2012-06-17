@@ -1,0 +1,4 @@
+usr/share/kde4/apps/plasma/plasmoids/org.kde.ktp-chatplasmoid/*
+usr/share/kde4/services/plasma-applet-ktpchat.desktop
+usr/lib/kde4/imports/org/kde/telepathy/chat/libktpchatqmlplugin.so
+usr/lib/kde4/imports/org/kde/telepathy/chat/qmldir

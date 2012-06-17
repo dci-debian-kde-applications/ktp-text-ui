@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+
+override_dh_install:
+	dh_install --list-missing
+	rm "debian/kde-telepathy-text-ui/usr/share/kde4/apps/ktelepathy/styles/renkoo.AdiumMessageStyle/Contents/Resources/Renkoo LICENSE.txt"
+	rm "debian/kde-telepathy-text-ui/usr/share/kde4/apps/ktelepathy/styles/SimKete.AdiumMessageStyle/Contents/README"
+
+%:
+	dh $@ --parallel --with kde --dbg-package=kde-telepathy-text-ui-dbg

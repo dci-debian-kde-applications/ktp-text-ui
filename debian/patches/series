@@ -1,0 +1,3 @@
+01_no_useless_dependencies.diff
+02_ktpchat_soversion.diff
+03_no_redundant_glib_calls.diff

@@ -1,0 +1,14 @@
+usr/bin/ktp-log-viewer
+usr/lib/kde4/kcm_*.so
+usr/lib/kde4/libexec/ktp-adiumxtra-protocol-handler
+usr/lib/kde4/libexec/ktp-text-ui
+usr/share/applications/kde4/ktp-log-viewer.desktop
+usr/share/dbus-1/services/org.freedesktop.Telepathy.Client.KTp.TextUi.service
+usr/share/kde4/apps/ktelepathy/styles/renkoo.AdiumMessageStyle/*
+usr/share/kde4/apps/ktelepathy/styles/SimKete.AdiumMessageStyle/*
+usr/share/kde4/apps/ktelepathy/Template.html
+usr/share/kde4/apps/ktp-text-ui/chatwindow.rc
+usr/share/kde4/services/adiumxtra.protocol
+usr/share/kde4/services/kcm_*.desktop
+usr/share/locale/*
+usr/share/telepathy/clients/KTp.TextUi.client

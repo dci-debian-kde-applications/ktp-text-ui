@@ -1,0 +1,62 @@
+Source: ktp-text-ui
+Section: kde
+Priority: optional
+Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: George Kiagiadakis <kiagiadakis.george@gmail.com>
+Build-Depends: debhelper (>= 9),
+ pkg-kde-tools (>= 0.9),
+ libtelepathy-qt4-dev (>= 0.9.1),
+ kdelibs5-dev (>= 4:4.6),
+ libqtwebkit-dev,
+ cmake (>= 2.8),
+ libktpcommoninternalsprivate-dev (>= 0.4.0),
+ libtelepathy-logger-qt4-dev (>= 0.4.0)
+Standards-Version: 3.9.3
+Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-text-ui
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git
+
+Package: libktpchat0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE Telepathy text chat functionality shared library
+ This package provides a shared library with common functionality
+ for handling text chat in KDE Telepathy.
+
+Package: kde-telepathy-text-ui
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libktpchat0 (= ${binary:Version}),
+ kde-telepathy-data (>= 0.4)
+Recommends: kde-telepathy
+Description: Telepathy text chat UI for the KDE Plasma Desktop
+ This package provides a telepathy handler for text channels, a program
+ that in other words allows you to chat with your contacts using instant
+ text messages.
+ .
+ In addition, this package also provides a UI for viewing telepathy
+ text chat logs.
+ .
+ This package is not meant to be used standalone. It is recommended
+ to install the kde-telepathy metapackage instead.
+
+Package: plasma-widget-telepathy-chat
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libktpchat0 (= ${binary:Version}),
+ kde-telepathy-data (>= 0.4)
+Recommends: kde-telepathy
+Description: Telepathy text chat plasma widget
+ This package provides a plasma widget that allows you to chat with
+ your contacts directly from your desktop.
+ .
+ This package is not meant to be used standalone. It is recommended
+ to install the kde-telepathy metapackage instead.
+
+Package: kde-telepathy-text-ui-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: kde-telepathy-text-ui (= ${binary:Version}), ${misc:Depends}
+Description: Telepathy text chat UI for the KDE Plasma Desktop - debug symbols
+ This package provides debug symbols for the KDE Telepathy text chat UI.
