@@ -44,6 +44,7 @@ Package: plasma-widget-telepathy-chat
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
  libktpchat0 (= ${binary:Version}),
+ kde-runtime-data (>= 4:4.8),
  kde-telepathy-data (>= 0.4)
 Recommends: kde-telepathy
 Description: Telepathy text chat plasma widget
