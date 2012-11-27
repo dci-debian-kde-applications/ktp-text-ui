@@ -17,32 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#. i18n: file: behavior-config.ui:17
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
-#: rc.cpp:3
+#: behavior-config.ui:17
 msgid "Tabs"
 msgstr "Páginas"
 
-#. i18n: file: behavior-config.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:6
+#: behavior-config.ui:23
 msgid "Open new conversations in :"
 msgstr "Abrir as conversas novas :"
 
-#. i18n: file: behavior-config.ui:30
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
-#: rc.cpp:9
+#: behavior-config.ui:30
 msgid "A new window"
 msgstr "Numa janela nova"
 
-#. i18n: file: behavior-config.ui:40
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
-#: rc.cpp:12
+#: behavior-config.ui:40
 msgid "A new tab in the first window"
 msgstr "Numa página nova da primeira janela"
 
-#. i18n: file: behavior-config.ui:50
 #. i18n: ectx: property (text), widget (QRadioButton, radioLast)
-#: rc.cpp:15
+#: behavior-config.ui:50
 msgid "A new tab in the last focused window"
 msgstr "Numa página nova da janela em primeiro plano"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-02 03:32+0200\n"
-"PO-Revision-Date: 2012-05-14 06:56+0300\n"
+"POT-Creation-Date: 2012-10-01 12:22+0200\n"
+"PO-Revision-Date: 2012-08-04 08:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -18,44 +18,52 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: chat-window.cpp:115
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Юрій Чорноіван"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yurchor@ukr.net"
+
+#: chat-window.cpp:123
 msgid "Close"
 msgstr "Закрити"
 
-#: chat-window.cpp:116
+#: chat-window.cpp:124
 msgid "Detach Tab"
 msgstr "Від’єднати вкладку"
 
-#: chat-window.cpp:117
+#: chat-window.cpp:125
 msgid "Move Tab Left"
 msgstr "Пересунути вкладку ліворуч"
 
-#: chat-window.cpp:118
+#: chat-window.cpp:126
 msgid "Move Tab Right"
 msgstr "Пересунути вкладку праворуч"
 
-#: chat-window.cpp:565
+#: chat-window.cpp:577
 msgid "&Next Tab"
 msgstr "&Наступна вкладка"
 
-#: chat-window.cpp:569
+#: chat-window.cpp:581
 msgid "&Previous Tab"
 msgstr "&Попередня вкладка"
 
-#: chat-window.cpp:573
+#: chat-window.cpp:585
 msgid "&Audio Call"
 msgstr "&Голосовий виклик"
 
-#: chat-window.cpp:574
+#: chat-window.cpp:586
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Розпочати спілкування з контактом за допомогою звукового зв’язку."
 
-#: chat-window.cpp:577 chat-window.cpp:815
+#: chat-window.cpp:589 chat-window.cpp:829
 msgid "&Block Contact"
 msgstr "&Заблокувати контакт"
 
-#: chat-window.cpp:579
+#: chat-window.cpp:591
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -64,107 +72,101 @@ msgstr ""
 "Блокування означає, що відповідна особа не зможе дізнаватися про те, коли ви "
 "у мережі, а також те, що ви не отримуватимете повідомлень від цієї особи."
 
-#: chat-window.cpp:582
+#: chat-window.cpp:594
 msgid "&Send File"
 msgstr "&Надіслати файли"
 
-#: chat-window.cpp:583
+#: chat-window.cpp:595
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Надіслати цьому контакту файл."
 
-#: chat-window.cpp:586
+#: chat-window.cpp:598
 msgid "&Invite to Chat"
 msgstr "&Запросити до спілкування"
 
-#: chat-window.cpp:587
+#: chat-window.cpp:599
 msgctxt "Toolbar icon tooltip"
-msgid "Invite any other contacts to join this chat"
-msgstr "Запросити власників всіх інших записів контактів до цього спілкування."
+msgid "Invite another contact to join this chat"
+msgstr "Запросити власника іншого запису контакту до цього обговорення."
 
-#: chat-window.cpp:590
+#: chat-window.cpp:602
 msgid "&Video Call"
 msgstr "&Відеовиклик"
 
-#: chat-window.cpp:591
+#: chat-window.cpp:603
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Розпочати спілкування з цим контактом за допомогою відеозв’язку."
 
-#: chat-window.cpp:594
+#: chat-window.cpp:606
 msgid "Share My &Desktop"
 msgstr "Оприлюднити мою с&тільницю"
 
-#: chat-window.cpp:595
+#: chat-window.cpp:607
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr ""
 "Запустити програму, за допомогою якої цей контакт зможе бачити те, що "
 "відбувається на вашій стільниці."
 
-#: chat-window.cpp:606
+#: chat-window.cpp:618
 msgid "Choose Spelling Language"
 msgstr "Виберіть мову перевірки правопису"
 
-#: chat-window.cpp:609
-msgctxt "Action to open the log viwer with a specified contact"
-msgid "&Previous conversations"
+#: chat-window.cpp:621
+msgctxt "Action to open the log viewer with a specified contact"
+msgid "&Previous Conversations"
 msgstr "&Попередні сеанси спілкування"
 
-#: chat-window.cpp:613
+#: chat-window.cpp:625
 msgid "Account Icon"
 msgstr "Піктограма облікового запису"
 
-#: chat-window.cpp:721
+#: chat-window.cpp:735
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Виберіть файли, які слід надіслати %1"
 
-#: chat-window.cpp:774
+#: chat-window.cpp:788
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr "Створення повідомлення… %1"
 
-#: chat-window.cpp:776
+#: chat-window.cpp:790
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 введено повідомлення"
 
-#: chat-window.cpp:808
+#: chat-window.cpp:822
 msgid "&Unblock Contact"
 msgstr "&&Розблокувати контакт"
 
-#: main.cpp:37
+#: invite-contact-dialog.cpp:51
+msgid "Search in Contacts..."
+msgstr "Шукати у контактах…"
+
+#: main.cpp:38
 msgid "Telepathy Text Ui"
 msgstr "Текстовий інтерфейс Telepathy"
 
-#: main.cpp:39
+#: main.cpp:40
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:39 main.cpp:40 main.cpp:41
+#: main.cpp:40 main.cpp:41 main.cpp:42
 msgid "Developer"
 msgstr "Розробник"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:41
+#: main.cpp:42
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Юрій Чорноіван"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "yurchor@ukr.net"
 
 #~ msgid "Choose a file"
 #~ msgstr "Виберіть файл"

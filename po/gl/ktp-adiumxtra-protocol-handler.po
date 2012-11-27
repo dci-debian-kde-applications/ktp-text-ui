@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-03-22 03:36+0100\n"
+"POT-Creation-Date: 2012-06-13 11:49+0200\n"
 "PO-Revision-Date: 2012-01-29 22:43+0100\n"
 "Last-Translator: Xosé <xosecalvo@gmail.com>\n"
 "Language-Team: Galician <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Xosé Calvo"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xosecalvo@gmail.com"
 
 #: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
 msgid "Package type not recognized or not supported"
@@ -77,16 +85,5 @@ msgstr ""
 
 #: main.cpp:38
 #, fuzzy
-#| msgid "Install Adium packages"
 msgid "Adium package to install"
 msgstr "Instalar os paquetes do Adium"
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Xosé Calvo"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "xosecalvo@gmail.com"

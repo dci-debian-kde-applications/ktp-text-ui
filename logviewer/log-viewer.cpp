@@ -22,18 +22,23 @@
 
 #include <TelepathyQt/AccountManager>
 #include <TelepathyQt/PendingReady>
+#include <TelepathyQt/ContactManager>
 
 
 #include <TelepathyLoggerQt4/Init>
 #include <TelepathyLoggerQt4/Entity>
 #include <TelepathyLoggerQt4/LogManager>
-
-#include <glib-object.h>
-#include <QGlib/Init>
+#include <TelepathyLoggerQt4/SearchHit>
+#include <TelepathyLoggerQt4/PendingSearch>
 
 #include <QSortFilterProxyModel>
+#include <QWebFrame>
+#include <KLineEdit>
+#include <KPixmapSequence>
 
 #include "entity-model.h"
+#include "entity-proxy-model.h"
+#include "entity-model-item.h"
 
 LogViewer::LogViewer(QWidget *parent) :
     QWidget(parent),
@@ -42,24 +47,46 @@ LogViewer::LogViewer(QWidget *parent) :
     ui->setupUi(this);
     setWindowIcon(KIcon(QLatin1String("documentation")));
     Tp::registerTypes();
-    g_type_init();
-    QGlib::init(); //are these 4 really needed?
     Tpl::init();
 
-    m_accountManager = Tp::AccountManager::create();
+    Tp::AccountFactoryPtr  accountFactory = Tp::AccountFactory::create(
+                                                QDBusConnection::sessionBus(),
+                                                Tp::Features() << Tp::Account::FeatureCore);
+
+    Tp::ConnectionFactoryPtr connectionFactory = Tp::ConnectionFactory::create(
+                                                QDBusConnection::sessionBus(),
+                                                Tp::Features() << Tp::Connection::FeatureCore
+                                                    << Tp::Connection::FeatureSelfContact
+                                                    << Tp::Connection::FeatureRoster);
+
+    Tp::ContactFactoryPtr contactFactory = Tp::ContactFactory::create(
+                                                Tp::Features()  << Tp::Contact::FeatureAlias
+                                                    << Tp::Contact::FeatureAvatarData
+                                                    << Tp::Contact::FeatureSimplePresence
+                                                    << Tp::Contact::FeatureCapabilities);
+
+    Tp::ChannelFactoryPtr channelFactory = Tp::ChannelFactory::create(QDBusConnection::sessionBus());
+
+    m_accountManager = Tp::AccountManager::create(accountFactory, connectionFactory, channelFactory, contactFactory);
 
     m_entityModel = new EntityModel(this);
-    m_filterModel = new QSortFilterProxyModel(this);
+    m_filterModel = new EntityProxyModel(this);
     m_filterModel->setSourceModel(m_entityModel);
 
     ui->entityList->setModel(m_filterModel);
+    ui->entityList->setItemsExpandable(true);
+    ui->entityList->setRootIsDecorated(true);
     ui->entityFilter->setProxy(m_filterModel);
+    ui->entityFilter->lineEdit()->setClickMessage(i18nc("Placeholder text in line edit for filtering contacts", "Filter contacts..."));
 
     //TODO parse command line args and update all views as appropriate
 
     connect(m_accountManager->becomeReady(), SIGNAL(finished(Tp::PendingOperation*)), SLOT(onAccountManagerReady()));
-    connect(ui->entityList, SIGNAL(activated(QModelIndex)), SLOT(onEntitySelected(QModelIndex)));
+    connect(ui->entityList->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)), SLOT(onEntitySelected(QModelIndex,QModelIndex)));
     connect(ui->datePicker, SIGNAL(dateChanged(QDate)), SLOT(onDateSelected()));
+    connect(ui->messageView, SIGNAL(conversationSwitchRequested(QDate)), SLOT(switchConversation(QDate)));
+    connect(ui->globalSearch, SIGNAL(returnPressed(QString)), SLOT(startGlobalSearch(QString)));
+    connect(ui->globalSearch, SIGNAL(clearButtonClicked()), SLOT(clearGlobalSearch()));
 }
 
 LogViewer::~LogViewer()
@@ -74,14 +101,19 @@ void LogViewer::onAccountManagerReady()
     m_entityModel->setAccountManager(m_accountManager);
 }
 
-void LogViewer::onEntitySelected(const QModelIndex &index)
+void LogViewer::onEntitySelected(const QModelIndex &current, const QModelIndex &previous)
 {
-    Tpl::EntityPtr entity = index.data(EntityModel::EntityRole).value<Tpl::EntityPtr>();
-    Tp::AccountPtr account = index.data(EntityModel::AccountRole).value<Tp::AccountPtr>();
+    Q_UNUSED(previous);
+
+    /* Ignore account nodes */
+    if (current.parent() == QModelIndex()) {
+        return;
+    }
+
+    Tpl::EntityPtr entity = current.data(EntityModel::EntityRole).value<Tpl::EntityPtr>();
+    Tp::AccountPtr account = current.data(EntityModel::AccountRole).value<Tp::AccountPtr>();
 
     ui->datePicker->setEntity(account, entity);
-
-    updateMainView();
 }
 
 void LogViewer::onDateSelected()
@@ -97,7 +129,66 @@ void LogViewer::updateMainView()
         return;
     }
 
+    QPair< QDate, QDate > nearestDates;
+
+    /* If the selected date is not within valid (highlighted) dates then display empty
+     * conversation (even if there is a chat log for that particular date) */
+    QDate date = ui->datePicker->date();
+    if (!ui->datePicker->validDates().contains(date)) {
+        date = QDate();
+    }
+
+    nearestDates.first = ui->datePicker->previousDate();
+    nearestDates.second = ui->datePicker->nextDate();
+
     Tpl::EntityPtr entity = currentIndex.data(EntityModel::EntityRole).value<Tpl::EntityPtr>();
+    Tp::ContactPtr contact = currentIndex.data(EntityModel::ContactRole).value<Tp::ContactPtr>();
     Tp::AccountPtr account = currentIndex.data(EntityModel::AccountRole).value<Tp::AccountPtr>();
-    ui->messageView->loadLog(account, entity, ui->datePicker->date());
+    ui->messageView->loadLog(account, entity, contact, date, nearestDates);
+}
+
+void LogViewer::switchConversation(const QDate &date)
+{
+    ui->datePicker->setDate(date);
+}
+
+void LogViewer::startGlobalSearch(const QString &term)
+{
+    if (term.isEmpty()) {
+        ui->messageView->clearHighlightText();
+        m_filterModel->clearSearchHits();
+        ui->datePicker->clearSearchHits();
+        return;
+    }
+
+    ui->busyAnimation->setSequence(KPixmapSequence(QLatin1String("process-working"), KIconLoader::SizeSmallMedium));
+    ui->busyAnimation->setVisible(true);
+    ui->globalSearch->setDisabled(true);
+
+    ui->messageView->setHighlightText(term);
+
+    Tpl::LogManagerPtr manager = Tpl::LogManager::instance();
+    Tpl::PendingSearch *search = manager->search(term, Tpl::EventTypeMaskAny);
+    connect (search, SIGNAL(finished(Tpl::PendingOperation*)),
+             this, SLOT(globalSearchFinished(Tpl::PendingOperation*)));
+}
+
+void LogViewer::globalSearchFinished(Tpl::PendingOperation *operation)
+{
+    Tpl::PendingSearch *search = qobject_cast< Tpl::PendingSearch* >(operation);
+    Q_ASSERT(search);
+
+    m_filterModel->setSearchHits(search->hits());
+    ui->datePicker->setSearchHits(search->hits());
+
+    ui->globalSearch->setEnabled(true);
+    ui->busyAnimation->setSequence(KPixmapSequence());
+    ui->busyAnimation->setVisible(false);
+}
+
+void LogViewer::clearGlobalSearch()
+{
+    m_filterModel->clearSearchHits();
+    ui->datePicker->clearSearchHits();
+    ui->messageView->clearHighlightText();
 }

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-02 03:32+0200\n"
-"PO-Revision-Date: 2012-05-19 18:17+0200\n"
+"POT-Creation-Date: 2012-10-01 12:22+0200\n"
+"PO-Revision-Date: 2012-09-24 19:04+0200\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,44 +20,52 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: chat-window.cpp:115
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Josep Ma. Ferrer"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "txemaq@gmail.com"
+
+#: chat-window.cpp:123
 msgid "Close"
 msgstr "Tanca"
 
-#: chat-window.cpp:116
+#: chat-window.cpp:124
 msgid "Detach Tab"
 msgstr "Separa la pestanya"
 
-#: chat-window.cpp:117
+#: chat-window.cpp:125
 msgid "Move Tab Left"
 msgstr "Mou la pestanya a l'esquerra"
 
-#: chat-window.cpp:118
+#: chat-window.cpp:126
 msgid "Move Tab Right"
 msgstr "Mou la pestanya a la dreta"
 
-#: chat-window.cpp:565
+#: chat-window.cpp:577
 msgid "&Next Tab"
 msgstr "Pestanya següe&nt"
 
-#: chat-window.cpp:569
+#: chat-window.cpp:581
 msgid "&Previous Tab"
 msgstr "Pestanya &anterior"
 
-#: chat-window.cpp:573
+#: chat-window.cpp:585
 msgid "&Audio Call"
 msgstr "Truc&ada d'àudio"
 
-#: chat-window.cpp:574
+#: chat-window.cpp:586
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Inicia una trucada d'àudio amb aquest contacte"
 
-#: chat-window.cpp:577 chat-window.cpp:815
+#: chat-window.cpp:589 chat-window.cpp:829
 msgid "&Block Contact"
 msgstr "&Bloqueja el contacte"
 
-#: chat-window.cpp:579
+#: chat-window.cpp:591
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -66,104 +74,98 @@ msgstr ""
 "Bloquejar significa que aquest contacte no us veurà en línia i no rebreu cap "
 "missatge d'aquest contacte"
 
-#: chat-window.cpp:582
+#: chat-window.cpp:594
 msgid "&Send File"
 msgstr "&Envia fitxer"
 
-#: chat-window.cpp:583
+#: chat-window.cpp:595
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Envia un fitxer a aquest contacte"
 
-#: chat-window.cpp:586
+#: chat-window.cpp:598
 msgid "&Invite to Chat"
 msgstr "Conv&ida al xat"
 
-#: chat-window.cpp:587
+#: chat-window.cpp:599
 msgctxt "Toolbar icon tooltip"
-msgid "Invite any other contacts to join this chat"
-msgstr "Convida els altres contactes a aquesta conversa "
+msgid "Invite another contact to join this chat"
+msgstr "Convida a una altre contacte a unir-se a aquesta conversa"
 
-#: chat-window.cpp:590
+#: chat-window.cpp:602
 msgid "&Video Call"
 msgstr "Trucada de &vídeo"
 
-#: chat-window.cpp:591
+#: chat-window.cpp:603
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Inicia una trucada de vídeo amb aquest contacte"
 
-#: chat-window.cpp:594
+#: chat-window.cpp:606
 msgid "Share My &Desktop"
 msgstr "Com&parteix el meu escriptori"
 
-#: chat-window.cpp:595
+#: chat-window.cpp:607
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr ""
 "Inicia una aplicació que permeti que aquest contacte vegi el vostre "
 "escriptori"
 
-#: chat-window.cpp:606
+#: chat-window.cpp:618
 msgid "Choose Spelling Language"
 msgstr "Selecció de l'idioma de verificació"
 
-#: chat-window.cpp:609
-msgctxt "Action to open the log viwer with a specified contact"
-msgid "&Previous conversations"
+#: chat-window.cpp:621
+msgctxt "Action to open the log viewer with a specified contact"
+msgid "&Previous Conversations"
 msgstr "Converses &anteriors"
 
-#: chat-window.cpp:613
+#: chat-window.cpp:625
 msgid "Account Icon"
 msgstr "Icona de compte"
 
-#: chat-window.cpp:721
+#: chat-window.cpp:735
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Seleccioneu els fitxers a enviar a %1"
 
-#: chat-window.cpp:774
+#: chat-window.cpp:788
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr "Escrivint... %1"
 
-#: chat-window.cpp:776
+#: chat-window.cpp:790
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 ha introduït text"
 
-#: chat-window.cpp:808
+#: chat-window.cpp:822
 msgid "&Unblock Contact"
 msgstr "&Desbloqueja el contacte"
 
-#: main.cpp:37
+#: invite-contact-dialog.cpp:51
+msgid "Search in Contacts..."
+msgstr "Cerca en els contactes..."
+
+#: main.cpp:38
 msgid "Telepathy Text Ui"
 msgstr "IU de text del Telepathy"
 
-#: main.cpp:39
+#: main.cpp:40
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:39 main.cpp:40 main.cpp:41
+#: main.cpp:40 main.cpp:41 main.cpp:42
 msgid "Developer"
 msgstr "Desenvolupador"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:41
+#: main.cpp:42
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Josep Ma. Ferrer"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "txemaq@gmail.com"

@@ -1,13 +1,13 @@
 # translation of ktpchat.po to Français
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Joëlle Cornavin <jcorn@free.fr>, 2011, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: ktpchat\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-15 04:37+0200\n"
+"POT-Creation-Date: 2012-09-16 11:50+0200\n"
 "PO-Revision-Date: 2012-04-19 00:48+0200\n"
 "Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
 "Language-Team: French <kde-francophone@kde.orh>\n"
@@ -16,7 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 1.4\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Joëlle Cornavin"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "jcon@free.fr"
 
 #: adium-theme-view.cpp:86
 msgid ""
@@ -31,16 +38,6 @@ msgstr ""
 msgid "Missing required file Template.html - check your installation."
 msgstr ""
 "Il manque le fichier requis « template.html » - vérifiez votre installation."
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Joëlle Cornavin"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "jcon@free.fr"
 
 #: chat-search-bar.cpp:36
 msgctxt "Next search result"
@@ -60,41 +57,32 @@ msgstr "Insérez le texte de la recherche..."
 msgid "Case sensitive"
 msgstr "Respecter la casse"
 
-#: chat-widget.cpp:98
+#: chat-widget.cpp:106
 msgid "Show format options"
 msgstr "Afficher les options de format"
 
-#: chat-widget.cpp:286
-msgid "Connection closed"
-msgstr "Connexion fermée"
-
-#: chat-widget.cpp:288
-msgctxt "Connected to IM service"
-msgid "Connected"
-msgstr "Connecté(e)"
-
-#: chat-widget.cpp:481
+#: chat-widget.cpp:588
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
 msgstr "La remise du message « %1 » a échoué car le contact distant est bloqué"
 
-#: chat-widget.cpp:485
+#: chat-widget.cpp:592
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
 msgstr ""
 "La remise du message « %1 » a échoué car le contact distant est déconnecté"
 
-#: chat-widget.cpp:491
+#: chat-widget.cpp:598
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr "La remise d'un message a échoué car le contact distant est bloqué"
 
-#: chat-widget.cpp:494
+#: chat-widget.cpp:601
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr "La remise d'un message a échoué car le contact distant est déconnecté"
 
-#: chat-widget.cpp:501
+#: chat-widget.cpp:608
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
@@ -102,12 +90,12 @@ msgstr ""
 "La remise du message « %1 » a échoué car le contact distant n'est pas "
 "valable "
 
-#: chat-widget.cpp:505
+#: chat-widget.cpp:612
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr ""
 "La remise d'un message a échoué car le contact distant n'est pas valable"
 
-#: chat-widget.cpp:511
+#: chat-widget.cpp:618
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -116,7 +104,7 @@ msgstr ""
 "La remise du message « %1 » a échoué car vous n'êtes pas autorisé à vous "
 "exprimer dans ce salon"
 
-#: chat-widget.cpp:515
+#: chat-widget.cpp:622
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
@@ -124,55 +112,55 @@ msgstr ""
 "La remise d'un message a échoué car vous n'êtes pas autorisé à vous exprimer "
 "dans ce salon"
 
-#: chat-widget.cpp:521
+#: chat-widget.cpp:628
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "La remise du message « %1 » a échoué car il est trop long"
 
-#: chat-widget.cpp:525
+#: chat-widget.cpp:632
 msgid "Delivery of a message failed because it was too long"
 msgstr "La remise d'un message a échoué car il est trop long"
 
-#: chat-widget.cpp:531
+#: chat-widget.cpp:638
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "La remise du message « %1 » a échoué : %2"
 
-#: chat-widget.cpp:535
+#: chat-widget.cpp:642
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "La remise d'un message a échoué : %1"
 
-#: chat-widget.cpp:640
+#: chat-widget.cpp:747
 #, kde-format
 msgid "%1 has sent you a message"
 msgstr "%1 vous a envoyé un message"
 
-#: chat-widget.cpp:661
+#: chat-widget.cpp:768
 msgid "View"
 msgstr "Voir"
 
-#: chat-widget.cpp:692
+#: chat-widget.cpp:799
 msgid "You have sent a message"
 msgstr "Vous avez envoyé un message"
 
-#: chat-widget.cpp:733
+#: chat-widget.cpp:840
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 a quitté la discussion"
 
-#: chat-widget.cpp:776
+#: chat-widget.cpp:883
 #, kde-format
 msgid "You are now marked as %1"
 msgstr "Vous êtes maintenant marqué(e) comme %1"
 
-#: chat-widget.cpp:780
+#: chat-widget.cpp:887
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 est %2"
 
-#: chat-widget.cpp:782
+#: chat-widget.cpp:889
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -180,25 +168,30 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 est %2 - %3"
 
-#: chat-widget.cpp:812
+#: chat-widget.cpp:919
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Vous êtes maintenant connu(e) sous %1"
 
-#: chat-widget.cpp:820
+#: chat-widget.cpp:927
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 est maintenant connu(e) sous %2"
 
-#: chat-widget.cpp:843
+#: chat-widget.cpp:950
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 est maintenant bloqué(e)."
 
-#: chat-widget.cpp:845
+#: chat-widget.cpp:952
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 est maintenant débloqué(e)."
+
+#: chat-widget.cpp:1052
+#, fuzzy
+msgid "You are now offline"
+msgstr "Vous êtes maintenant marqué(e) comme déconnecté(e)"
 
 #: chat-window-style.cpp:349
 msgctxt "Normal style variant menu item"
@@ -221,5 +214,28 @@ msgstr "Lire"
 msgid "Save as"
 msgstr "Enregistrer sous"
 
+#~ msgid "Connection closed"
+#~ msgstr "Connexion fermée"
+
+#~ msgctxt "Connected to IM service"
+#~ msgid "Connected"
+#~ msgstr "Connecté(e)"
+
 #~ msgid "&Send"
 #~ msgstr "&Envoyer"
+
+#~ msgid "%1 is offline"
+#~ msgstr "%1 est déconnecté(e)"
+
+#~ msgid "You are now marked as online"
+#~ msgstr "Vous êtes maintenant marqué(e) comme connecté(e)"
+
+#~ msgid "%1 is away"
+#~ msgstr "%1 est absent(e)"
+
+#~ msgid "You are now marked as away"
+#~ msgstr "Vous êtes maintenant marqué(e) comme absent(e)"
+
+#, fuzzy
+#~ msgid "You are now marked as not available"
+#~ msgstr "Vous êtes maintenant marqué(e) comme connecté(e)"

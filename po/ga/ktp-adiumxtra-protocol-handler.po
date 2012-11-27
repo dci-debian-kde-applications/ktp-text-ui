@@ -6,16 +6,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-adiumxtra-protocol-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-03-22 03:36+0100\n"
+"POT-Creation-Date: 2012-06-13 11:49+0200\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
-"Language: ga\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kevin Scannell"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kscanne@gmail.com"
 
 #: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
 msgid "Package type not recognized or not supported"
@@ -65,26 +73,16 @@ msgstr ""
 
 #: main.cpp:32
 msgid "Dominik Schmidt"
-msgstr ""
+msgstr "Dominik Schmidt"
 
 #: main.cpp:32 main.cpp:33
 msgid "Developer"
-msgstr ""
+msgstr "Forbróir"
 
 #: main.cpp:33
 msgid "Daniele E. Domenichelli"
-msgstr ""
+msgstr "Daniele E. Domenichelli"
 
 #: main.cpp:38
 msgid "Adium package to install"
 msgstr ""
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Kevin Scannell"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kscanne@gmail.com"

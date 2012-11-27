@@ -27,13 +27,14 @@
 #include "entity-model.h"
 
 EntityView::EntityView(QWidget *parent) :
-    QListView(parent)
+    QTreeView(parent)
 {
+    setHeaderHidden(true);
 }
 
 void EntityView::rowsInserted(const QModelIndex &parent, int start, int end)
 {
-    QListView::rowsInserted(parent, start, end);
+    QTreeView::rowsInserted(parent, start, end);
     static bool loadedCurrentContact = false;
 
     if (loadedCurrentContact) {
@@ -44,18 +45,22 @@ void EntityView::rowsInserted(const QModelIndex &parent, int start, int end)
         QString selectAccountId = KCmdLineArgs::parsedArgs()->arg(0);
         QString selectContactId = KCmdLineArgs::parsedArgs()->arg(1);
 
-        for (int i=start; i<end;i++) {
+        for (int i = start; i <= end; i++) {
             QModelIndex index = model()->index(i, 0, parent);
-            QString accountId = index.data(EntityModel::AccountRole).value<Tp::AccountPtr>()->uniqueIdentifier();
-            QString contactId = index.data(EntityModel::EntityRole).value<Tpl::EntityPtr>()->identifier();
+            Tp::AccountPtr account = index.data(EntityModel::AccountRole).value<Tp::AccountPtr>();
+            Tpl::EntityPtr contact = index.data(EntityModel::EntityRole).value<Tpl::EntityPtr>();
 
-            if (selectAccountId == accountId && selectContactId == contactId) {
+            if (account.isNull() || contact.isNull()) {
+                continue;
+            }
+
+            if (selectAccountId == account->uniqueIdentifier() && selectContactId == contact->identifier()) {
                 setCurrentIndex(index);
-                Q_EMIT activated(index); // this is normally emitted when a user clicks a contact
-                //we emit it here to trigger the same results.
                 loadedCurrentContact = true;
             }
 
         }
     }
+
+    expandAll();
 }

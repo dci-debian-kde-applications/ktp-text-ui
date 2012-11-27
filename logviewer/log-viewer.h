@@ -22,13 +22,18 @@
 
 #include <QWidget>
 #include <TelepathyQt/AccountManager>
+#include <TelepathyLoggerQt4/Types>
 
 namespace Ui {
     class LogViewer;
 }
 
+namespace Tpl {
+    class PendingOperation;
+}
+
 class EntityModel;
-class QSortFilterProxyModel;
+class EntityProxyModel;
 
 class LogViewer : public QWidget
 {
@@ -40,16 +45,21 @@ public:
 private Q_SLOTS:
     void onAccountManagerReady();
 
-    void onEntitySelected(const QModelIndex &index);
+    void onEntitySelected(const QModelIndex &current, const QModelIndex &previous);
     void onDateSelected();
 
     void updateMainView();
+    void switchConversation(const QDate &date);
+
+    void startGlobalSearch(const QString &term);
+    void globalSearchFinished(Tpl::PendingOperation *);
+    void clearGlobalSearch();
 
 private:
     Ui::LogViewer *ui;
     Tp::AccountManagerPtr m_accountManager;
     EntityModel *m_entityModel;
-    QSortFilterProxyModel *m_filterModel;
+    EntityProxyModel *m_filterModel;
 };
 
 #endif // LOGVIEWER_H

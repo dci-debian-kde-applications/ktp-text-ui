@@ -21,6 +21,7 @@ include_directories (${KDE4_INCLUDES}
                      ${TELEPATHY_QT4_INCLUDE_DIR}
                      ${QT_QTWEBKIT_INCLUDES}
                      ${KTP_INCLUDE_DIR}
+                     "${CMAKE_CURRENT_SOURCE_DIR}/lib"
 )
 
 add_definitions (${KDE4_DEFINITIONS}
@@ -32,6 +33,9 @@ macro_log_feature(TELEPATHY_LOGGER_QT4_FOUND "TelepathyLoggerQt4" "Qt4 wrapper a
 macro_display_feature_log()
 if(TELEPATHY_LOGGER_QT4_FOUND)
     add_definitions( -DTELEPATHY_LOGGER_QT4_FOUND )
+    include_directories(
+        ${TELEPATHY_LOGGER_QT4_INCLUDE_DIRS}
+    )
 endif()
 
 add_subdirectory(lib)
@@ -41,6 +45,11 @@ add_subdirectory(data)
 add_subdirectory(adiumxtra-protocol-handler)
 add_subdirectory(logviewer)
 add_subdirectory(plasmoid)
+
+
+add_subdirectory(filters)
+add_subdirectory(tests)
+
 find_package(Msgfmt REQUIRED)
 find_package(Gettext REQUIRED)
 add_subdirectory( po )

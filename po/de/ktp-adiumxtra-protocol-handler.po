@@ -1,12 +1,12 @@
-# Frederik Schwarzer <schwarzer@kde.org>, 2011, 2012.
+# Frederik Schwarzer <schwarzer@kde.org>, 2011.
 # Burkhard Lück <lueck@hube-lueck.de>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-adiumxtra-protocol-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-03-22 03:36+0100\n"
-"PO-Revision-Date: 2012-05-16 20:02+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"POT-Creation-Date: 2012-06-13 11:49+0200\n"
+"PO-Revision-Date: 2012-06-30 11:24+0200\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +14,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frederik Schwarzer"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "schwarzer@kde.org"
 
 #: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
 msgid "Package type not recognized or not supported"
@@ -76,16 +84,6 @@ msgstr "Daniele E. Domenichelli"
 #: main.cpp:38
 msgid "Adium package to install"
 msgstr "Installationsfertiges Adium-Paket"
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Frederik Schwarzer"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "schwarzer@kde.org"
 
 #~ msgid "Ok"
 #~ msgstr "OK"

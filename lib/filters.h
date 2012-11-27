@@ -19,11 +19,9 @@
 #ifndef FILTERS_H
 #define FILTERS_H
 
-#include "message-processor.h"
+#include "abstract-message-filter.h"
 
 #include <QObject>
-
-#include <KEmoticons>
 
 class UrlFilter : public AbstractMessageFilter
 {
@@ -32,23 +30,11 @@ public:
     void filterMessage(Message &message);
 };
 
-class EmoticonFilter : public AbstractMessageFilter
-{
-public:
-    explicit EmoticonFilter(QObject *parent = 0);
-    virtual ~EmoticonFilter();
-
-    void filterMessage(Message &message);
-private:
-    class Private;
-    Private *d;
-};
-
 class EscapeFilter : public AbstractMessageFilter
 {
 public:
     explicit EscapeFilter(QObject *parent = 0);
-    virtual void filterMessage(Message &message);
+    virtual void filterMessage(Message& message);
 };
 
 #endif

@@ -56,6 +56,8 @@
 
 #include <Sonnet/DictionaryComboBox>
 
+#include "invite-contact-dialog.h"
+
 #define PREFERRED_TEXTCHAT_HANDLER "org.freedesktop.Telepathy.Client.KTp.TextUi"
 #define PREFERRED_FILETRANSFER_HANDLER "org.freedesktop.Telepathy.Client.KTp.FileTransfer"
 #define PREFERRED_AUDIO_VIDEO_HANDLER "org.freedesktop.Telepathy.Client.KTp.CallUi"
@@ -103,6 +105,12 @@ ChatWindow::ChatWindow()
     setCentralWidget(m_tabWidget);
 
     setupGUI(QSize(460, 440), static_cast<StandardWindowOptions>(Default^StatusBar), QLatin1String("chatwindow.rc"));
+
+    // Connects the toolbars iconSizeChanged to the custom toolbar item
+    // NOTE Must be called after setupGUI or the toolbars won't be created
+    Q_FOREACH(KToolBar *toolbar, toolBars()) {
+        connect(toolbar, SIGNAL(iconSizeChanged(const QSize&)), SLOT(updateAccountIcon()));
+    }
 }
 
 ChatWindow::~ChatWindow()
@@ -143,7 +151,7 @@ void ChatWindow::tabBarContextMenu(int index, const QPoint& globalPos)
     }
 }
 
-void ChatWindow::focusChat(ChatTab* tab)
+void ChatWindow::focusChat(ChatTab *tab)
 {
     kDebug();
     m_tabWidget->setCurrentWidget(tab);
@@ -151,7 +159,7 @@ void ChatWindow::focusChat(ChatTab* tab)
 
 ChatTab* ChatWindow::getTab(const Tp::TextChannelPtr& incomingTextChannel)
 {
-    ChatTab* match = 0;
+    ChatTab *match = 0;
 
     // if targetHandle is None, targetId is also "", therefore we won't be able to find it.
     if (!incomingTextChannel->targetHandleType() == Tp::HandleTypeNone) {
@@ -174,7 +182,7 @@ ChatTab* ChatWindow::getTab(const Tp::TextChannelPtr& incomingTextChannel)
     return match;
 }
 
-void ChatWindow::removeTab(ChatTab* tab)
+void ChatWindow::removeTab(ChatTab *tab)
 {
     kDebug();
 
@@ -189,7 +197,7 @@ void ChatWindow::removeTab(ChatTab* tab)
     }
 }
 
-void ChatWindow::addTab(ChatTab* tab)
+void ChatWindow::addTab(ChatTab *tab)
 {
     kDebug();
 
@@ -209,7 +217,7 @@ void ChatWindow::destroyTab(QWidget* chatWidget)
 {
     kDebug();
 
-    ChatTab* tab = qobject_cast<ChatTab*>(chatWidget);
+    ChatTab *tab = qobject_cast<ChatTab*>(chatWidget);
     Q_ASSERT(tab);
 
     tab->setChatWindow(0);
@@ -281,7 +289,7 @@ void ChatWindow::onCurrentIndexChanged(int index)
         return;
     }
 
-    ChatTab* currentChatTab = qobject_cast<ChatTab*>(m_tabWidget->widget(index));
+    ChatTab *currentChatTab = qobject_cast<ChatTab*>(m_tabWidget->widget(index));
     currentChatTab->acknowledgeMessages();
     setWindowTitle(currentChatTab->title());
     setWindowIcon(currentChatTab->icon());
@@ -310,8 +318,7 @@ void ChatWindow::onCurrentIndexChanged(int index)
         setFileTransferEnabled(selfCapabilities.fileTransfers() && contactCapabilites.fileTransfers());
         setVideoCallEnabled(selfCapabilities.streamedMediaVideoCalls() && contactCapabilites.streamedMediaVideoCalls());
         setShareDesktopEnabled(s_krfbAvailableChecker->isAvailable() && contactCapabilites.streamTubes(QLatin1String("rfb")));
-        /// TODO re-activate check when invitation to chat has been sorted out
-        setInviteToChatEnabled(false);
+        setInviteToChatEnabled(true);
 
         toggleBlockButton(currentChatTab->textChannel()->targetContact()->isBlocked());
 
@@ -320,8 +327,7 @@ void ChatWindow::onCurrentIndexChanged(int index)
         setFileTransferEnabled(false);
         setVideoCallEnabled(false);
         setShareDesktopEnabled(false);
-        /// TODO re-activate check when invitation to chat has been sorted out
-        setInviteToChatEnabled(false);
+        setInviteToChatEnabled(true);
         setBlockEnabled(false);
 
     }
@@ -331,7 +337,7 @@ void ChatWindow::onCurrentIndexChanged(int index)
     setPreviousConversationsEnabled(currentChatTab->previousConversationAvailable());
 #endif
 
-    setAccountIcon(currentChatTab->accountIcon());
+    updateAccountIcon();
 }
 
 void ChatWindow::onEnableSearchActions(bool enable)
@@ -386,7 +392,10 @@ void ChatWindow::onGenericOperationFinished(Tp::PendingOperation* op)
 
 void ChatWindow::onInviteToChatTriggered()
 {
-    /// TODO
+    ChatTab *currChat = qobject_cast<ChatTab*>(m_tabWidget->currentWidget());
+    InviteContactDialog *dialog = new InviteContactDialog(currChat->account(), currChat->textChannel(), this);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->show();
 }
 
 void ChatWindow::onNextTabActionTriggered()
@@ -422,7 +431,7 @@ void ChatWindow::onTabStateChanged()
 {
     kDebug();
 
-    ChatTab* sender = qobject_cast<ChatTab*>(QObject::sender());
+    ChatTab *sender = qobject_cast<ChatTab*>(QObject::sender());
     if (sender) {
         int tabIndex = m_tabWidget->indexOf(sender);
         setTabTextColor(tabIndex, sender->titleColor());
@@ -488,18 +497,20 @@ void ChatWindow::onShareDesktopTriggered()
 void ChatWindow::onOpenLogTriggered()
 {
     int index = m_tabWidget->currentIndex();
-    ChatTab* currentChatTab = qobject_cast<ChatTab*>(m_tabWidget->widget(index));
+    ChatTab *currentChatTab = qobject_cast<ChatTab*>(m_tabWidget->widget(index));
     Q_ASSERT(currentChatTab);
 
     Tp::AccountPtr account = currentChatTab->account();
     Tp::ContactPtr contact = currentChatTab->textChannel()->targetContact();
 
+    /* Add "--" before the UIDs so that KCmdLineArgs in ktp-log-viewer does not try to parse
+     * UIDs starting with "-" as arguments */
     if (!contact.isNull()) {
         KToolInvocation::kdeinitExec(QLatin1String("ktp-log-viewer"),
-                                     QStringList() << account->uniqueIdentifier() << contact->id());
+                                     QStringList() << QLatin1String("--") << account->uniqueIdentifier() << contact->id());
     } else {
         KToolInvocation::kdeinitExec(QLatin1String("ktp-log-viewer"),
-                                     QStringList() << account->uniqueIdentifier() << currentChatTab->textChannel()->targetId());
+                                     QStringList() << QLatin1String("--") << account->uniqueIdentifier() << currentChatTab->textChannel()->targetId());
     }
 }
 
@@ -512,6 +523,7 @@ void ChatWindow::showSettingsDialog()
 
     dialog->addModule(QLatin1String("kcm_ktp_chat_appearance"));
     dialog->addModule(QLatin1String("kcm_ktp_chat_behavior"));
+    dialog->addModule(QLatin1String("kcm_ktp_chat_messages"));
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
@@ -522,7 +534,7 @@ void ChatWindow::showNotificationsDialog()
     KNotifyConfigWidget::configure(this, QLatin1String("ktelepathy"));
 }
 
-void ChatWindow::removeChatTabSignals(ChatTab* chatTab)
+void ChatWindow::removeChatTabSignals(ChatTab *chatTab)
 {
     disconnect(chatTab, SIGNAL(titleChanged(QString)), this, SLOT(onTabTextChanged(QString)));
     disconnect(chatTab, SIGNAL(iconChanged(KIcon)), this, SLOT(onTabIconChanged(KIcon)));
@@ -584,7 +596,7 @@ void ChatWindow::setupCustomActions()
     connect(fileTransferAction, SIGNAL(triggered()), this, SLOT(onFileTransferTriggered()));
 
     KAction *inviteToChat = new KAction(KIcon(QLatin1String("user-group-new")), i18n("&Invite to Chat"), this);
-    inviteToChat->setToolTip(i18nc("Toolbar icon tooltip", "Invite any other contacts to join this chat"));
+    inviteToChat->setToolTip(i18nc("Toolbar icon tooltip", "Invite another contact to join this chat"));
     connect(inviteToChat, SIGNAL(triggered()), this, SLOT(onInviteToChatTriggered()));
 
     KAction *videoCallAction = new KAction(KIcon(QLatin1String("camera-web")), i18n("&Video Call"), this);
@@ -606,7 +618,7 @@ void ChatWindow::setupCustomActions()
     spellDictComboAction->setIconText(i18n("Choose Spelling Language"));
 
 #ifdef TELEPATHY_LOGGER_QT4_FOUND
-    KAction *openLogAction = new KAction(KIcon(QLatin1String("view-pim-journal")), i18nc("Action to open the log viwer with a specified contact","&Previous conversations"), this);
+    KAction *openLogAction = new KAction(KIcon(QLatin1String("view-pim-journal")), i18nc("Action to open the log viewer with a specified contact","&Previous Conversations"), this);
     connect(openLogAction, SIGNAL(triggered()), SLOT(onOpenLogTriggered()));
 #endif
 
@@ -694,9 +706,11 @@ void ChatWindow::setPreviousConversationsEnabled ( bool enable )
     }
 }
 
-void ChatWindow::setAccountIcon(const QIcon &icon)
+void ChatWindow::updateAccountIcon()
 {
-    m_accountIconLabel->setPixmap(icon.pixmap(toolBar()->iconSize()));
+    int index = m_tabWidget->currentIndex();
+    ChatTab *currentChatTab = qobject_cast<ChatTab*>(m_tabWidget->widget(index));
+    m_accountIconLabel->setPixmap(currentChatTab->accountIcon().pixmap(toolBar()->iconSize()));
 }
 
 void ChatWindow::startAudioCall(const Tp::AccountPtr& account, const Tp::ContactPtr& contact)
@@ -794,7 +808,7 @@ bool ChatWindow::event(QEvent *e)
 void ChatWindow::setTabSpellDictionary(const QString &dict)
 {
     int index = m_tabWidget->currentIndex();
-    ChatTab* currentChatTab=qobject_cast<ChatTab*>(m_tabWidget->widget(index));
+    ChatTab *currentChatTab=qobject_cast<ChatTab*>(m_tabWidget->widget(index));
     currentChatTab->setSpellDictionary(dict);
 }
 

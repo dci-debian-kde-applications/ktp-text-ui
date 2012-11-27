@@ -18,33 +18,28 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#. i18n: file: behavior-config.ui:17
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
-#: rc.cpp:3
+#: behavior-config.ui:17
 msgid "Tabs"
 msgstr "Karty"
 
-#. i18n: file: behavior-config.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:6
+#: behavior-config.ui:23
 msgid "Open new conversations in :"
 msgstr "Otwieraj nowe konwersacje w :"
 
-#. i18n: file: behavior-config.ui:30
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
-#: rc.cpp:9
+#: behavior-config.ui:30
 msgid "A new window"
 msgstr "Nowym oknie"
 
-#. i18n: file: behavior-config.ui:40
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
-#: rc.cpp:12
+#: behavior-config.ui:40
 msgid "A new tab in the first window"
 msgstr "Nowej kacie w pierwszym oknie"
 
-#. i18n: file: behavior-config.ui:50
 #. i18n: ectx: property (text), widget (QRadioButton, radioLast)
-#: rc.cpp:15
+#: behavior-config.ui:50
 msgid "A new tab in the last focused window"
 msgstr "Nowej karcie w oknie z uaktywnieniem"
 
