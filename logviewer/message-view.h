@@ -24,6 +24,7 @@
 
 #include <QDate>
 
+#include <TelepathyLoggerQt4/Event>
 #include <TelepathyLoggerQt4/Entity>
 #include <TelepathyLoggerQt4/PendingOperation>
 
@@ -34,17 +35,41 @@ class MessageView : public AdiumThemeView
 public:
     explicit MessageView(QWidget *parent = 0);
 
-    void loadLog(const Tp::AccountPtr &account, const Tpl::EntityPtr &entity, const QDate &date);
+    void loadLog(const Tp::AccountPtr &account, const Tpl::EntityPtr &entity,
+                 const Tp::ContactPtr &contact, const QDate &date,
+                 const QPair< QDate, QDate > &nearestDates);
+
+    void setHighlightText(const QString &text);
+    void clearHighlightText();
+
+public Q_SLOTS:
+    void onLinkClicked(const QUrl &link);
 
 private Q_SLOTS:
    void onLoadFinished();
    void onEventsLoaded(Tpl::PendingOperation* po);
+   void doHighlightText();
+
+Q_SIGNALS:
+    void conversationSwitchRequested(const QDate &date);
 
 private:
+    void processStoredEvents();
+
     Tpl::EntityPtr m_entity;
     Tp::AccountPtr m_account;
+    Tp::ContactPtr m_contact;
     QDate m_date;
+    QDate m_prev;
+    QDate m_next;
 
+    QString m_highlightedText;
+
+    Tpl::EventPtrList m_events;
+    bool m_initialized;
+    bool m_templateLoaded;
+
+    QString m_accountAvatar;
 };
 
 #endif // MESSAGEVIEW_H

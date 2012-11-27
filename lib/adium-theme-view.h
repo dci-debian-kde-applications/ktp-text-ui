@@ -86,11 +86,13 @@ public:
     void setHeaderDisplayed(bool);
     /* .. font, backgrounds, everything else.*/
 
+    void clear();
+
 public Q_SLOTS:
     void addContentMessage(const AdiumThemeContentInfo&);
     void addStatusMessage(const AdiumThemeStatusInfo&);
-    void onLinkClicked(const QUrl &);
     void onOpenLinkActionTriggered();
+    virtual void onLinkClicked(const QUrl &);
 
 protected:
     virtual void contextMenuEvent(QContextMenuEvent *event);

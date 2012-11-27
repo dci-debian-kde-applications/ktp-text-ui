@@ -1,3 +1,5 @@
+include_directories (${KTP_INCLUDE_DIR})
+
 set(ktpchat_SRCS
         chat-widget.cpp
         chat-window-style.cpp
@@ -13,13 +15,15 @@ set(ktpchat_SRCS
         chat-search-bar.cpp
         logmanager.cpp
         message.cpp
+        abstract-message-filter.cpp
         message-processor.cpp
         url-filter.cpp
-        emoticon-filter.cpp
         escape-filter.cpp
+        plugin-config-manager.cpp
 )
 
 set(ktpchat_HDRS
+    abstract-message-filter.h
     adium-theme-content-info.h
     adium-theme-header-info.h
     adium-theme-message-info.h
@@ -55,10 +59,6 @@ kde4_add_library(ktpchat SHARED ${ktpchat_SRCS})
 if(TELEPATHY_LOGGER_QT4_FOUND)
     set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TELEPATHY_LOGGER_QT4_DEFINITIONS}" )
 
-    include_directories(
-        ${TELEPATHY_LOGGER_QT4_INCLUDE_DIRS}
-    )
-
     target_link_libraries(ktpchat
         ${TELEPATHY_LOGGER_QT4_LIBRARIES}
     )
@@ -71,7 +71,6 @@ target_link_libraries(ktpchat
     ${TELEPATHY_QT4_LIBRARIES}
     ${QT_QTWEBKIT_LIBRARY}
     ${KDE4_KEMOTICONS_LIBS}
-    ${KDE4_KCMUTILS_LIBS}
     ${KTP_LIBRARIES}
 )
 install(TARGETS ktpchat ${INSTALL_TARGETS_DEFAULT_ARGS})
@@ -83,3 +82,8 @@ install(FILES
         DESTINATION ${INCLUDE_INSTALL_DIR}/KTp COMPONENT Devel
 )
 
+install(FILES
+        ktptxtui_message_filter.desktop
+        DESTINATION
+        ${SERVICETYPES_INSTALL_DIR}
+)

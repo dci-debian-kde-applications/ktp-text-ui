@@ -27,6 +27,7 @@
 #include <TelepathyQt/ChannelFactory>
 #include <TelepathyQt/ContactFactory>
 #include <TelepathyQt/TextChannel>
+#include <TelepathyQt/OutgoingFileTransferChannel>
 
 #include <KAboutData>
 #include <KCmdLineArgs>
@@ -35,7 +36,7 @@ int main(int argc, char *argv[])
 {
     KAboutData aboutData("ktp-text-ui", 0,
                          ki18n("Telepathy Text Ui"),
-                         "0.4");
+                         "0.5.1");
     aboutData.addAuthor(ki18n("David Edmundson"), ki18n("Developer"), "david@davidedmundson.co.uk");
     aboutData.addAuthor(ki18n("Dominik Schmidt"), ki18n("Developer"), "kde@dominik-schmidt.de");
     aboutData.addAuthor(ki18n("Francesco Nwokeka"), ki18n("Developer"), "francesco.nwokeka@gmail.com");
@@ -47,7 +48,8 @@ int main(int argc, char *argv[])
     Tp::registerTypes();
 
     Tp::AccountFactoryPtr accountFactory = Tp::AccountFactory::create(QDBusConnection::sessionBus(),
-                                                                      Tp::Account::FeatureCore);
+                                                                      Tp::Features() << Tp::Account::FeatureCore
+                                                                                     << Tp::Account::FeatureProfile);
 
     Tp::ConnectionFactoryPtr  connectionFactory = Tp::ConnectionFactory::create(
         QDBusConnection::sessionBus(),
@@ -65,6 +67,7 @@ int main(int argc, char *argv[])
                                                << Tp::TextChannel::FeatureMessageCapabilities;
     channelFactory->addFeaturesForTextChats(textFeatures);
     channelFactory->addFeaturesForTextChatrooms(textFeatures);
+    channelFactory->addFeaturesForOutgoingFileTransfers(Tp::OutgoingFileTransferChannel::FeatureCore);
 
     Tp::ContactFactoryPtr contactFactory = Tp::ContactFactory::create(
         Tp::Features() << Tp::Contact::FeatureAlias

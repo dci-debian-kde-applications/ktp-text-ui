@@ -20,6 +20,7 @@
 #include "logmanager.h"
 
 #include "adium-theme-content-info.h"
+#include "message-processor.h"
 
 #include <KDebug>
 
@@ -33,9 +34,6 @@
 #include <TelepathyLoggerQt4/TextEvent>
 #include <TelepathyLoggerQt4/CallEvent>
 #include <TelepathyLoggerQt4/LogManager>
-
-#include <glib-object.h>
-#include <QGlib/Init>
 #endif
 
 #include <TelepathyQt/Types>
@@ -48,8 +46,6 @@ LogManager::LogManager(QObject *parent)
     m_fetchAmount(10)
 {
 #ifdef TELEPATHY_LOGGER_QT4_FOUND
-    g_type_init();
-    QGlib::init();
     Tpl::init();
 
     m_logManager = Tpl::LogManager::instance();
@@ -175,9 +171,8 @@ void LogManager::onEventsFinished(Tpl::PendingOperation *po)
 
 
     QList<AdiumThemeContentInfo> messages;
-    Q_FOREACH(const Tpl::TextEventPtr& event, events) {
+    Q_FOREACH(const Tpl::TextEventPtr &event, events) {
         AdiumThemeMessageInfo::MessageType type;
-        QString iconPath;
         Tp::ContactPtr contact;
         if(event->sender()->identifier() == m_account->normalizedName()) {
             type = AdiumThemeMessageInfo::HistoryLocalToRemote;
@@ -188,18 +183,19 @@ void LogManager::onEventsFinished(Tpl::PendingOperation *po)
             type = AdiumThemeMessageInfo::HistoryRemoteToLocal;
             contact = m_textChannel->targetContact();
         }
-        iconPath = contact->avatarData().fileName;
-
         AdiumThemeContentInfo message(type);
-        // "\" characters are replaced with "\\" to match with normal messages
-        // FIXME we should remove this when the history messages are filtered
-        //       through the message processor
-        message.setMessage(event->message().replace(QLatin1Char('\\'), QLatin1String("\\\\")));
+
+        if (type == AdiumThemeMessageInfo::HistoryLocalToRemote) {
+            message.setMessage(MessageProcessor::instance()->processOutgoingMessage(event).finalizedMessage());
+        } else {
+            message.setMessage(MessageProcessor::instance()->processIncomingMessage(event).finalizedMessage());
+        }
+
         message.setService(m_account->serviceName());
         message.setSenderDisplayName(event->sender()->alias());
         message.setSenderScreenName(event->sender()->alias());
         message.setTime(event->timestamp());
-        message.setUserIconPath(iconPath);
+        message.setUserIconPath(contact->avatarData().fileName);
         kDebug()    << event->timestamp()
                     << "from" << event->sender()->identifier()
                     << "to" << event->receiver()->identifier()

@@ -38,3 +38,4 @@ void EscapeFilter::filterMessage(Message& message)
 
     message.setMainMessagePart(escapedMessage);
 }
+

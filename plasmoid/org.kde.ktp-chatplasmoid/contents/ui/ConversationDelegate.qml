@@ -21,22 +21,29 @@
 import QtQuick 1.1
 import org.kde.plasma.components 0.1 as PlasmaComponents
 import org.kde.qtextracomponents 0.1 as ExtraComponents
+import org.kde.plasma.core 0.1 as PlasmaCore
 
 PlasmaComponents.ToolButton {
     id: base
     width: height
-
-    property alias image: icon.icon
-    property alias overlayText: text.text
-    checkable: true
-
+    
+    checked: ListView.isCurrentItem
+    
     ExtraComponents.QIconItem {
         id: icon
+        icon: model.conversation.target.avatar
         anchors {
             fill: parent
             margins: 5
         }
     }
+    
+    PlasmaCore.ToolTip {
+      target: icon
+      mainText: model.conversation.target.nick
+      image: model.conversation.target.presenceIconName
+    }
+
 
     Rectangle {
         anchors {
@@ -53,13 +60,13 @@ PlasmaComponents.ToolButton {
             anchors.fill: parent
 
             font.pixelSize: parent.height
-            text: "0"
+            text: model.conversation.messages.unreadCount
             color: "white"
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
         }
 
-        visible: base.overlayText != "0"
+        visible: model.conversation.messages.unreadCount !== 0
     }
 }

@@ -20,12 +20,12 @@
 #ifndef ENTITYVIEW_H
 #define ENTITYVIEW_H
 
-#include <QListView>
+#include <QTreeView>
 
 //model is loaded asynchronously so we need to select the correct element on each new element
 //this is done in the view to avoid having to be careful with proxy models.
 
-class EntityView : public QListView
+class EntityView : public QTreeView
 {
     Q_OBJECT
 public:

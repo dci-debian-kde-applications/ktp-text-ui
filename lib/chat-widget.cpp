@@ -37,6 +37,8 @@
 #include <KDebug>
 #include <KColorScheme>
 #include <KLineEdit>
+#include <KMimeType>
+#include <KTemporaryFile>
 
 #include <TelepathyQt/Account>
 #include <TelepathyQt/Message>
@@ -44,6 +46,8 @@
 #include <TelepathyQt/AvatarData>
 #include <TelepathyQt/Connection>
 #include <TelepathyQt/Presence>
+#include <TelepathyQt/PendingChannelRequest>
+#include <TelepathyQt/OutgoingFileTransferChannel>
 
 #include <KTp/presence.h>
 #include "message-processor.h"
@@ -71,6 +75,8 @@ public:
     LogManager *logManager;
     QTimer *pausedStateTimer;
 
+    QList< Tp::OutgoingFileTransferChannelPtr > tmpFileTransfers;
+
     KComponentData telepathyComponentData();
 };
 
@@ -90,6 +96,8 @@ ChatWidget::ChatWidget(const Tp::TextChannelPtr & channel, const Tp::AccountPtr 
     d->account = account;
     d->logManager = new LogManager(this);
 
+    connect(d->account.data(), SIGNAL(currentPresenceChanged(Tp::Presence)),
+            this, SLOT(currentPresenceChanged(Tp::Presence)));
 
     //load translations for this library. keep this before any i18n() calls in library code
     KGlobal::locale()->insertCatalog(QLatin1String("ktpchat"));
@@ -127,6 +135,10 @@ ChatWidget::ChatWidget(const Tp::TextChannelPtr & channel, const Tp::AccountPtr 
     d->yourName = channel->groupSelfContact()->alias();
 
     d->ui.chatArea->load((d->isGroupChat?AdiumThemeView::GroupChat:AdiumThemeView::SingleUserChat));
+
+    d->ui.sendMessageBox->setAcceptDrops(false);
+    d->ui.chatArea->setAcceptDrops(false);
+    setAcceptDrops(true);
 
     AdiumThemeHeaderInfo info;
 
@@ -242,7 +254,7 @@ Tp::AccountPtr ChatWidget::account() const
 
 KIcon ChatWidget::icon() const
 {
-    if (d->channel->connection()->status() == Tp::ConnectionStatusConnected) {
+    if (d->account->currentPresence() != Tp::Presence::offline()) {
         //normal chat - self and one other person.
         if (!d->isGroupChat) {
             //find the other contact which isn't self.
@@ -277,25 +289,15 @@ ChatSearchBar *ChatWidget::chatSearchBar() const
 
 void ChatWidget::setChatEnabled(bool enable)
 {
+    d->ui.contactsView->setEnabled(enable);
     d->ui.sendMessageBox->setEnabled(enable);
-
-    // show a message informing the user
-    AdiumThemeStatusInfo statusMessage;
-
-    if (!enable) {
-        statusMessage.setMessage(i18n("Connection closed"));
-    } else {
-        statusMessage.setMessage(i18nc("Connected to IM service", "Connected"));
-    }
-    statusMessage.setService(d->channel->connection()->protocolName());
-    statusMessage.setTime(QDateTime::currentDateTime());
-    d->ui.chatArea->addStatusMessage(statusMessage);
-
     Q_EMIT iconChanged(icon());
 }
 
 void ChatWidget::setTextChannel(const Tp::TextChannelPtr &newTextChannelPtr)
 {
+    onContactPresenceChange(d->channel->groupSelfContact(), KTp::Presence(d->channel->groupSelfContact()->presence()));
+
     d->channel = newTextChannelPtr;     // set the new channel
     d->contactModel->setTextChannel(newTextChannelPtr);
 
@@ -327,6 +329,110 @@ void ChatWidget::keyPressEvent(QKeyEvent *e)
     }
 
     QWidget::keyPressEvent(e);
+}
+
+void ChatWidget::temporaryFileTransferStateChanged(Tp::FileTransferState state, Tp::FileTransferStateChangeReason reason)
+{
+    Q_UNUSED(reason);
+
+    if ((state == Tp::FileTransferStateCompleted) || (state == Tp::FileTransferStateCancelled)) {
+        Tp::OutgoingFileTransferChannel *channel = qobject_cast<Tp::OutgoingFileTransferChannel*>(sender());
+        Q_ASSERT(channel);
+
+        QString localFile = QUrl(channel->uri()).toLocalFile();
+        if (QFile::exists(localFile)) {
+            QFile::remove(localFile);
+            kDebug() << "File" << localFile << "removed";
+        }
+
+        d->tmpFileTransfers.removeAll(Tp::OutgoingFileTransferChannelPtr(channel));
+    }
+}
+
+
+void ChatWidget::temporaryFileTransferChannelCreated(Tp::PendingOperation *operation)
+{
+    Tp::PendingChannelRequest *request = qobject_cast<Tp::PendingChannelRequest*>(operation);
+    Q_ASSERT(request);
+
+    Tp::OutgoingFileTransferChannelPtr transferChannel;
+    transferChannel = Tp::OutgoingFileTransferChannelPtr::qObjectCast<Tp::Channel>(request->channelRequest()->channel());
+    Q_ASSERT(!transferChannel.isNull());
+
+    /* Make sure the pointer lives until the transfer is over
+     * so that the signal connection below lasts until the end */
+    d->tmpFileTransfers << transferChannel;
+
+    connect(transferChannel.data(), SIGNAL(stateChanged(Tp::FileTransferState,Tp::FileTransferStateChangeReason)),
+            this, SLOT(temporaryFileTransferStateChanged(Tp::FileTransferState,Tp::FileTransferStateChangeReason)));
+}
+
+
+void ChatWidget::dropEvent(QDropEvent *e)
+{
+    const QMimeData *data = e->mimeData();
+
+    if (data->hasUrls()) {
+        Q_FOREACH(const QUrl &url, data->urls()) {
+            if (url.isLocalFile()) {
+                Tp::FileTransferChannelCreationProperties properties(
+                        url.toLocalFile(),
+                        KMimeType::findByFileContent(url.toLocalFile())->name());
+                d->account->createFileTransfer(d->channel->targetContact(),
+                        properties, QDateTime::currentDateTime(),
+                        QLatin1String("org.freedesktop.Telepathy.Client.KTp.FileTransfer"));
+            } else {
+                d->ui.sendMessageBox->append(url.toString());
+            }
+        }
+        e->acceptProposedAction();
+    } else if (data->hasText()) {
+        d->ui.sendMessageBox->append(data->text());
+        e->acceptProposedAction();
+    } else if (data->hasHtml()) {
+        d->ui.sendMessageBox->insertHtml(data->html());
+        e->acceptProposedAction();
+    } else if (data->hasImage()) {
+        QImage image = qvariant_cast<QImage>(data->imageData());
+
+        KTemporaryFile tmpFile;
+        tmpFile.setPrefix(d->account->displayName() + QLatin1String("-"));
+        tmpFile.setSuffix(QLatin1String(".png"));
+        tmpFile.setAutoRemove(false);
+        if (!tmpFile.open()) {
+            return;
+        }
+        tmpFile.close();
+
+        if (!image.save(tmpFile.fileName(), "PNG")) {
+            return;
+        }
+
+        Tp::FileTransferChannelCreationProperties properties(
+                    tmpFile.fileName(),
+                    KMimeType::findByFileContent(tmpFile.fileName())->name());
+        Tp::PendingChannelRequest *request;
+        request = d->account->createFileTransfer(d->channel->targetContact(),
+                        properties, QDateTime::currentDateTime(),
+                        QLatin1String("org.freedesktop.Telepathy.Client.KTp.FileTransfer"));
+        connect(request, SIGNAL(finished(Tp::PendingOperation*)),
+                this, SLOT(temporaryFileTransferChannelCreated(Tp::PendingOperation*)));
+
+        kDebug() << "Starting transfer of" << tmpFile.fileName();
+        e->acceptProposedAction();
+    }
+
+    QWidget::dropEvent(e);
+}
+
+void ChatWidget::dragEnterEvent(QDragEnterEvent *e)
+{
+    if (e->mimeData()->hasHtml() || e->mimeData()->hasImage() ||
+        e->mimeData()->hasText() || e->mimeData()->hasUrls()) {
+            e->accept();
+    }
+
+    QWidget::dragEnterEvent(e);
 }
 
 QString ChatWidget::title() const
@@ -613,11 +719,11 @@ void ChatWidget::notifyAboutIncomingMessage(const Tp::ReceivedMessage & message)
     if (message.sender() == d->channel->groupSelfContact()) {
         return;
     }
-    
+
     if (message.isDeliveryReport()) {
         return;
     }
-    
+
     // kde_telepathy_contact_highlight (contains your name)
     // kde_telepathy_info_event
 
@@ -862,13 +968,20 @@ void ChatWidget::onChannelInvalidated()
 void ChatWidget::onInputBoxChanged()
 {
     //if the box is empty
-    bool textBoxEmpty = !d->ui.sendMessageBox->toPlainText().isEmpty();
+    bool textBoxEmpty = d->ui.sendMessageBox->toPlainText().isEmpty();
 
-    //FIXME buffer what we've sent to telepathy, make this more efficient.
-    if(textBoxEmpty) {
-        d->channel->requestChatState(Tp::ChannelChatStateComposing);
-        d->pausedStateTimer->start(5000);
+    if(!textBoxEmpty) {
+        //if the timer is active, it means the user is continuously typing
+        if (d->pausedStateTimer->isActive()) {
+            //just restart the timer and don't spam with chat state changes
+            d->pausedStateTimer->start(5000);
+        } else {
+            //if the user has just typed some text, set state to Composing and start the timer
+            d->channel->requestChatState(Tp::ChannelChatStateComposing);
+            d->pausedStateTimer->start(5000);
+        }
     } else {
+        //if the user typed no text/cleared the input field, set Active and stop the timer
         d->channel->requestChatState(Tp::ChannelChatStateActive);
         d->pausedStateTimer->stop();
     }
@@ -929,5 +1042,19 @@ void ChatWidget::onChatPausedTimerExpired()
 {
         d->channel->requestChatState(Tp::ChannelChatStatePaused);
 }
+
+void ChatWidget::currentPresenceChanged(const Tp::Presence &presence)
+{
+    if (presence == Tp::Presence::offline()) {
+        // show a message informing the user
+        AdiumThemeStatusInfo statusMessage;
+        statusMessage.setMessage(i18n("You are now offline"));
+        statusMessage.setService(d->channel->connection()->protocolName());
+        statusMessage.setTime(QDateTime::currentDateTime());
+        d->ui.chatArea->addStatusMessage(statusMessage);
+        Q_EMIT iconChanged(KTp::Presence(Tp::Presence::offline()).icon());
+    }
+}
+
 
 #include "chat-widget.moc"

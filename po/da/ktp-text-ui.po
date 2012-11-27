@@ -6,55 +6,63 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-02 03:32+0200\n"
-"PO-Revision-Date: 2012-05-22 20:38+0200\n"
+"POT-Creation-Date: 2012-10-01 12:22+0200\n"
+"PO-Revision-Date: 2012-09-12 19:44+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: chat-window.cpp:115
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Martin Schlander"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mschlander@opensuse.org"
+
+#: chat-window.cpp:123
 msgid "Close"
 msgstr "Luk"
 
-#: chat-window.cpp:116
+#: chat-window.cpp:124
 msgid "Detach Tab"
 msgstr "Frigør faneblad"
 
-#: chat-window.cpp:117
+#: chat-window.cpp:125
 msgid "Move Tab Left"
 msgstr "Flyt faneblad til venstre"
 
-#: chat-window.cpp:118
+#: chat-window.cpp:126
 msgid "Move Tab Right"
 msgstr "Flyt faneblad til højre"
 
-#: chat-window.cpp:565
+#: chat-window.cpp:577
 msgid "&Next Tab"
 msgstr "&Næste faneblad"
 
-#: chat-window.cpp:569
+#: chat-window.cpp:581
 msgid "&Previous Tab"
 msgstr "&Forrige faneblad"
 
-#: chat-window.cpp:573
+#: chat-window.cpp:585
 msgid "&Audio Call"
-msgstr "&Stemmeopkald"
+msgstr "&Lydopkald"
 
-#: chat-window.cpp:574
+#: chat-window.cpp:586
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Start et lydopkald til denne kontakt"
 
-#: chat-window.cpp:577 chat-window.cpp:815
+#: chat-window.cpp:589 chat-window.cpp:829
 msgid "&Block Contact"
 msgstr "&Blokér kontakt"
 
-#: chat-window.cpp:579
+#: chat-window.cpp:591
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -63,105 +71,99 @@ msgstr ""
 "Blokering betyder at denne kontakt ikke vil se dig som online og du vil ikke "
 "modtage nogen beskeder fra denne kontakt"
 
-#: chat-window.cpp:582
+#: chat-window.cpp:594
 msgid "&Send File"
 msgstr "&Send fil"
 
-#: chat-window.cpp:583
+#: chat-window.cpp:595
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Send en fil til denne kontakt"
 
-#: chat-window.cpp:586
+#: chat-window.cpp:598
 msgid "&Invite to Chat"
 msgstr "&Invitér til chat"
 
-#: chat-window.cpp:587
+#: chat-window.cpp:599
 msgctxt "Toolbar icon tooltip"
-msgid "Invite any other contacts to join this chat"
-msgstr "Invitér andre kontakter til at gå med i denne chat"
+msgid "Invite another contact to join this chat"
+msgstr "Invitér en anden kontakt til at gå med i denne chat"
 
-#: chat-window.cpp:590
+#: chat-window.cpp:602
 msgid "&Video Call"
 msgstr "&Videoopkald"
 
-#: chat-window.cpp:591
+#: chat-window.cpp:603
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Start et videoopkald til denne kontakt"
 
-#: chat-window.cpp:594
+#: chat-window.cpp:606
 msgid "Share My &Desktop"
 msgstr "Del mit skrivebor&d"
 
-#: chat-window.cpp:595
+#: chat-window.cpp:607
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr "Start et program der lader denne kontakt se dit skrivebord"
 
-#: chat-window.cpp:606
+#: chat-window.cpp:618
 msgid "Choose Spelling Language"
 msgstr "Vælg sprog til stavekontrol"
 
-#: chat-window.cpp:609
-msgctxt "Action to open the log viwer with a specified contact"
-msgid "&Previous conversations"
+#: chat-window.cpp:621
+msgctxt "Action to open the log viewer with a specified contact"
+msgid "&Previous Conversations"
 msgstr "&Tidligere samtaler"
 
-#: chat-window.cpp:613
+#: chat-window.cpp:625
 msgid "Account Icon"
 msgstr "Kontoikon"
 
-#: chat-window.cpp:721
+#: chat-window.cpp:735
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Vælg filer der skal sendes til %1"
 
-#: chat-window.cpp:774
+#: chat-window.cpp:788
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr "skriver... %1"
 
-#: chat-window.cpp:776
+#: chat-window.cpp:790
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 har indtastet noget"
 
-#: chat-window.cpp:808
+#: chat-window.cpp:822
 msgid "&Unblock Contact"
 msgstr "&Afblokér kontakt"
 
-#: main.cpp:37
+#: invite-contact-dialog.cpp:51
+msgid "Search in Contacts..."
+msgstr "Søg i kontakter..."
+
+#: main.cpp:38
 msgid "Telepathy Text Ui"
 msgstr "Tekst-brugerflade til Telepathy"
 
-#: main.cpp:39
+#: main.cpp:40
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:39 main.cpp:40 main.cpp:41
+#: main.cpp:40 main.cpp:41 main.cpp:42
 msgid "Developer"
 msgstr "Udvikler"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:41
+#: main.cpp:42
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Martin Schlander"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "mschlander@opensuse.org"
 
 #~ msgid "Choose a file"
 #~ msgstr "Vælg en fil"

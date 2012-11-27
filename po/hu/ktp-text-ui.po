@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-02 03:32+0200\n"
-"PO-Revision-Date: 2012-01-17 12:40+0100\n"
-"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"POT-Creation-Date: 2012-10-01 12:22+0200\n"
+"PO-Revision-Date: 2012-06-18 23:44+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -17,148 +17,158 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: chat-window.cpp:115
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@kubuntu.org"
+
+#: chat-window.cpp:123
 msgid "Close"
 msgstr "Bezárás"
 
-#: chat-window.cpp:116
+#: chat-window.cpp:124
 msgid "Detach Tab"
 msgstr "Lap leválasztása"
 
-#: chat-window.cpp:117
+#: chat-window.cpp:125
 msgid "Move Tab Left"
 msgstr "Lap mozgatása balra"
 
-#: chat-window.cpp:118
+#: chat-window.cpp:126
 msgid "Move Tab Right"
 msgstr "Lap mozgatása jobbra"
 
-#: chat-window.cpp:565
+#: chat-window.cpp:577
 msgid "&Next Tab"
 msgstr "&Következő lap"
 
-#: chat-window.cpp:569
+#: chat-window.cpp:581
 msgid "&Previous Tab"
 msgstr "E&lőző lap"
 
-#: chat-window.cpp:573
+#: chat-window.cpp:585
 msgid "&Audio Call"
 msgstr "H&anghívás"
 
-#: chat-window.cpp:574
+#: chat-window.cpp:586
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
-msgstr ""
+msgstr "Hanghívás indítása ezzel a partnerrel"
 
-#: chat-window.cpp:577 chat-window.cpp:815
+#: chat-window.cpp:589 chat-window.cpp:829
 msgid "&Block Contact"
-msgstr ""
+msgstr "Partner b&lokkolása"
 
-#: chat-window.cpp:579
+#: chat-window.cpp:591
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
 "receive any messages from this contact"
 msgstr ""
+"A blokkolás azt jelenti, hogy a partner nem látja, ha Ön elérhető, és Ön nem "
+"kap egy üzenetet sem ettől a partnertől"
 
-#: chat-window.cpp:582
+#: chat-window.cpp:594
 msgid "&Send File"
 msgstr "Fájl küldé&se"
 
-#: chat-window.cpp:583
+#: chat-window.cpp:595
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
-msgstr ""
+msgstr "Fájl küldése ennek a partnernek"
 
-#: chat-window.cpp:586
+#: chat-window.cpp:598
 msgid "&Invite to Chat"
 msgstr "Me&ghívás csevegésre"
 
-#: chat-window.cpp:587
+#: chat-window.cpp:599
+#, fuzzy
+#| msgctxt "Toolbar icon tooltip"
+#| msgid "Invite any other contacts to join this chat"
 msgctxt "Toolbar icon tooltip"
-msgid "Invite any other contacts to join this chat"
-msgstr ""
+msgid "Invite another contact to join this chat"
+msgstr "Hívjon meg más partnereket is ebbe a csevegésbe"
 
-#: chat-window.cpp:590
+#: chat-window.cpp:602
 msgid "&Video Call"
 msgstr "&Videóhívás"
 
-#: chat-window.cpp:591
+#: chat-window.cpp:603
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
-msgstr ""
+msgstr "Videohívás indítása ezzel a partnerrel"
 
-#: chat-window.cpp:594
+#: chat-window.cpp:606
 msgid "Share My &Desktop"
 msgstr "Az asztalom me&gosztása"
 
-#: chat-window.cpp:595
+#: chat-window.cpp:607
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr ""
+"Elindít egy alkalmazást, amely lehetővé teszi a partnernek az Ön asztalának "
+"megtekintését"
 
-#: chat-window.cpp:606
+#: chat-window.cpp:618
 msgid "Choose Spelling Language"
 msgstr "Helyesírás-ellenőrzés nyelvének kiválasztása"
 
-#: chat-window.cpp:609
+#: chat-window.cpp:621
 #, fuzzy
-#| msgid "&Previous Tab"
-msgctxt "Action to open the log viwer with a specified contact"
-msgid "&Previous conversations"
-msgstr "E&lőző lap"
+#| msgctxt "Action to open the log viwer with a specified contact"
+#| msgid "&Previous conversations"
+msgctxt "Action to open the log viewer with a specified contact"
+msgid "&Previous Conversations"
+msgstr "&Előző beszélgetések"
 
-#: chat-window.cpp:613
+#: chat-window.cpp:625
 msgid "Account Icon"
-msgstr ""
+msgstr "Azonosítóikon"
 
-#: chat-window.cpp:721
+#: chat-window.cpp:735
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Válassza ki a(z) %1 partnernek küldendő fájlokat"
 
-#: chat-window.cpp:774
+#: chat-window.cpp:788
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr "%1 üzenetet ír…"
 
-#: chat-window.cpp:776
+#: chat-window.cpp:790
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
-msgstr ""
+msgstr "%1 szöveget írt be"
 
-#: chat-window.cpp:808
+#: chat-window.cpp:822
 msgid "&Unblock Contact"
+msgstr "&Partner blokkolásának feloldása"
+
+#: invite-contact-dialog.cpp:51
+msgid "Search in Contacts..."
 msgstr ""
 
-#: main.cpp:37
+#: main.cpp:38
 msgid "Telepathy Text Ui"
 msgstr "Telepathy szöveges felület"
 
-#: main.cpp:39
+#: main.cpp:40
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:39 main.cpp:40 main.cpp:41
+#: main.cpp:40 main.cpp:41 main.cpp:42
 msgid "Developer"
 msgstr "Fejlesztő"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:41
+#: main.cpp:42
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Kiszel Kristóf"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "ulysses@kubuntu.org"

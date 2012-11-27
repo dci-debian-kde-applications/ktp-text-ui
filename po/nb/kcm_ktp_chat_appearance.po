@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-16 04:02+0200\n"
+"POT-Creation-Date: 2012-08-28 20:47+0200\n"
 "PO-Revision-Date: 2012-03-09 12:38+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -19,50 +19,85 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: appearance-config.cpp:46
+#: appearance-config.cpp:42
 msgid "A demo chat"
 msgstr "En demo-prat"
 
-#: appearance-config.cpp:47 appearance-config.cpp:184
-#: appearance-config.cpp:192 appearance-config.cpp:200
-#: appearance-config.cpp:208 appearance-config.cpp:215
-#: appearance-config.cpp:221 appearance-config.cpp:229
-#: appearance-config.cpp:237 appearance-config.cpp:247
-#: appearance-config.cpp:255 appearance-config.cpp:262
-#: appearance-config.cpp:269
+#: appearance-config.cpp:43 appearance-config.cpp:178
+#: appearance-config.cpp:186 appearance-config.cpp:194
+#: appearance-config.cpp:202 appearance-config.cpp:209
+#: appearance-config.cpp:215 appearance-config.cpp:223
+#: appearance-config.cpp:231 appearance-config.cpp:241
+#: appearance-config.cpp:249 appearance-config.cpp:256
+#: appearance-config.cpp:263
 msgid "Jabber"
 msgstr "Jabber"
 
-#: appearance-config.cpp:181
+#: appearance-config.cpp:45 appearance-config.cpp:192
+#: appearance-config.cpp:200 appearance-config.cpp:239
+#: appearance-config.cpp:247
+msgctxt "Example email"
+msgid "ted@example.com"
+msgstr ""
+
+#: appearance-config.cpp:46
+msgctxt "Example name"
+msgid "Ted"
+msgstr ""
+
+#: appearance-config.cpp:175
 msgctxt "Example message in preview conversation"
 msgid "Ok!"
 msgstr ""
 
-#: appearance-config.cpp:189
+#: appearance-config.cpp:176 appearance-config.cpp:184
+#: appearance-config.cpp:221 appearance-config.cpp:229
+msgctxt "Example email"
+msgid "larry@example.com"
+msgstr ""
+
+#: appearance-config.cpp:177 appearance-config.cpp:185
+#: appearance-config.cpp:222 appearance-config.cpp:230
+msgctxt "Example name"
+msgid "Larry Demo"
+msgstr ""
+
+#: appearance-config.cpp:183
 msgid "Bye Bye"
 msgstr "Ha det bra"
 
-#: appearance-config.cpp:197
+#: appearance-config.cpp:191
 msgid "Have fun!"
 msgstr "Ha det moro!"
 
-#: appearance-config.cpp:205
+#: appearance-config.cpp:193 appearance-config.cpp:201
+#: appearance-config.cpp:240 appearance-config.cpp:248
+msgctxt "Example name"
+msgid "Ted Example"
+msgstr ""
+
+#: appearance-config.cpp:199
 msgid "cya"
 msgstr "snakkes"
 
-#: appearance-config.cpp:219 appearance-config.cpp:267
+#: appearance-config.cpp:207
+msgctxt "Example message"
+msgid "Ted Example waves."
+msgstr ""
+
+#: appearance-config.cpp:213 appearance-config.cpp:261
 msgid "Ted Example has left the chat."
 msgstr "Ted Eksempel har gått ut av praten"
 
-#: appearance-config.cpp:226
+#: appearance-config.cpp:220
 msgid "Hello"
 msgstr "Hallo"
 
-#: appearance-config.cpp:234
+#: appearance-config.cpp:228
 msgid "What's up?"
 msgstr "Hvaskjera?"
 
-#: appearance-config.cpp:242
+#: appearance-config.cpp:236
 msgid ""
 "Check out which cool adium themes work <a href=\"http://community.kde.org/"
 "Real-Time_Communication_and_Collaboration/Components/Chat_Window/"
@@ -72,60 +107,45 @@ msgstr ""
 "Time_Communication_and_Collaboration/Components/Chat_Window/Themes\">her</a> "
 "hvilke kule adium-temaer som virker!"
 
-#: appearance-config.cpp:245
-msgid "ted@example.com"
-msgstr "ted@example.com"
-
 #: appearance-config.cpp:246
-msgid "Ted Example"
-msgstr "Ted Eksempel"
-
-#: appearance-config.cpp:252
 msgid "A different example message"
 msgstr "En annen eksempelmelding"
 
-#: appearance-config.cpp:260
+#: appearance-config.cpp:254
 msgid "Ted Example is now Away."
 msgstr "Ted Eksempel er nå borte"
 
-#. i18n: file: appearance-config.ui:29
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
-#: rc.cpp:3
+#: appearance-config.ui:29
 msgid "Use Custom Font Settings"
 msgstr "Bruk egendefinerte skriftinnstillinger"
 
-#. i18n: file: appearance-config.ui:41
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
-#: rc.cpp:6
+#: appearance-config.ui:41
 msgid "Select Font: "
 msgstr "Velg skrift: "
 
-#. i18n: file: appearance-config.ui:54
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
-#: rc.cpp:9
+#: appearance-config.ui:54
 msgid "Select Size: "
 msgstr "Velg størrelse: "
 
-#. i18n: file: appearance-config.ui:90
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:12
+#: appearance-config.ui:90
 msgid "Style"
 msgstr "Stil"
 
-#. i18n: file: appearance-config.ui:99
 #. i18n: ectx: property (text), widget (QLabel, styleLabel)
-#: rc.cpp:15
+#: appearance-config.ui:99
 msgid "Message Style:"
 msgstr "Meldingsstil:"
 
-#. i18n: file: appearance-config.ui:125
 #. i18n: ectx: property (text), widget (QLabel, variantLabel)
-#: rc.cpp:18
+#: appearance-config.ui:125
 msgid "Variant:"
 msgstr "Variant:"
 
-#. i18n: file: appearance-config.ui:151
 #. i18n: ectx: property (text), widget (QCheckBox, showHeader)
-#: rc.cpp:21
+#: appearance-config.ui:151
 msgid "Show Header"
 msgstr "Vis hode"

@@ -20,11 +20,27 @@
 #include "message.h"
 #include <KDebug>
 
-Message::Message(const Tp::Message &original)
-    : m_originalMessage(original)
+#ifdef TELEPATHY_LOGGER_QT4_FOUND
+#include <TelepathyLoggerQt4/TextEvent>
+#endif
+
+Message::Message(const Tp::Message &original) :
+      m_sentTime(original.sent()),
+      m_token(original.messageToken()),
+      m_messageType(original.messageType())
 {
     setMainMessagePart(original.text());
 }
+
+#ifdef TELEPATHY_LOGGER_QT4_FOUND
+Message::Message(const Tpl::TextEventPtr &original) :
+    m_sentTime(original->timestamp()),
+    m_token(original->messageToken()),
+    m_messageType(original->messageType())
+{
+    setMainMessagePart(original->message());
+}
+#endif
 
 QString Message::mainMessagePart() const
 {
@@ -46,7 +62,7 @@ QString Message::finalizedMessage() const
     QString msg = m_mainPart + QLatin1String("\n") +
         m_parts.join(QLatin1String("\n"));
 
-    kDebug() << msg;
+//     kDebug() << msg;
     return msg;
 }
 
@@ -62,15 +78,15 @@ void Message::setProperty(const char *name, const QVariant& value)
 
 QDateTime Message::time() const
 {
-    return m_originalMessage.sent();
+    return m_sentTime;
 }
 
 QString Message::token() const
 {
-    return m_originalMessage.messageToken();
+    return m_token;
 }
 
 Tp::ChannelTextMessageType Message::type() const
 {
-    return m_originalMessage.messageType();
+    return m_messageType;
 }

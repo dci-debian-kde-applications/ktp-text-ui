@@ -19,36 +19,38 @@
 
 #include "message-processor.h"
 #include "filters.h"
+#include "plugin-config-manager.h"
+
+#include <QMutex>
+
+#include <KDebug>
+#include <KService>
+#include <KServiceTypeTrader>
+#include <KPluginFactory>
 
 MessageProcessor* MessageProcessor::s_instance = 0;
 
-AbstractMessageFilter::AbstractMessageFilter(QObject* parent)
-    : QObject(parent)
-{
-}
-
-AbstractMessageFilter::~AbstractMessageFilter()
-{
-}
-
 MessageProcessor* MessageProcessor::instance()
 {
+    kDebug();
+
     static QMutex mutex;
-    if (!s_instance)
-    {
-        mutex.lock();
-        if (!s_instance) {
-            s_instance = new MessageProcessor;
-        }
-        mutex.unlock();
+    mutex.lock();
+    if (!s_instance) {
+        s_instance = new MessageProcessor;
     }
+    mutex.unlock();
+
     return s_instance;
 }
 
 
 MessageProcessor::MessageProcessor()
 {
-    m_filters << new EscapeFilter(this) << new UrlFilter(this) << new EmoticonFilter(this);
+    m_filters.append(new EscapeFilter(this));
+    m_filters.append(new UrlFilter(this));
+
+    loadFilters();
 }
 
 
@@ -56,22 +58,40 @@ MessageProcessor::~MessageProcessor()
 {
 }
 
-Message MessageProcessor::processIncomingMessage(const Tp::ReceivedMessage &receivedMessage)
+Message MessageProcessor::processIncomingMessage(Message receivedMessage)
 {
-    Message message(receivedMessage);
     Q_FOREACH(AbstractMessageFilter *filter, MessageProcessor::m_filters) {
-        filter->filterMessage(message);
+        kDebug() << "running filter :" << filter->metaObject()->className();
+        filter->filterMessage(receivedMessage);
     }
-    return message;
+    return receivedMessage;
 }
 
-Message MessageProcessor::processOutgoingMessage(const Tp::Message &sentMessage)
+Message MessageProcessor::processOutgoingMessage(Message sentMessage)
 {
-    Message message(sentMessage);
     Q_FOREACH(AbstractMessageFilter *filter, MessageProcessor::m_filters) {
-        filter->filterMessage(message);
+        filter->filterMessage(sentMessage);
     }
-    return message;
+    return sentMessage;
 }
 
+void MessageProcessor::loadFilters() {
+    kDebug() << "Starting loading filters...";
 
+    Q_FOREACH (const KPluginInfo &plugin, PluginConfigManager::self()->enabledPlugins()) {
+        KService::Ptr service = plugin.service();
+
+        KPluginFactory *factory = KPluginLoader(service->library()).factory();
+        if(factory) {
+            kDebug() << "loaded factory :" << factory;
+            AbstractMessageFilter *filter = factory->create<AbstractMessageFilter>(this);
+
+            if(filter) {
+                kDebug() << "loaded message filter : " << filter;
+                m_filters.append(filter);
+            }
+        } else {
+            kError() << "error loading plugin :" << service->library();
+        }
+    }
+}

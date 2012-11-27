@@ -18,32 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 
-#. i18n: file: behavior-config.ui:17
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
-#: rc.cpp:3
+#: behavior-config.ui:17
 msgid "Tabs"
 msgstr "Kortelės"
 
-#. i18n: file: behavior-config.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:6
+#: behavior-config.ui:23
 msgid "Open new conversations in :"
 msgstr "Atverti naujus pokalbius:"
 
-#. i18n: file: behavior-config.ui:30
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
-#: rc.cpp:9
+#: behavior-config.ui:30
 msgid "A new window"
 msgstr "Naujame lange"
 
-#. i18n: file: behavior-config.ui:40
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
-#: rc.cpp:12
+#: behavior-config.ui:40
 msgid "A new tab in the first window"
 msgstr "Naujoje pirmojo lango kortelėje"
 
-#. i18n: file: behavior-config.ui:50
 #. i18n: ectx: property (text), widget (QRadioButton, radioLast)
-#: rc.cpp:15
+#: behavior-config.ui:50
 msgid "A new tab in the last focused window"
 msgstr "Naujoje paskutinio sufokusuoto lango kortelėje"

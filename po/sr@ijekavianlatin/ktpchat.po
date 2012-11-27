@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktpchat\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-05-15 04:37+0200\n"
-"PO-Revision-Date: 2012-03-25 19:32+0200\n"
+"POT-Creation-Date: 2012-09-16 11:50+0200\n"
+"PO-Revision-Date: 2012-08-17 21:54+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
@@ -19,6 +19,14 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Mladen Pejaković"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "pejakm@gmail.com"
+
 #: adium-theme-view.cpp:86
 msgid ""
 "Failed to load a valid theme. Your installation is broken. Check your kde "
@@ -30,16 +38,6 @@ msgstr ""
 #: adium-theme-view.cpp:145
 msgid "Missing required file Template.html - check your installation."
 msgstr "Nedostaje zahtijevani fajl „Template.html“ — provjerite instalaciju."
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Mladen Pejaković"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "pejakm@gmail.com"
 
 #: chat-search-bar.cpp:36
 msgctxt "Next search result"
@@ -59,55 +57,41 @@ msgstr "Unesite tekst za pretragu..."
 msgid "Case sensitive"
 msgstr "Razlikuj veličinu slova"
 
-#: chat-widget.cpp:98
+#: chat-widget.cpp:106
 msgid "Show format options"
 msgstr "Prikaži opcije formata"
 
-#: chat-widget.cpp:286
-msgid "Connection closed"
-msgstr "Veza je zatvorena"
-
-#: chat-widget.cpp:288
-msgctxt "Connected to IM service"
-msgid "Connected"
-msgstr "Povezan"
-
-#: chat-widget.cpp:481
-#, fuzzy, kde-format
-#| msgid ""
-#| "Delivery of the message \"%1\" failed because the remote contact is "
-#| "offline"
+#: chat-widget.cpp:588
+#, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
-msgstr "Isporuka poruke „%1“ nije uspjela jer je udaljeni kontakt van veze"
+msgstr "Isporuka poruke „%1“ nije uspjela jer je udaljeni kontakt blokiran"
 
-#: chat-widget.cpp:485
+#: chat-widget.cpp:592
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
 msgstr "Isporuka poruke „%1“ nije uspjela jer je udaljeni kontakt van veze"
 
-#: chat-widget.cpp:491
-#, fuzzy
-#| msgid "Delivery of a message failed because the remote contact is offline"
+#: chat-widget.cpp:598
 msgid "Delivery of a message failed because the remote contact is blocked"
-msgstr "Isporuka poruke nije uspjela jer je udaljeni kontakt van veze"
+msgstr "Isporuka poruke nije uspjela jer je udaljeni kontakt blokiran"
 
-#: chat-widget.cpp:494
+#: chat-widget.cpp:601
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr "Isporuka poruke nije uspjela jer je udaljeni kontakt van veze"
 
-#: chat-widget.cpp:501
+#: chat-widget.cpp:608
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
 msgstr "Isporuka poruke „%1“ nije uspjela jer udaljeni kontakt nije ispravan"
 
-#: chat-widget.cpp:505
+#: chat-widget.cpp:612
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr "Isporuka poruke nije uspjela jer udaljeni kontakt nije ispravan"
 
-#: chat-widget.cpp:511
+#: chat-widget.cpp:618
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -115,63 +99,63 @@ msgid ""
 msgstr ""
 "Isporuka poruke „%1“ nije uspjela jer nemate dozvolu da govorite u ovoj sobi"
 
-#: chat-widget.cpp:515
+#: chat-widget.cpp:622
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
 msgstr ""
 "Isporuka poruke nije uspjela jer nemate dozvolu da govorite u ovoj sobi"
 
-#: chat-widget.cpp:521
+#: chat-widget.cpp:628
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Isporuka poruke „%1“ nije uspjela jer je predugačka"
 
-#: chat-widget.cpp:525
+#: chat-widget.cpp:632
 msgid "Delivery of a message failed because it was too long"
 msgstr "Isporuka poruke nije uspjela jer je predugačka"
 
-#: chat-widget.cpp:531
+#: chat-widget.cpp:638
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Isporuka poruke „%1“ nije uspjela: %2"
 
-#: chat-widget.cpp:535
+#: chat-widget.cpp:642
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Isporuka poruke nije uspjela: %1"
 
-#: chat-widget.cpp:640
+#: chat-widget.cpp:747
 #, kde-format
 msgid "%1 has sent you a message"
 msgstr "%1 vam posla poruku"
 
 # >> @action
-#: chat-widget.cpp:661
+#: chat-widget.cpp:768
 msgid "View"
 msgstr "Prikaži"
 
-#: chat-widget.cpp:692
+#: chat-widget.cpp:799
 msgid "You have sent a message"
 msgstr "Poslali ste poruku"
 
-#: chat-widget.cpp:733
+#: chat-widget.cpp:840
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 napusti ćaskanje"
 
-#: chat-widget.cpp:776
+#: chat-widget.cpp:883
 #, kde-format
 msgid "You are now marked as %1"
 msgstr "Sada ste označeni kao %1"
 
-#: chat-widget.cpp:780
+#: chat-widget.cpp:887
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 je %2"
 
-#: chat-widget.cpp:782
+#: chat-widget.cpp:889
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -180,26 +164,30 @@ msgid "%1 is %2 - %3"
 msgstr "%1 je %2 — %3"
 
 # rewrite-msgid: /known/nickname/
-#: chat-widget.cpp:812
+#: chat-widget.cpp:919
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Sada ste pod nadimkom %1"
 
 # rewrite-msgid: /known/nickname/
-#: chat-widget.cpp:820
+#: chat-widget.cpp:927
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 je sada pod nadimkom %2"
 
-#: chat-widget.cpp:843
+#: chat-widget.cpp:950
 #, kde-format
 msgid "%1 is now blocked."
-msgstr ""
+msgstr "%1 je sada pod blokom."
 
-#: chat-widget.cpp:845
+#: chat-widget.cpp:952
 #, kde-format
 msgid "%1 is now unblocked."
-msgstr ""
+msgstr "%1 je sada bez bloka."
+
+#: chat-widget.cpp:1052
+msgid "You are now offline"
+msgstr "Sada ste van veze"
 
 #: chat-window-style.cpp:349
 msgctxt "Normal style variant menu item"
