@@ -5,12 +5,12 @@ Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: George Kiagiadakis <kiagiadakis.george@gmail.com>
 Build-Depends: debhelper (>= 9),
  pkg-kde-tools (>= 0.9),
- libtelepathy-qt4-dev (>= 0.9.1),
+ libtelepathy-qt4-dev (>= 0.9.3),
  kdelibs5-dev (>= 4:4.6),
  libqtwebkit-dev,
  cmake (>= 2.8),
- libktpcommoninternalsprivate-dev (>= 0.4.0),
- libtelepathy-logger-qt4-dev (>= 0.4.0)
+ libktpcommoninternalsprivate-dev (>= 0.5.1),
+ libtelepathy-logger-qt4-dev (>= 0.5.1)
 Standards-Version: 3.9.3
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-text-ui
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git
@@ -27,7 +27,7 @@ Package: kde-telepathy-text-ui
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
  libktpchat0 (= ${binary:Version}),
- kde-telepathy-data (>= 0.4)
+ kde-telepathy-data (>= 0.5.1)
 Recommends: kde-telepathy
 Description: Telepathy text chat UI for the KDE Plasma Desktop
  This package provides a telepathy handler for text channels, a program
@@ -45,7 +45,7 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
  libktpchat0 (= ${binary:Version}),
  kde-runtime-data (>= 4:4.8),
- kde-telepathy-data (>= 0.4)
+ kde-telepathy-data (>= 0.5.1)
 Recommends: kde-telepathy
 Description: Telepathy text chat plasma widget
  This package provides a plasma widget that allows you to chat with
