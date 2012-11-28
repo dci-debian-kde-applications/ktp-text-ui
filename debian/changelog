@@ -1,3 +1,9 @@
+ktp-text-ui (0.5.1-1) UNRELEASED; urgency=low
+
+  * [a339a98] Imported Upstream version 0.5.1
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Thu, 29 Nov 2012 00:01:07 +0530
+
 ktp-text-ui (0.4.0-1) unstable; urgency=low
 
   * Initial release.
