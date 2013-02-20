@@ -496,7 +496,7 @@ QString AdiumThemeView::replaceHeaderKeywords(QString htmlTemplate, const AdiumT
     htmlTemplate.replace(QLatin1String("%destinationName%"), info.destinationName());
     htmlTemplate.replace(QLatin1String("%destinationDisplayName%"), info.destinationDisplayName());
     htmlTemplate.replace(QLatin1String("%incomingIconPath%"), (!info.incomingIconPath().isEmpty() ? info.incomingIconPath().toString() : m_defaultAvatar));
-    htmlTemplate.replace(QLatin1String("%outgoingIconPath%"), (!info.outgoingIconPath().isEmpty() ? info.incomingIconPath().toString() : m_defaultAvatar));
+    htmlTemplate.replace(QLatin1String("%outgoingIconPath%"), (!info.outgoingIconPath().isEmpty() ? info.outgoingIconPath().toString() : m_defaultAvatar));
     htmlTemplate.replace(QLatin1String("%timeOpened%"), KGlobal::locale()->formatTime(info.timeOpened().time()));
     htmlTemplate.replace(QLatin1String("%dateOpened%"), KGlobal::locale()->formatDate(info.timeOpened().date(), KLocale::LongDate));
 
@@ -525,8 +525,6 @@ QString AdiumThemeView::replaceContentKeywords(QString& htmlTemplate, const Adiu
     htmlTemplate.replace(QLatin1String("%senderColor%"), info.senderColor());
     //senderStatusIcon
     htmlTemplate.replace(QLatin1String("%senderStatusIcon%"), info.senderStatusIcon());
-    //messageDirection
-    htmlTemplate.replace(QLatin1String("%messageDirection%"), info.messageDirection());
     //senderDisplayName
     htmlTemplate.replace(QLatin1String("%senderDisplayName%"), info.senderDisplayName());
 
@@ -545,6 +543,11 @@ QString AdiumThemeView::replaceMessageKeywords(QString &htmlTemplate, const Adiu
     //message
     QString message = info.message();
 
+    if(info.messageDirection() == QLatin1String("rtl")) {
+        message.prepend(QString::fromLatin1("<div dir=\"rtl\">"));
+        message.append(QLatin1String("</div>"));
+    }
+
     htmlTemplate.replace(QLatin1String("%message%"), message);
 
     //service
@@ -561,6 +564,9 @@ QString AdiumThemeView::replaceMessageKeywords(QString &htmlTemplate, const Adiu
         htmlTemplate.replace(pos , timeRegExp.cap(0).length() , timeKeyword);
     }
 
+    //messageDirection
+    htmlTemplate.replace(QLatin1String("%messageDirection%"), info.messageDirection());
+    
     htmlTemplate.replace(QLatin1String("%messageClasses%"), info.messageClasses());
 
 

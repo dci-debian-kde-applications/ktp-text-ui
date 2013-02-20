@@ -1,17 +1,17 @@
 # Copyright © 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the ktp-text-ui package.
 # Tommi Nieminen <translator@legisign.org>, 2012.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2012.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013.
 #
-# KDE 4.9 Finnish translation sprint 2012-06/07
+# KDE Finnish translation sprint participants:
 # Author: Artnay
 # Author: Lliehu
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-adiumxtra-protocol-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-13 11:49+0200\n"
-"PO-Revision-Date: 2012-08-13 23:20+0300\n"
+"POT-Creation-Date: 2012-11-01 10:55+0100\n"
+"PO-Revision-Date: 2013-01-27 02:27+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
 "Language: fi\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-06-15 07:10:32+0000\n"
+"X-POT-Import-Date: 2012-12-01 22:21:13+0000\n"
 "X-Generator: Lokalize 1.5\n"
 
 msgctxt "NAME OF TRANSLATORS"
@@ -42,7 +42,7 @@ msgstr "OK"
 #: chat-style-installer.cpp:123
 #, kde-format
 msgid "Install Chatstyle %1"
-msgstr "Asenna chat-tyyli %1"
+msgstr "Asenna keskustelutyyli %1"
 
 #: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
 msgid "Install"
@@ -55,12 +55,12 @@ msgstr "Peru"
 #: chat-style-installer.cpp:146
 #, kde-format
 msgid "Installed Chatstyle %1 successfully."
-msgstr "Onnistuneesti asennettiin chat-tyyli %1."
+msgstr "Onnistuneesti asennettiin keskustelutyyli %1."
 
 #: chat-style-installer.cpp:150
 #, kde-format
 msgid "Installation of Chatstyle %1 failed."
-msgstr "Chat-tyylin %1 asennus epäonnistui."
+msgstr "Keskustelutyylin %1 asennus epäonnistui."
 
 #: emoticon-set-installer.cpp:104
 #, kde-format
@@ -72,22 +72,22 @@ msgstr "Asenna hymiöjoukko %1"
 msgid "Installed Emoticonset %1 successfully."
 msgstr "Hymiöjoukon %1 asennus onnistui."
 
-#: main.cpp:30
+#: main.cpp:31
 msgid "AdiumXtra Protocol Handler"
 msgstr "AdiumXtra-yhteyskäytäntökäsittelijä"
 
-#: main.cpp:32
+#: main.cpp:33
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:32 main.cpp:33
+#: main.cpp:33 main.cpp:34
 msgid "Developer"
 msgstr "Kehittäjä"
 
-#: main.cpp:33
+#: main.cpp:34
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "Adium package to install"
 msgstr "Asennettava Adium-paketti"

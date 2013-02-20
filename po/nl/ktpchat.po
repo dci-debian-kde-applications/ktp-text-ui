@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-16 11:50+0200\n"
+"POT-Creation-Date: 2013-01-31 13:28+0100\n"
 "PO-Revision-Date: 2012-08-30 16:21+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -59,7 +59,7 @@ msgstr "Hoofdlettergevoelig"
 msgid "Show format options"
 msgstr "Opmaakopties tonen"
 
-#: chat-widget.cpp:588
+#: chat-widget.cpp:594
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
@@ -67,7 +67,7 @@ msgstr ""
 "Aflevering van het bericht \"%1\" is mislukt omdat het verre contact is "
 "geblokkeerd"
 
-#: chat-widget.cpp:592
+#: chat-widget.cpp:598
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
@@ -75,18 +75,18 @@ msgstr ""
 "Aflevering van het bericht \"%1\" is mislukt omdat het verre contact offline "
 "is"
 
-#: chat-widget.cpp:598
+#: chat-widget.cpp:604
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr ""
 "Aflevering van een bericht is mislukt omdat het verre contact offline is "
 "geblokkeerd"
 
-#: chat-widget.cpp:601
+#: chat-widget.cpp:607
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr ""
 "Aflevering van een bericht is mislukt omdat het verre contact offline is"
 
-#: chat-widget.cpp:608
+#: chat-widget.cpp:614
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
@@ -94,12 +94,12 @@ msgstr ""
 "Aflevering van het bericht \"%1\" is mislukt omdat het verre contact niet "
 "geldig is"
 
-#: chat-widget.cpp:612
+#: chat-widget.cpp:618
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr ""
 "Aflevering van een bericht is mislukt omdat het verre contact niet geldig is"
 
-#: chat-widget.cpp:618
+#: chat-widget.cpp:624
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -108,7 +108,7 @@ msgstr ""
 "Aflevering van het bericht \"%1\" is mislukt omdat u geen rechten hebt in "
 "deze room te spreken"
 
-#: chat-widget.cpp:622
+#: chat-widget.cpp:628
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
@@ -116,55 +116,55 @@ msgstr ""
 "Aflevering van een bericht is mislukt omdat u geen rechten hebt in deze room "
 "te spreken"
 
-#: chat-widget.cpp:628
+#: chat-widget.cpp:634
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Aflevering van het bericht \"%1\" is mislukt omdat het te lang is"
 
-#: chat-widget.cpp:632
+#: chat-widget.cpp:638
 msgid "Delivery of a message failed because it was too long"
 msgstr "Aflevering van een bericht is mislukt omdat het te lang is"
 
-#: chat-widget.cpp:638
+#: chat-widget.cpp:644
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Aflevering van het bericht \"%1\" is mislukt: %2"
 
-#: chat-widget.cpp:642
+#: chat-widget.cpp:648
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Aflevering van een bericht is mislukt: %1"
 
-#: chat-widget.cpp:747
+#: chat-widget.cpp:765
 #, kde-format
 msgid "%1 has sent you a message"
 msgstr "%1 heeft u een bericht gezonden"
 
-#: chat-widget.cpp:768
+#: chat-widget.cpp:778
 msgid "View"
 msgstr "Beeld"
 
-#: chat-widget.cpp:799
+#: chat-widget.cpp:809
 msgid "You have sent a message"
 msgstr "U hebt een nieuw bericht verzonden"
 
-#: chat-widget.cpp:840
+#: chat-widget.cpp:850
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 heeft de chat verlaten"
 
-#: chat-widget.cpp:883
+#: chat-widget.cpp:893
 #, kde-format
 msgid "You are now marked as %1"
 msgstr "Uw status is nu %1"
 
-#: chat-widget.cpp:887
+#: chat-widget.cpp:897
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 is %2"
 
-#: chat-widget.cpp:889
+#: chat-widget.cpp:899
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -172,27 +172,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 is %2 - %3"
 
-#: chat-widget.cpp:919
+#: chat-widget.cpp:929
 #, kde-format
 msgid "You are now known as %1"
 msgstr "U staat nu bekend als %1"
 
-#: chat-widget.cpp:927
+#: chat-widget.cpp:937
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 heet nu %2"
 
-#: chat-widget.cpp:950
+#: chat-widget.cpp:960
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 is nu geblokkeerd."
 
-#: chat-widget.cpp:952
+#: chat-widget.cpp:962
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "Blokkering van %1 is nu opgeheven."
 
-#: chat-widget.cpp:1052
+#: chat-widget.cpp:1062
 msgid "You are now offline"
 msgstr "U bent nu offline"
 

@@ -1,0 +1,215 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sergiu Bivol <sergiu@ase.md>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2013-01-31 13:28+0100\n"
+"PO-Revision-Date: 2013-02-09 01:25+0200\n"
+"Last-Translator: Sergiu Bivol <sergiu.bivol@jurnaltv.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 1.5\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@ase.md"
+
+#: adium-theme-view.cpp:86
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr ""
+"Încărcarea unei teme valide a eșuat. Instalarea dumenavoastră e deteriorată. "
+"Verificați calea pentru KDE. Programul se va prăbuși acum."
+
+#: adium-theme-view.cpp:145
+msgid "Missing required file Template.html - check your installation."
+msgstr "Lipsește fișierul necesar Template.html – verificați-vă instalarea."
+
+#: chat-search-bar.cpp:36
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "&Următor"
+
+#: chat-search-bar.cpp:37
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "&Precedent"
+
+#: chat-search-bar.cpp:45
+msgid "Insert search text..."
+msgstr "Introduceți textul de căutat..."
+
+#: chat-search-bar.cpp:54
+msgid "Case sensitive"
+msgstr "Sensibil la registru"
+
+#: chat-widget.cpp:106
+msgid "Show format options"
+msgstr "Arată opțiuni de format"
+
+#: chat-widget.cpp:594
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr ""
+"Livrarea mesajului „%1” a eșuat din cauză că contactul distant este blocat"
+
+#: chat-widget.cpp:598
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr ""
+"Livrarea mesajului „%1” a eșuat din cauză că contactul distant este "
+"deconectat"
+
+#: chat-widget.cpp:604
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr "Livrarea unui mesaj a eșuat din cauză că contactul distant este blocat"
+
+#: chat-widget.cpp:607
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr ""
+"Livrarea unui mesaj a eșuat din cauză că contactul distant este deconectat"
+
+#: chat-widget.cpp:614
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr ""
+"Livrarea mesajului „%1” a eșuat din cauză că contactul distant nu este valid"
+
+#: chat-widget.cpp:618
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr ""
+"Livrarea unui mesaj a eșuat din cauză că contactul distant nu este valid"
+
+#: chat-widget.cpp:624
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr ""
+"Livrarea mesajului „%1” a eșuat din cauză că nu aveți permisiunea să vorbiți "
+"în această cameră"
+
+#: chat-widget.cpp:628
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr ""
+"Livrarea unui mesaj a eșuat din cauză că nu aveți permisiunea să vorbiți în "
+"această cameră"
+
+#: chat-widget.cpp:634
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr "Livrarea mesajului „%1” a eșuat din cauză că era prea lung"
+
+#: chat-widget.cpp:638
+msgid "Delivery of a message failed because it was too long"
+msgstr "Livrarea unui mesaj a eșuat din cauză că era prea lung"
+
+#: chat-widget.cpp:644
+#, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr "Livrarea mesajului „%1” a eșuat: %2"
+
+#: chat-widget.cpp:648
+#, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr "Livrarea unui mesaj a eșuat: %1"
+
+#: chat-widget.cpp:765
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 v-a trimis un mesaj"
+
+#: chat-widget.cpp:778
+msgid "View"
+msgstr "Vizualizare"
+
+#: chat-widget.cpp:809
+msgid "You have sent a message"
+msgstr "Ați trimis un mesaj"
+
+#: chat-widget.cpp:850
+#, kde-format
+msgid "%1 has left the chat"
+msgstr "%1 a părăsit discuția"
+
+#: chat-widget.cpp:893
+#, kde-format
+msgid "You are now marked as %1"
+msgstr "Sînteți marcat acum ca %1"
+
+#: chat-widget.cpp:897
+#, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr "%1 este %2"
+
+#: chat-widget.cpp:899
+#, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr "%1 este %2 - %3"
+
+#: chat-widget.cpp:929
+#, kde-format
+msgid "You are now known as %1"
+msgstr "Sînteți cunoscut acum ca %1"
+
+#: chat-widget.cpp:937
+#, kde-format
+msgid "%1 is now known as %2"
+msgstr "%1 este cunoscut acum ca %2"
+
+#: chat-widget.cpp:960
+#, kde-format
+msgid "%1 is now blocked."
+msgstr "%1 este blocat acum."
+
+#: chat-widget.cpp:962
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr "%1 este deblocat acum."
+
+#: chat-widget.cpp:1062
+msgid "You are now offline"
+msgstr "Sînteți deconectat acum"
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr "Normal"
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "Descarcă"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "Renunță"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "Redă"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "Salvează ca"

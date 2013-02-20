@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-13 11:49+0200\n"
+"POT-Creation-Date: 2012-11-01 10:55+0100\n"
 "PO-Revision-Date: 2012-06-15 17:59+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kdei18n-pl-uwagi>\n"
@@ -68,23 +68,23 @@ msgstr "Zainstaluj zestaw emotikon %1"
 msgid "Installed Emoticonset %1 successfully."
 msgstr "Pomyślnie zainstalowano zestaw emotikon %1."
 
-#: main.cpp:30
+#: main.cpp:31
 msgid "AdiumXtra Protocol Handler"
 msgstr "Program obsługujący protokół AdiumXtra"
 
-#: main.cpp:32
+#: main.cpp:33
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:32 main.cpp:33
+#: main.cpp:33 main.cpp:34
 msgid "Developer"
 msgstr "Programista"
 
-#: main.cpp:33
+#: main.cpp:34
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "Adium package to install"
 msgstr "Pakiet Adium do zainstalowania "
 

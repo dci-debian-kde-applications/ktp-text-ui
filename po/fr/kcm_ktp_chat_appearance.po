@@ -1,25 +1,26 @@
 # translation of kcm_ktp_chat_appearance.po to Français
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Joëlle Cornavin <jcorn@free.fr>, 2011, 2012.
+# Joëlle Cornavin <jcorn@free.fr>, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_appearance\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-07-09 22:04+0200\n"
+"PO-Revision-Date: 2013-02-07 20:04+0100\n"
 "Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.4\n"
 
 #: appearance-config.cpp:42
 msgid "A demo chat"
-msgstr "Une discussion de démonstration"
+msgstr "Une démonstration de discussion"
 
 #: appearance-config.cpp:43 appearance-config.cpp:178
 #: appearance-config.cpp:186 appearance-config.cpp:194
@@ -98,12 +99,12 @@ msgstr "Quoi de nouveau ?"
 #: appearance-config.cpp:236
 msgid ""
 "Check out which cool adium themes work <a href=\"http://community.kde.org/"
-"Real-Time_Communication_and_Collaboration/Components/Chat_Window/Themes"
-"\">here</a>!"
+"Real-Time_Communication_and_Collaboration/Components/Chat_Window/"
+"Themes\">here</a>!"
 msgstr ""
-"Vérifiez quels thèmes Adium élégants fonctionnent <a href=\"http://community."
-"kde.org/Real-Time_Communication_and_Collaboration/Components/Chat_Window/"
-"Themes\">ici</a>!"
+"Vérifiez quels thèmes « Adium » esthétiques fonctionnent <a href=\"http://"
+"community.kde.org/Real-Time_Communication_and_Collaboration/Components/"
+"Chat_Window/Themes\">ici</a>!"
 
 #: appearance-config.cpp:246
 msgid "A different example message"

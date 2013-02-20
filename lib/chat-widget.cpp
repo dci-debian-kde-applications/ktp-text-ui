@@ -55,10 +55,10 @@
 class ChatWidgetPrivate
 {
 public:
-    ChatWidgetPrivate()
+    ChatWidgetPrivate() :
+        remoteContactChatState(Tp::ChannelChatStateInactive),
+        isGroupChat(false)
     {
-        isGroupChat = false;
-        remoteContactChatState = Tp::ChannelChatStateInactive;
     }
     /** Stores whether the channel is ready with all contacts upgraded*/
     bool chatviewlInitialised;
@@ -165,7 +165,14 @@ ChatWidget::ChatWidget(const Tp::TextChannelPtr & channel, const Tp::AccountPtr 
 
     //set up anything related to 'self'
     info.setOutgoingIconPath(d->channel->groupSelfContact()->avatarData().fileName);
-    info.setTimeOpened(QDateTime::currentDateTime());
+
+    //set the message time
+    if (!d->channel->messageQueue().isEmpty()) {
+        info.setTimeOpened(d->channel->messageQueue().first().received());
+    } else {
+        info.setTimeOpened(QDateTime::currentDateTime());
+    }
+
     info.setServiceIconImage(KIconLoader::global()->iconPath(d->account->iconName(), KIconLoader::Panel));
     connect(d->ui.chatArea, SIGNAL(loadFinished(bool)), SLOT(chatViewReady()), Qt::QueuedConnection);
     d->ui.chatArea->initialise(info);
@@ -583,7 +590,7 @@ void ChatWidget::handleIncomingMessage(const Tp::ReceivedMessage &message)
                 switch (reportDetails.error()) {
                 case Tp::ChannelTextSendErrorOffline:
                     if (reportDetails.hasEchoedMessage()) {
-                        if(message.sender()->isBlocked()) {
+                        if(message.sender() && message.sender()->isBlocked()) {
                             text = i18n("Delivery of the message \"%1\" "
                                         "failed because the remote contact is blocked",
                                         reportDetails.echoedMessage().text());
@@ -593,7 +600,7 @@ void ChatWidget::handleIncomingMessage(const Tp::ReceivedMessage &message)
                                         reportDetails.echoedMessage().text());
                          }
                     } else {
-                        if(message.sender()->isBlocked()) {
+                        if(message.sender() && message.sender()->isBlocked()) {
                             text = i18n("Delivery of a message failed "
                                         "because the remote contact is blocked");
                         } else {
@@ -709,12 +716,7 @@ void ChatWidget::notifyAboutIncomingMessage(const Tp::ReceivedMessage & message)
     //choose the correct notification type:
     //options are:
     // kde_telepathy_contact_incoming
-    // kde_telepathy_contact_incoming_active_window - TODO - requires information not available yet.
-    //FIXME: until the above is available, simply deactivate the event
-    if(isOnTop()) {
-        kDebug() << "Widget is on top, not doing anything";
-        return;
-    }
+    // kde_telepathy_contact_incoming_active_window
     // don't notify of messages sent by self from another computer
     if (message.sender() == d->channel->groupSelfContact()) {
         return;
@@ -734,21 +736,33 @@ void ChatWidget::notifyAboutIncomingMessage(const Tp::ReceivedMessage & message)
     } else if(message.messageType() == Tp::ChannelTextMessageTypeNotice) {
         notificationType = QLatin1String("kde_telepathy_info_event");
     } else {
-        notificationType = QLatin1String("kde_telepathy_contact_incoming");
+        if (isOnTop()) {
+            notificationType = QLatin1String("kde_telepathy_contact_incoming_active_window");
+        } else {
+            notificationType = QLatin1String("kde_telepathy_contact_incoming");
+        }
     }
-
 
     KNotification *notification = new KNotification(notificationType, this,
                                                     KNotification::RaiseWidgetOnActivation
                                                     | KNotification::CloseWhenWidgetActivated
                                                     | KNotification::Persistent);
     notification->setComponentData(d->telepathyComponentData());
-    notification->setTitle(i18n("%1 has sent you a message", message.sender()->alias()));
+   
+    QString senderName;
 
-    QPixmap notificationPixmap;
-    if (notificationPixmap.load(message.sender()->avatarData().fileName)) {
-        notification->setPixmap(notificationPixmap);
+    if (message.sender().isNull()) {
+        senderName = message.senderNickname();
+    } else {
+        senderName = message.sender()->alias();
+        QPixmap notificationPixmap;
+        if (notificationPixmap.load(message.sender()->avatarData().fileName)) {
+            notification->setPixmap(notificationPixmap);
+        }
+        //allows per contact notifications
+        notification->addContext(QLatin1String("contact"), message.sender()->id());
     }
+    notification->setTitle(i18n("%1 has sent you a message", senderName));
 
     // Remove empty lines from message
     QString notifyText = message.text().simplified();
@@ -760,9 +774,6 @@ void ChatWidget::notifyAboutIncomingMessage(const Tp::ReceivedMessage & message)
         notification->setText(notifyText);
     }
 
-    //allows per contact notifications
-    notification->addContext(QLatin1String("contact"), message.sender()->id());
-    //TODO notification->addContext("group",... Requires KDE Telepathy Contact to work out which group they are in.
 
     notification->setActions(QStringList(i18n("View")));
     connect(notification, SIGNAL(activated(uint)), this, SIGNAL(notificationClicked()));
