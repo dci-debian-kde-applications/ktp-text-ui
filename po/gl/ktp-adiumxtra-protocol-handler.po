@@ -6,16 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-13 11:49+0200\n"
-"PO-Revision-Date: 2012-01-29 22:43+0100\n"
+"POT-Creation-Date: 2012-11-01 10:55+0100\n"
+"PO-Revision-Date: 2012-07-12 22:32+0200\n"
 "Last-Translator: Xosé <xosecalvo@gmail.com>\n"
 "Language-Team: Galician <kde-i18n-doc@kde.org>\n"
-"Language: \n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -67,23 +70,22 @@ msgstr "Instalar o conxunto de iconas %1"
 msgid "Installed Emoticonset %1 successfully."
 msgstr "Instalouse sen problemas o conxunto de iconas %1."
 
-#: main.cpp:30
+#: main.cpp:31
 msgid "AdiumXtra Protocol Handler"
 msgstr "Xestor do protocolo AdiumXtra"
 
-#: main.cpp:32
-msgid "Dominik Schmidt"
-msgstr ""
-
-#: main.cpp:32 main.cpp:33
-msgid "Developer"
-msgstr ""
-
 #: main.cpp:33
-msgid "Daniele E. Domenichelli"
-msgstr ""
+msgid "Dominik Schmidt"
+msgstr "Dominik Schmidt"
 
-#: main.cpp:38
-#, fuzzy
+#: main.cpp:33 main.cpp:34
+msgid "Developer"
+msgstr "Desenvolvedor"
+
+#: main.cpp:34
+msgid "Daniele E. Domenichelli"
+msgstr "Daniele E. Domenichelli"
+
+#: main.cpp:39
 msgid "Adium package to install"
 msgstr "Instalar os paquetes do Adium"

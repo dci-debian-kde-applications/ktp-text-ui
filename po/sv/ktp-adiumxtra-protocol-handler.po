@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-13 11:49+0200\n"
+"POT-Creation-Date: 2012-11-01 10:55+0100\n"
 "PO-Revision-Date: 2012-03-14 19:37+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@comhem.se>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -67,23 +67,23 @@ msgstr "Installera smilisuppsättning %1"
 msgid "Installed Emoticonset %1 successfully."
 msgstr "installerade smilisuppsättning %1 med lyckat resultat"
 
-#: main.cpp:30
+#: main.cpp:31
 msgid "AdiumXtra Protocol Handler"
 msgstr "Adiumxtra-protokollhantering"
 
-#: main.cpp:32
+#: main.cpp:33
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:32 main.cpp:33
+#: main.cpp:33 main.cpp:34
 msgid "Developer"
 msgstr "Utvecklare"
 
-#: main.cpp:33
+#: main.cpp:34
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "Adium package to install"
 msgstr "Adium-paket att installera"
 

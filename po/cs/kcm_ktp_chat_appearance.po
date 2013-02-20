@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2011, 2012.
+# Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2013.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
 #
 msgid ""
@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-08-16 15:08+0200\n"
-"Last-Translator: Tomáš Chvátal <tomas.chvatal@gmail.com>\n"
+"PO-Revision-Date: 2013-02-13 14:14+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: appearance-config.cpp:42
@@ -102,6 +102,9 @@ msgid ""
 "Real-Time_Communication_and_Collaboration/Components/Chat_Window/Themes"
 "\">here</a>!"
 msgstr ""
+"Podívejte se na <a href=\"http://community.kde.org/Real-"
+"Time_Communication_and_Collaboration/Components/Chat_Window/Themes"
+"\">zajímavé vzhledy</a> adium."
 
 #: appearance-config.cpp:246
 msgid "A different example message"
@@ -119,12 +122,12 @@ msgstr "Použít vlastní nastavení písma"
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
 #: appearance-config.ui:41
 msgid "Select Font: "
-msgstr "Vybrat písmo: "
+msgstr "Vyberte písmo: "
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
 #: appearance-config.ui:54
 msgid "Select Size: "
-msgstr "Vybrat velikost: "
+msgstr "Vyberte velikost: "
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: appearance-config.ui:90

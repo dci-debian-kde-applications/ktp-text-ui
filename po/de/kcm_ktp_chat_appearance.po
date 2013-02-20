@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: kcm_ktp_chat_appearance\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-06-30 11:23+0200\n"
+"PO-Revision-Date: 2012-12-02 21:47+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: appearance-config.cpp:42
@@ -33,8 +33,6 @@ msgstr "Jabber"
 #: appearance-config.cpp:45 appearance-config.cpp:192
 #: appearance-config.cpp:200 appearance-config.cpp:239
 #: appearance-config.cpp:247
-#, fuzzy
-#| msgid "ted@example.com"
 msgctxt "Example email"
 msgid "ted@example.com"
 msgstr "Hans@beispiel.de"
@@ -42,7 +40,7 @@ msgstr "Hans@beispiel.de"
 #: appearance-config.cpp:46
 msgctxt "Example name"
 msgid "Ted"
-msgstr ""
+msgstr "Hans"
 
 #: appearance-config.cpp:175
 msgctxt "Example message in preview conversation"
@@ -51,16 +49,12 @@ msgstr "OK!"
 
 #: appearance-config.cpp:176 appearance-config.cpp:184
 #: appearance-config.cpp:221 appearance-config.cpp:229
-#, fuzzy
-#| msgid "larry@example.com"
 msgctxt "Example email"
 msgid "larry@example.com"
 msgstr "Klaus@beispiel.de"
 
 #: appearance-config.cpp:177 appearance-config.cpp:185
 #: appearance-config.cpp:222 appearance-config.cpp:230
-#, fuzzy
-#| msgid "Larry Demo"
 msgctxt "Example name"
 msgid "Larry Demo"
 msgstr "Klaus Demo"
@@ -75,8 +69,6 @@ msgstr "Viel Spaß!"
 
 #: appearance-config.cpp:193 appearance-config.cpp:201
 #: appearance-config.cpp:240 appearance-config.cpp:248
-#, fuzzy
-#| msgid "Ted Example"
 msgctxt "Example name"
 msgid "Ted Example"
 msgstr "Hans Beispiel"
@@ -86,8 +78,6 @@ msgid "cya"
 msgstr "Wir sehen uns"
 
 #: appearance-config.cpp:207
-#, fuzzy
-#| msgid "Ted Example waves."
 msgctxt "Example message"
 msgid "Ted Example waves."
 msgstr "Hans Beispiel winkt."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-01 12:22+0200\n"
+"POT-Creation-Date: 2012-12-31 09:01+0100\n"
 "PO-Revision-Date: 2012-09-05 16:15+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kdei18n-pl-uwagi>\n"
@@ -42,28 +42,28 @@ msgstr "Przesuń kartę w lewo"
 msgid "Move Tab Right"
 msgstr "Przesuń kartę w prawo"
 
-#: chat-window.cpp:577
+#: chat-window.cpp:589
 msgid "&Next Tab"
 msgstr "&Następna karta"
 
-#: chat-window.cpp:581
+#: chat-window.cpp:593
 msgid "&Previous Tab"
 msgstr "&Poprzednia karta"
 
-#: chat-window.cpp:585
+#: chat-window.cpp:597
 msgid "&Audio Call"
 msgstr "Rozmowa głosow&a"
 
-#: chat-window.cpp:586
+#: chat-window.cpp:598
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Rozpocznij rozmowę głosową z tym kontaktem"
 
-#: chat-window.cpp:589 chat-window.cpp:829
+#: chat-window.cpp:601 chat-window.cpp:841
 msgid "&Block Contact"
 msgstr "&Blokuj kontakt"
 
-#: chat-window.cpp:591
+#: chat-window.cpp:603
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -72,74 +72,74 @@ msgstr ""
 "Blokowanie oznacza, że ten kontakt nie będzie widział ciebie dostępnego oraz "
 "to, że nie otrzymasz żadnych wiadomości od tego kontaktu"
 
-#: chat-window.cpp:594
+#: chat-window.cpp:606
 msgid "&Send File"
 msgstr "&Wyślij plik"
 
-#: chat-window.cpp:595
+#: chat-window.cpp:607
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Wyślij plik do tego kontaktu"
 
-#: chat-window.cpp:598
+#: chat-window.cpp:610
 msgid "&Invite to Chat"
 msgstr "&Zaproś do rozmowy"
 
-#: chat-window.cpp:599
+#: chat-window.cpp:611
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Zaproś inne kontakty do rozmowy"
 
-#: chat-window.cpp:602
+#: chat-window.cpp:614
 msgid "&Video Call"
 msgstr "Rozmowa &wideo"
 
-#: chat-window.cpp:603
+#: chat-window.cpp:615
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Rozpocznij rozmowę wideo z tym kontaktem"
 
-#: chat-window.cpp:606
+#: chat-window.cpp:618
 msgid "Share My &Desktop"
 msgstr "Współdziel mój &pulpit"
 
-#: chat-window.cpp:607
+#: chat-window.cpp:619
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr ""
 "Uruchom program, który pozwala temu kontaktowi na zobaczenie twojego pulpitu"
 
-#: chat-window.cpp:618
+#: chat-window.cpp:630
 msgid "Choose Spelling Language"
 msgstr "Wybierz język pisowni"
 
-#: chat-window.cpp:621
+#: chat-window.cpp:633
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Poprzednie rozmowy"
 
-#: chat-window.cpp:625
+#: chat-window.cpp:637
 msgid "Account Icon"
 msgstr "Ikona konta"
 
-#: chat-window.cpp:735
+#: chat-window.cpp:747
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Wybierz pliki do wysłania do %1"
 
-#: chat-window.cpp:788
+#: chat-window.cpp:800
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr "Pisze... %1"
 
-#: chat-window.cpp:790
+#: chat-window.cpp:802
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 wpisał tekst"
 
-#: chat-window.cpp:822
+#: chat-window.cpp:834
 msgid "&Unblock Contact"
 msgstr "&Odblokuj kontakt"
 
@@ -147,23 +147,23 @@ msgstr "&Odblokuj kontakt"
 msgid "Search in Contacts..."
 msgstr "Znajdź w kontaktach..."
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "Telepathy Text Ui"
 msgstr "Interfejs użytkownika tekstu Telepathy"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:40 main.cpp:41 main.cpp:42
+#: main.cpp:41 main.cpp:42 main.cpp:43
 msgid "Developer"
 msgstr "Programista"
 
-#: main.cpp:41
+#: main.cpp:42
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:42
+#: main.cpp:43
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-13 11:49+0200\n"
+"POT-Creation-Date: 2012-11-01 10:55+0100\n"
 "PO-Revision-Date: 2012-06-15 17:04+0200\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -70,22 +70,22 @@ msgstr "Instal·la el joc de icones %1"
 msgid "Installed Emoticonset %1 successfully."
 msgstr "El joc de icones %1 s'ha instal·lat correctament."
 
-#: main.cpp:30
+#: main.cpp:31
 msgid "AdiumXtra Protocol Handler"
 msgstr "Gestor del protocol «AdiumXtra»"
 
-#: main.cpp:32
+#: main.cpp:33
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:32 main.cpp:33
+#: main.cpp:33 main.cpp:34
 msgid "Developer"
 msgstr "Desenvolupador"
 
-#: main.cpp:33
+#: main.cpp:34
 msgid "Daniele E. Domenichelli"
 msgstr "Daniele E. Domenichelli"
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "Adium package to install"
 msgstr "Paquet Adium a instal·lar"

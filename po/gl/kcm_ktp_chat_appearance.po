@@ -2,19 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Xosé <xosecalvo@gmail.com>, 2012.
+# Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2012.
+# Miguel Branco <mgl.branco@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-01-28 00:38+0100\n"
-"Last-Translator: Xosé <xosecalvo@gmail.com>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2013-01-12 21:23+0100\n"
+"Last-Translator: Miguel Branco <mgl.branco@gmail.com>\n"
+"Language-Team: Galician <proxecto@trasno.net>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -37,37 +39,31 @@ msgstr "Jabber"
 #: appearance-config.cpp:45 appearance-config.cpp:192
 #: appearance-config.cpp:200 appearance-config.cpp:239
 #: appearance-config.cpp:247
-#, fuzzy
-#| msgid "ted@example.com"
 msgctxt "Example email"
 msgid "ted@example.com"
-msgstr "ted@exemplo.com"
+msgstr "rosaliadecastro@example.com"
 
 #: appearance-config.cpp:46
 msgctxt "Example name"
 msgid "Ted"
-msgstr ""
+msgstr "Rosalía de Castro"
 
 #: appearance-config.cpp:175
 msgctxt "Example message in preview conversation"
 msgid "Ok!"
-msgstr ""
+msgstr "Aceptar!"
 
 #: appearance-config.cpp:176 appearance-config.cpp:184
 #: appearance-config.cpp:221 appearance-config.cpp:229
-#, fuzzy
-#| msgid "larry@example.com"
 msgctxt "Example email"
 msgid "larry@example.com"
-msgstr "larry@exemplo.com"
+msgstr "castelao@example.com"
 
 #: appearance-config.cpp:177 appearance-config.cpp:185
 #: appearance-config.cpp:222 appearance-config.cpp:230
-#, fuzzy
-#| msgid "Larry Demo"
 msgctxt "Example name"
 msgid "Larry Demo"
-msgstr "Larry Demo"
+msgstr "Alfonso Daniel Rodríguez Castelao"
 
 #: appearance-config.cpp:183
 msgid "Bye Bye"
@@ -75,37 +71,34 @@ msgstr "Adeus"
 
 #: appearance-config.cpp:191
 msgid "Have fun!"
-msgstr ""
+msgstr "Pásao ben!"
 
 #: appearance-config.cpp:193 appearance-config.cpp:201
 #: appearance-config.cpp:240 appearance-config.cpp:248
-#, fuzzy
-#| msgid "Ted Example"
 msgctxt "Example name"
 msgid "Ted Example"
-msgstr "Ted Exemplo"
+msgstr "Rosalía de Castro"
 
 #: appearance-config.cpp:199
 msgid "cya"
-msgstr "cya"
+msgstr "Deica"
 
 #: appearance-config.cpp:207
-#, fuzzy
 msgctxt "Example message"
 msgid "Ted Example waves."
-msgstr "Ted Exemplo"
+msgstr "Rosalía de Castro saúda."
 
 #: appearance-config.cpp:213 appearance-config.cpp:261
 msgid "Ted Example has left the chat."
-msgstr "Ted Exemplo deixou a conversa."
+msgstr "Rosalía de Castro deixou a conversa."
 
 #: appearance-config.cpp:220
 msgid "Hello"
-msgstr "Olá"
+msgstr "Ola"
 
 #: appearance-config.cpp:228
 msgid "What's up?"
-msgstr ""
+msgstr "Que hai?"
 
 #: appearance-config.cpp:236
 msgid ""
@@ -113,15 +106,17 @@ msgid ""
 "Real-Time_Communication_and_Collaboration/Components/Chat_Window/Themes"
 "\">here</a>!"
 msgstr ""
+"Comprobe os temas de Adium que funcionan <a href=\"http://community.kde.org/"
+"Real-Time_Communication_and_Collaboration/Components/Chat_Window/Themes"
+"\">aquí</a>!"
 
 #: appearance-config.cpp:246
 msgid "A different example message"
 msgstr "Unha mensaxe de exemplo diferente"
 
 #: appearance-config.cpp:254
-#, fuzzy
 msgid "Ted Example is now Away."
-msgstr "Ted Exemplo deixou a conversa."
+msgstr "Rosalía de Castro está agora Ausente."
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
 #: appearance-config.ui:29
@@ -157,9 +152,3 @@ msgstr "Variante:"
 #: appearance-config.ui:151
 msgid "Show Header"
 msgstr "Mostrar a cabeceira"
-
-#~ msgid "BobMarley@yahoo.com"
-#~ msgstr "BobMarley@yahoo.com"
-
-#~ msgid "Bob Marley"
-#~ msgstr "Bob Marley"

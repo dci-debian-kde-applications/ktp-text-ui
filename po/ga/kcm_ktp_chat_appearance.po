@@ -19,7 +19,7 @@ msgstr ""
 
 #: appearance-config.cpp:42
 msgid "A demo chat"
-msgstr ""
+msgstr "Comhrá taispeána"
 
 #: appearance-config.cpp:43 appearance-config.cpp:178
 #: appearance-config.cpp:186 appearance-config.cpp:194
@@ -36,23 +36,23 @@ msgstr "Jabber"
 #: appearance-config.cpp:247
 msgctxt "Example email"
 msgid "ted@example.com"
-msgstr ""
+msgstr "tadhg@example.com"
 
 #: appearance-config.cpp:46
 msgctxt "Example name"
 msgid "Ted"
-msgstr ""
+msgstr "Tadhg"
 
 #: appearance-config.cpp:175
 msgctxt "Example message in preview conversation"
 msgid "Ok!"
-msgstr ""
+msgstr "OK!"
 
 #: appearance-config.cpp:176 appearance-config.cpp:184
 #: appearance-config.cpp:221 appearance-config.cpp:229
 msgctxt "Example email"
 msgid "larry@example.com"
-msgstr ""
+msgstr "liam@example.com"
 
 #: appearance-config.cpp:177 appearance-config.cpp:185
 #: appearance-config.cpp:222 appearance-config.cpp:230
@@ -66,7 +66,7 @@ msgstr "Slán"
 
 #: appearance-config.cpp:191
 msgid "Have fun!"
-msgstr ""
+msgstr "Bain sult as!"
 
 #: appearance-config.cpp:193 appearance-config.cpp:201
 #: appearance-config.cpp:240 appearance-config.cpp:248
@@ -76,7 +76,7 @@ msgstr ""
 
 #: appearance-config.cpp:199
 msgid "cya"
-msgstr ""
+msgstr "sgf"
 
 #: appearance-config.cpp:207
 msgctxt "Example message"
@@ -85,7 +85,7 @@ msgstr ""
 
 #: appearance-config.cpp:213 appearance-config.cpp:261
 msgid "Ted Example has left the chat."
-msgstr ""
+msgstr "D'fhág Tadhg Ó Sampla an comhrá."
 
 #: appearance-config.cpp:220
 msgid "Hello"
@@ -93,7 +93,7 @@ msgstr "Dia Duit"
 
 #: appearance-config.cpp:228
 msgid "What's up?"
-msgstr ""
+msgstr "Aon scéal?"
 
 #: appearance-config.cpp:236
 msgid ""
@@ -104,7 +104,7 @@ msgstr ""
 
 #: appearance-config.cpp:246
 msgid "A different example message"
-msgstr ""
+msgstr "Teachtaireacht shamplach eile"
 
 #: appearance-config.cpp:254
 msgid "Ted Example is now Away."
@@ -113,17 +113,17 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
 #: appearance-config.ui:29
 msgid "Use Custom Font Settings"
-msgstr ""
+msgstr "Úsáid Clófhoireann Shaincheaptha"
 
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
 #: appearance-config.ui:41
 msgid "Select Font: "
-msgstr ""
+msgstr "Roghnaigh Cló: "
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
 #: appearance-config.ui:54
 msgid "Select Size: "
-msgstr ""
+msgstr "Roghnaigh an Chlómhéid: "
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: appearance-config.ui:90
@@ -133,7 +133,7 @@ msgstr "Stíl"
 #. i18n: ectx: property (text), widget (QLabel, styleLabel)
 #: appearance-config.ui:99
 msgid "Message Style:"
-msgstr ""
+msgstr "Stíl na Teachtaireachta:"
 
 #. i18n: ectx: property (text), widget (QLabel, variantLabel)
 #: appearance-config.ui:125
@@ -143,4 +143,4 @@ msgstr "Malairt:"
 #. i18n: ectx: property (text), widget (QCheckBox, showHeader)
 #: appearance-config.ui:151
 msgid "Show Header"
-msgstr ""
+msgstr "Taispeáin Ceanntásc"

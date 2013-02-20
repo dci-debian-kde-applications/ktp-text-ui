@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-kde-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-01 12:22+0200\n"
+"POT-Creation-Date: 2012-12-31 09:01+0100\n"
 "PO-Revision-Date: 2011-06-28 07:46+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -42,101 +42,101 @@ msgstr ""
 msgid "Move Tab Right"
 msgstr ""
 
-#: chat-window.cpp:577
+#: chat-window.cpp:589
 msgid "&Next Tab"
 msgstr ""
 
-#: chat-window.cpp:581
+#: chat-window.cpp:593
 msgid "&Previous Tab"
 msgstr ""
 
-#: chat-window.cpp:585
+#: chat-window.cpp:597
 msgid "&Audio Call"
 msgstr ""
 
-#: chat-window.cpp:586
+#: chat-window.cpp:598
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr ""
 
-#: chat-window.cpp:589 chat-window.cpp:829
+#: chat-window.cpp:601 chat-window.cpp:841
 msgid "&Block Contact"
 msgstr ""
 
-#: chat-window.cpp:591
+#: chat-window.cpp:603
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
 "receive any messages from this contact"
 msgstr ""
 
-#: chat-window.cpp:594
-msgid "&Send File"
-msgstr ""
-
-#: chat-window.cpp:595
-msgctxt "Toolbar icon tooltip"
-msgid "Send a file to this contact"
-msgstr ""
-
-#: chat-window.cpp:598
-msgid "&Invite to Chat"
-msgstr ""
-
-#: chat-window.cpp:599
-msgctxt "Toolbar icon tooltip"
-msgid "Invite another contact to join this chat"
-msgstr ""
-
-#: chat-window.cpp:602
-msgid "&Video Call"
-msgstr ""
-
-#: chat-window.cpp:603
-msgctxt "Toolbar icon tooltip"
-msgid "Start a video call with this contact"
-msgstr ""
-
 #: chat-window.cpp:606
-msgid "Share My &Desktop"
+msgid "&Send File"
 msgstr ""
 
 #: chat-window.cpp:607
 msgctxt "Toolbar icon tooltip"
-msgid "Start an application that allows this contact to see your desktop"
+msgid "Send a file to this contact"
+msgstr ""
+
+#: chat-window.cpp:610
+msgid "&Invite to Chat"
+msgstr ""
+
+#: chat-window.cpp:611
+msgctxt "Toolbar icon tooltip"
+msgid "Invite another contact to join this chat"
+msgstr ""
+
+#: chat-window.cpp:614
+msgid "&Video Call"
+msgstr ""
+
+#: chat-window.cpp:615
+msgctxt "Toolbar icon tooltip"
+msgid "Start a video call with this contact"
 msgstr ""
 
 #: chat-window.cpp:618
+msgid "Share My &Desktop"
+msgstr ""
+
+#: chat-window.cpp:619
+msgctxt "Toolbar icon tooltip"
+msgid "Start an application that allows this contact to see your desktop"
+msgstr ""
+
+#: chat-window.cpp:630
 msgid "Choose Spelling Language"
 msgstr ""
 
-#: chat-window.cpp:621
+#: chat-window.cpp:633
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr ""
 
-#: chat-window.cpp:625
+#: chat-window.cpp:637
 msgid "Account Icon"
 msgstr ""
 
-#: chat-window.cpp:735
+#: chat-window.cpp:747
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr ""
 
-#: chat-window.cpp:788
+#: chat-window.cpp:800
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr ""
 
-#: chat-window.cpp:790
+#: chat-window.cpp:802
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr ""
 
-#: chat-window.cpp:822
+#: chat-window.cpp:834
 msgid "&Unblock Contact"
 msgstr ""
 
@@ -144,23 +144,23 @@ msgstr ""
 msgid "Search in Contacts..."
 msgstr ""
 
-#: main.cpp:38
+#: main.cpp:39
 #, fuzzy
 msgid "Telepathy Text Ui"
 msgstr " "
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "David Edmundson"
 msgstr ""
 
-#: main.cpp:40 main.cpp:41 main.cpp:42
+#: main.cpp:41 main.cpp:42 main.cpp:43
 msgid "Developer"
 msgstr ""
 
-#: main.cpp:41
+#: main.cpp:42
 msgid "Dominik Schmidt"
 msgstr ""
 
-#: main.cpp:42
+#: main.cpp:43
 msgid "Francesco Nwokeka"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adiumxtra-protocol-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-13 11:49+0200\n"
+"POT-Creation-Date: 2012-11-01 10:55+0100\n"
 "PO-Revision-Date: 2011-06-16 17:28+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -68,22 +68,22 @@ msgstr ""
 msgid "Installed Emoticonset %1 successfully."
 msgstr ""
 
-#: main.cpp:30
+#: main.cpp:31
 msgid "AdiumXtra Protocol Handler"
 msgstr "Hanterer för dat AdiumXtra-Protokoll"
 
-#: main.cpp:32
+#: main.cpp:33
 msgid "Dominik Schmidt"
 msgstr ""
 
-#: main.cpp:32 main.cpp:33
+#: main.cpp:33 main.cpp:34
 msgid "Developer"
 msgstr ""
 
-#: main.cpp:33
+#: main.cpp:34
 msgid "Daniele E. Domenichelli"
 msgstr ""
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "Adium package to install"
 msgstr ""

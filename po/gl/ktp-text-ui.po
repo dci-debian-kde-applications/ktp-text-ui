@@ -2,20 +2,24 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Xosé <xosecalvo@gmail.com>, 2012.
+# Miguel Branco <mgl.branco@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-01 12:22+0200\n"
-"PO-Revision-Date: 2012-03-23 23:55+0100\n"
-"Last-Translator: Xosé <xosecalvo@gmail.com>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"POT-Creation-Date: 2012-12-31 09:01+0100\n"
+"PO-Revision-Date: 2013-01-13 16:45+0100\n"
+"Last-Translator: Miguel Branco <mgl.branco@gmail.com>\n"
+"Language-Team: Galician <proxecto@trasno.net>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -41,126 +45,127 @@ msgstr "Mover a lapela á esquerda"
 msgid "Move Tab Right"
 msgstr "Mover a lapela á dereita"
 
-#: chat-window.cpp:577
+#: chat-window.cpp:589
 msgid "&Next Tab"
 msgstr "Lapela segui&nte"
 
-#: chat-window.cpp:581
+#: chat-window.cpp:593
 msgid "&Previous Tab"
 msgstr "Lapela &anterior"
 
-#: chat-window.cpp:585
+#: chat-window.cpp:597
 msgid "&Audio Call"
 msgstr "Chamada de &son"
 
-#: chat-window.cpp:586
+#: chat-window.cpp:598
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
-msgstr ""
+msgstr "Iniciar unha chamada de son con este contacto"
 
-#: chat-window.cpp:589 chat-window.cpp:829
+#: chat-window.cpp:601 chat-window.cpp:841
 msgid "&Block Contact"
-msgstr ""
+msgstr "&Bloquear este contacto"
 
-#: chat-window.cpp:591
+#: chat-window.cpp:603
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
 "receive any messages from this contact"
 msgstr ""
+"Bloquear significa que este contacto non o verá na rede e que vostede non "
+"recibirá ningunha mensaxe del."
 
-#: chat-window.cpp:594
+#: chat-window.cpp:606
 msgid "&Send File"
 msgstr "&Enviar un ficheiro"
 
-#: chat-window.cpp:595
+#: chat-window.cpp:607
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
-msgstr ""
+msgstr "Enviarlle un ficheiro a este contacto"
 
-#: chat-window.cpp:598
+#: chat-window.cpp:610
 msgid "&Invite to Chat"
 msgstr "C&onvidar a unha conversa"
 
-#: chat-window.cpp:599
+#: chat-window.cpp:611
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
-msgstr ""
+msgstr "Convidar outro contacto a se unir a esta conversa"
 
-#: chat-window.cpp:602
+#: chat-window.cpp:614
 msgid "&Video Call"
 msgstr "Chamada de &vídeo"
 
-#: chat-window.cpp:603
+#: chat-window.cpp:615
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
-msgstr ""
+msgstr "Iniciar unha chamada de vídeo con este contacto"
 
-#: chat-window.cpp:606
+#: chat-window.cpp:618
 msgid "Share My &Desktop"
 msgstr "&Compartir o meu escritorio"
 
-#: chat-window.cpp:607
+#: chat-window.cpp:619
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr ""
+"Iniciar un aplicativo que permita que este contacto vexa o seu escritorio"
 
-#: chat-window.cpp:618
+#: chat-window.cpp:630
 msgid "Choose Spelling Language"
 msgstr "Escoller o idioma da ortografía"
 
-#: chat-window.cpp:621
-#, fuzzy
-#| msgid "&Previous Tab"
+#: chat-window.cpp:633
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
-msgstr "Lapela &anterior"
+msgstr "Conversas &anteriores"
 
-#: chat-window.cpp:625
+#: chat-window.cpp:637
 msgid "Account Icon"
-msgstr ""
+msgstr "Icona da conta"
 
-#: chat-window.cpp:735
+#: chat-window.cpp:747
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Escolla os ficheiros que enviar a %1"
 
-#: chat-window.cpp:788
+#: chat-window.cpp:800
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
-msgstr "A escribir... %1"
+msgstr "Escribindo... %1"
 
-#: chat-window.cpp:790
+#: chat-window.cpp:802
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 introduciu texto"
 
-#: chat-window.cpp:822
+#: chat-window.cpp:834
 msgid "&Unblock Contact"
-msgstr ""
+msgstr "&Desbloquear este contacto"
 
 #: invite-contact-dialog.cpp:51
 msgid "Search in Contacts..."
-msgstr ""
+msgstr "Buscar nos contactos..."
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "Telepathy Text Ui"
 msgstr "Interface de texto do Telepathy"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:40 main.cpp:41 main.cpp:42
+#: main.cpp:41 main.cpp:42 main.cpp:43
 msgid "Developer"
 msgstr "Desenvolvedor"
 
-#: main.cpp:41
+#: main.cpp:42
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:42
+#: main.cpp:43
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"

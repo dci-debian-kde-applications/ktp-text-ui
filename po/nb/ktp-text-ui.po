@@ -1,19 +1,19 @@
 # Translation of ktp-text-ui to Norwegian Bokmål
 #
-# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2012.
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-03-09 12:42+0100\n"
+"POT-Creation-Date: 2012-12-31 09:01+0100\n"
+"PO-Revision-Date: 2012-11-22 19:17+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -43,124 +43,126 @@ msgstr "Flytt fane mot venstre"
 msgid "Move Tab Right"
 msgstr "Flytt fane mot høyre"
 
-#: chat-window.cpp:575
+#: chat-window.cpp:589
 msgid "&Next Tab"
 msgstr "&Neste fane"
 
-#: chat-window.cpp:579
+#: chat-window.cpp:593
 msgid "&Previous Tab"
 msgstr "&Forrige fane"
 
-#: chat-window.cpp:583
+#: chat-window.cpp:597
 msgid "&Audio Call"
 msgstr "&Lydanrop"
 
-#: chat-window.cpp:584
+#: chat-window.cpp:598
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
-msgstr ""
+msgstr "Start en lydsamtale med denne kontakten"
 
-#: chat-window.cpp:587 chat-window.cpp:827
+#: chat-window.cpp:601 chat-window.cpp:841
 msgid "&Block Contact"
-msgstr ""
+msgstr "&Blokker kontakt"
 
-#: chat-window.cpp:589
+#: chat-window.cpp:603
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
 "receive any messages from this contact"
 msgstr ""
+"Blokkering betyr at denne kontakten ikke kan se at du er tilkoblet, og du "
+"får ingen meldinger fra denne kontakten"
 
-#: chat-window.cpp:592
+#: chat-window.cpp:606
 msgid "&Send File"
 msgstr "&Send fil"
 
-#: chat-window.cpp:593
+#: chat-window.cpp:607
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
-msgstr ""
+msgstr "Send en fil til denne kontakten"
 
-#: chat-window.cpp:596
+#: chat-window.cpp:610
 msgid "&Invite to Chat"
 msgstr "&Inviter til prat"
 
-#: chat-window.cpp:597
+#: chat-window.cpp:611
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
-msgstr ""
+msgstr "Inviter en annen kontakt til å bli med i denne praten"
 
-#: chat-window.cpp:600
+#: chat-window.cpp:614
 msgid "&Video Call"
-msgstr "Videoanrop"
+msgstr "&Videoanrop"
 
-#: chat-window.cpp:601
+#: chat-window.cpp:615
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
-msgstr ""
+msgstr "Start en videosamtale med denne kontakten"
 
-#: chat-window.cpp:604
+#: chat-window.cpp:618
 msgid "Share My &Desktop"
 msgstr "&Del mitt skrivebord"
 
-#: chat-window.cpp:605
+#: chat-window.cpp:619
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
-msgstr ""
+msgstr "Start et program som lar denne kontakten se skrivebordet ditt"
 
-#: chat-window.cpp:616
+#: chat-window.cpp:630
 msgid "Choose Spelling Language"
 msgstr "Velg språk for stavekontroll"
 
-#: chat-window.cpp:619
+#: chat-window.cpp:633
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
-msgstr ""
+msgstr "&Tidligere samtaler"
 
-#: chat-window.cpp:623
+#: chat-window.cpp:637
 msgid "Account Icon"
-msgstr ""
+msgstr "Konto-ikon"
 
-#: chat-window.cpp:733
+#: chat-window.cpp:747
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Velg filer som skal sendes til %1"
 
-#: chat-window.cpp:786
+#: chat-window.cpp:800
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr "Skriver … %1"
 
-#: chat-window.cpp:788
+#: chat-window.cpp:802
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
-msgstr ""
+msgstr "%1 har skrevet inn tekst"
 
-#: chat-window.cpp:820
+#: chat-window.cpp:834
 msgid "&Unblock Contact"
-msgstr ""
+msgstr "Ta &vekk blokkering for kontakt"
 
 #: invite-contact-dialog.cpp:51
 msgid "Search in Contacts..."
-msgstr ""
+msgstr "Søk i kontakter …"
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "Telepathy Text Ui"
 msgstr "Telepathy tekst-brukerflate"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:40 main.cpp:41 main.cpp:42
+#: main.cpp:41 main.cpp:42 main.cpp:43
 msgid "Developer"
 msgstr "Utvikler"
 
-#: main.cpp:41
+#: main.cpp:42
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:42
+#: main.cpp:43
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
