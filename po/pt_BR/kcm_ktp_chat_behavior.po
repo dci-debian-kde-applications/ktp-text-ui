@@ -1,22 +1,32 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# Translation of kcm_ktp_chat_behavior.po to Brazilian Portuguese
+# Copyright (C) 2011-2013 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# André Marcelo Alvarenga <andrealvarenga@gmx.net>, 2011.
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2011, 2012, 2013.
 # Marcus Gama <marcus.gama@gmail.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-17 05:23+0100\n"
-"PO-Revision-Date: 2011-10-14 22:57-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-13 08:14-0200\n"
+"Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: behavior-config.cpp:49
+msgctxt ""
+"Part of config 'show last [spin box] messages' This is the suffix to the "
+"spin box. Be sure to include leading space"
+msgid " message"
+msgid_plural " messages"
+msgstr[0] " mensagem"
+msgstr[1] " mensagens"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -25,97 +35,26 @@ msgstr "Abas"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: behavior-config.ui:23
-msgid "Open new conversations in :"
-msgstr "Abrir nova conversação em :"
+msgid "Open new conversations:"
+msgstr "Abrir novas conversas:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
 #: behavior-config.ui:30
-msgid "A new window"
-msgstr "Uma nova janela"
+msgid "As new windows"
+msgstr "Como novas janelas"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
 #: behavior-config.ui:40
-msgid "A new tab in the first window"
-msgstr "Uma nova aba na primeira janela"
+msgid "As tabs in the same window"
+msgstr "Como abas em uma mesma janela"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioLast)
-#: behavior-config.ui:50
-msgid "A new tab in the last focused window"
-msgstr "Uma nova aba na última janela com foco"
+#. i18n: ectx: property (title), widget (KButtonGroup, scrollbackGroup)
+#: behavior-config.ui:53
+msgid "Last Conversation Scrollback"
+msgstr "Deslocamento das últimas conversas"
 
-#~ msgid "A demo chat"
-#~ msgstr "Uma bate-papo de demonstração"
-
-#~ msgid "Jabber"
-#~ msgstr "Jabber"
-
-#~ msgid "BobMarley@yahoo.com"
-#~ msgstr "BobMarley@yahoo.com"
-
-#~ msgid "Bob Marley"
-#~ msgstr "Bob Marley"
-
-#~ msgid "Bye Bye"
-#~ msgstr "Tchau"
-
-#~ msgid "larry@example.com"
-#~ msgstr "lucas@exemplo.com"
-
-#~ msgid "Larry Demo"
-#~ msgstr "Lucas Demonstração"
-
-#~ msgid "cya"
-#~ msgstr "cya"
-
-#~ msgid "ted@example.com"
-#~ msgstr "joao@exemplo.com"
-
-#~ msgid "Ted Example"
-#~ msgstr "João Exemplo"
-
-#~ msgid "Hello"
-#~ msgstr "Olá"
-
-#~ msgid "A different example message"
-#~ msgstr "Uma mensagem de exemplo diferente"
-
-#~ msgid "Ted Example has left the chat."
-#~ msgstr "João Exemplo saiu do bate-papo."
-
-#~ msgid "Use Custom Font Settings"
-#~ msgstr "Usar configurações de fonte personalizadas"
-
-#~ msgid "Select Font: "
-#~ msgstr "Selecionar fonte: "
-
-#~ msgid "Select Size: "
-#~ msgstr "Selecionar tamanho: "
-
-#~ msgid "Style"
-#~ msgstr "Estilo"
-
-#~ msgid "Message Style:"
-#~ msgstr "Estilo de mensagem:"
-
-#~ msgid "Variant:"
-#~ msgstr "Variante:"
-
-#~ msgid "Show Header"
-#~ msgstr "Mostrar o cabeçalho:"
-
-#~ msgid "Show User Icons"
-#~ msgstr "Mostrar ícones do usuário"
-
-#~ msgid "Form"
-#~ msgstr "Formulário"
-
-#~ msgid "Telepathy Chat Window Config"
-#~ msgstr "Configuração da janela de bate-papo do Telepathy"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "André Marcelo Alvarenga"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "andrealvarenga@gmx.net"
+#. i18n: First part of &quot;Show last %1 messages&quot; string
+#. i18n: ectx: property (text), widget (QLabel, label_p1)
+#: behavior-config.ui:59
+msgid "Show last"
+msgstr "Mostrar última"

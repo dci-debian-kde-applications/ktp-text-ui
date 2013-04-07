@@ -1,11 +1,11 @@
 # translation of ktp-text-ui.po to Slovak
-# Roman Paholik <wizzardsk@gmail.com>, 2012.
+# Roman Paholik <wizzardsk@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-12-31 09:01+0100\n"
-"PO-Revision-Date: 2012-08-29 22:35+0200\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-03-06 10:07+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
@@ -23,44 +23,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
-#: chat-window.cpp:123
+#: chat-window.cpp:134
 msgid "Close"
 msgstr "Zavrieť"
 
-#: chat-window.cpp:124
+#: chat-window.cpp:135
 msgid "Detach Tab"
 msgstr "Odpojiť kartu"
 
-#: chat-window.cpp:125
+#: chat-window.cpp:136
 msgid "Move Tab Left"
 msgstr "Presunúť kartu vľavo"
 
-#: chat-window.cpp:126
+#: chat-window.cpp:137
 msgid "Move Tab Right"
 msgstr "Presunúť kartu vpravo"
 
-#: chat-window.cpp:589
+#: chat-window.cpp:646
 msgid "&Next Tab"
 msgstr "&Nasledujúca karta"
 
-#: chat-window.cpp:593
+#: chat-window.cpp:650
 msgid "&Previous Tab"
 msgstr "&Predchádzajúca karta"
 
-#: chat-window.cpp:597
+#: chat-window.cpp:654
 msgid "&Audio Call"
 msgstr "Zvukový hovor"
 
-#: chat-window.cpp:598
+#: chat-window.cpp:655
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Spustiť zvukový hovor s týmto kontaktom"
 
-#: chat-window.cpp:601 chat-window.cpp:841
+#: chat-window.cpp:658 chat-window.cpp:889
 msgid "&Block Contact"
 msgstr "&Blokovať kontakt"
 
-#: chat-window.cpp:603
+#: chat-window.cpp:660
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -69,96 +69,117 @@ msgstr ""
 "Blokovanie znamená, že kontakt vás neuvidí online a nedostanete od neho "
 "žiadne správy"
 
-#: chat-window.cpp:606
+#: chat-window.cpp:663
 msgid "&Send File"
 msgstr "Odo&slať súbor"
 
-#: chat-window.cpp:607
+#: chat-window.cpp:664
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Poslať súbor tomuto kontaktu"
 
-#: chat-window.cpp:610
+#: chat-window.cpp:667
 msgid "&Invite to Chat"
 msgstr "Pozvať na rozhovor"
 
-#: chat-window.cpp:611
+#: chat-window.cpp:668
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Pozvať iný kontakt na pripojenie k tomuto rozhovoru"
 
-#: chat-window.cpp:614
+#: chat-window.cpp:671
 msgid "&Video Call"
 msgstr "Video hovor"
 
-#: chat-window.cpp:615
+#: chat-window.cpp:672
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Spustiť videohovor s týmto kontaktom"
 
-#: chat-window.cpp:618
+#: chat-window.cpp:675
 msgid "Share My &Desktop"
 msgstr "Zdieľať moju plochu"
 
-#: chat-window.cpp:619
+#: chat-window.cpp:676
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr "Spustiť aplikáciu, ktorá umožní vidieť tento kontakt na vašej ploche"
 
-#: chat-window.cpp:630
+#: chat-window.cpp:687
 msgid "Choose Spelling Language"
 msgstr "Vybrať jazyk kontroly"
 
-#: chat-window.cpp:633
+#: chat-window.cpp:689
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Predošlé konverzácie"
 
-#: chat-window.cpp:637
+#: chat-window.cpp:692
 msgid "Account Icon"
 msgstr "Ikona účtu"
 
-#: chat-window.cpp:747
+#: chat-window.cpp:696
+msgid "&Clear View"
+msgstr "Vyčistiť pohľad"
+
+#: chat-window.cpp:697
+msgctxt "Toolbar icon tooltip"
+msgid "Clear all messages from current chat tab"
+msgstr "Vyčistiť všetky správy z aktuálnej karty rozhovoru"
+
+#: chat-window.cpp:703
+msgid "Send message"
+msgstr "Poslať správu"
+
+#: chat-window.cpp:815
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Vybrať súbory na odoslanie do %1"
 
-#: chat-window.cpp:800
+#: chat-window.cpp:848
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr "Písanie... %1"
 
-#: chat-window.cpp:802
+#: chat-window.cpp:850
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 zadal text"
 
-#: chat-window.cpp:834
+#: chat-window.cpp:882
 msgid "&Unblock Contact"
 msgstr "Odblokovať kontakt"
 
-#: invite-contact-dialog.cpp:51
+#: emoticon-text-edit-action.cpp:49
+msgid "Add Smiley"
+msgstr "Pridať smajlík"
+
+#: invite-contact-dialog.cpp:50
 msgid "Search in Contacts..."
 msgstr "Hľadať v kontaktoch..."
 
-#: main.cpp:39
+#: invite-contact-dialog.cpp:54
+msgid "Select Contacts to Invite to Group Chat"
+msgstr "Vyberte kontakty na pozvanie do skupinového rozhovoru"
+
+#: main.cpp:43
 msgid "Telepathy Text Ui"
 msgstr "UI textu Telepathy"
 
-#: main.cpp:41
+#: main.cpp:45
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:41 main.cpp:42 main.cpp:43
+#: main.cpp:45 main.cpp:46 main.cpp:47
 msgid "Developer"
 msgstr "Vývojár"
 
-#: main.cpp:42
+#: main.cpp:46
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:43
+#: main.cpp:47
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"

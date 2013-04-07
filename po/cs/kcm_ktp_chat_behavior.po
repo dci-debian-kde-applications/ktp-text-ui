@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-17 05:23+0100\n"
-"PO-Revision-Date: 2011-09-29 13:21+0200\n"
-"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-13 14:14+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,16 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
+#: behavior-config.cpp:49
+msgctxt ""
+"Part of config 'show last [spin box] messages' This is the suffix to the "
+"spin box. Be sure to include leading space"
+msgid " message"
+msgid_plural " messages"
+msgstr[0] " zprávu"
+msgstr[1] " zprávy"
+msgstr[2] " zpráv"
+
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
 msgid "Tabs"
@@ -25,20 +35,26 @@ msgstr "Karty"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: behavior-config.ui:23
-msgid "Open new conversations in :"
-msgstr "Otevřít nové rozhovory v:"
+msgid "Open new conversations:"
+msgstr "Otevřít nové rozhovory:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
 #: behavior-config.ui:30
-msgid "A new window"
-msgstr "Novém okně"
+msgid "As new windows"
+msgstr "Nových oknech"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
 #: behavior-config.ui:40
-msgid "A new tab in the first window"
-msgstr "Nové kartě prvního okna"
+msgid "As tabs in the same window"
+msgstr "Jako karty ve stejném okně"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioLast)
-#: behavior-config.ui:50
-msgid "A new tab in the last focused window"
-msgstr "Nové kartě posledního okna"
+#. i18n: ectx: property (title), widget (KButtonGroup, scrollbackGroup)
+#: behavior-config.ui:53
+msgid "Last Conversation Scrollback"
+msgstr "Historie posledního rozhovoru"
+
+#. i18n: First part of &quot;Show last %1 messages&quot; string
+#. i18n: ectx: property (text), widget (QLabel, label_p1)
+#: behavior-config.ui:59
+msgid "Show last"
+msgstr "Zobrazit poslední"

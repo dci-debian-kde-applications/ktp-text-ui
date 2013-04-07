@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Ni Hui <shuizhuyuanluo@126.com>, 2012.
-# Weng Xuetian <wengxt@gmail.com>, 2013.
+# Weng Xuetian <wengxt@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-11-01 10:55+0100\n"
-"PO-Revision-Date: 2013-01-12 11:44-0500\n"
+"PO-Revision-Date: 2012-10-06 04:57-0400\n"
 "Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
 "Language: zh_CN\n"

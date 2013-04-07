@@ -5,9 +5,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-17 05:23+0100\n"
-"PO-Revision-Date: 2012-02-19 17:52+0100\n"
-"Last-Translator: Mladen Pejakovic <pejakm@gmail.com>\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-17 22:34+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -19,32 +19,45 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#. i18n: file: behavior-config.ui:17
+#: behavior-config.cpp:49
+msgctxt ""
+"Part of config 'show last [spin box] messages' This is the suffix to the "
+"spin box. Be sure to include leading space"
+msgid " message"
+msgid_plural " messages"
+msgstr[0] " poruka"
+msgstr[1] " poruke"
+msgstr[2] " poruka"
+msgstr[3] " poruka"
+
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
-#: rc.cpp:3
+#: behavior-config.ui:17
 msgid "Tabs"
 msgstr "Jezičci"
 
-#. i18n: file: behavior-config.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:6
-msgid "Open new conversations in :"
-msgstr "Otvaraj nove razgovore u:"
+#: behavior-config.ui:23
+msgid "Open new conversations:"
+msgstr "Otvaraj nove razgovore:"
 
-#. i18n: file: behavior-config.ui:30
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
-#: rc.cpp:9
-msgid "A new window"
-msgstr "novom prozoru"
+#: behavior-config.ui:30
+msgid "As new windows"
+msgstr "kao nove prozore"
 
-#. i18n: file: behavior-config.ui:40
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
-#: rc.cpp:12
-msgid "A new tab in the first window"
-msgstr "novom jezičku u prvom prozoru"
+#: behavior-config.ui:40
+msgid "As tabs in the same window"
+msgstr "kao jezičke u istom prozoru"
 
-#. i18n: file: behavior-config.ui:50
-#. i18n: ectx: property (text), widget (QRadioButton, radioLast)
-#: rc.cpp:15
-msgid "A new tab in the last focused window"
-msgstr "novom jezičku u poslednje fokusiranom prozoru"
+#. i18n: ectx: property (title), widget (KButtonGroup, scrollbackGroup)
+#: behavior-config.ui:53
+msgid "Last Conversation Scrollback"
+msgstr "Prepis poslednjeg razgovora"
+
+# >! Plural forms.
+#. i18n: First part of &quot;Show last %1 messages&quot; string
+#. i18n: ectx: property (text), widget (QLabel, label_p1)
+#: behavior-config.ui:59
+msgid "Show last"
+msgstr "Prikaži poslednjih"

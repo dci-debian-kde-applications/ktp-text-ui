@@ -1,18 +1,9 @@
-#Only do anything with this app if the logger is available.
-if(TELEPATHY_LOGGER_QT4_FOUND)
-    add_definitions( -DTELEPATHY_LOGGER_QT4_FOUND )
-
-
-    set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TELEPATHY_LOGGER_QT4_DEFINITIONS}" )
-
-
-include_directories(${CMAKE_SOURCE_DIR}/lib
-                    ${TELEPATHY_LOGGER_QT4_INCLUDE_DIRS}
-                   )
+include_directories(${CMAKE_SOURCE_DIR}/lib)
 
 set(ktp-log-viewer_SRCS
         main.cpp
         log-viewer.cpp
+        logs-import-dialog.cpp
         entity-model.cpp
         entity-model-item.cpp
         message-view.cpp
@@ -31,13 +22,12 @@ target_link_libraries(ktp-log-viewer
             ${KDE4_KIO_LIBS}
             ${TELEPATHY_QT4_LIBRARIES}
             ${KDE4_KEMOTICONS_LIBS}
-      	    ${KDE4_KCMUTILS_LIBS}
+            ${KDE4_KCMUTILS_LIBS}
             ${TELEPATHY_LOGGER_QT4_LIBRARIES}
             ${QT_QTWEBKIT_LIBRARY}
+            ${KTP_LIBRARIES}
             ktpchat)
 
 install(TARGETS ktp-log-viewer DESTINATION ${BIN_INSTALL_DIR})
 install(FILES ktp-log-viewer.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-
-
-endif()
+install(FILES log-viewer.rc DESTINATION  ${DATA_INSTALL_DIR}/ktp-log-viewer/)

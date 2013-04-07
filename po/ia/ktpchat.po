@@ -1,0 +1,209 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Giovanni Sora <g.sora@tiscali.it>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-27 14:39+0100\n"
+"Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-l10n-ia@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Giovanni Sora"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "g.sora@tiscali.it"
+
+#: adium-theme-view.cpp:91
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr ""
+"Il falleva cargar un thema valide. Tu installation es corrupte. Verifica tu "
+"percurso de kde. Ora on fracassara."
+
+#: adium-theme-view.cpp:172
+msgid "Missing required file Template.html - check your installation."
+msgstr "File requirite Template.html es mancante - verifica tu installation"
+
+#: chat-search-bar.cpp:37
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "Seque&nte"
+
+#: chat-search-bar.cpp:38
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "&Previe"
+
+#: chat-search-bar.cpp:47
+msgid "Insert search text..."
+msgstr "Inserta texto de cerca..."
+
+#: chat-search-bar.cpp:56
+msgid "Case sensitive"
+msgstr "Sensibile al differentia inter majusculas e minusculas"
+
+#: chat-widget.cpp:534
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr ""
+"Livration del message \"%1\"falleva proque le contacto remote es blocate"
+
+#: chat-widget.cpp:538
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr ""
+"Livration del message \"%1\"falleva proque le contacto remote es foras de "
+"linea"
+
+#: chat-widget.cpp:544
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr "Livration del message falleva proque le contacto remote es blocate"
+
+#: chat-widget.cpp:547
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr ""
+"Livration del message falleva proque le contacto remote es foras de linea"
+
+#: chat-widget.cpp:554
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr ""
+"Livration del message \"%1\"falleva proque le contacto remote es invalide"
+
+#: chat-widget.cpp:558
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr "Livration del message falleva proque le contacto remote es invalide"
+
+#: chat-widget.cpp:564
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr ""
+"Livration del message \"%1\"falleva proque tu non ha le permission de parlar "
+"in iste sala"
+
+#: chat-widget.cpp:568
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr ""
+"Livration del message falleva proque tu non ha le permission de parlar in "
+"iste sala"
+
+#: chat-widget.cpp:574
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr "Livration del message \"%1\" falleva proque il esseva troppo longe"
+
+#: chat-widget.cpp:578
+msgid "Delivery of a message failed because it was too long"
+msgstr "Livration del message falleva proque il esseva troppo longe"
+
+#: chat-widget.cpp:584
+#, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr "Livration del message \"%1\" falleva : %2"
+
+#: chat-widget.cpp:588
+#, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr "Livration del message  falleva : %1"
+
+#: chat-widget.cpp:693
+msgid "You have sent a message"
+msgstr "Tu ha inviate un message"
+
+#: chat-widget.cpp:741
+#, kde-format
+msgid "%1 has left the chat"
+msgstr "%1 ha lassate le conversation in directo."
+
+#: chat-widget.cpp:784
+#, kde-format
+msgid "You are now marked as %1"
+msgstr "Tu ora es marcate como %1."
+
+#: chat-widget.cpp:788
+#, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr "%1 es %2"
+
+#: chat-widget.cpp:790
+#, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr "%1 es %2 - %3"
+
+#: chat-widget.cpp:822
+#, kde-format
+msgid "You are now known as %1"
+msgstr "Tu ora es cognoscite como %1"
+
+#: chat-widget.cpp:830
+#, kde-format
+msgid "%1 is now known as %2"
+msgstr "%1 es ora cognoscite como %2"
+
+#: chat-widget.cpp:853
+#, kde-format
+msgid "%1 is now blocked."
+msgstr "%1 es ora blocate."
+
+#: chat-widget.cpp:855
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr "%1 es ora disblocate."
+
+#: chat-widget.cpp:1038
+msgid "You are now offline"
+msgstr "Tu ora es foras de linea"
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr "Normal"
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "Discarga"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "Cancella"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "Reproduce"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "Salveguarda como"
+
+#: notify-filter.cpp:76
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 te ha inviate un message"
+
+#: notify-filter.cpp:97
+msgid "View"
+msgstr "Vista"

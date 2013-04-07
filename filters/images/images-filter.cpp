@@ -29,20 +29,15 @@
 
 class ImagesFilter::Private {
 public:
-    QRegExp imageRegex;
+    QList<QByteArray> formats;
 };
 
-ImagesFilter::ImagesFilter (QObject* parent, const QVariantList&) :
-    AbstractMessageFilter (parent), d(new Private)
-{
-    QString imagePattern = QLatin1String("\\.(?:");
-    Q_FOREACH (const QByteArray &format, QImageReader::supportedImageFormats()) {
-        imagePattern = imagePattern % QString::fromAscii(format) % QLatin1String("|");
-    }
-    imagePattern.chop(1);
-    imagePattern += QLatin1String(")$");
+static const KCatalogLoader loader(QLatin1String("ktp-filters"));
 
-    d->imageRegex = QRegExp(imagePattern);
+ImagesFilter::ImagesFilter (QObject* parent, const QVariantList&) :
+    KTp::AbstractMessageFilter (parent), d(new Private)
+{
+    d->formats = QImageReader::supportedImageFormats();
 }
 
 ImagesFilter::~ImagesFilter()
@@ -50,14 +45,18 @@ ImagesFilter::~ImagesFilter()
     delete d;
 }
 
-void ImagesFilter::filterMessage (Message& message)
+void ImagesFilter::filterMessage(KTp::Message &message, const KTp::MessageContext &context)
 {
+    Q_UNUSED(context)
     kDebug() << message.property("Urls").toList().size();
     Q_FOREACH (const QVariant &var, message.property("Urls").toList()) {
         const KUrl url = qvariant_cast<KUrl>(var);
         QString fileName = url.fileName().toLower();
 
-        if (!fileName.isNull() && fileName.contains(d->imageRegex)) {
+        //get everything after the . The +1 means we don't include the . character
+        QString extension = fileName.mid(fileName.lastIndexOf(QLatin1Char('.'))+1);
+
+        if (!fileName.isNull() && d->formats.contains(extension.toUtf8())) {
             QString href = QString::fromAscii(url.toEncoded());
             message.appendMessagePart(
                 QLatin1Literal("<br/><a href=\"") % href % QLatin1Literal("\">") %

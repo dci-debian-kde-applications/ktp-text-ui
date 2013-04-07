@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-31 13:28+0100\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
 "PO-Revision-Date: 2013-02-06 11:07+0100\n"
 "Last-Translator: Tomáš Chvátal <tomas.chvatal@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -26,7 +26,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org, tomas.chvatal@gmail.com"
 
-#: adium-theme-view.cpp:86
+#: adium-theme-view.cpp:91
 msgid ""
 "Failed to load a valid theme. Your installation is broken. Check your kde "
 "path. Will now crash."
@@ -34,64 +34,60 @@ msgstr ""
 "Nelze načíst platný motiv. Máte poškozenou instalaci. Zkontrolujte si "
 "adresář s KDE. Nyní dojde k pádu."
 
-#: adium-theme-view.cpp:145
+#: adium-theme-view.cpp:172
 msgid "Missing required file Template.html - check your installation."
 msgstr ""
 "Chybí požadovaný soubor Template.html - zkontrolujte instalaci programu."
 
-#: chat-search-bar.cpp:36
+#: chat-search-bar.cpp:37
 msgctxt "Next search result"
 msgid "&Next"
 msgstr "&Následující"
 
-#: chat-search-bar.cpp:37
+#: chat-search-bar.cpp:38
 msgctxt "Previous search result"
 msgid "&Previous"
 msgstr "&Předchozí"
 
-#: chat-search-bar.cpp:45
+#: chat-search-bar.cpp:47
 msgid "Insert search text..."
 msgstr "Vložte vyhledávaný text..."
 
-#: chat-search-bar.cpp:54
+#: chat-search-bar.cpp:56
 msgid "Case sensitive"
 msgstr "Rozlišovat velikost písmen"
 
-#: chat-widget.cpp:106
-msgid "Show format options"
-msgstr "Zobrazit možnosti formátování"
-
-#: chat-widget.cpp:594
+#: chat-widget.cpp:534
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
 msgstr "Odeslání zprávy \"%1\" selhalo, protože vzdálený kontakt je blokovaný"
 
-#: chat-widget.cpp:598
+#: chat-widget.cpp:538
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
 msgstr "Odeslání zprávy \"%1\" selhalo, protože vzdálený kontakt je odpojený"
 
-#: chat-widget.cpp:604
+#: chat-widget.cpp:544
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr "Odeslání zprávy selhalo, protože vzdálený kontakt je blokovaný"
 
-#: chat-widget.cpp:607
+#: chat-widget.cpp:547
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr "Odeslání zprávy selhalo, protože vzdálený kontakt je odpojený"
 
-#: chat-widget.cpp:614
+#: chat-widget.cpp:554
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
 msgstr "Odeslání zprávy \"%1\" selhalo, protože vzdálený kontakt není platný"
 
-#: chat-widget.cpp:618
+#: chat-widget.cpp:558
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr "Odeslání zprávy selhalo, protože vzdálený kontakt není platný"
 
-#: chat-widget.cpp:624
+#: chat-widget.cpp:564
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -100,62 +96,53 @@ msgstr ""
 "Odeslání zprávy \"%1\" selhalo, protože nemáte oprávnění mluvit v této "
 "místnosti"
 
-#: chat-widget.cpp:628
+#: chat-widget.cpp:568
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
 msgstr ""
 "Odeslání zprávy selhalo, protože nemáte oprávnění mluvit v této místnosti"
 
-#: chat-widget.cpp:634
+#: chat-widget.cpp:574
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Odeslání zprávy \"%1\" selhalo, protože byla příliš dlouhá"
 
-#: chat-widget.cpp:638
+#: chat-widget.cpp:578
 msgid "Delivery of a message failed because it was too long"
 msgstr "Odeslání zprávy selhalo, protože byla příliš dlouhá"
 
-#: chat-widget.cpp:644
+#: chat-widget.cpp:584
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Odeslání zprávy \"%1\" selhalo: %2"
 
-#: chat-widget.cpp:648
+#: chat-widget.cpp:588
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Odeslání zprávy selhalo: %1"
 
-#: chat-widget.cpp:765
-#, kde-format
-msgid "%1 has sent you a message"
-msgstr "%1 vám poslal zprávu"
-
-#: chat-widget.cpp:778
-msgid "View"
-msgstr "Pohled"
-
-#: chat-widget.cpp:809
+#: chat-widget.cpp:693
 msgid "You have sent a message"
 msgstr "Odeslal jste zprávu"
 
-#: chat-widget.cpp:850
+#: chat-widget.cpp:741
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 opustil rozhovor"
 
-#: chat-widget.cpp:893
+#: chat-widget.cpp:784
 #, kde-format
 msgid "You are now marked as %1"
 msgstr "Nyní jste označeni jako %1"
 
-#: chat-widget.cpp:897
+#: chat-widget.cpp:788
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 je %2"
 
-#: chat-widget.cpp:899
+#: chat-widget.cpp:790
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -163,27 +150,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 je %2 - %3"
 
-#: chat-widget.cpp:929
+#: chat-widget.cpp:822
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Nyní jste znám jako %1"
 
-#: chat-widget.cpp:937
+#: chat-widget.cpp:830
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 je nyní znám jako %2"
 
-#: chat-widget.cpp:960
+#: chat-widget.cpp:853
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 je nyní blokován."
 
-#: chat-widget.cpp:962
+#: chat-widget.cpp:855
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 je nyní odblokován."
 
-#: chat-widget.cpp:1062
+#: chat-widget.cpp:1038
 msgid "You are now offline"
 msgstr "Nyní jste odpojeni"
 
@@ -207,3 +194,12 @@ msgstr "Přehrát"
 #: chat-window-style.cpp:498
 msgid "Save as"
 msgstr "Uložit jako"
+
+#: notify-filter.cpp:76
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 vám poslal zprávu"
+
+#: notify-filter.cpp:97
+msgid "View"
+msgstr "Pohled"

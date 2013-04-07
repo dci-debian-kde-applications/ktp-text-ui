@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-11-01 10:55+0100\n"
-"PO-Revision-Date: 2013-02-06 02:51+0600\n"
+"PO-Revision-Date: 2013-03-12 05:12+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
 "Language: kk\n"
@@ -29,7 +29,7 @@ msgstr "sairan@computer.org"
 
 #: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
 msgid "Package type not recognized or not supported"
-msgstr ""
+msgstr "Дестенің түрі анықталмады, не қолдауы жоқ"
 
 #: adiumxtra-protocol-handler.cpp:83 adiumxtra-protocol-handler.cpp:152
 #: chat-style-installer.cpp:153 emoticon-set-installer.cpp:126
@@ -39,7 +39,7 @@ msgstr "OK"
 #: chat-style-installer.cpp:123
 #, kde-format
 msgid "Install Chatstyle %1"
-msgstr ""
+msgstr "%1 чат стилін орнату"
 
 #: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
 msgid "Install"
@@ -52,26 +52,26 @@ msgstr "Қайту"
 #: chat-style-installer.cpp:146
 #, kde-format
 msgid "Installed Chatstyle %1 successfully."
-msgstr ""
+msgstr "%1 чат стилі сәтті орнатылды."
 
 #: chat-style-installer.cpp:150
 #, kde-format
 msgid "Installation of Chatstyle %1 failed."
-msgstr ""
+msgstr "%1 чат стилін орнату жаңылысы."
 
 #: emoticon-set-installer.cpp:104
 #, kde-format
 msgid "Install Emoticonset %1"
-msgstr ""
+msgstr "%1 көңіл күй белгілер жинағын орнату"
 
 #: emoticon-set-installer.cpp:124
 #, kde-format
 msgid "Installed Emoticonset %1 successfully."
-msgstr ""
+msgstr "%1 көңіл күй белгілер жинағы сәтті орнатылды."
 
 #: main.cpp:31
 msgid "AdiumXtra Protocol Handler"
-msgstr ""
+msgstr "AdiumXtra протоколын өңдеуші"
 
 #: main.cpp:33
 msgid "Dominik Schmidt"
@@ -87,4 +87,4 @@ msgstr "Daniele E. Domenichelli"
 
 #: main.cpp:39
 msgid "Adium package to install"
-msgstr ""
+msgstr "Орнататын Aduim дестесі"

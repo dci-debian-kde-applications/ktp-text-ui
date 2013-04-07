@@ -16,22 +16,23 @@
  *    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
 */
 
-#ifndef FORMAT_FILTER_H
-#define FORMAT_FILTER_H
-#include <KTp/AbstractMessageFilter>
+#ifndef IMAGES_FILTER_H
+#define IMAGES_FILTER_H
 
-class ImagesFilter : public AbstractMessageFilter
+#include <KTp/abstract-message-filter.h>
+
+class ImagesFilter : public KTp::AbstractMessageFilter
 {
 Q_OBJECT
 
 public:
     ImagesFilter (QObject* parent, const QVariantList &);
     virtual ~ImagesFilter();
-    virtual void filterMessage (Message& message);
+    virtual void filterMessage (KTp::Message &message, const KTp::MessageContext &context);
 
 private:
     class Private;
     Private *d;
 };
 
-#endif // FORMAT_FILTER_H
+#endif // IMAGES_FILTER_H

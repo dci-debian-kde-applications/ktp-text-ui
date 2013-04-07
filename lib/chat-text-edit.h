@@ -20,13 +20,20 @@
 #ifndef CHATTEXTEDIT_H
 #define CHATTEXTEDIT_H
 
-#include <KTextEdit>
+#include <QtCore/QList>
+#include <QtGui/QKeySequence>
 
+#include <KTextEdit>
+#include <KAction>
+
+class ChannelContactModel;
 class ChatTextEdit : public KTextEdit
 {
     Q_OBJECT
 public:
     explicit ChatTextEdit(QWidget *parent = 0);
+
+    void setContactModel(ChannelContactModel *model);
 
     // reimplemented
     QSize minimumSizeHint() const;
@@ -40,6 +47,11 @@ protected:
     // reimplemented
     void resizeEvent(QResizeEvent*);
 
+    void getHistory(bool up);
+    void addHistory(const QString &text);
+
+    void completeNick();
+
 private Q_SLOTS:
     void recalculateSize();
     void updateScrollBar();
@@ -50,6 +62,26 @@ Q_SIGNALS:
 public Q_SLOTS:
     /** wraps setFontWeight to a simple on/off bold) */
     void setFontBold(bool);
+    void sendMessage(); // Sends message entered (<= Return key pressing)
+
+    /**
+     * Updates internal message sending shortcuts. Must be called on every window
+     * creation and every message sending shortcuts change.
+     */
+    void setSendMessageShortcuts(const KShortcut &shortcuts);
+
+private:
+    QStringList m_history;
+    int m_historyPos;
+
+    /* Nick completion */
+    ChannelContactModel *m_contactModel;
+    QString m_lastCompletion;
+    int m_oldCursorPos;
+    int m_completionPosition;
+    bool m_continuousCompletion;
+
+    KShortcut m_sendMessageShortcuts;
 };
 
 #endif // CHATTEXTEDIT_H

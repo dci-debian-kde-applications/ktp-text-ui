@@ -25,6 +25,7 @@
 #include "chat-widget.h"
 
 #include <KTp/service-availability-checker.h>
+#include <KTp/actions.h>
 
 #include <KStandardAction>
 #include <KIcon>
@@ -37,6 +38,7 @@
 #include <KColorScheme>
 #include <KTabBar>
 #include <KSettings/Dialog>
+#include <kcmodulecontainer.h>
 #include <KNotification>
 #include <KNotifyConfigWidget>
 #include <KMenuBar>
@@ -56,22 +58,27 @@
 
 #include <Sonnet/DictionaryComboBox>
 
+#include "emoticon-text-edit-action.h"
 #include "invite-contact-dialog.h"
+#include "telepathy-chat-ui.h"
 
-#define PREFERRED_TEXTCHAT_HANDLER "org.freedesktop.Telepathy.Client.KTp.TextUi"
-#define PREFERRED_FILETRANSFER_HANDLER "org.freedesktop.Telepathy.Client.KTp.FileTransfer"
-#define PREFERRED_AUDIO_VIDEO_HANDLER "org.freedesktop.Telepathy.Client.KTp.CallUi"
 #define PREFERRED_RFB_HANDLER "org.freedesktop.Telepathy.Client.krfb_rfb_handler"
 
 K_GLOBAL_STATIC_WITH_ARGS(KTp::ServiceAvailabilityChecker, s_krfbAvailableChecker,
                           (QLatin1String(PREFERRED_RFB_HANDLER)));
 
 ChatWindow::ChatWindow()
+    : m_sendMessage(0),
+      m_tabWidget(0)
 {
     //This effectively constructs the s_krfbAvailableChecker object the first
     //time that this code is executed. This is to start the d-bus query early, so
     //that data are available when we need them later in desktopSharingCapability()
     (void) s_krfbAvailableChecker.operator->();
+
+    KConfig config(QLatin1String("ktelepathyrc"));
+    KConfigGroup group = config.group("Appearance");
+    m_zoomFactor = group.readEntry("zoomFactor", (qreal) 1.0);
 
     //setup actions
     KStandardAction::close(this,SLOT(closeCurrentTab()),actionCollection());
@@ -87,8 +94,8 @@ ChatWindow::ChatWindow()
     KStandardAction::findNext(this, SLOT(onFindNextText()), actionCollection())->setEnabled(false);
     KStandardAction::findPrev(this, SLOT(onFindPreviousText()), actionCollection())->setEnabled(false);
 
-    // create custom actions
-    setupCustomActions();
+    KStandardAction::zoomIn(this, SLOT(onZoomIn()), actionCollection());
+    KStandardAction::zoomOut(this, SLOT(onZoomOut()), actionCollection());
 
     // set up m_tabWidget
     m_tabWidget = new KTabWidget(this);
@@ -103,6 +110,10 @@ ChatWindow::ChatWindow()
     connect(qobject_cast<KTabBar*>(m_tabWidget->tabBar()), SIGNAL(contextMenu(int,QPoint)), SLOT(tabBarContextMenu(int,QPoint)));
 
     setCentralWidget(m_tabWidget);
+
+    // create custom actions
+    // we must do it AFTER m_tabWidget is set up
+    setupCustomActions();
 
     setupGUI(QSize(460, 440), static_cast<StandardWindowOptions>(Default^StatusBar), QLatin1String("chatwindow.rc"));
 
@@ -182,6 +193,11 @@ ChatTab* ChatWindow::getTab(const Tp::TextChannelPtr& incomingTextChannel)
     return match;
 }
 
+ChatTab *ChatWindow::getCurrentTab()
+{
+    return qobject_cast<ChatTab*>(m_tabWidget->currentWidget());
+}
+
 void ChatWindow::removeTab(ChatTab *tab)
 {
     kDebug();
@@ -202,6 +218,7 @@ void ChatWindow::addTab(ChatTab *tab)
     kDebug();
 
     setupChatTabSignals(tab);
+    tab->setZoomFactor(m_zoomFactor);
 
     m_tabWidget->addTab(tab, tab->icon(), tab->title());
     m_tabWidget->setCurrentWidget(tab);
@@ -211,6 +228,8 @@ void ChatWindow::addTab(ChatTab *tab)
             m_tabWidget->setTabBarHidden(false);
         }
     }
+
+    tab->updateSendMessageShortcuts(m_sendMessage->shortcut());
 }
 
 void ChatWindow::destroyTab(QWidget* chatWidget)
@@ -292,7 +311,11 @@ void ChatWindow::onCurrentIndexChanged(int index)
     ChatTab *currentChatTab = qobject_cast<ChatTab*>(m_tabWidget->widget(index));
     currentChatTab->acknowledgeMessages();
     setWindowTitle(currentChatTab->title());
-    setWindowIcon(currentChatTab->icon());
+    if (hasUnreadMessages()) {
+        setWindowIcon(KIcon(QLatin1String("mail-mark-unread-new")));
+    } else {
+        setWindowIcon(currentChatTab->icon());
+    }
 
     //call this to update the "Typing.." in window title
     onUserTypingChanged(currentChatTab->remoteChatState());
@@ -333,9 +356,7 @@ void ChatWindow::onCurrentIndexChanged(int index)
     }
 
     // only show enable the action if there are actually previous converstations
-#ifdef TELEPATHY_LOGGER_QT4_FOUND
     setPreviousConversationsEnabled(currentChatTab->previousConversationAvailable());
-#endif
 
     updateAccountIcon();
 }
@@ -393,7 +414,9 @@ void ChatWindow::onGenericOperationFinished(Tp::PendingOperation* op)
 void ChatWindow::onInviteToChatTriggered()
 {
     ChatTab *currChat = qobject_cast<ChatTab*>(m_tabWidget->currentWidget());
-    InviteContactDialog *dialog = new InviteContactDialog(currChat->account(), currChat->textChannel(), this);
+
+    TelepathyChatUi *app = qobject_cast<TelepathyChatUi*>(KApplication::instance());
+    InviteContactDialog *dialog = new InviteContactDialog(app->accountManager(), currChat->account(), currChat->textChannel(), this);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
 }
@@ -403,7 +426,7 @@ void ChatWindow::onNextTabActionTriggered()
     if (m_tabWidget->count() == 1) {
         return;
     }
-    
+
     int currIndex = m_tabWidget->currentIndex();
 
     if (currIndex < m_tabWidget->count()-1) {
@@ -418,7 +441,7 @@ void ChatWindow::onPreviousTabActionTriggered()
     if (m_tabWidget->count() == 1) {
         return;
     }
-    
+
     int currIndex = m_tabWidget->currentIndex();
 
     if (currIndex > 0) {
@@ -443,11 +466,34 @@ void ChatWindow::onTabStateChanged()
 {
     kDebug();
 
+    KIcon windowIcon;
     ChatTab *sender = qobject_cast<ChatTab*>(QObject::sender());
     if (sender) {
         int tabIndex = m_tabWidget->indexOf(sender);
         setTabTextColor(tabIndex, sender->titleColor());
+
+        if (sender->remoteChatState() == Tp::ChannelChatStateComposing) {
+            setTabIcon(tabIndex, KIcon(QLatin1String("document-edit")));
+            if (sender == m_tabWidget->currentWidget()) {
+                windowIcon = KIcon(QLatin1String("document-edit"));
+            } else {
+                windowIcon = qobject_cast<ChatTab*>(m_tabWidget->currentWidget())->icon();
+            }
+        } else {
+            setTabIcon(tabIndex, sender->icon());
+            windowIcon = qobject_cast<ChatTab*>(m_tabWidget->currentWidget())->icon();
+        }
+
+        if (sender->unreadMessageCount() > 0) {
+            setTabIcon(tabIndex, KIcon(QLatin1String("mail-mark-unread-new")));
+        }
     }
+
+    if (hasUnreadMessages()) {
+        windowIcon = KIcon(QLatin1String("mail-mark-unread-new"));
+    }
+
+    setWindowIcon(windowIcon);
 }
 
 void ChatWindow::onTabIconChanged(const KIcon & newIcon)
@@ -526,6 +572,16 @@ void ChatWindow::onOpenLogTriggered()
     }
 }
 
+void ChatWindow::onClearViewTriggered()
+{
+    ChatWidget *chatWidget = qobject_cast<ChatWidget*>(m_tabWidget->currentWidget());
+
+    if (!chatWidget) {
+        return;
+    }
+
+    chatWidget->clear();
+}
 
 void ChatWindow::showSettingsDialog()
 {
@@ -582,6 +638,7 @@ void ChatWindow::setupChatTabSignals(ChatTab *chatTab)
     connect(chatTab, SIGNAL(contactPresenceChanged(KTp::Presence)), this, SLOT(onTabStateChanged()));
     connect(chatTab->chatSearchBar(), SIGNAL(enableSearchButtonsSignal(bool)), this, SLOT(onEnableSearchActions(bool)));
     connect(chatTab, SIGNAL(contactBlockStatusChanged(bool)), this, SLOT(toggleBlockButton(bool)));
+    connect(chatTab, SIGNAL(zoomFactorChanged(qreal)), this, SLOT(onZoomFactorChanged(qreal)));
 }
 
 void ChatWindow::setupCustomActions()
@@ -629,14 +686,28 @@ void ChatWindow::setupCustomActions()
     spellDictComboAction->setIcon(KIcon(QLatin1String("tools-check-spelling")));
     spellDictComboAction->setIconText(i18n("Choose Spelling Language"));
 
-#ifdef TELEPATHY_LOGGER_QT4_FOUND
     KAction *openLogAction = new KAction(KIcon(QLatin1String("view-pim-journal")), i18nc("Action to open the log viewer with a specified contact","&Previous Conversations"), this);
     connect(openLogAction, SIGNAL(triggered()), SLOT(onOpenLogTriggered()));
-#endif
 
     KAction *accountIconAction = new KAction(KIcon(QLatin1String("telepathy-kde")), i18n("Account Icon"), this);
     m_accountIconLabel = new QLabel(this);
     accountIconAction->setDefaultWidget(m_accountIconLabel);
+
+    KAction *clearViewAction = new KAction(KIcon(QLatin1String("edit-clear-history")), i18n("&Clear View"), this);
+    clearViewAction->setToolTip(i18nc("Toolbar icon tooltip", "Clear all messages from current chat tab"));
+    connect(clearViewAction, SIGNAL(triggered()), this, SLOT(onClearViewTriggered()));
+
+    EmoticonTextEditAction *addEmoticonAction = new EmoticonTextEditAction(this);
+    connect(addEmoticonAction, SIGNAL(emoticonActivated(QString)), this, SLOT(onAddEmoticon(QString)) );
+
+    m_sendMessage = new KAction(i18n("Send message"), this);
+    m_sendMessage->setShortcuts(
+                // Setting default shortcuts. Return will be a primary one, and Enter (on keypad) - alternate.
+                QList<QKeySequence>() << QKeySequence(Qt::Key_Return) << QKeySequence(Qt::Key_Enter),
+                KAction::DefaultShortcut);
+    m_sendMessage->setShortcutConfigurable(true);
+    connect(m_sendMessage, SIGNAL(triggered()), SLOT(sendCurrentTabMessage()));
+    connect(m_sendMessage, SIGNAL(changed()), SLOT(updateSendMessageShortcuts()));
 
     // add custom actions to the collection
     actionCollection()->addAction(QLatin1String("next-tab"), nextTabAction);
@@ -649,9 +720,10 @@ void ChatWindow::setupCustomActions()
     actionCollection()->addAction(QLatin1String("language"), spellDictComboAction);
     actionCollection()->addAction(QLatin1String("account-icon"), accountIconAction);
     actionCollection()->addAction(QLatin1String("block-contact"), blockContactAction);
-#ifdef TELEPATHY_LOGGER_QT4_FOUND
     actionCollection()->addAction(QLatin1String("open-log"), openLogAction);
-#endif
+    actionCollection()->addAction(QLatin1String("clear-chat-view"), clearViewAction);
+    actionCollection()->addAction(QLatin1String("emoticons"), addEmoticonAction);
+    actionCollection()->addAction(QLatin1String("send-message"), m_sendMessage);
 }
 
 void ChatWindow::setAudioCallEnabled(bool enable)
@@ -727,11 +799,7 @@ void ChatWindow::updateAccountIcon()
 
 void ChatWindow::startAudioCall(const Tp::AccountPtr& account, const Tp::ContactPtr& contact)
 {
-    Tp::PendingChannelRequest *channelRequest = account->ensureAudioCall(contact,
-                                                                         QLatin1String("audio"),
-                                                                         QDateTime::currentDateTime(),
-                                                                         QLatin1String(PREFERRED_AUDIO_VIDEO_HANDLER));
-
+    Tp::PendingChannelRequest *channelRequest = KTp::Actions::startAudioCall(account, contact);
     connect(channelRequest, SIGNAL(finished(Tp::PendingOperation*)), this, SLOT(onGenericOperationFinished(Tp::PendingOperation*)));
 }
 
@@ -753,40 +821,20 @@ void ChatWindow::startFileTransfer(const Tp::AccountPtr& account, const Tp::Cont
 
     QDateTime now = QDateTime::currentDateTime();
     Q_FOREACH(const QString& fileName, fileNames) {
-        QFileInfo fileinfo(fileName);
-
-        kDebug() << "Filename:" << fileName;
-        kDebug() << "Content type:" << KMimeType::findByFileContent(fileName)->name();
-
-        Tp::FileTransferChannelCreationProperties fileTransferProperties(fileName, KMimeType::findByFileContent(fileName)->name());
-
-        Tp::PendingChannelRequest* channelRequest = account->createFileTransfer(contact,
-                                                                                fileTransferProperties,
-                                                                                QDateTime::currentDateTime(),
-                                                                                QLatin1String(PREFERRED_FILETRANSFER_HANDLER));
-
+        Tp::PendingChannelRequest* channelRequest = KTp::Actions::startFileTransfer(account, contact, fileName);
         connect(channelRequest, SIGNAL(finished(Tp::PendingOperation*)), SLOT(onGenericOperationFinished(Tp::PendingOperation*)));
     }
 }
 
 void ChatWindow::startVideoCall(const Tp::AccountPtr& account, const Tp::ContactPtr& contact)
 {
-    Tp::PendingChannelRequest* channelRequest = account->ensureAudioVideoCall(contact,
-                                                                              QLatin1String("audio"),
-                                                                              QLatin1String("video"),
-                                                                              QDateTime::currentDateTime(),
-                                                                              QLatin1String(PREFERRED_AUDIO_VIDEO_HANDLER));
-
+    Tp::PendingChannelRequest* channelRequest = KTp::Actions::startAudioVideoCall(account, contact);
     connect(channelRequest, SIGNAL(finished(Tp::PendingOperation*)), this, SLOT(onGenericOperationFinished(Tp::PendingOperation*)));
 }
 
 void ChatWindow::startShareDesktop(const Tp::AccountPtr& account, const Tp::ContactPtr& contact)
 {
-    Tp::PendingChannelRequest* channelRequest = account->createStreamTube(contact,
-                                                                          QLatin1String("rfb"),
-                                                                          QDateTime::currentDateTime(),
-                                                                          QLatin1String(PREFERRED_RFB_HANDLER));
-
+    Tp::PendingChannelRequest* channelRequest = KTp::Actions::startDesktopSharing(account, contact);
     connect(channelRequest, SIGNAL(finished(Tp::PendingOperation*)), this, SLOT(onGenericOperationFinished(Tp::PendingOperation*)));
 }
 
@@ -850,5 +898,60 @@ void ChatWindow::toggleBlockButton(bool contactIsBlocked)
     setBlockEnabled(true);
 }
 
+void ChatWindow::onAddEmoticon(const QString& emoticon)
+{
+    int index = m_tabWidget->currentIndex();
+    ChatTab *currentChatTab = qobject_cast<ChatTab*>(m_tabWidget->widget(index));
+    currentChatTab->addEmoticonToChat(emoticon);
+}
+
+bool ChatWindow::hasUnreadMessages() const
+{
+    for (int i = 0; i < m_tabWidget->count(); i++) {
+        ChatTab *tab = qobject_cast<ChatTab*>(m_tabWidget->widget(i));
+        if (tab && tab->unreadMessageCount() > 0) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void ChatWindow::onZoomIn()
+{
+    onZoomFactorChanged(m_zoomFactor + 0.1);
+}
+
+void ChatWindow::onZoomOut()
+{
+    onZoomFactorChanged(m_zoomFactor - 0.1);
+}
+
+void ChatWindow::onZoomFactorChanged(qreal zoom)
+{
+    m_zoomFactor = zoom;
+
+    for (int i = 0; i < m_tabWidget->count(); i++) {
+        ChatWidget *widget = qobject_cast<ChatWidget*>(m_tabWidget->widget(i));
+        if (!widget) {
+            continue;
+        }
+
+        widget->setZoomFactor(zoom);
+    }
+
+    KConfig config(QLatin1String("ktelepathyrc"));
+    KConfigGroup group = config.group("Appearance");
+    group.writeEntry("zoomFactor", m_zoomFactor);
+}
+
+void ChatWindow::updateSendMessageShortcuts()
+{
+    KShortcut newSendMessageShortcuts = m_sendMessage->shortcut();
+    for (int i = 0; i < m_tabWidget->count(); i++) {
+        ChatTab* tab = qobject_cast<ChatTab*>(m_tabWidget->widget(i));
+        tab->updateSendMessageShortcuts(newSendMessageShortcuts);
+    }
+}
 
 #include "chat-window.moc"

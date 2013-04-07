@@ -1,15 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# André Marcelo Alvarenga <andrealvarenga@gmx.net>, 2011.
-# André Marcelo Alvarenga <alvarenga@kde.org>, 2012.
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2011, 2012.
 # Marcus Gama <marcus.gama@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-11-01 10:55+0100\n"
-"PO-Revision-Date: 2012-06-15 13:51-0300\n"
+"PO-Revision-Date: 2012-03-22 20:19-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
 "Language: pt_BR\n"
@@ -25,7 +24,7 @@ msgstr "André Marcelo Alvarenga"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "andrealvarenga@gmx.net"
+msgstr "alvarenga@kde.org"
 
 #: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
 msgid "Package type not recognized or not supported"
@@ -88,6 +87,3 @@ msgstr "Daniele E. Domenichelli"
 #: main.cpp:39
 msgid "Adium package to install"
 msgstr "Pacotes do Adium para instalar"
-
-#~ msgid "Ok"
-#~ msgstr "OK"

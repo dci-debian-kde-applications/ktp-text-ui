@@ -86,6 +86,9 @@ public:
     void setHeaderDisplayed(bool);
     /* .. font, backgrounds, everything else.*/
 
+    void setShowPresenceChanges(bool showPresenceChanges);
+    bool showPresenceChanges() const;
+
     void clear();
 
 public Q_SLOTS:
@@ -96,6 +99,10 @@ public Q_SLOTS:
 
 protected:
     virtual void contextMenuEvent(QContextMenuEvent *event);
+    virtual void wheelEvent(QWheelEvent *event);
+
+Q_SIGNALS:
+    void zoomFactorChanged(qreal zoomFactor);
 
 private:
     ChatWindowStyle *m_chatStyle;
@@ -104,13 +111,14 @@ private:
     bool m_useCustomFont;
     QString m_fontFamily;
     int m_fontSize;
+    bool m_showPresenceChanges;
 
     QString appendScript(AppendMode mode);
     AppendMode appendMode(const AdiumThemeMessageInfo &message,
                           bool consecutive,
                           bool willAddMoreContentObjects,
                           bool replaceLastContent);
-    void appendMessage(QString&, AppendMode mode);
+    void appendMessage(QString &htmlMessage, const QString &script, AppendMode mode);
 
     QString replaceHeaderKeywords(QString htmlTemplate, const AdiumThemeHeaderInfo&);
     QString replaceContentKeywords(QString& htmlTemplate, const AdiumThemeContentInfo&);

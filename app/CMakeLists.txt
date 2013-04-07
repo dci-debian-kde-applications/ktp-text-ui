@@ -5,7 +5,9 @@ set(ktp-text-ui_SRCS
         telepathy-chat-ui.cpp
         chat-window.cpp
         chat-tab.cpp
-        invite-contact-dialog.cpp
+        emoticon-text-edit-action.cpp
+        emoticon-text-edit-selector.cpp
+        invite-contact-dialog.cpp       
 )
 
 kde4_add_executable(ktp-text-ui ${ktp-text-ui_SRCS})
@@ -14,6 +16,7 @@ target_link_libraries(ktp-text-ui
             ${KDE4_KDECORE_LIBS}
             ${KDE4_KDEUI_LIBS}
             ${KDE4_KIO_LIBS}
+            ${KDE4_KEMOTICONS_LIBS}
             ${TELEPATHY_QT4_LIBRARIES}
             ${KTP_LIBRARIES}
             ${KTP_MODELS_LIBRARIES}
@@ -21,6 +24,7 @@ target_link_libraries(ktp-text-ui
             ${QT_QTWEBKIT_LIBRARY}
             ${KDE4_KNOTIFYCONFIG_LIBS}
             ${KDE4_KCMUTILS_LIBS}
+            ${KDEPIMLIBS_KPIMTEXTEDIT_LIBS}
             ktpchat)
 
 configure_file(org.freedesktop.Telepathy.Client.KTp.TextUi.service.in

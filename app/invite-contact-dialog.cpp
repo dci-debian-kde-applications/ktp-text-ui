@@ -29,28 +29,29 @@
 
 #include <TelepathyQt/Contact>
 #include <TelepathyQt/TextChannel>
-
-#include <KTp/debug.h>
-#include <KTp/Models/accounts-model.h>
-#include <KTp/Models/accounts-filter-model.h>
-#include <KTp/Widgets/contact-grid-widget.h>
 #include <TelepathyQt/PendingChannelRequest>
 
-InviteContactDialog::InviteContactDialog(const Tp::AccountPtr &account, const Tp::TextChannelPtr &channel, QWidget *parent) :
+#include <KTp/debug.h>
+#include <KTp/Models/contacts-list-model.h>
+#include <KTp/Models/contacts-filter-model.h>
+#include <KTp/Widgets/contact-grid-widget.h>
+
+InviteContactDialog::InviteContactDialog(const Tp::AccountManagerPtr &accountManager, const Tp::AccountPtr &account, const Tp::TextChannelPtr &channel, QWidget *parent) :
     KDialog(parent),
     m_account(account),
-    m_channel(channel)
+    m_channel(channel),
+    m_contactsModel(new KTp::ContactsListModel(this))
 {
     resize(500,450);
 
-    m_accountsModel = new AccountsModel(this);
-    m_accountsModel->onNewAccount(account);
+    m_contactsModel->setAccountManager(accountManager);
 
-
-    m_contactGridWidget = new KTp::ContactGridWidget(m_accountsModel, this);
+    m_contactGridWidget = new KTp::ContactGridWidget(m_contactsModel, this);
     m_contactGridWidget->contactFilterLineEdit()->setClickMessage(i18n("Search in Contacts..."));
-    m_contactGridWidget->filter()->setPresenceTypeFilterFlags(AccountsFilterModel::ShowOnlyConnected);
+    m_contactGridWidget->filter()->setPresenceTypeFilterFlags(KTp::ContactsFilterModel::ShowOnlyConnected);
+    m_contactGridWidget->filter()->setAccountFilter(account);
     setMainWidget(m_contactGridWidget);
+    setWindowTitle(i18n("Select Contacts to Invite to Group Chat"));
 
     connect(m_contactGridWidget,
             SIGNAL(selectionChanged(Tp::AccountPtr,Tp::ContactPtr)),
@@ -92,7 +93,6 @@ void InviteContactDialog::onOkClicked()
     else {
         QList<Tp::ContactPtr> contacts;
         contacts << contact;
-        contacts << m_channel->groupContacts(false).toList();
         m_account->createConferenceTextChat(QList<Tp::ChannelPtr>() << m_channel, contacts);
     }
 }

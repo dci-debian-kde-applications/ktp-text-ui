@@ -20,12 +20,11 @@
 #include "logmanager.h"
 
 #include "adium-theme-content-info.h"
-#include "message-processor.h"
+
+#include <KTp/message-processor.h>
 
 #include <KDebug>
 
-
-#ifdef TELEPATHY_LOGGER_QT4_FOUND
 #include <TelepathyLoggerQt4/Init>
 #include <TelepathyLoggerQt4/Entity>
 #include <TelepathyLoggerQt4/PendingDates>
@@ -34,7 +33,6 @@
 #include <TelepathyLoggerQt4/TextEvent>
 #include <TelepathyLoggerQt4/CallEvent>
 #include <TelepathyLoggerQt4/LogManager>
-#endif
 
 #include <TelepathyQt/Types>
 #include <TelepathyQt/AvatarData>
@@ -45,7 +43,6 @@ LogManager::LogManager(QObject *parent)
     : QObject(parent),
     m_fetchAmount(10)
 {
-#ifdef TELEPATHY_LOGGER_QT4_FOUND
     Tpl::init();
 
     m_logManager = Tpl::LogManager::instance();
@@ -53,10 +50,6 @@ LogManager::LogManager(QObject *parent)
         qWarning() << "LogManager not found";
         Q_ASSERT(false);
     }
-
-#else
-    kWarning() << "text-ui was built without log support";
-#endif
 }
 
 LogManager::~LogManager()
@@ -66,7 +59,6 @@ LogManager::~LogManager()
 
 bool LogManager::exists() const
 {
-#ifdef TELEPATHY_LOGGER_QT4_FOUND
     if (!m_account.isNull() && !m_textChannel.isNull() && m_textChannel->targetHandleType() == Tp::HandleTypeContact) {
         Tpl::EntityPtr contactEntity = Tpl::Entity::create(m_textChannel->targetContact()->id().toLatin1().data(),
                                                            Tpl::EntityTypeContact,
@@ -77,9 +69,6 @@ bool LogManager::exists() const
     } else {
         return false;
     }
-#else
-    return false;
-#endif
 }
 
 void LogManager::setTextChannel(const Tp::AccountPtr &account, const Tp::TextChannelPtr &textChannel)
@@ -96,8 +85,7 @@ void LogManager::setFetchAmount(int n)
 void LogManager::fetchLast()
 {
     kDebug();
-#ifdef TELEPATHY_LOGGER_QT4_FOUND
-    if (!m_account.isNull() && !m_textChannel.isNull() && m_textChannel->targetHandleType() == Tp::HandleTypeContact) {
+    if (m_fetchAmount > 0 && !m_account.isNull() && !m_textChannel.isNull() && m_textChannel->targetHandleType() == Tp::HandleTypeContact) {
         Tpl::EntityPtr contactEntity = Tpl::Entity::create(m_textChannel->targetContact()->id().toLatin1().data(),
                                                 Tpl::EntityTypeContact,
                                                 NULL,
@@ -107,13 +95,12 @@ void LogManager::fetchLast()
         connect(dates, SIGNAL(finished(Tpl::PendingOperation*)), SLOT(onDatesFinished(Tpl::PendingOperation*)));
         return;
     }
-#endif
+
     //in all other cases finish immediately.
     QList<AdiumThemeContentInfo> messages;
     Q_EMIT fetched(messages);
 }
 
-#ifdef TELEPATHY_LOGGER_QT4_FOUND
 void LogManager::onDatesFinished(Tpl::PendingOperation *po)
 {
     Tpl::PendingDates *pd = (Tpl::PendingDates*) po;
@@ -160,7 +147,7 @@ void LogManager::onEventsFinished(Tpl::PendingOperation *po)
     QList<Tpl::EventPtr> allEvents = pe->events();
     QList<Tpl::TextEventPtr> events;
     QList<Tpl::EventPtr>::iterator i = allEvents.end();
-    while (i-- != allEvents.begin() && (events.count() <= m_fetchAmount)) {
+    while (i-- != allEvents.begin() && (events.count() < m_fetchAmount)) {
         Tpl::TextEventPtr textEvent = (*i).dynamicCast<Tpl::TextEvent>();
         if (!textEvent.isNull()) {
             if (!queuedMessageTokens.contains(textEvent->messageToken())) {
@@ -194,12 +181,10 @@ void LogManager::onEventsFinished(Tpl::PendingOperation *po)
 
         AdiumThemeContentInfo message(type);
 
-        if (type == AdiumThemeMessageInfo::HistoryLocalToRemote) {
-            message.setMessage(MessageProcessor::instance()->processOutgoingMessage(event).finalizedMessage());
-        } else {
-            message.setMessage(MessageProcessor::instance()->processIncomingMessage(event).finalizedMessage());
-        }
+        KTp::Message processedEvent = KTp::MessageProcessor::instance()->processIncomingMessage(event, m_account, m_textChannel);
 
+        message.setMessage(processedEvent.finalizedMessage());
+        message.setScript(processedEvent.finalizedScript());
         message.setService(m_account->serviceName());
         message.setSenderDisplayName(event->sender()->alias());
         message.setSenderScreenName(event->sender()->alias());
@@ -216,4 +201,3 @@ void LogManager::onEventsFinished(Tpl::PendingOperation *po)
     kDebug() << "emit all messages" << messages.count();
     Q_EMIT fetched(messages);
 }
-#endif

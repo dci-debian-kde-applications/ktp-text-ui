@@ -23,6 +23,8 @@
 
 #include <KDebug>
 #include <KPluginFactory>
+#include <KLocalizedString>
+
 
 K_PLUGIN_FACTORY(KCMTelepathyChatBehaviorConfigFactory, registerPlugin<BehaviorConfig>();)
 K_EXPORT_PLUGIN(KCMTelepathyChatBehaviorConfigFactory("ktp_chat_behavior", "kcm_ktp_chat_behavior"))
@@ -38,12 +40,15 @@ BehaviorConfig::BehaviorConfig(QWidget *parent, const QVariantList& args)
 
     ui->setupUi(this);
 
-    ui->newTabButtonGroup->setId(ui->radioLast, TelepathyChatUi::LastWindow);
-    ui->newTabButtonGroup->setId(ui->radioNew, TelepathyChatUi::NewWindow);
-    ui->newTabButtonGroup->setId(ui->radioZero, TelepathyChatUi::FirstWindow);
+    ui->newTabButtonGroup->setId(ui->radioNew, TextChatConfig::NewWindow);
+    ui->newTabButtonGroup->setId(ui->radioZero, TextChatConfig::FirstWindow);
 
     ui->newTabButtonGroup->button(m_openMode)->setChecked(true);
     connect(ui->newTabButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(onRadioSelected(int)));
+
+    ui->scrollbackLength->setSuffix(ki18ncp("Part of config 'show last [spin box] messages' This is the suffix to the spin box. Be sure to include leading space"," message", " messages"));
+    ui->scrollbackLength->setValue(m_scrollbackLength);
+    connect(ui->scrollbackLength, SIGNAL(valueChanged(int)), this, SLOT(onScrollbackLengthChanged()));
 }
 
 BehaviorConfig::~BehaviorConfig()
@@ -53,39 +58,15 @@ BehaviorConfig::~BehaviorConfig()
 
 void BehaviorConfig::load()
 {
-    KSharedConfigPtr config = KSharedConfig::openConfig(QLatin1String("ktelepathyrc"));
-    KConfigGroup tabConfig = config->group("Behavior");
-
-    QString mode = tabConfig.readEntry("tabOpenMode", "NewWindow");
-    if(mode == QLatin1String("NewWindow")) {
-        m_openMode = TelepathyChatUi::NewWindow;
-    } else if (mode == QLatin1String("FirstWindow")) {
-        m_openMode = TelepathyChatUi::FirstWindow;
-    } else if (mode == QLatin1String("LastWindow")) {
-        m_openMode = TelepathyChatUi::LastWindow;
-    }
+    m_openMode = TextChatConfig::instance()->openMode();
+    m_scrollbackLength = TextChatConfig::instance()->scrollbackLength();
 }
 
 void BehaviorConfig::save()
 {
-    KSharedConfigPtr config = KSharedConfig::openConfig(QLatin1String("ktelepathyrc"));
-    KConfigGroup tabConfig = config->group("Behavior");
-
-    QString mode;
-    switch (m_openMode) {
-        case TelepathyChatUi::NewWindow :
-            mode = QLatin1String("NewWindow");
-            break;
-        case TelepathyChatUi::FirstWindow :
-            mode = QLatin1String("FirstWindow");
-            break;
-        case TelepathyChatUi::LastWindow :
-            mode = QLatin1String("LastWindow");
-            break;
-    }
-
-    tabConfig.writeEntry("tabOpenMode", mode);
-    tabConfig.sync();
+    TextChatConfig::instance()->setOpenMode(m_openMode);
+    TextChatConfig::instance()->setScrollbackLength(m_scrollbackLength);
+    TextChatConfig::instance()->sync();
 }
 
 void BehaviorConfig::changeEvent(QEvent* e)
@@ -103,7 +84,13 @@ void BehaviorConfig::changeEvent(QEvent* e)
 void BehaviorConfig::onRadioSelected(int id)
 {
     kDebug() << "BehaviorConfig::m_openMode changed from " << id << " to " << m_openMode;
-    m_openMode = (TelepathyChatUi::TabOpenMode) id;
+    m_openMode = (TextChatConfig::TabOpenMode) id;
     kDebug() << "emitting changed(true)";
+    Q_EMIT changed(true);
+}
+
+void BehaviorConfig::onScrollbackLengthChanged()
+{
+    m_scrollbackLength = ui->scrollbackLength->value();
     Q_EMIT changed(true);
 }

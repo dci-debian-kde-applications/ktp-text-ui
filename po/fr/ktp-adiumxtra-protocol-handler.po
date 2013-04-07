@@ -1,8 +1,8 @@
 # translation of ktp-adiumxtra-protocol-handler.po to Français
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Joëlle Cornavin <jcorn@free.fr>, 2011, 2012.
 #
+# Joëlle Cornavin <jcorn@free.fr>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-adiumxtra-protocol-handler\n"
@@ -86,6 +86,3 @@ msgstr "Daniele E. Domenichelli"
 #: main.cpp:39
 msgid "Adium package to install"
 msgstr "Paquetage Adium à installer"
-
-#~ msgid "Ok"
-#~ msgstr "Ok"

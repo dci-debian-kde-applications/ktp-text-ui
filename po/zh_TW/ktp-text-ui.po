@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Franklin Weng <franklin@mail.everfocus.com.tw>, 2012.
-# Franklin Weng <franklin@goodhorse.idv.tw>, 2012.
+# Franklin Weng <franklin@goodhorse.idv.tw>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-12-31 09:01+0100\n"
-"PO-Revision-Date: 2012-09-20 08:35+0800\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-03-14 13:21+0800\n"
+"Last-Translator: Franklin Weng <franklin at goodhorse dot idv dot tw>\n"
 "Language-Team: Chinese Traditional <kde-tw@googlegroups.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
@@ -26,140 +26,161 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin at goodhorse dot idv dot tw"
 
-#: chat-window.cpp:123
+#: chat-window.cpp:134
 msgid "Close"
-msgstr "關閉"
+msgstr "關閉全部"
 
-#: chat-window.cpp:124
+#: chat-window.cpp:135
 msgid "Detach Tab"
 msgstr "分離分頁"
 
-#: chat-window.cpp:125
+#: chat-window.cpp:136
 msgid "Move Tab Left"
 msgstr "將分頁左移"
 
-#: chat-window.cpp:126
+#: chat-window.cpp:137
 msgid "Move Tab Right"
 msgstr "將分頁右移"
 
-#: chat-window.cpp:589
+#: chat-window.cpp:646
 msgid "&Next Tab"
 msgstr "下一個分頁(&N)"
 
-#: chat-window.cpp:593
+#: chat-window.cpp:650
 msgid "&Previous Tab"
 msgstr "前一個分頁(&P)"
 
-#: chat-window.cpp:597
+#: chat-window.cpp:654
 msgid "&Audio Call"
 msgstr "語音呼叫(&A)"
 
-#: chat-window.cpp:598
+#: chat-window.cpp:655
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "開始語音呼叫此聯絡人"
 
-#: chat-window.cpp:601 chat-window.cpp:841
+#: chat-window.cpp:658 chat-window.cpp:889
 msgid "&Block Contact"
 msgstr "封鎖聯絡人(&B)"
 
-#: chat-window.cpp:603
+#: chat-window.cpp:660
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
 "receive any messages from this contact"
 msgstr "封鎖表示這個聯絡人沒辦法看到您上線，您也不會再從此聯絡人收到任何訊息"
 
-#: chat-window.cpp:606
+#: chat-window.cpp:663
 msgid "&Send File"
 msgstr "傳送檔案(&S)"
 
-#: chat-window.cpp:607
+#: chat-window.cpp:664
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "傳送檔案給此聯絡人"
 
-#: chat-window.cpp:610
+#: chat-window.cpp:667
 msgid "&Invite to Chat"
 msgstr "邀請到聊天室(&I)"
 
-#: chat-window.cpp:611
+#: chat-window.cpp:668
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "邀請其他聯絡人加入此聊天"
 
-#: chat-window.cpp:614
+#: chat-window.cpp:671
 msgid "&Video Call"
 msgstr "視訊呼叫(&V)"
 
-#: chat-window.cpp:615
+#: chat-window.cpp:672
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "開始視訊呼叫此聯絡人"
 
-#: chat-window.cpp:618
+#: chat-window.cpp:675
 msgid "Share My &Desktop"
 msgstr "分享我的桌面(&D)"
 
-#: chat-window.cpp:619
+#: chat-window.cpp:676
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr "啟動應用程式，讓此聯絡人能看到您的桌面"
 
-#: chat-window.cpp:630
+#: chat-window.cpp:687
 msgid "Choose Spelling Language"
 msgstr "選擇拼字檢查語言"
 
-#: chat-window.cpp:633
+#: chat-window.cpp:689
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "前一個對話(&P)"
 
-#: chat-window.cpp:637
+#: chat-window.cpp:692
 msgid "Account Icon"
 msgstr "帳號圖示"
 
-#: chat-window.cpp:747
+#: chat-window.cpp:696
+msgid "&Clear View"
+msgstr "清除檢視(&C)"
+
+#: chat-window.cpp:697
+msgctxt "Toolbar icon tooltip"
+msgid "Clear all messages from current chat tab"
+msgstr "清除目前聊天分頁的所有訊息"
+
+#: chat-window.cpp:703
+msgid "Send message"
+msgstr "傳送訊息"
+
+#: chat-window.cpp:815
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "選擇要傳送給 %1 的檔案"
 
-#: chat-window.cpp:800
+#: chat-window.cpp:848
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr "輸入中... %1"
 
-#: chat-window.cpp:802
+#: chat-window.cpp:850
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 已輸入文字"
 
-#: chat-window.cpp:834
+#: chat-window.cpp:882
 msgid "&Unblock Contact"
 msgstr "解除封鎖聯絡人(&U)"
 
-#: invite-contact-dialog.cpp:51
+#: emoticon-text-edit-action.cpp:49
+msgid "Add Smiley"
+msgstr "加入表情"
+
+#: invite-contact-dialog.cpp:50
 msgid "Search in Contacts..."
 msgstr "搜尋聯絡人..."
 
-#: main.cpp:39
+#: invite-contact-dialog.cpp:54
+msgid "Select Contacts to Invite to Group Chat"
+msgstr "選擇要邀請到群組聊天的聯絡人"
+
+#: main.cpp:43
 msgid "Telepathy Text Ui"
 msgstr "Telepathy 文字介面"
 
-#: main.cpp:41
+#: main.cpp:45
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:41 main.cpp:42 main.cpp:43
+#: main.cpp:45 main.cpp:46 main.cpp:47
 msgid "Developer"
 msgstr "開發者"
 
-#: main.cpp:42
+#: main.cpp:46
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:43
+#: main.cpp:47
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
