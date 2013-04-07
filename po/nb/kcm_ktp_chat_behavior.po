@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-17 05:23+0100\n"
-"PO-Revision-Date: 2012-02-03 15:12+0100\n"
+"POT-Creation-Date: 2013-02-13 04:07+0100\n"
+"PO-Revision-Date: 2013-01-08 13:09+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -19,6 +19,15 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
+#: behavior-config.cpp:49
+msgctxt ""
+"Part of config 'show last [spin box] messages' This is the suffix to the "
+"spin box. Be sure to include leading space"
+msgid " message"
+msgid_plural " messages"
+msgstr[0] " melding"
+msgstr[1] " meldinger"
+
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
 msgid "Tabs"
@@ -26,20 +35,26 @@ msgstr "Faner"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: behavior-config.ui:23
-msgid "Open new conversations in :"
-msgstr "Åpne nye samtaler i:"
+msgid "Open new conversations:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
 #: behavior-config.ui:30
-msgid "A new window"
-msgstr "Et nytt vindu"
+msgid "As new windows"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
 #: behavior-config.ui:40
-msgid "A new tab in the first window"
-msgstr "En ny fane i det første vinduet"
+msgid "As tabs in the same window"
+msgstr ""
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioLast)
-#: behavior-config.ui:50
-msgid "A new tab in the last focused window"
-msgstr "En ny fane i det vinduet som sist fikk fokus"
+#. i18n: ectx: property (title), widget (KButtonGroup, scrollbackGroup)
+#: behavior-config.ui:53
+msgid "Last Conversation Scrollback"
+msgstr ""
+
+#. i18n: First part of &quot;Show last %1 messages&quot; string
+#. i18n: ectx: property (text), widget (QLabel, label_p1)
+#: behavior-config.ui:59
+msgid "Show last"
+msgstr "Vis siste"

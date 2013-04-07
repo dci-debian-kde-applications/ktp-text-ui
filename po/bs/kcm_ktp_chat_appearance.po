@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
 "PO-Revision-Date: 2012-11-08 13:17+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -15,138 +15,57 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-01-26 22:17+0000\n"
-"X-Generator: Launchpad (build 16451)\n"
+"X-Launchpad-Export-Date: 2012-12-21 01:44+0000\n"
+"X-Generator: Launchpad (build 16378)\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: appearance-config.cpp:42
-msgid "A demo chat"
-msgstr "Demo ćaskanje"
+#: appearance-config.cpp:48
+msgctxt "@title:tab"
+msgid "Normal Chat"
+msgstr "Normalno ćaskanmje"
 
-#: appearance-config.cpp:43 appearance-config.cpp:178
-#: appearance-config.cpp:186 appearance-config.cpp:194
-#: appearance-config.cpp:202 appearance-config.cpp:209
-#: appearance-config.cpp:215 appearance-config.cpp:223
-#: appearance-config.cpp:231 appearance-config.cpp:241
-#: appearance-config.cpp:249 appearance-config.cpp:256
-#: appearance-config.cpp:263
-msgid "Jabber"
-msgstr "Jabber"
-
-#: appearance-config.cpp:45 appearance-config.cpp:192
-#: appearance-config.cpp:200 appearance-config.cpp:239
-#: appearance-config.cpp:247
-msgctxt "Example email"
-msgid "ted@example.com"
-msgstr "ted@example.com"
-
-#: appearance-config.cpp:46
-msgctxt "Example name"
-msgid "Ted"
-msgstr "Ted"
-
-#: appearance-config.cpp:175
-msgctxt "Example message in preview conversation"
-msgid "Ok!"
-msgstr "U redu!"
-
-#: appearance-config.cpp:176 appearance-config.cpp:184
-#: appearance-config.cpp:221 appearance-config.cpp:229
-msgctxt "Example email"
-msgid "larry@example.com"
-msgstr "larry@example.com"
-
-#: appearance-config.cpp:177 appearance-config.cpp:185
-#: appearance-config.cpp:222 appearance-config.cpp:230
-msgctxt "Example name"
-msgid "Larry Demo"
-msgstr "Larry Demo"
-
-#: appearance-config.cpp:183
-msgid "Bye Bye"
-msgstr "Ćao"
-
-#: appearance-config.cpp:191
-msgid "Have fun!"
-msgstr "Prijatno"
-
-#: appearance-config.cpp:193 appearance-config.cpp:201
-#: appearance-config.cpp:240 appearance-config.cpp:248
-msgctxt "Example name"
-msgid "Ted Example"
-msgstr "Tedo Primjerić"
-
-#: appearance-config.cpp:199
-msgid "cya"
-msgstr "cya"
-
-#: appearance-config.cpp:207
-msgctxt "Example message"
-msgid "Ted Example waves."
-msgstr "Tedo Primjerić maše."
-
-#: appearance-config.cpp:213 appearance-config.cpp:261
-msgid "Ted Example has left the chat."
-msgstr "Tedo Primjerić je napustio ćaskanje."
-
-#: appearance-config.cpp:220
-msgid "Hello"
-msgstr "Zdravo."
-
-#: appearance-config.cpp:228
-msgid "What's up?"
-msgstr "Šta ima?"
-
-#: appearance-config.cpp:236
-msgid ""
-"Check out which cool adium themes work <a href=\"http://community.kde.org/"
-"Real-Time_Communication_and_Collaboration/Components/Chat_Window/Themes"
-"\">here</a>!"
-msgstr ""
-"Pregledajte neke teme <a href=\"http://community.kde.org/Real-"
-"Time_Communication_and_Collaboration/Components/Chat_Window/Themes\">here</"
-"a>!"
-
-#: appearance-config.cpp:246
-msgid "A different example message"
-msgstr "Druga primjer poruka"
-
-#: appearance-config.cpp:254
-msgid "Ted Example is now Away."
-msgstr "Tedo Primjerić je otišao."
-
-#. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
-#: appearance-config.ui:29
-msgid "Use Custom Font Settings"
-msgstr "Koristi vlastite postavke fontova"
-
-#. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
-#: appearance-config.ui:41
-msgid "Select Font: "
-msgstr "Izaberi font: "
-
-#. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
-#: appearance-config.ui:54
-msgid "Select Size: "
-msgstr "Izaberi veličinu: "
+#: appearance-config.cpp:52
+msgctxt "@title:tab"
+msgid "Group Chat"
+msgstr "Grupno ćaskanje"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: appearance-config.ui:90
+#: appearance-config.ui:41
 msgid "Style"
 msgstr "Stil"
 
 #. i18n: ectx: property (text), widget (QLabel, styleLabel)
-#: appearance-config.ui:99
+#: appearance-config.ui:49
 msgid "Message Style:"
 msgstr "Stil poruke:"
 
 #. i18n: ectx: property (text), widget (QLabel, variantLabel)
-#: appearance-config.ui:125
+#: appearance-config.ui:75
 msgid "Variant:"
 msgstr "Varijanta:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showHeader)
-#: appearance-config.ui:151
+#: appearance-config.ui:107
 msgid "Show Header"
 msgstr "Prikaži zaglavlje"
+
+#. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
+#: appearance-config.ui:120
+msgid "Show status changes"
+msgstr "Prikaži promjenu statusa"
+
+#. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
+#: appearance-config.ui:145
+msgid "Use Custom Font Settings"
+msgstr "Koristi vlastite postavke fontova"
+
+#. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
+#: appearance-config.ui:157
+msgid "Select Font:"
+msgstr "Izaberi font: "
+
+#. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
+#: appearance-config.ui:170
+msgid "Select Size:"
+msgstr "Izaberi veličinu: "

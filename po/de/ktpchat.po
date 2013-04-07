@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktpchat\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-31 13:28+0100\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
 "PO-Revision-Date: 2012-12-02 21:52+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -24,7 +24,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "schwarzer@kde.org"
 
-#: adium-theme-view.cpp:86
+#: adium-theme-view.cpp:91
 msgid ""
 "Failed to load a valid theme. Your installation is broken. Check your kde "
 "path. Will now crash."
@@ -32,70 +32,66 @@ msgstr ""
 "Es kann kein gültiges Design geladen werden. Ihre Installation ist "
 "fehlerhaft. Überprüfen Sie Ihren KDE-Pfad. Das Programm stürzt jetzt ab."
 
-#: adium-theme-view.cpp:145
+#: adium-theme-view.cpp:172
 msgid "Missing required file Template.html - check your installation."
 msgstr ""
 "Die benötigte Datei „Template.html“ fehlt. Überprüfen Sie Ihre Installation."
 
-#: chat-search-bar.cpp:36
+#: chat-search-bar.cpp:37
 msgctxt "Next search result"
 msgid "&Next"
 msgstr "&Weiter"
 
-#: chat-search-bar.cpp:37
+#: chat-search-bar.cpp:38
 msgctxt "Previous search result"
 msgid "&Previous"
 msgstr "&Zurück"
 
-#: chat-search-bar.cpp:45
+#: chat-search-bar.cpp:47
 msgid "Insert search text..."
 msgstr "Suchtext einfügen ..."
 
-#: chat-search-bar.cpp:54
+#: chat-search-bar.cpp:56
 msgid "Case sensitive"
 msgstr "Groß-/Kleinschreibung beachten"
 
-#: chat-widget.cpp:106
-msgid "Show format options"
-msgstr "Formatoptionen anzeigen"
-
-#: chat-widget.cpp:594
+#: chat-widget.cpp:534
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
 msgstr ""
 "Die Nachricht „%1“ kann nicht zugestellt werden, da der Kontakt blockiert ist"
 
-#: chat-widget.cpp:598
+#: chat-widget.cpp:538
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
 msgstr ""
 "Die Nachricht „%1“ kann nicht zugestellt werden, da der Kontakt offline ist"
 
-#: chat-widget.cpp:604
+#: chat-widget.cpp:544
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr ""
 "Eine Nachricht kann nicht zugestellt werden, da der Kontakt blockiert ist"
 
-#: chat-widget.cpp:607
+#: chat-widget.cpp:547
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr ""
 "Eine Nachricht kann nicht zugestellt werden, da der Kontakt offline ist"
 
-#: chat-widget.cpp:614
+#: chat-widget.cpp:554
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
 msgstr ""
 "Die Nachricht „%1“ kann nicht zugestellt werden, da der Kontakt ungültig ist"
 
-#: chat-widget.cpp:618
+#: chat-widget.cpp:558
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr ""
 "Eine Nachricht kann nicht zugestellt werden, da der Kontakt ungültig ist"
 
-#: chat-widget.cpp:624
+#: chat-widget.cpp:564
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -104,7 +100,7 @@ msgstr ""
 "Die Nachricht „%1“ kann nicht zugestellt werden, da Sie in diesem Raum keine "
 "Berechtigung zu schreiben haben"
 
-#: chat-widget.cpp:628
+#: chat-widget.cpp:568
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
@@ -112,55 +108,46 @@ msgstr ""
 "Eine Nachricht kann nicht zugestellt werden, da Sie in diesem Raum keine "
 "Berechtigung zu schreiben haben"
 
-#: chat-widget.cpp:634
+#: chat-widget.cpp:574
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Die Nachricht „%1“ kann nicht zugestellt werden, da sie zu lang ist"
 
-#: chat-widget.cpp:638
+#: chat-widget.cpp:578
 msgid "Delivery of a message failed because it was too long"
 msgstr "Eine Nachricht kann nicht zugestellt werden, da sie zu lang ist"
 
-#: chat-widget.cpp:644
+#: chat-widget.cpp:584
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Die Nachricht „%1“ kann nicht zugestellt werden: %2"
 
-#: chat-widget.cpp:648
+#: chat-widget.cpp:588
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Eine Nachricht kann nicht zugestellt werden: %1"
 
-#: chat-widget.cpp:765
-#, kde-format
-msgid "%1 has sent you a message"
-msgstr "%1 hat Ihnen eine Nachricht gesendet"
-
-#: chat-widget.cpp:778
-msgid "View"
-msgstr "Ansicht"
-
-#: chat-widget.cpp:809
+#: chat-widget.cpp:693
 msgid "You have sent a message"
 msgstr "Sie haben eine Nachricht gesendet"
 
-#: chat-widget.cpp:850
+#: chat-widget.cpp:741
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 hat den Chat verlassen"
 
-#: chat-widget.cpp:893
+#: chat-widget.cpp:784
 #, kde-format
 msgid "You are now marked as %1"
 msgstr "Sie sind jetzt als %1 markiert"
 
-#: chat-widget.cpp:897
+#: chat-widget.cpp:788
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 ist %2"
 
-#: chat-widget.cpp:899
+#: chat-widget.cpp:790
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -168,27 +155,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 ist %2 - %3"
 
-#: chat-widget.cpp:929
+#: chat-widget.cpp:822
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Sie sind jetzt als %1 bekannt"
 
-#: chat-widget.cpp:937
+#: chat-widget.cpp:830
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 nennt sich jetzt %2"
 
-#: chat-widget.cpp:960
+#: chat-widget.cpp:853
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 ist jetzt blockiert"
 
-#: chat-widget.cpp:962
+#: chat-widget.cpp:855
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 ist jetzt freigegeben"
 
-#: chat-widget.cpp:1062
+#: chat-widget.cpp:1038
 msgid "You are now offline"
 msgstr "Sie sind jetzt als offline"
 
@@ -213,6 +200,18 @@ msgstr "Wiedergeben"
 msgid "Save as"
 msgstr "Speichern unter"
 
+#: notify-filter.cpp:76
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 hat Ihnen eine Nachricht gesendet"
+
+#: notify-filter.cpp:97
+msgid "View"
+msgstr "Ansicht"
+
+#~ msgid "Show format options"
+#~ msgstr "Formatoptionen anzeigen"
+
 #~ msgid "Connection closed"
 #~ msgstr "Verbindung beendet"
 
@@ -236,5 +235,6 @@ msgstr "Speichern unter"
 #~ msgstr "Sie sind jetzt als abwesend markiert"
 
 #, fuzzy
+#~| msgid "You are now marked as online"
 #~ msgid "You are now marked as not available"
 #~ msgstr "Sie sind jetzt als online markiert"

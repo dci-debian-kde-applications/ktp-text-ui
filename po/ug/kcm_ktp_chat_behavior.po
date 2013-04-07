@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-chat-window-config\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-17 05:23+0100\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
 "PO-Revision-Date: 2011-05-09 19:00+0900\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -17,6 +17,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: behavior-config.cpp:49
+msgctxt ""
+"Part of config 'show last [spin box] messages' This is the suffix to the "
+"spin box. Be sure to include leading space"
+msgid " message"
+msgid_plural " messages"
+msgstr[0] ""
+
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
 msgid "Tabs"
@@ -24,22 +32,28 @@ msgstr "بەتكۈچلەر"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: behavior-config.ui:23
-msgid "Open new conversations in :"
+msgid "Open new conversations:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
 #: behavior-config.ui:30
-msgid "A new window"
+msgid "As new windows"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
 #: behavior-config.ui:40
-msgid "A new tab in the first window"
+msgid "As tabs in the same window"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioLast)
-#: behavior-config.ui:50
-msgid "A new tab in the last focused window"
+#. i18n: ectx: property (title), widget (KButtonGroup, scrollbackGroup)
+#: behavior-config.ui:53
+msgid "Last Conversation Scrollback"
+msgstr ""
+
+#. i18n: First part of &quot;Show last %1 messages&quot; string
+#. i18n: ectx: property (text), widget (QLabel, label_p1)
+#: behavior-config.ui:59
+msgid "Show last"
 msgstr ""
 
 #~ msgid "Jabber"

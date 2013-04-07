@@ -19,16 +19,17 @@
 #ifndef SEARCHEXPANSION_FILTER_H
 #define SEARCHEXPANSION_FILTER_H
 
-#include <KTp/AbstractMessageFilter>
+#include <KTp/abstract-message-filter.h>
 
-class SearchexpansionFilter : public AbstractMessageFilter
+class SearchexpansionFilter : public KTp::AbstractMessageFilter
 {
     Q_OBJECT
 
 public:
     SearchexpansionFilter(QObject *parent, const QVariantList &);
     virtual ~SearchexpansionFilter();
-    virtual void filterMessage(Message &message);
+    virtual void filterMessage(KTp::Message &message, const KTp::MessageContext &context);
+    virtual void filterOutgoingMessage(KTp::OutgoingMessage &message, const KTp::MessageContext &context);
 
 private:
     class Private;

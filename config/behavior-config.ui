@@ -20,39 +20,61 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Open new conversations in :</string>
+         <string>Open new conversations:</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QRadioButton" name="radioNew">
         <property name="text">
-         <string>A new window</string>
+         <string>As new windows</string>
         </property>
         <attribute name="buttonGroup">
-         <string>newTabButtonGroup</string>
+         <string notr="true">newTabButtonGroup</string>
         </attribute>
        </widget>
       </item>
       <item>
        <widget class="QRadioButton" name="radioZero">
         <property name="text">
-         <string>A new tab in the first window</string>
+         <string>As tabs in the same window</string>
         </property>
         <attribute name="buttonGroup">
-         <string>newTabButtonGroup</string>
+         <string notr="true">newTabButtonGroup</string>
         </attribute>
        </widget>
       </item>
-      <item>
-       <widget class="QRadioButton" name="radioLast">
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="KButtonGroup" name="scrollbackGroup">
+     <property name="title">
+      <string>Last Conversation Scrollback</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_p1">
         <property name="text">
-         <string>A new tab in the last focused window</string>
+         <string extracomment="First part of &quot;Show last %1 messages&quot; string">Show last</string>
         </property>
-        <attribute name="buttonGroup">
-         <string>newTabButtonGroup</string>
-        </attribute>
        </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="KIntSpinBox" name="scrollbackLength"/>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
      </layout>
     </widget>
@@ -78,6 +100,11 @@
    <extends>QGroupBox</extends>
    <header>kbuttongroup.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>KIntSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>knuminput.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

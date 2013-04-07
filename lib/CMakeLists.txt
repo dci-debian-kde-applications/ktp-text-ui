@@ -14,17 +14,11 @@ set(ktpchat_SRCS
         chat-text-edit.cpp
         chat-search-bar.cpp
         logmanager.cpp
-        message.cpp
-        abstract-message-filter.cpp
-        message-processor.cpp
-        url-filter.cpp
-        escape-filter.cpp
-        backslash-filter.cpp
-        plugin-config-manager.cpp
+        notify-filter.cpp
+        text-chat-config.cpp
 )
 
 set(ktpchat_HDRS
-    abstract-message-filter.h
     adium-theme-content-info.h
     adium-theme-header-info.h
     adium-theme-message-info.h
@@ -34,6 +28,7 @@ set(ktpchat_HDRS
     chat-widget.h
     chat-window-style.h
     chat-window-style-manager.h
+    text-chat-config.h
 )
 
 set(ktpchat_PRETTY_HDRS
@@ -46,6 +41,7 @@ set(ktpchat_PRETTY_HDRS
     KTp/ChatWidget
     KTp/ChatWindowStyle
     KTp/ChatWindowStyleManager
+    KTp/TextChatConfig
 )
 
 set(ktpchat_UI
@@ -56,15 +52,6 @@ kde4_add_ui_files(ktpchat_SRCS ${ktpchat_UI})
 
 kde4_add_library(ktpchat SHARED ${ktpchat_SRCS})
 
-# telepathy-logger-qt4 related stuff
-if(TELEPATHY_LOGGER_QT4_FOUND)
-    set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TELEPATHY_LOGGER_QT4_DEFINITIONS}" )
-
-    target_link_libraries(ktpchat
-        ${TELEPATHY_LOGGER_QT4_LIBRARIES}
-    )
-endif()
-
 target_link_libraries(ktpchat
     ${KDE4_KDECORE_LIBS}
     ${KDE4_KIO_LIBS}
@@ -73,6 +60,7 @@ target_link_libraries(ktpchat
     ${QT_QTWEBKIT_LIBRARY}
     ${KDE4_KEMOTICONS_LIBS}
     ${KTP_LIBRARIES}
+    ${TELEPATHY_LOGGER_QT4_LIBRARIES}
 )
 install(TARGETS ktpchat ${INSTALL_TARGETS_DEFAULT_ARGS})
 

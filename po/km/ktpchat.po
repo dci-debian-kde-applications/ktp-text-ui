@@ -1,0 +1,215 @@
+# translation of ktpchat.po to Khmer
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktpchat\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2012-07-10 15:03+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ខឹម សុខែម, ម៉ន ម៉េត, សេង សុត្ថា, ចាន់ សម្បត្តិរតនៈ, សុខ សុភា"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"khoemsokhem@khmeros.info,​​mornmet@khmeros.info,sutha@khmeros.info,"
+"ratanak@khmeros.info,sophea@khmeros.info"
+
+#: adium-theme-view.cpp:91
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr ""
+"បាន​បរាជ័យ​ក្នុងការ​ផ្ទុក​រូបរាង​ត្រឹមត្រូវ ។ ការ​តំឡើង​របស់​អ្នក​ខូច​ហើយ ។ ពិនិត្យ​មើល​ផ្លូវ​ kde របស់ ។ នឹង​"
+"គាំង​ឥឡូវ ។"
+
+#: adium-theme-view.cpp:172
+msgid "Missing required file Template.html - check your installation."
+msgstr "បាត់​ឯកសារ Template.html ដែល​ទាមទារ - ពិនិត្យ​មើល​ការ​ដំឡើង​របស់​អ្នក ។"
+
+#: chat-search-bar.cpp:37
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "បន្ទាប់"
+
+#: chat-search-bar.cpp:38
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "មុន"
+
+#: chat-search-bar.cpp:47
+msgid "Insert search text..."
+msgstr "បញ្ចូល​អត្ថបទ​ស្វែងរក..."
+
+#: chat-search-bar.cpp:56
+msgid "Case sensitive"
+msgstr "ប្រកាន់​អក្សរ​តូចធំ"
+
+#: chat-widget.cpp:534
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr "ការ​បញ្ជូន​​សារ \"%1\" បាន​បរាជ័យ ដោយសារ​តែ​ទំនាក់ទំនង​ពី​ចម្ងាយ​ត្រូវបាន​ទប់ស្កាត់"
+
+#: chat-widget.cpp:538
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr "ការបញ្ជូន​សារ \"%1\" បាន​បរាជ័យ​ ដោយ​សារ​តែ​ទំនាក់ទំនង​ពី​ចម្ងាយ​នៅ​ក្រៅ​បណ្ដាញ"
+
+#: chat-widget.cpp:544
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr "ការបញ្ជូន​​សារ​បាន​បរាជ័យ ដោយ​សារ​តែ​ទំនាក់ទំនង​ពី​ចម្ងាយ​ត្រូវបាន​ទប់ស្កាត់"
+
+#: chat-widget.cpp:547
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr "ការបញ្ជូន​​សារ​បាន​បរាជ័យ ដោយ​សារ​តែ​ទំនាក់ទំនង​ពី​ចម្ងាយនៅ​ក្រៅ​បណ្ដាញ"
+
+#: chat-widget.cpp:554
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr "កា​របញ្ជូន​សារ \"%1\" បានបរាជ័យ​ ដោយ​សារ​តែ​ទំនាក់ទំនង​ពី​ចម្ងាយ​មិន​ត្រឹមត្រូវ"
+
+#: chat-widget.cpp:558
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr "ការបញ្ជូន​​សារ​បាន​បរាជ័យ ដោយ​សារ​តែ​ទំនាក់ទំនង​ពី​ចម្ងាយមិន​ត្រឹមត្រូវ"
+
+#: chat-widget.cpp:564
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr "ការបញ្ជូន​​សារ \"%1\" បាន​បរាជ័យ ដោយ​សារ​តែ​អ្នក​មិន​មាន​សិទ្ធិ​និយាយ​ក្នុង​បន្ទប់​នេះ"
+
+#: chat-widget.cpp:568
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr "កា​របញ្ជូន​​សារ​បានបរាជ័យ ដោយ​សារ​តែ​អ្នក​មិនមាន​សិទ្ធិ​និយាយ​ក្នុងបន្ទប់​នេះ"
+
+#: chat-widget.cpp:574
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr "ការ​​បញ្ជូនសារ \"%1\" បាន​បរាជ័យ​ ដោយសារ​តែ​វា​​វែងពេក"
+
+#: chat-widget.cpp:578
+msgid "Delivery of a message failed because it was too long"
+msgstr "ការ​បញ្ជូន​សារ​បាន​បរាជ័យ ដោយ​សារ​តែ​វា​វែងពេក"
+
+#: chat-widget.cpp:584
+#, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr "កា​របញ្ជូនសារ \"%1\" បាន​បរាជ័យ ៖ %2"
+
+#: chat-widget.cpp:588
+#, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr "ការ​បញ្ជូន​សារបាន​បរាជ័យ ៖ %1"
+
+#: chat-widget.cpp:693
+msgid "You have sent a message"
+msgstr "អ្នក​បាន​ផ្ញើសារ​"
+
+#: chat-widget.cpp:741
+#, kde-format
+msgid "%1 has left the chat"
+msgstr "%1 បាន​ចេញ​ពី​ការ​ជជែក"
+
+#: chat-widget.cpp:784
+#, kde-format
+msgid "You are now marked as %1"
+msgstr "ឥឡូវ​អ្នក​ត្រូវ​បាន​សម្គាល់​ថា​ជា %1"
+
+#: chat-widget.cpp:788
+#, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr "%1 គឺជា %2"
+
+#: chat-widget.cpp:790
+#, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr "%1 គឺ​ជា %2 - %3"
+
+#: chat-widget.cpp:822
+#, kde-format
+msgid "You are now known as %1"
+msgstr "ឥឡូវ​​អ្នក​ត្រូវ​បាន​ស្គាល់​ថា​ជា %1"
+
+#: chat-widget.cpp:830
+#, kde-format
+msgid "%1 is now known as %2"
+msgstr "%1 ត្រូវ​បាន​ស្គាល់​ថា​ជា %2"
+
+#: chat-widget.cpp:853
+#, kde-format
+msgid "%1 is now blocked."
+msgstr "%1 ឥឡូវ​ត្រូវ​បាន​ទប់ស្កាត់ ។"
+
+#: chat-widget.cpp:855
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr "%1 ឥឡូវ​លែង​ទប់ស្កាត់​ហើយ"
+
+#: chat-widget.cpp:1038
+#, fuzzy
+#| msgid "You are now known as %1"
+msgid "You are now offline"
+msgstr "ឥឡូវ​​អ្នក​ត្រូវ​បាន​ស្គាល់​ថា​ជា %1"
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr "ធម្មតា"
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "ទាញយក"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "បោះបង់"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "ចាក់"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "រក្សាទុកជា"
+
+#: notify-filter.cpp:76
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 បាន​ផ្ញើ​សារ​ឲ្យ​អ្នក"
+
+#: notify-filter.cpp:97
+msgid "View"
+msgstr "មើល"
+
+#~ msgid "Show format options"
+#~ msgstr "បង្ហាញ​ជម្រើស​ទ្រង់ទ្រាយ"
+
+#~ msgid "Connection closed"
+#~ msgstr "បាន​បិទ​ការ​តភ្ជាប់"
+
+#~ msgctxt "Connected to IM service"
+#~ msgid "Connected"
+#~ msgstr "បានតភ្ជាប់"

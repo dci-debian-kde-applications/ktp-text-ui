@@ -1,0 +1,143 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Giovanni Sora <g.sora@tiscali.it>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-03-27 09:44+0100\n"
+"Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-l10n-ia@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: appearance-config.cpp:48
+msgctxt "@title:tab"
+msgid "Normal Chat"
+msgstr "Conversation normal"
+
+#: appearance-config.cpp:52
+msgctxt "@title:tab"
+msgid "Group Chat"
+msgstr "Conversation de gruppo"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: appearance-config.ui:41
+msgid "Style"
+msgstr "Stilo"
+
+#. i18n: ectx: property (text), widget (QLabel, styleLabel)
+#: appearance-config.ui:49
+msgid "Message Style:"
+msgstr "Stilo de message"
+
+#. i18n: ectx: property (text), widget (QLabel, variantLabel)
+#: appearance-config.ui:75
+msgid "Variant:"
+msgstr "Variante:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, showHeader)
+#: appearance-config.ui:107
+msgid "Show Header"
+msgstr "Monstra capite"
+
+#. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
+#: appearance-config.ui:120
+msgid "Show status changes"
+msgstr "Monstra cambiamentos de stato"
+
+#. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
+#: appearance-config.ui:145
+msgid "Use Custom Font Settings"
+msgstr "Usa preferentias de font personalisate"
+
+#. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
+#: appearance-config.ui:157
+msgid "Select Font:"
+msgstr "Selectiona le Font:"
+
+#. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
+#: appearance-config.ui:170
+msgid "Select Size:"
+msgstr "Selectiona Dimension:"
+
+#~ msgid "A demo chat"
+#~ msgstr "Un conversation de demonstration"
+
+#~ msgid "Jabber"
+#~ msgstr "Jabber"
+
+#~ msgctxt "Example email"
+#~ msgid "ted@example.com"
+#~ msgstr "ted@exemplo.com"
+
+#~ msgctxt "Example name"
+#~ msgid "Ted"
+#~ msgstr "Ted"
+
+#~ msgctxt "Example message in preview conversation"
+#~ msgid "Ok!"
+#~ msgstr "OK!"
+
+#~ msgctxt "Example email"
+#~ msgid "larry@example.com"
+#~ msgstr "larry@exemplo.com"
+
+#~ msgctxt "Example name"
+#~ msgid "Larry Demo"
+#~ msgstr "Demo de Larry"
+
+#~ msgid "Bye Bye"
+#~ msgstr "A revider"
+
+#~ msgid "Have fun!"
+#~ msgstr "Diverte te!"
+
+#~ msgctxt "Example name"
+#~ msgid "Ted Example"
+#~ msgstr "Ted Exemplo"
+
+#~ msgid "cya"
+#~ msgstr "cya"
+
+#~ msgctxt "Example message"
+#~ msgid "Ted Example waves."
+#~ msgstr "Exemplos de Ted saluta."
+
+#~ msgid "Ted Example has left the chat."
+#~ msgstr "Ted Exemplo ha abandonate le conversation"
+
+#~ msgctxt "Example message"
+#~ msgid "Hello Ted"
+#~ msgstr "Salute Ted"
+
+#~ msgid "What's up?"
+#~ msgstr "Que es?"
+
+#~ msgid ""
+#~ "Check out which cool adium themes work <a href=\"http://community.kde.org/"
+#~ "KTp/Components/Chat_Window/Themes\">here</a>!"
+#~ msgstr ""
+#~ "Controla qual thema fabulode de adium functiona <a href=\"http://"
+#~ "communiti.kde.org/KTp/Components/Chat_Window/Themes\">hic</a>!"
+
+#~ msgid "A different example message"
+#~ msgstr "Un differente message de exemplo"
+
+#~ msgid "Ted Example is now Away."
+#~ msgstr "Ted Exemplo ora es foras"
+
+#~ msgid "Always"
+#~ msgstr "Sempre"
+
+#~ msgid "Never in group chats"
+#~ msgstr "Jammais in conversationes de gruppo"
+
+#~ msgid "Never"
+#~ msgstr "Jammais"

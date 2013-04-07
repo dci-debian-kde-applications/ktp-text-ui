@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-31 13:28+0100\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
 "PO-Revision-Date: 2012-08-05 22:33+0300\n"
 "Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stikonas@gmail.com,liudas@akmc.lt"
 
-#: adium-theme-view.cpp:86
+#: adium-theme-view.cpp:91
 msgid ""
 "Failed to load a valid theme. Your installation is broken. Check your kde "
 "path. Will now crash."
@@ -36,67 +36,63 @@ msgstr ""
 "Nepavyko įkrauti tinkamos temos. Jūsų įdiegimas yra sugadintas. Patikrinkite "
 "Jūsų KDE kelią. DAbar užstrigs."
 
-#: adium-theme-view.cpp:145
+#: adium-theme-view.cpp:172
 msgid "Missing required file Template.html - check your installation."
 msgstr "Trūksta reikalingo failo Template.html - patikrinkite Jūsų įdiegimą."
 
-#: chat-search-bar.cpp:36
+#: chat-search-bar.cpp:37
 msgctxt "Next search result"
 msgid "&Next"
 msgstr "&Kitas"
 
-#: chat-search-bar.cpp:37
+#: chat-search-bar.cpp:38
 msgctxt "Previous search result"
 msgid "&Previous"
 msgstr "&Ankstesnis"
 
-#: chat-search-bar.cpp:45
+#: chat-search-bar.cpp:47
 msgid "Insert search text..."
 msgstr "Įveskite ieškomą tekstą..."
 
-#: chat-search-bar.cpp:54
+#: chat-search-bar.cpp:56
 msgid "Case sensitive"
 msgstr "Skirti raidžių dydį"
 
-#: chat-widget.cpp:106
-msgid "Show format options"
-msgstr "Rodyti formato parinktis"
-
-#: chat-widget.cpp:594
+#: chat-widget.cpp:534
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
 msgstr ""
 "Pristatymas žinutės „%1“ nepavyko, nes nuotolinis kontaktas yra blokuotas"
 
-#: chat-widget.cpp:598
+#: chat-widget.cpp:538
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
 msgstr ""
 "Pristatymas žinutės „%1“ nepavyko, nes nuotolinis kontaktas yra neprisijungęs"
 
-#: chat-widget.cpp:604
+#: chat-widget.cpp:544
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr "Pristatymas žinutės nepavyko, nes nuotolinis kontaktas yra blokuotas"
 
-#: chat-widget.cpp:607
+#: chat-widget.cpp:547
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr ""
 "Pristatymas žinutės nepavyko, nes nuotolinis kontaktas yra neprisijungęs"
 
-#: chat-widget.cpp:614
+#: chat-widget.cpp:554
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
 msgstr ""
 "Pristatymas žinutės „%1“ nepavyko, nes nuotolinis kontaktas yra netinkamas"
 
-#: chat-widget.cpp:618
+#: chat-widget.cpp:558
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr "Pristatymas žinutės nepavyko, nes nuotolinis kontaktas yra netinkamas"
 
-#: chat-widget.cpp:624
+#: chat-widget.cpp:564
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -105,7 +101,7 @@ msgstr ""
 "Pristatymas žinutės „%1“ nepavyko, nes Jūs neturite leidimo kalbėti šiame "
 "kambaryje"
 
-#: chat-widget.cpp:628
+#: chat-widget.cpp:568
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
@@ -113,55 +109,46 @@ msgstr ""
 "Pristatymas žinutės nepavyko, nes Jūs neturite leidimo kalbėti šiame "
 "kambaryje"
 
-#: chat-widget.cpp:634
+#: chat-widget.cpp:574
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Pristatymas žinutės „%1“ nepavyko, nes ji buvo per ilga"
 
-#: chat-widget.cpp:638
+#: chat-widget.cpp:578
 msgid "Delivery of a message failed because it was too long"
 msgstr "Pristatymas žinutės nepavyko, nes ji buvo per ilga"
 
-#: chat-widget.cpp:644
+#: chat-widget.cpp:584
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Pristatymas žinutės „%1“ nepavyko: %2"
 
-#: chat-widget.cpp:648
+#: chat-widget.cpp:588
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Pristatymas žinutės nepavyko: %1"
 
-#: chat-widget.cpp:765
-#, kde-format
-msgid "%1 has sent you a message"
-msgstr "%1 išsiuntė jums žinutę"
-
-#: chat-widget.cpp:778
-msgid "View"
-msgstr "Žiūrėti"
-
-#: chat-widget.cpp:809
+#: chat-widget.cpp:693
 msgid "You have sent a message"
 msgstr "Išsiuntėte žinutę"
 
-#: chat-widget.cpp:850
+#: chat-widget.cpp:741
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 paliko pokalbį"
 
-#: chat-widget.cpp:893
+#: chat-widget.cpp:784
 #, kde-format
 msgid "You are now marked as %1"
 msgstr "Jūs dabar pažymėtas kaip %1"
 
-#: chat-widget.cpp:897
+#: chat-widget.cpp:788
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 yra %2"
 
-#: chat-widget.cpp:899
+#: chat-widget.cpp:790
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -169,27 +156,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 yra %2 – %3"
 
-#: chat-widget.cpp:929
+#: chat-widget.cpp:822
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Jūs žinoma(-s) kaip %1"
 
-#: chat-widget.cpp:937
+#: chat-widget.cpp:830
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 dabar žinomas (-a) kaip %2"
 
-#: chat-widget.cpp:960
+#: chat-widget.cpp:853
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 dabar yra blokuota(-s)."
 
-#: chat-widget.cpp:962
+#: chat-widget.cpp:855
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 dabar yra atblokuota(-s)."
 
-#: chat-widget.cpp:1062
+#: chat-widget.cpp:1038
 #, fuzzy
 msgid "You are now offline"
 msgstr "Jūs žinoma(-s) kaip %1"
@@ -214,3 +201,25 @@ msgstr "Groti"
 #: chat-window-style.cpp:498
 msgid "Save as"
 msgstr "Įrašyti kaip"
+
+#: notify-filter.cpp:76
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 išsiuntė jums žinutę"
+
+#: notify-filter.cpp:97
+msgid "View"
+msgstr "Žiūrėti"
+
+#~ msgid "Show format options"
+#~ msgstr "Rodyti formato parinktis"
+
+#~ msgid "Connection closed"
+#~ msgstr "Ryšys nutrauktas"
+
+#~ msgctxt "Connected to IM service"
+#~ msgid "Connected"
+#~ msgstr "Prisijungta"
+
+#~ msgid "&Send"
+#~ msgstr "&Siųsti"

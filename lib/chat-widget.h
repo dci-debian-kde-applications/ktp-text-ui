@@ -29,6 +29,7 @@
 
 #include <KIcon>
 #include <KColorScheme>
+#include <KShortcut>
 
 #include <TelepathyQt/ReceivedMessage>
 
@@ -86,10 +87,21 @@ public:
 
     void setSpellDictionary(const QString &dict);
 
+    void addEmoticonToChat(const QString &emoticon);
+
     /** Returns the chat state of remote contact */
     Tp::ChannelChatState remoteChatState();
 
     bool previousConversationAvailable();
+
+    void clear();
+
+    qreal zoomFactor() const;
+
+    void setZoomFactor(qreal zoomFactor);
+
+    /** Is this widget visible and in the active window */
+    virtual bool isOnTop() const;
 
 public Q_SLOTS:
     /** toggle the search bar visibility */
@@ -98,6 +110,8 @@ public Q_SLOTS:
     /** Mark that the following messages have been seen by the user.
       */
     void acknowledgeMessages();
+
+    void updateSendMessageShortcuts(const KShortcut &shortcuts);
 
 protected:
     void changeEvent(QEvent *e);
@@ -108,10 +122,7 @@ protected:
 
 protected Q_SLOTS:
     /** Show the received message in the chat window*/
-    void handleIncomingMessage(const Tp::ReceivedMessage &message);
-
-    /** Show notification about a received message */
-    void notifyAboutIncomingMessage(const Tp::ReceivedMessage &message);
+    void handleIncomingMessage(const Tp::ReceivedMessage &message, bool alreadyNotified = false);
 
     /** Show the message sent in the chat window*/
     void handleMessageSent(const Tp::Message &message,
@@ -161,12 +172,14 @@ Q_SIGNALS:
     /** Emitted when a notification for the chat window has been activated*/
     void notificationClicked();
 
+    /** Emitted when zoom level in chat view changes */
+    void zoomFactorChanged(qreal zoomFactor);
+
 private Q_SLOTS:
     /** received when user changes search criteria or when searching for text */
     void findTextInChat(const QString &text, QWebPage::FindFlags flags);
     void findNextTextInChat(const QString &text, QWebPage::FindFlags flags);
     void findPreviousTextInChat(const QString &text, QWebPage::FindFlags flags);
-    void onFormatColorReleased();
     void onHistoryFetched(const QList<AdiumThemeContentInfo> &messages);
     void onChatPausedTimerExpired();
     void currentPresenceChanged(const Tp::Presence &presence);
@@ -181,7 +194,15 @@ private:
     /** connects necessary signals for the contactModel */
     void setupContactModelSignals();
 
-    virtual bool isOnTop() const;
+    /** Saves pair <target Id,language option selected> in a file */
+    void saveSpellCheckingOption();
+
+    /** Loads language option for specified target Id */
+    void loadSpellCheckingOption();
+
+    /** Loads theme into the the AdiumThemeView */
+    void initChatArea();
+
     bool m_previousConversationAvailable;
 
     ChatWidgetPrivate * const d;

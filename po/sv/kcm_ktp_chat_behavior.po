@@ -1,21 +1,30 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhall <stefan.asserhall@comhem.se>, 2011.
+# Stefan Asserhall <stefan.asserhall@comhem.se>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-17 05:23+0100\n"
-"PO-Revision-Date: 2011-10-13 18:44+0200\n"
-"Last-Translator: Stefan Asserhall <stefan.asserhall@comhem.se>\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-02-13 19:30+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@comhem.se>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: behavior-config.cpp:49
+msgctxt ""
+"Part of config 'show last [spin box] messages' This is the suffix to the "
+"spin box. Be sure to include leading space"
+msgid " message"
+msgid_plural " messages"
+msgstr[0] " meddelande"
+msgstr[1] " meddelanden"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -24,23 +33,32 @@ msgstr "Flikar"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: behavior-config.ui:23
-msgid "Open new conversations in :"
-msgstr "Öppna ny konversation i: "
+msgid "Open new conversations:"
+msgstr "Öppna nya konversationer:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
 #: behavior-config.ui:30
-msgid "A new window"
-msgstr "Ett nytt fönster"
+msgid "As new windows"
+msgstr "Som nya fönster"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
 #: behavior-config.ui:40
-msgid "A new tab in the first window"
-msgstr "En ny flik i det första fönstret"
+msgid "As tabs in the same window"
+msgstr "Som flikar i samma fönster"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioLast)
-#: behavior-config.ui:50
-msgid "A new tab in the last focused window"
-msgstr "En ny flik i det senast fokuserade fönstret"
+#. i18n: ectx: property (title), widget (KButtonGroup, scrollbackGroup)
+#: behavior-config.ui:53
+msgid "Last Conversation Scrollback"
+msgstr "Historik för senaste konversation"
+
+#. i18n: First part of &quot;Show last %1 messages&quot; string
+#. i18n: ectx: property (text), widget (QLabel, label_p1)
+#: behavior-config.ui:59
+msgid "Show last"
+msgstr "Visa senaste"
+
+#~ msgid "A new tab in the last focused window"
+#~ msgstr "En ny flik i det senast fokuserade fönstret"
 
 #~ msgid "A demo chat"
 #~ msgstr "En chattdemonstration"
@@ -98,9 +116,6 @@ msgstr "En ny flik i det senast fokuserade fönstret"
 
 #~ msgid "Variant:"
 #~ msgstr "Variant:"
-
-#~ msgid "Show Header"
-#~ msgstr "Visa rubrik"
 
 #~ msgid "Show User Icons"
 #~ msgstr "Visa användarikoner"

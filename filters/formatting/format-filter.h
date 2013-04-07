@@ -18,20 +18,19 @@
 
 #ifndef FORMAT_FILTER_H
 #define FORMAT_FILTER_H
-#include <KTp/AbstractMessageFilter>
 
-class FormatFilter : public AbstractMessageFilter
+#include <KTp/abstract-message-filter.h>
+
+class FormatFilter : public KTp::AbstractMessageFilter
 {
 Q_OBJECT
 
 public:
     FormatFilter (QObject* parent, const QVariantList &);
     virtual ~FormatFilter();
-    virtual void filterMessage (Message& message);
+    virtual void filterMessage (KTp::Message &message, const KTp::MessageContext &context);
 
 private:
-    void addTag (const char *markingCharacter, char htmlTag);
-
     class Private;
     Private *d;
 };

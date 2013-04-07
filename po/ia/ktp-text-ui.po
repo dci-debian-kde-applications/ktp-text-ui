@@ -1,0 +1,187 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Giovanni Sora <g.sora@tiscali.it>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-03-11 13:13+0100\n"
+"Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-l10n-ia@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Giovanni Sora"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "g.sora@tiscali.it"
+
+#: chat-window.cpp:134
+msgid "Close"
+msgstr "Claude"
+
+#: chat-window.cpp:135
+msgid "Detach Tab"
+msgstr "Distacca scheda"
+
+#: chat-window.cpp:136
+msgid "Move Tab Left"
+msgstr "Move scheda a sinistra"
+
+#: chat-window.cpp:137
+msgid "Move Tab Right"
+msgstr "Move scheda a dextera"
+
+#: chat-window.cpp:646
+msgid "&Next Tab"
+msgstr "&Proxime scheda"
+
+#: chat-window.cpp:650
+msgid "&Previous Tab"
+msgstr "Pre&vie scheda"
+
+#: chat-window.cpp:654
+msgid "&Audio Call"
+msgstr "&Appello audio"
+
+#: chat-window.cpp:655
+msgctxt "Toolbar icon tooltip"
+msgid "Start an audio call with this contact"
+msgstr "Initia un appello audio con iste contacto"
+
+#: chat-window.cpp:658 chat-window.cpp:889
+msgid "&Block Contact"
+msgstr "&Bloca contacto"
+
+#: chat-window.cpp:660
+msgctxt "Toolbar icon tooltip"
+msgid ""
+"Blocking means that this contact will not see you online and you will not "
+"receive any messages from this contact"
+msgstr ""
+"Blocar significa que iste contacto non videra te in linea e tu non recipera "
+"alcun messages ex iste contacto"
+
+#: chat-window.cpp:663
+msgid "&Send File"
+msgstr "&Invia file"
+
+#: chat-window.cpp:664
+msgctxt "Toolbar icon tooltip"
+msgid "Send a file to this contact"
+msgstr "Invia un file a iste contacto"
+
+#: chat-window.cpp:667
+msgid "&Invite to Chat"
+msgstr "&Invita al conversation"
+
+#: chat-window.cpp:668
+msgctxt "Toolbar icon tooltip"
+msgid "Invite another contact to join this chat"
+msgstr "Invita un altere contacto a unir se a iste conversation"
+
+#: chat-window.cpp:671
+msgid "&Video Call"
+msgstr "Appello &Video"
+
+#: chat-window.cpp:672
+msgctxt "Toolbar icon tooltip"
+msgid "Start a video call with this contact"
+msgstr "Initia un appello video con iste contacto"
+
+#: chat-window.cpp:675
+msgid "Share My &Desktop"
+msgstr "Comparti mi &Scriptorio"
+
+#: chat-window.cpp:676
+msgctxt "Toolbar icon tooltip"
+msgid "Start an application that allows this contact to see your desktop"
+msgstr "Initia application que permitte a iste contacto vider tu scriptorio"
+
+#: chat-window.cpp:687
+msgid "Choose Spelling Language"
+msgstr "Selige linguage de orthographia"
+
+#: chat-window.cpp:689
+msgctxt "Action to open the log viewer with a specified contact"
+msgid "&Previous Conversations"
+msgstr "&Previe conversationes"
+
+#: chat-window.cpp:692
+msgid "Account Icon"
+msgstr "Icone de conto"
+
+#: chat-window.cpp:696
+msgid "&Clear View"
+msgstr "&Netta vista"
+
+#: chat-window.cpp:697
+msgctxt "Toolbar icon tooltip"
+msgid "Clear all messages from current chat tab"
+msgstr "Netta omne messages ab le scheda de conversation currente"
+
+#: chat-window.cpp:703
+msgid "Send message"
+msgstr "Invia message"
+
+#: chat-window.cpp:815
+#, kde-format
+msgid "Choose files to send to %1"
+msgstr "Selioge files de inviar a %1"
+
+#: chat-window.cpp:848
+#, kde-format
+msgctxt "String prepended in window title, arg is contact's name"
+msgid "Typing... %1"
+msgstr "Typante... %1"
+
+#: chat-window.cpp:850
+#, kde-format
+msgctxt "String appended in window title, arg is contact's name"
+msgid "%1 has entered text"
+msgstr "%1 ha insertate texto"
+
+#: chat-window.cpp:882
+msgid "&Unblock Contact"
+msgstr "Dis&bloca contacto"
+
+#: emoticon-text-edit-action.cpp:49
+msgid "Add Smiley"
+msgstr "Adde smiley"
+
+#: invite-contact-dialog.cpp:50
+msgid "Search in Contacts..."
+msgstr "Cerca in contactos..."
+
+#: invite-contact-dialog.cpp:54
+msgid "Select Contacts to Invite to Group Chat"
+msgstr "Selige contactos de invitar al conversation de gruppo"
+
+#: main.cpp:43
+msgid "Telepathy Text Ui"
+msgstr "Ui de texto de Telepathy"
+
+#: main.cpp:45
+msgid "David Edmundson"
+msgstr "David Edmundson"
+
+#: main.cpp:45 main.cpp:46 main.cpp:47
+msgid "Developer"
+msgstr "Developpator"
+
+#: main.cpp:46
+msgid "Dominik Schmidt"
+msgstr "Dominik Schmidt"
+
+#: main.cpp:47
+msgid "Francesco Nwokeka"
+msgstr "Francesco Nwokeka"

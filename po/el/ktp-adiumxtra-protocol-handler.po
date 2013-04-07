@@ -4,29 +4,28 @@
 #
 # Stelios <sstavra@gmail.com>, 2012.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012.
-# Petros Vidalis <pvidalis@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-adiumxtra-protocol-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2012-11-01 10:55+0100\n"
-"PO-Revision-Date: 2012-09-27 14:30+0300\n"
-"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
-"Language-Team: Greek <i18ngr@lists.hellug.gr>\n"
+"PO-Revision-Date: 2012-03-29 07:19+0100\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Stelios, Πέτρος Βιδάλης"
+msgstr "Stelios"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sstavra@gmail.com, p_vidalis@hotmail.com"
+msgstr "sstavra@gmail.com"
 
 #: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
 msgid "Package type not recognized or not supported"
@@ -88,4 +87,4 @@ msgstr "Daniele E. Domenichelli"
 
 #: main.cpp:39
 msgid "Adium package to install"
-msgstr "Πακέτα adium για εγκατάσταση"
+msgstr "Adium πακέτο προς εγκατάσταση"

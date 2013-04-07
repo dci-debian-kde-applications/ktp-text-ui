@@ -6,148 +6,137 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-07-14 11:17+0200\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2012-12-24 12:16+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kdei18n-pl-uwagi>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: appearance-config.cpp:42
-msgid "A demo chat"
-msgstr "Czat demonstracyjny"
-
-#: appearance-config.cpp:43 appearance-config.cpp:178
-#: appearance-config.cpp:186 appearance-config.cpp:194
-#: appearance-config.cpp:202 appearance-config.cpp:209
-#: appearance-config.cpp:215 appearance-config.cpp:223
-#: appearance-config.cpp:231 appearance-config.cpp:241
-#: appearance-config.cpp:249 appearance-config.cpp:256
-#: appearance-config.cpp:263
-msgid "Jabber"
-msgstr "Jabber"
-
-#: appearance-config.cpp:45 appearance-config.cpp:192
-#: appearance-config.cpp:200 appearance-config.cpp:239
-#: appearance-config.cpp:247
-msgctxt "Example email"
-msgid "ted@example.com"
-msgstr "tadeusz@przyklad.com"
-
-#: appearance-config.cpp:46
-msgctxt "Example name"
-msgid "Ted"
-msgstr "Tadeusz"
-
-#: appearance-config.cpp:175
-msgctxt "Example message in preview conversation"
-msgid "Ok!"
-msgstr "Ok!"
-
-#: appearance-config.cpp:176 appearance-config.cpp:184
-#: appearance-config.cpp:221 appearance-config.cpp:229
-msgctxt "Example email"
-msgid "larry@example.com"
-msgstr "larry@przyklad.com"
-
-#: appearance-config.cpp:177 appearance-config.cpp:185
-#: appearance-config.cpp:222 appearance-config.cpp:230
-msgctxt "Example name"
-msgid "Larry Demo"
-msgstr "Demonstracyjny Larry"
-
-#: appearance-config.cpp:183
-msgid "Bye Bye"
-msgstr "Bye Bye"
-
-#: appearance-config.cpp:191
-msgid "Have fun!"
-msgstr "Baw się dobrze!"
-
-#: appearance-config.cpp:193 appearance-config.cpp:201
-#: appearance-config.cpp:240 appearance-config.cpp:248
-msgctxt "Example name"
-msgid "Ted Example"
-msgstr "Tadeusz Przykładowy"
-
-#: appearance-config.cpp:199
-msgid "cya"
-msgstr "cya"
-
-#: appearance-config.cpp:207
-msgctxt "Example message"
-msgid "Ted Example waves."
-msgstr "Tadeusz Przykładowy macha."
-
-#: appearance-config.cpp:213 appearance-config.cpp:261
-msgid "Ted Example has left the chat."
-msgstr "Tadeusz Przykładowy opuścił czat."
-
-#: appearance-config.cpp:220
-msgid "Hello"
-msgstr "Hello"
-
-#: appearance-config.cpp:228
-msgid "What's up?"
-msgstr "Co tam?"
-
-#: appearance-config.cpp:236
-msgid ""
-"Check out which cool adium themes work <a href=\"http://community.kde.org/"
-"Real-Time_Communication_and_Collaboration/Components/Chat_Window/Themes"
-"\">here</a>!"
+#: appearance-config.cpp:48
+msgctxt "@title:tab"
+msgid "Normal Chat"
 msgstr ""
-"<a href=\"http://community.kde.org/Real-Time_Communication_and_Collaboration/"
-"Components/Chat_Window/Themes\">Tutaj</a> sprawdź działanie wspaniałych "
-"motywów adium!"
 
-#: appearance-config.cpp:246
-msgid "A different example message"
-msgstr "Inny przykład wiadomości"
-
-#: appearance-config.cpp:254
-msgid "Ted Example is now Away."
-msgstr "Tadeusz Przykładowy teraz odszedł."
-
-#. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
-#: appearance-config.ui:29
-msgid "Use Custom Font Settings"
-msgstr "Użyj własnych ustawień czcionki"
-
-#. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
-#: appearance-config.ui:41
-msgid "Select Font: "
-msgstr "Wybierz czcionkę: "
-
-#. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
-#: appearance-config.ui:54
-msgid "Select Size: "
-msgstr "Wybierz rozmiar: "
+#: appearance-config.cpp:52
+msgctxt "@title:tab"
+msgid "Group Chat"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: appearance-config.ui:90
+#: appearance-config.ui:41
 msgid "Style"
 msgstr "Styl"
 
 #. i18n: ectx: property (text), widget (QLabel, styleLabel)
-#: appearance-config.ui:99
+#: appearance-config.ui:49
 msgid "Message Style:"
 msgstr "Styl wiadomości:"
 
 #. i18n: ectx: property (text), widget (QLabel, variantLabel)
-#: appearance-config.ui:125
+#: appearance-config.ui:75
 msgid "Variant:"
 msgstr "Wariant:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showHeader)
-#: appearance-config.ui:151
+#: appearance-config.ui:107
 msgid "Show Header"
 msgstr "Pokaż nagłówek"
+
+#. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
+#: appearance-config.ui:120
+msgid "Show status changes"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
+#: appearance-config.ui:145
+msgid "Use Custom Font Settings"
+msgstr "Użyj własnych ustawień czcionki"
+
+#. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
+#: appearance-config.ui:157
+#, fuzzy
+msgid "Select Font:"
+msgstr "Wybierz czcionkę: "
+
+#. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
+#: appearance-config.ui:170
+#, fuzzy
+msgid "Select Size:"
+msgstr "Wybierz rozmiar: "
+
+#~ msgid "A demo chat"
+#~ msgstr "Czat demonstracyjny"
+
+#~ msgid "Jabber"
+#~ msgstr "Jabber"
+
+#~ msgctxt "Example email"
+#~ msgid "ted@example.com"
+#~ msgstr "tadeusz@przyklad.com"
+
+#~ msgctxt "Example name"
+#~ msgid "Ted"
+#~ msgstr "Tadeusz"
+
+#~ msgctxt "Example message in preview conversation"
+#~ msgid "Ok!"
+#~ msgstr "Ok!"
+
+#~ msgctxt "Example email"
+#~ msgid "larry@example.com"
+#~ msgstr "larry@przyklad.com"
+
+#~ msgctxt "Example name"
+#~ msgid "Larry Demo"
+#~ msgstr "Demonstracyjny Larry"
+
+#~ msgid "Bye Bye"
+#~ msgstr "Bye Bye"
+
+#~ msgid "Have fun!"
+#~ msgstr "Dobrej zabawy!"
+
+#~ msgctxt "Example name"
+#~ msgid "Ted Example"
+#~ msgstr "Tadeusz Przykładowy"
+
+#~ msgid "cya"
+#~ msgstr "cya"
+
+#~ msgctxt "Example message"
+#~ msgid "Ted Example waves."
+#~ msgstr "Tadeusz Przykładowy macha."
+
+#~ msgid "Ted Example has left the chat."
+#~ msgstr "Tadeusz Przykładowy opuścił czat."
+
+#, fuzzy
+#~| msgid "Hello"
+#~ msgctxt "Example message"
+#~ msgid "Hello Ted"
+#~ msgstr "Hello"
+
+#~ msgid "What's up?"
+#~ msgstr "Co u ciebie?"
+
+#~ msgid ""
+#~ "Check out which cool adium themes work <a href=\"http://community.kde.org/"
+#~ "KTp/Components/Chat_Window/Themes\">here</a>!"
+#~ msgstr ""
+#~ "<a href=\"http://community.kde.org/KTp/Components/Chat_Window/Themes"
+#~ "\">Tutaj</a> sprawdź działanie wspaniałych motywów adium!"
+
+#~ msgid "A different example message"
+#~ msgstr "Inny przykład wiadomości"
+
+#~ msgid "Ted Example is now Away."
+#~ msgstr "Tadeusz Przykładowy teraz odszedł."
 
 #~ msgid "BobMarley@yahoo.com"
 #~ msgstr "BobMarley@yahoo.com"

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Ni Hui <shuizhuyuanluo@126.com>, 2012.
-# Weng Xuetian <wengxt@gmail.com>, 2013.
+# Weng Xuetian <wengxt@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2013-01-12 11:43-0500\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2012-12-10 21:10-0500\n"
 "Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
 "Language: zh_CN\n"
@@ -18,136 +18,125 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: appearance-config.cpp:42
-msgid "A demo chat"
-msgstr "演示聊天"
-
-#: appearance-config.cpp:43 appearance-config.cpp:178
-#: appearance-config.cpp:186 appearance-config.cpp:194
-#: appearance-config.cpp:202 appearance-config.cpp:209
-#: appearance-config.cpp:215 appearance-config.cpp:223
-#: appearance-config.cpp:231 appearance-config.cpp:241
-#: appearance-config.cpp:249 appearance-config.cpp:256
-#: appearance-config.cpp:263
-msgid "Jabber"
-msgstr "Jabber"
-
-#: appearance-config.cpp:45 appearance-config.cpp:192
-#: appearance-config.cpp:200 appearance-config.cpp:239
-#: appearance-config.cpp:247
-msgctxt "Example email"
-msgid "ted@example.com"
-msgstr "ted@example.com"
-
-#: appearance-config.cpp:46
-msgctxt "Example name"
-msgid "Ted"
-msgstr "Ted"
-
-#: appearance-config.cpp:175
-msgctxt "Example message in preview conversation"
-msgid "Ok!"
-msgstr "没问题！"
-
-#: appearance-config.cpp:176 appearance-config.cpp:184
-#: appearance-config.cpp:221 appearance-config.cpp:229
-msgctxt "Example email"
-msgid "larry@example.com"
-msgstr "larry@example.com"
-
-#: appearance-config.cpp:177 appearance-config.cpp:185
-#: appearance-config.cpp:222 appearance-config.cpp:230
-msgctxt "Example name"
-msgid "Larry Demo"
-msgstr "Larry Demo"
-
-#: appearance-config.cpp:183
-msgid "Bye Bye"
-msgstr "再见"
-
-#: appearance-config.cpp:191
-msgid "Have fun!"
-msgstr "祝您愉快！"
-
-#: appearance-config.cpp:193 appearance-config.cpp:201
-#: appearance-config.cpp:240 appearance-config.cpp:248
-msgctxt "Example name"
-msgid "Ted Example"
-msgstr "Ted Example"
-
-#: appearance-config.cpp:199
-msgid "cya"
-msgstr "cya"
-
-#: appearance-config.cpp:207
-msgctxt "Example message"
-msgid "Ted Example waves."
-msgstr "Ted Example 挥手。"
-
-#: appearance-config.cpp:213 appearance-config.cpp:261
-msgid "Ted Example has left the chat."
-msgstr "Ted Example 离开了交谈。"
-
-#: appearance-config.cpp:220
-msgid "Hello"
-msgstr "你好"
-
-#: appearance-config.cpp:228
-msgid "What's up?"
-msgstr "什么事？"
-
-#: appearance-config.cpp:236
-msgid ""
-"Check out which cool adium themes work <a href=\"http://community.kde.org/"
-"Real-Time_Communication_and_Collaboration/Components/Chat_Window/Themes"
-"\">here</a>!"
+#: appearance-config.cpp:48
+msgctxt "@title:tab"
+msgid "Normal Chat"
 msgstr ""
-"来 <a href=\"http://community.kde.org/Real-"
-"Time_Communication_and_Collaboration/Components/Chat_Window/Themes\">这里</a>"
-"看看很酷的 adium 主题吧！"
 
-#: appearance-config.cpp:246
-msgid "A different example message"
-msgstr "不同的示例消息"
-
-#: appearance-config.cpp:254
-msgid "Ted Example is now Away."
-msgstr "Ted Example 现在已标记为离开"
-
-#. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
-#: appearance-config.ui:29
-msgid "Use Custom Font Settings"
-msgstr "使用自定义字体设置"
-
-#. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
-#: appearance-config.ui:41
-msgid "Select Font: "
-msgstr "选择字体："
-
-#. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
-#: appearance-config.ui:54
-msgid "Select Size: "
-msgstr "选择大小："
+#: appearance-config.cpp:52
+msgctxt "@title:tab"
+msgid "Group Chat"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: appearance-config.ui:90
+#: appearance-config.ui:41
 msgid "Style"
 msgstr "样式"
 
 #. i18n: ectx: property (text), widget (QLabel, styleLabel)
-#: appearance-config.ui:99
+#: appearance-config.ui:49
 msgid "Message Style:"
 msgstr "消息样式："
 
 #. i18n: ectx: property (text), widget (QLabel, variantLabel)
-#: appearance-config.ui:125
+#: appearance-config.ui:75
 msgid "Variant:"
 msgstr "变体："
 
 #. i18n: ectx: property (text), widget (QCheckBox, showHeader)
-#: appearance-config.ui:151
+#: appearance-config.ui:107
 msgid "Show Header"
 msgstr "显示页眉"
+
+#. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
+#: appearance-config.ui:120
+msgid "Show status changes"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
+#: appearance-config.ui:145
+msgid "Use Custom Font Settings"
+msgstr "使用自定义字体设置"
+
+#. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
+#: appearance-config.ui:157
+#, fuzzy
+msgid "Select Font:"
+msgstr "选择字体："
+
+#. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
+#: appearance-config.ui:170
+#, fuzzy
+msgid "Select Size:"
+msgstr "选择大小："
+
+#~ msgid "A demo chat"
+#~ msgstr "演示聊天"
+
+#~ msgid "Jabber"
+#~ msgstr "Jabber"
+
+#~ msgctxt "Example email"
+#~ msgid "ted@example.com"
+#~ msgstr "ted@example.com"
+
+#~ msgctxt "Example name"
+#~ msgid "Ted"
+#~ msgstr "Ted"
+
+#~ msgctxt "Example message in preview conversation"
+#~ msgid "Ok!"
+#~ msgstr "没问题！"
+
+#~ msgctxt "Example email"
+#~ msgid "larry@example.com"
+#~ msgstr "larry@example.com"
+
+#~ msgctxt "Example name"
+#~ msgid "Larry Demo"
+#~ msgstr "Larry Demo"
+
+#~ msgid "Bye Bye"
+#~ msgstr "再见"
+
+#~ msgid "Have fun!"
+#~ msgstr "祝您愉快！"
+
+#~ msgctxt "Example name"
+#~ msgid "Ted Example"
+#~ msgstr "Ted Example"
+
+#~ msgid "cya"
+#~ msgstr "cya"
+
+#~ msgctxt "Example message"
+#~ msgid "Ted Example waves."
+#~ msgstr "Ted Example 挥手。"
+
+#~ msgid "Ted Example has left the chat."
+#~ msgstr "Ted Example 离开了交谈。"
+
+#, fuzzy
+#~| msgid "Hello"
+#~ msgctxt "Example message"
+#~ msgid "Hello Ted"
+#~ msgstr "你好"
+
+#~ msgid "What's up?"
+#~ msgstr "什么事？"
+
+#~ msgid ""
+#~ "Check out which cool adium themes work <a href=\"http://community.kde.org/"
+#~ "KTp/Components/Chat_Window/Themes\">here</a>!"
+#~ msgstr ""
+#~ "来 <a href=\"http://community.kde.org/KTp/Components/Chat_Window/Themes\">"
+#~ "这里</a>看看很酷的 adium 主题吧！"
+
+#~ msgid "A different example message"
+#~ msgstr "不同的示例消息"
+
+#~ msgid "Ted Example is now Away."
+#~ msgstr "Ted Example 现在已标记为离开"
 
 #~ msgid "BobMarley@yahoo.com"
 #~ msgstr "BobMarley@yahoo.com"

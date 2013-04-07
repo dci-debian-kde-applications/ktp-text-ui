@@ -1,6 +1,6 @@
 include_directories(${CMAKE_SOURCE_DIR}/lib)
 
-set(kcm_ktp_chat_appearance_SRCS appearance-config.cpp)
+set(kcm_ktp_chat_appearance_SRCS appearance-config-tab.cpp appearance-config.cpp)
 set(kcm_ktp_chat_behavior_SRCS behavior-config.cpp)
 set(kcm_ktp_chat_messages_SRCS messages-config.cpp)
 
@@ -31,6 +31,7 @@ target_link_libraries(kcm_ktp_chat_messages
     ${KDE4_KDECORE_LIBS}
     ${KDE4_KDEUI_LIBS}
     ${KDE4_KUTILS_LIBS}
+    ${KTP_LIBRARIES}
     ktpchat
 )
 

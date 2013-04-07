@@ -25,6 +25,7 @@
 
 #include <KXmlGuiWindow>
 #include <KTabWidget>
+#include <KAction>
 
 namespace Sonnet {
     class DictionaryComboBox;
@@ -56,6 +57,7 @@ public:
      * @param incomingTextChannel textChannel to search for
      */
     ChatTab* getTab(const Tp::TextChannelPtr &incomingTextChannel);
+    ChatTab* getCurrentTab();
 
     void focusChat(ChatTab *tab);
 
@@ -98,9 +100,15 @@ private Q_SLOTS:
     void onUnblockContactTriggered();                           /** Unblocks contact when already blocked */
     void onShareDesktopTriggered();                             /** start a desktop share */
     void onOpenLogTriggered();                                  /** Starts ktp-log-viewer accountId contactId */
+    void onClearViewTriggered();                                /** Clears current view */
     void setTabSpellDictionary(const QString &dict);            /** set the spelling language for the current chat tab*/
     void toggleBlockButton(bool contactIsBlocked);              /** Toggle block/unblock action according to the flag */
     void updateAccountIcon();                                   /** Update account icon fake action */
+    void onAddEmoticon(const QString& emoticon);                /** Add the corresponding emoticon*/
+    void onZoomIn();
+    void onZoomOut();
+    void onZoomFactorChanged(qreal zoom);
+    void updateSendMessageShortcuts();
 
 protected Q_SLOTS:
     void showSettingsDialog();
@@ -159,10 +167,16 @@ private:
      */
     void startShareDesktop(const Tp::AccountPtr &account, const Tp::ContactPtr &contact);
 
+    /** Returns whether there's at least one tab with unread message */
+    bool hasUnreadMessages() const;
+
+    KAction *m_sendMessage;
+
     KTabWidget *m_tabWidget;
 
     Sonnet::DictionaryComboBox *m_spellDictCombo;
     QLabel *m_accountIconLabel;
+    qreal m_zoomFactor;
 };
 
 #endif // CHATWINDOW_H

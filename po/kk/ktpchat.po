@@ -1,0 +1,203 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sairan Kikkarin <sairan@computer.org>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-03-29 04:37+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Сайран Киккарин"
+
+#
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sairan@computer.org"
+
+#: adium-theme-view.cpp:91
+msgid ""
+"Failed to load a valid theme. Your installation is broken. Check your kde "
+"path. Will now crash."
+msgstr ""
+"Нақышын жүктеу жаңылысы. KDE орнатылымыңыз қате - тексеріңіз. Жүйе қирайды."
+
+#: adium-theme-view.cpp:172
+msgid "Missing required file Template.html - check your installation."
+msgstr "Қажетті Template.html файлы жоқ - орнатылымыңызды тексеріңіз."
+
+#: chat-search-bar.cpp:37
+msgctxt "Next search result"
+msgid "&Next"
+msgstr "&Келесі"
+
+#: chat-search-bar.cpp:38
+msgctxt "Previous search result"
+msgid "&Previous"
+msgstr "1&Алдыңғы"
+
+#: chat-search-bar.cpp:47
+msgid "Insert search text..."
+msgstr "Іздейтін мәтіні..."
+
+#: chat-search-bar.cpp:56
+msgid "Case sensitive"
+msgstr "Үлкен-кішілігін ескеріп"
+
+#: chat-widget.cpp:534
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is blocked"
+msgstr "Қашық контакт бұғатталған, сондықтан \"%1\" хабарламасы жеткізілмеді"
+
+#: chat-widget.cpp:538
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is offline"
+msgstr "Қашық контакт желіден тыс, сондықтан \"%1\" хабарламасы жеткізілмеді"
+
+#: chat-widget.cpp:544
+msgid "Delivery of a message failed because the remote contact is blocked"
+msgstr "Қашық контакт бұғатталған, сондықтан хабарлама жеткізілмеді"
+
+#: chat-widget.cpp:547
+msgid "Delivery of a message failed because the remote contact is offline"
+msgstr "Қашық контакт желіден тыс, сондықтан хабарлама жеткізілмеді"
+
+#: chat-widget.cpp:554
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because the remote contact is not valid"
+msgstr "Қашық контакт дұрыс емес сондықтан \"%1\" хабарламасы жеткізілмеді"
+
+#: chat-widget.cpp:558
+msgid "Delivery of a message failed because the remote contact is not valid"
+msgstr "Қашық контакт дұрыс емес сондықтан хабарлама жеткізілмеді"
+
+#: chat-widget.cpp:564
+#, kde-format
+msgid ""
+"Delivery of the message \"%1\" failed because you do not have permission to "
+"speak in this room"
+msgstr ""
+"Бұл бөлмеде сөйлеуге рұқсатыңыз жоқ, сондықтан \"%1\" хабарламасы "
+"жеткізілмеді"
+
+#: chat-widget.cpp:568
+msgid ""
+"Delivery of a message failed because you do not have permission to speak in "
+"this room"
+msgstr "Бұл бөлмеде сөйлеуге рұқсатыңыз жоқ, сондықтан хабарлама жеткізілмеді"
+
+#: chat-widget.cpp:574
+#, kde-format
+msgid "Delivery of the message \"%1\" failed because it was too long"
+msgstr "Тым ұзын болғандықтан \"%1\" хабарламасы жеткізілмеді"
+
+#: chat-widget.cpp:578
+msgid "Delivery of a message failed because it was too long"
+msgstr "Тым ұзын болғандықтан хабарлама жеткізілмеді"
+
+#: chat-widget.cpp:584
+#, kde-format
+msgid "Delivery of the message \"%1\" failed: %2"
+msgstr "\"%1\" хабарламасы жеткізілмеді: %2"
+
+#: chat-widget.cpp:588
+#, kde-format
+msgid "Delivery of a message failed: %1"
+msgstr "Хабарлама жеткізілмеді: %1"
+
+#: chat-widget.cpp:693
+msgid "You have sent a message"
+msgstr "Хабарламаны жібердіңіз"
+
+#: chat-widget.cpp:741
+#, kde-format
+msgid "%1 has left the chat"
+msgstr "%1 әңгімеден шықты"
+
+#: chat-widget.cpp:784
+#, kde-format
+msgid "You are now marked as %1"
+msgstr "Сіз %1 деп белгіленгенсіз"
+
+#: chat-widget.cpp:788
+#, kde-format
+msgctxt "User's name, with their new presence status (i.e online/away)"
+msgid "%1 is %2"
+msgstr "%1 %2"
+
+#: chat-widget.cpp:790
+#, kde-format
+msgctxt ""
+"User's name, with their new presence status (i.e online/away) and a "
+"sepecified presence message"
+msgid "%1 is %2 - %3"
+msgstr "%1 %2 - %3"
+
+#: chat-widget.cpp:822
+#, kde-format
+msgid "You are now known as %1"
+msgstr "Енді Сіз %1 болдыңыз"
+
+#: chat-widget.cpp:830
+#, kde-format
+msgid "%1 is now known as %2"
+msgstr "%1 енді %2 деп аталады"
+
+#: chat-widget.cpp:853
+#, kde-format
+msgid "%1 is now blocked."
+msgstr "%1 бұғатталған"
+
+#: chat-widget.cpp:855
+#, kde-format
+msgid "%1 is now unblocked."
+msgstr "%1 дегеннен бұғат шешілген"
+
+#: chat-widget.cpp:1038
+msgid "You are now offline"
+msgstr "Сіз желіден тыссыз"
+
+#: chat-window-style.cpp:349
+msgctxt "Normal style variant menu item"
+msgid "Normal"
+msgstr "Кәдімгі"
+
+#: chat-window-style.cpp:477
+msgid "Download"
+msgstr "Жүктеп алу"
+
+#: chat-window-style.cpp:477
+msgid "Cancel"
+msgstr "Қайту"
+
+#: chat-window-style.cpp:498
+msgid "Play"
+msgstr "Айдау"
+
+#: chat-window-style.cpp:498
+msgid "Save as"
+msgstr "Былай сақтау"
+
+#: notify-filter.cpp:76
+#, kde-format
+msgid "%1 has sent you a message"
+msgstr "%1 Сізге хабарлама жіберді"
+
+#: notify-filter.cpp:97
+msgid "View"
+msgstr "Көрініс"

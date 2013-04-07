@@ -20,8 +20,7 @@
 #ifndef LOGVIEWER_H
 #define LOGVIEWER_H
 
-#include <QWidget>
-#include <TelepathyQt/AccountManager>
+#include <KXmlGuiWindow>
 #include <TelepathyLoggerQt4/Types>
 
 namespace Ui {
@@ -34,13 +33,16 @@ namespace Tpl {
 
 class EntityModel;
 class EntityProxyModel;
+class KMenu;
 
-class LogViewer : public QWidget
+class LogViewer : public KXmlGuiWindow
 {
     Q_OBJECT
 
 public:
-    explicit LogViewer(QWidget *parent = 0);
+    explicit LogViewer(const Tp::AccountFactoryPtr &accountFactory, const Tp::ConnectionFactoryPtr &connectionFactory,
+                       const Tp::ChannelFactoryPtr &channelFactory, const Tp::ContactFactoryPtr &contactFactory,
+                       QWidget *parent = 0);
     ~LogViewer();
 private Q_SLOTS:
     void onAccountManagerReady();
@@ -48,18 +50,35 @@ private Q_SLOTS:
     void onEntitySelected(const QModelIndex &current, const QModelIndex &previous);
     void onDateSelected();
 
-    void updateMainView();
-    void switchConversation(const QDate &date);
+    void slotUpdateMainWindow();
+    void slotSetConversationDate(const QDate &date);
 
-    void startGlobalSearch(const QString &term);
-    void globalSearchFinished(Tpl::PendingOperation *);
-    void clearGlobalSearch();
+    void slotShowEntityListContextMenu(const QPoint &coords);
+    void slotClearGlobalSearch();
+    void slotStartGlobalSearch(const QString &term);
+    void onGlobalSearchFinished(Tpl::PendingOperation *);
+
+    void slotClearAccountHistory();
+    void slotClearContactHistory();
+    void onLogClearingFinished(Tpl::PendingOperation *);
+
+    void slotImportKopeteLogs(bool force = true);
+
+    void slotJumpToPrevConversation();
+    void slotJumpToNextConversation();
 
 private:
+    void setupActions();
+
     Ui::LogViewer *ui;
     Tp::AccountManagerPtr m_accountManager;
     EntityModel *m_entityModel;
     EntityProxyModel *m_filterModel;
+
+    KMenu *m_entityListContextMenu;
+
+    QDate m_prevConversationDate;
+    QDate m_nextConversationDate;
 };
 
 #endif // LOGVIEWER_H
