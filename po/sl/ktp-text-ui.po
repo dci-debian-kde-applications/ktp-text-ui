@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-04-13 11:41+0200\n"
 "PO-Revision-Date: 2013-03-03 12:56+0100\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -43,28 +43,28 @@ msgstr "Premakni zavihek levo"
 msgid "Move Tab Right"
 msgstr "Premakni zavihek desno"
 
-#: chat-window.cpp:646
+#: chat-window.cpp:647
 msgid "&Next Tab"
 msgstr "&Naslednji zavihek"
 
-#: chat-window.cpp:650
+#: chat-window.cpp:651
 msgid "&Previous Tab"
 msgstr "&Predhodni zavihek"
 
-#: chat-window.cpp:654
+#: chat-window.cpp:655
 msgid "&Audio Call"
 msgstr "Gl&asovni klic"
 
-#: chat-window.cpp:655
+#: chat-window.cpp:656
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Začni glasovni klic s tem stikom"
 
-#: chat-window.cpp:658 chat-window.cpp:889
+#: chat-window.cpp:659 chat-window.cpp:889
 msgid "&Block Contact"
 msgstr "&Blokiraj stik"
 
-#: chat-window.cpp:660
+#: chat-window.cpp:661
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -73,65 +73,65 @@ msgstr ""
 "Blokiranje pomeni, da vas ta stik ne bo videl povezanega, prav tako pa od "
 "njega ne boste dobivali sporočil"
 
-#: chat-window.cpp:663
+#: chat-window.cpp:664
 msgid "&Send File"
 msgstr "Pošlji d&atoteko"
 
-#: chat-window.cpp:664
+#: chat-window.cpp:665
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Pošlji datoteko temu stiku"
 
-#: chat-window.cpp:667
+#: chat-window.cpp:668
 msgid "&Invite to Chat"
 msgstr "Povab&i na klepet"
 
-#: chat-window.cpp:668
+#: chat-window.cpp:669
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Povabi drug stik, da se pridruži temu klepetu"
 
-#: chat-window.cpp:671
+#: chat-window.cpp:672
 msgid "&Video Call"
 msgstr "&Video klic"
 
-#: chat-window.cpp:672
+#: chat-window.cpp:673
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Začne video klic s tem stikom"
 
-#: chat-window.cpp:675
+#: chat-window.cpp:676
 msgid "Share My &Desktop"
 msgstr "Souporaba &namizja"
 
-#: chat-window.cpp:676
+#: chat-window.cpp:677
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr "Zažene program, ki dovoljuje temu stiku, da vidi vaše namizje"
 
-#: chat-window.cpp:687
+#: chat-window.cpp:688
 msgid "Choose Spelling Language"
 msgstr "Izberite jezik črkovanja"
 
-#: chat-window.cpp:689
+#: chat-window.cpp:690
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Predhodni pogovori"
 
-#: chat-window.cpp:692
+#: chat-window.cpp:693
 msgid "Account Icon"
 msgstr "Ikona računa"
 
-#: chat-window.cpp:696
+#: chat-window.cpp:697
 msgid "&Clear View"
 msgstr "Po&čisti pogled"
 
-#: chat-window.cpp:697
+#: chat-window.cpp:698
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr "Počisti vsa sporočila iz trenutnega zavihka klepeta"
 
-#: chat-window.cpp:703
+#: chat-window.cpp:704
 msgid "Send message"
 msgstr "Pošlji sporočilo"
 

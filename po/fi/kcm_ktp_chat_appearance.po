@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_ktp_chat_appearance\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-03-05 23:43+0200\n"
+"PO-Revision-Date: 2013-04-08 17:26+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
 "Language: fi\n"
@@ -24,12 +24,12 @@ msgstr ""
 #: appearance-config.cpp:48
 msgctxt "@title:tab"
 msgid "Normal Chat"
-msgstr ""
+msgstr "Tavallinen keskustelu"
 
 #: appearance-config.cpp:52
 msgctxt "@title:tab"
 msgid "Group Chat"
-msgstr ""
+msgstr "Ryhmäkeskustelu"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: appearance-config.ui:41
@@ -53,9 +53,8 @@ msgstr "Näytä otsake"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
 #: appearance-config.ui:120
-#, fuzzy
 msgid "Show status changes"
-msgstr "Näytä läsnäolon muutokset:"
+msgstr "Näytä tilamuutokset"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
 #: appearance-config.ui:145

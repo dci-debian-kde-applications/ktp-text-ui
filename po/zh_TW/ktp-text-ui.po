@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-04-13 11:41+0200\n"
 "PO-Revision-Date: 2013-03-14 13:21+0800\n"
 "Last-Translator: Franklin Weng <franklin at goodhorse dot idv dot tw>\n"
 "Language-Team: Chinese Traditional <kde-tw@googlegroups.com>\n"
@@ -42,93 +42,93 @@ msgstr "將分頁左移"
 msgid "Move Tab Right"
 msgstr "將分頁右移"
 
-#: chat-window.cpp:646
+#: chat-window.cpp:647
 msgid "&Next Tab"
 msgstr "下一個分頁(&N)"
 
-#: chat-window.cpp:650
+#: chat-window.cpp:651
 msgid "&Previous Tab"
 msgstr "前一個分頁(&P)"
 
-#: chat-window.cpp:654
+#: chat-window.cpp:655
 msgid "&Audio Call"
 msgstr "語音呼叫(&A)"
 
-#: chat-window.cpp:655
+#: chat-window.cpp:656
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "開始語音呼叫此聯絡人"
 
-#: chat-window.cpp:658 chat-window.cpp:889
+#: chat-window.cpp:659 chat-window.cpp:889
 msgid "&Block Contact"
 msgstr "封鎖聯絡人(&B)"
 
-#: chat-window.cpp:660
+#: chat-window.cpp:661
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
 "receive any messages from this contact"
 msgstr "封鎖表示這個聯絡人沒辦法看到您上線，您也不會再從此聯絡人收到任何訊息"
 
-#: chat-window.cpp:663
+#: chat-window.cpp:664
 msgid "&Send File"
 msgstr "傳送檔案(&S)"
 
-#: chat-window.cpp:664
+#: chat-window.cpp:665
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "傳送檔案給此聯絡人"
 
-#: chat-window.cpp:667
+#: chat-window.cpp:668
 msgid "&Invite to Chat"
 msgstr "邀請到聊天室(&I)"
 
-#: chat-window.cpp:668
+#: chat-window.cpp:669
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "邀請其他聯絡人加入此聊天"
 
-#: chat-window.cpp:671
+#: chat-window.cpp:672
 msgid "&Video Call"
 msgstr "視訊呼叫(&V)"
 
-#: chat-window.cpp:672
+#: chat-window.cpp:673
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "開始視訊呼叫此聯絡人"
 
-#: chat-window.cpp:675
+#: chat-window.cpp:676
 msgid "Share My &Desktop"
 msgstr "分享我的桌面(&D)"
 
-#: chat-window.cpp:676
+#: chat-window.cpp:677
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr "啟動應用程式，讓此聯絡人能看到您的桌面"
 
-#: chat-window.cpp:687
+#: chat-window.cpp:688
 msgid "Choose Spelling Language"
 msgstr "選擇拼字檢查語言"
 
-#: chat-window.cpp:689
+#: chat-window.cpp:690
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "前一個對話(&P)"
 
-#: chat-window.cpp:692
+#: chat-window.cpp:693
 msgid "Account Icon"
 msgstr "帳號圖示"
 
-#: chat-window.cpp:696
+#: chat-window.cpp:697
 msgid "&Clear View"
 msgstr "清除檢視(&C)"
 
-#: chat-window.cpp:697
+#: chat-window.cpp:698
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr "清除目前聊天分頁的所有訊息"
 
-#: chat-window.cpp:703
+#: chat-window.cpp:704
 msgid "Send message"
 msgstr "傳送訊息"
 

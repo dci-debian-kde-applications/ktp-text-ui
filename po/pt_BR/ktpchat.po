@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-04-11 10:37+0200\n"
 "PO-Revision-Date: 2012-08-07 22:34-0300\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
@@ -39,56 +39,56 @@ msgid "Missing required file Template.html - check your installation."
 msgstr ""
 "Falta o arquivo obrigatório Template.html - verifique a sua instalação."
 
-#: chat-search-bar.cpp:37
+#: chat-search-bar.cpp:39
 msgctxt "Next search result"
 msgid "&Next"
 msgstr "&Próximo"
 
-#: chat-search-bar.cpp:38
+#: chat-search-bar.cpp:40
 msgctxt "Previous search result"
 msgid "&Previous"
 msgstr "&Anterior"
 
-#: chat-search-bar.cpp:47
+#: chat-search-bar.cpp:49
 msgid "Insert search text..."
 msgstr "Inserir texto da procura..."
 
-#: chat-search-bar.cpp:56
+#: chat-search-bar.cpp:58
 msgid "Case sensitive"
 msgstr "Diferenciar maiúsculas de minúsculas"
 
-#: chat-widget.cpp:534
+#: chat-widget.cpp:535
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
 msgstr "Envio da mensagem \"%1\" falhou porque o contato remoto está bloqueado"
 
-#: chat-widget.cpp:538
+#: chat-widget.cpp:539
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
 msgstr ""
 "Envio da mensagem \"%1\" falhou porque o contato remoto está desconectado"
 
-#: chat-widget.cpp:544
+#: chat-widget.cpp:545
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr "Envio de uma mensagem falhou porque o contato remoto está bloqueado"
 
-#: chat-widget.cpp:547
+#: chat-widget.cpp:548
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr "Envio de uma mensagem falhou porque o contato remoto está desconectado"
 
-#: chat-widget.cpp:554
+#: chat-widget.cpp:555
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
 msgstr "Envio da mensagem \"%1\" falhou porque o contato remoto não é válido"
 
-#: chat-widget.cpp:558
+#: chat-widget.cpp:559
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr "Envio da mensagem falhou porque o contato remoto não é válido"
 
-#: chat-widget.cpp:564
+#: chat-widget.cpp:565
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -97,53 +97,53 @@ msgstr ""
 "Envio da mensagem \"%1\" falhou porque você não tem permissão de falar nesta "
 "sala"
 
-#: chat-widget.cpp:568
+#: chat-widget.cpp:569
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
 msgstr ""
 "Envio da mensagem falhou porque você não tem permissão de falar nesta sala"
 
-#: chat-widget.cpp:574
+#: chat-widget.cpp:575
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Envio da mensagem \"%1\" falhou porque ela era muito longa"
 
-#: chat-widget.cpp:578
+#: chat-widget.cpp:579
 msgid "Delivery of a message failed because it was too long"
 msgstr "Envio da mensagem falhou porque ela era muito longa"
 
-#: chat-widget.cpp:584
+#: chat-widget.cpp:585
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Envio da mensagem \"%1\" falhou: %2"
 
-#: chat-widget.cpp:588
+#: chat-widget.cpp:589
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Envio da mensagem falhou: %1"
 
-#: chat-widget.cpp:693
+#: chat-widget.cpp:694
 msgid "You have sent a message"
 msgstr "Você enviou uma mensagem"
 
-#: chat-widget.cpp:741
+#: chat-widget.cpp:742
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 deixou o bate-papo"
 
-#: chat-widget.cpp:784
+#: chat-widget.cpp:785
 #, kde-format
 msgid "You are now marked as %1"
 msgstr "Você foi marcado como %1"
 
-#: chat-widget.cpp:788
+#: chat-widget.cpp:789
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 está %2"
 
-#: chat-widget.cpp:790
+#: chat-widget.cpp:791
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -151,27 +151,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 está %2 - %3"
 
-#: chat-widget.cpp:822
+#: chat-widget.cpp:823
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Agora você é conhecido como %1"
 
-#: chat-widget.cpp:830
+#: chat-widget.cpp:831
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 é agora conhecido como %2"
 
-#: chat-widget.cpp:853
+#: chat-widget.cpp:854
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 está agora bloqueado."
 
-#: chat-widget.cpp:855
+#: chat-widget.cpp:856
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 está agora desbloqueado."
 
-#: chat-widget.cpp:1038
+#: chat-widget.cpp:1039
 msgid "You are now offline"
 msgstr "Agora você está desconectado"
 
@@ -201,7 +201,7 @@ msgstr "Salvar como"
 msgid "%1 has sent you a message"
 msgstr "%1 enviou-lhe uma mensagem"
 
-#: notify-filter.cpp:97
+#: notify-filter.cpp:89
 msgid "View"
 msgstr "Exibir"
 

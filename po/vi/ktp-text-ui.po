@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-04-13 11:41+0200\n"
 "PO-Revision-Date: 2012-10-09 15:59+0800\n"
 "Last-Translator: Lê Hoàng Phương <herophuong93@gmail.com>\n"
 "Language-Team: Vietnamese <kde-i18n-vi@kde.org>\n"
@@ -41,28 +41,28 @@ msgstr "Chuyển thẻ sang trái"
 msgid "Move Tab Right"
 msgstr "Chuyển thẻ sang phải"
 
-#: chat-window.cpp:646
+#: chat-window.cpp:647
 msgid "&Next Tab"
 msgstr "Thẻ &sau"
 
-#: chat-window.cpp:650
+#: chat-window.cpp:651
 msgid "&Previous Tab"
 msgstr "Thẻ &trước"
 
-#: chat-window.cpp:654
+#: chat-window.cpp:655
 msgid "&Audio Call"
 msgstr "&Gọi thoại"
 
-#: chat-window.cpp:655
+#: chat-window.cpp:656
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Bắt đầu một cuộc gọi thoại tới liên lạc này"
 
-#: chat-window.cpp:658 chat-window.cpp:889
+#: chat-window.cpp:659 chat-window.cpp:889
 msgid "&Block Contact"
 msgstr "&Chặn liên lạc"
 
-#: chat-window.cpp:660
+#: chat-window.cpp:661
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -71,65 +71,65 @@ msgstr ""
 "Chặn nghĩa là liên lạc này sẽ không còn nhìn thấy bạn trực tuyến và bạn cũng "
 "không phải nhận bất cứ tin nhắn nào từ liên lạc này"
 
-#: chat-window.cpp:663
+#: chat-window.cpp:664
 msgid "&Send File"
 msgstr "&Gửi tập tin"
 
-#: chat-window.cpp:664
+#: chat-window.cpp:665
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Gửi một tập tin tới liên lạc này"
 
-#: chat-window.cpp:667
+#: chat-window.cpp:668
 msgid "&Invite to Chat"
 msgstr "&Mời trò chuyện"
 
-#: chat-window.cpp:668
+#: chat-window.cpp:669
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Mời một liên lạc khác tham gia vào cuộc trò chuyện này"
 
-#: chat-window.cpp:671
+#: chat-window.cpp:672
 msgid "&Video Call"
 msgstr "&Gọi có hình"
 
-#: chat-window.cpp:672
+#: chat-window.cpp:673
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Bắt đầu một cuộc gọi có hình tới liên lạc này"
 
-#: chat-window.cpp:675
+#: chat-window.cpp:676
 msgid "Share My &Desktop"
 msgstr "Chia sẻ &màn hình làm việc"
 
-#: chat-window.cpp:676
+#: chat-window.cpp:677
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr "Chạy một ứng dụng cho phép liên lạc này nhìn thấy màn hình của bạn"
 
-#: chat-window.cpp:687
+#: chat-window.cpp:688
 msgid "Choose Spelling Language"
 msgstr "Chọn ngôn ngữ chính tả"
 
-#: chat-window.cpp:689
+#: chat-window.cpp:690
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "Cuộc thoại &trước"
 
-#: chat-window.cpp:692
+#: chat-window.cpp:693
 msgid "Account Icon"
 msgstr "Biểu tượng tài khoản"
 
-#: chat-window.cpp:696
+#: chat-window.cpp:697
 msgid "&Clear View"
 msgstr ""
 
-#: chat-window.cpp:697
+#: chat-window.cpp:698
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr ""
 
-#: chat-window.cpp:703
+#: chat-window.cpp:704
 msgid "Send message"
 msgstr ""
 
