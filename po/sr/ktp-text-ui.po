@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-04-12 10:44+0200\n"
 "PO-Revision-Date: 2013-03-10 14:32+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -60,7 +60,7 @@ msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Започни аудио позив са овим контактом"
 
-#: chat-window.cpp:658 chat-window.cpp:889
+#: chat-window.cpp:658 chat-window.cpp:888
 msgid "&Block Contact"
 msgstr "&Блокирај контакт"
 
@@ -137,24 +137,24 @@ msgid "Send message"
 msgstr "Пошаљи поруку"
 
 # >> @title:window
-#: chat-window.cpp:815
+#: chat-window.cpp:814
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Избор фајлова за слање примаоцу %1"
 
-#: chat-window.cpp:848
+#: chat-window.cpp:847
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr "Куца... %1"
 
-#: chat-window.cpp:850
+#: chat-window.cpp:849
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 унесе текст"
 
-#: chat-window.cpp:882
+#: chat-window.cpp:881
 msgid "&Unblock Contact"
 msgstr "&Одблокирај контакт"
 

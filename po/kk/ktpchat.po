@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-04-11 10:37+0200\n"
 "PO-Revision-Date: 2013-03-29 04:37+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -38,55 +38,55 @@ msgstr ""
 msgid "Missing required file Template.html - check your installation."
 msgstr "Қажетті Template.html файлы жоқ - орнатылымыңызды тексеріңіз."
 
-#: chat-search-bar.cpp:37
+#: chat-search-bar.cpp:39
 msgctxt "Next search result"
 msgid "&Next"
 msgstr "&Келесі"
 
-#: chat-search-bar.cpp:38
+#: chat-search-bar.cpp:40
 msgctxt "Previous search result"
 msgid "&Previous"
 msgstr "1&Алдыңғы"
 
-#: chat-search-bar.cpp:47
+#: chat-search-bar.cpp:49
 msgid "Insert search text..."
 msgstr "Іздейтін мәтіні..."
 
-#: chat-search-bar.cpp:56
+#: chat-search-bar.cpp:58
 msgid "Case sensitive"
 msgstr "Үлкен-кішілігін ескеріп"
 
-#: chat-widget.cpp:534
+#: chat-widget.cpp:535
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
 msgstr "Қашық контакт бұғатталған, сондықтан \"%1\" хабарламасы жеткізілмеді"
 
-#: chat-widget.cpp:538
+#: chat-widget.cpp:539
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
 msgstr "Қашық контакт желіден тыс, сондықтан \"%1\" хабарламасы жеткізілмеді"
 
-#: chat-widget.cpp:544
+#: chat-widget.cpp:545
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr "Қашық контакт бұғатталған, сондықтан хабарлама жеткізілмеді"
 
-#: chat-widget.cpp:547
+#: chat-widget.cpp:548
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr "Қашық контакт желіден тыс, сондықтан хабарлама жеткізілмеді"
 
-#: chat-widget.cpp:554
+#: chat-widget.cpp:555
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
 msgstr "Қашық контакт дұрыс емес сондықтан \"%1\" хабарламасы жеткізілмеді"
 
-#: chat-widget.cpp:558
+#: chat-widget.cpp:559
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr "Қашық контакт дұрыс емес сондықтан хабарлама жеткізілмеді"
 
-#: chat-widget.cpp:564
+#: chat-widget.cpp:565
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -95,52 +95,52 @@ msgstr ""
 "Бұл бөлмеде сөйлеуге рұқсатыңыз жоқ, сондықтан \"%1\" хабарламасы "
 "жеткізілмеді"
 
-#: chat-widget.cpp:568
+#: chat-widget.cpp:569
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
 msgstr "Бұл бөлмеде сөйлеуге рұқсатыңыз жоқ, сондықтан хабарлама жеткізілмеді"
 
-#: chat-widget.cpp:574
+#: chat-widget.cpp:575
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Тым ұзын болғандықтан \"%1\" хабарламасы жеткізілмеді"
 
-#: chat-widget.cpp:578
+#: chat-widget.cpp:579
 msgid "Delivery of a message failed because it was too long"
 msgstr "Тым ұзын болғандықтан хабарлама жеткізілмеді"
 
-#: chat-widget.cpp:584
+#: chat-widget.cpp:585
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "\"%1\" хабарламасы жеткізілмеді: %2"
 
-#: chat-widget.cpp:588
+#: chat-widget.cpp:589
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Хабарлама жеткізілмеді: %1"
 
-#: chat-widget.cpp:693
+#: chat-widget.cpp:694
 msgid "You have sent a message"
 msgstr "Хабарламаны жібердіңіз"
 
-#: chat-widget.cpp:741
+#: chat-widget.cpp:742
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 әңгімеден шықты"
 
-#: chat-widget.cpp:784
+#: chat-widget.cpp:785
 #, kde-format
 msgid "You are now marked as %1"
 msgstr "Сіз %1 деп белгіленгенсіз"
 
-#: chat-widget.cpp:788
+#: chat-widget.cpp:789
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 %2"
 
-#: chat-widget.cpp:790
+#: chat-widget.cpp:791
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -148,27 +148,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 %2 - %3"
 
-#: chat-widget.cpp:822
+#: chat-widget.cpp:823
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Енді Сіз %1 болдыңыз"
 
-#: chat-widget.cpp:830
+#: chat-widget.cpp:831
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 енді %2 деп аталады"
 
-#: chat-widget.cpp:853
+#: chat-widget.cpp:854
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 бұғатталған"
 
-#: chat-widget.cpp:855
+#: chat-widget.cpp:856
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 дегеннен бұғат шешілген"
 
-#: chat-widget.cpp:1038
+#: chat-widget.cpp:1039
 msgid "You are now offline"
 msgstr "Сіз желіден тыссыз"
 
@@ -198,6 +198,6 @@ msgstr "Былай сақтау"
 msgid "%1 has sent you a message"
 msgstr "%1 Сізге хабарлама жіберді"
 
-#: notify-filter.cpp:97
+#: notify-filter.cpp:89
 msgid "View"
 msgstr "Көрініс"
