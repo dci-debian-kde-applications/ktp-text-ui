@@ -1,3 +1,1 @@
-drop-tests.patch
-01_no_useless_dependencies.diff
 02_ktpchat_soversion.diff

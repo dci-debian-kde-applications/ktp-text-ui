@@ -9,8 +9,9 @@ Build-Depends: debhelper (>= 9),
  kdelibs5-dev (>= 4:4.6),
  libqtwebkit-dev,
  cmake (>= 2.8),
- libktpcommoninternalsprivate-dev (>= 0.5.1),
- libtelepathy-logger-qt4-dev (>= 0.5.1)
+ libktpcommoninternalsprivate-dev (>= 0.6.1),
+ libtelepathy-logger-dev,
+ libtelepathy-logger-qt4-dev (>= 0.5.60)
 Standards-Version: 3.9.3
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-text-ui
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git
@@ -36,20 +37,6 @@ Description: Telepathy text chat UI for the KDE Plasma Desktop
  .
  In addition, this package also provides a UI for viewing telepathy
  text chat logs.
- .
- This package is not meant to be used standalone. It is recommended
- to install the kde-telepathy metapackage instead.
-
-Package: plasma-widget-telepathy-chat
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends},
- libktpchat0 (= ${binary:Version}),
- kde-runtime-data (>= 4:4.8),
- kde-telepathy-data (>= 0.5.1)
-Recommends: kde-telepathy
-Description: Telepathy text chat plasma widget
- This package provides a plasma widget that allows you to chat with
- your contacts directly from your desktop.
  .
  This package is not meant to be used standalone. It is recommended
  to install the kde-telepathy metapackage instead.
