@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-12 10:44+0200\n"
-"PO-Revision-Date: 2013-03-10 14:32+0100\n"
+"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"PO-Revision-Date: 2013-04-28 15:52+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -43,118 +43,118 @@ msgstr "Premesti jezičak ulevo"
 msgid "Move Tab Right"
 msgstr "Premesti jezičak udesno"
 
-#: chat-window.cpp:646
+#: chat-window.cpp:647
 msgid "&Next Tab"
 msgstr "&Sledeći jezičak"
 
-#: chat-window.cpp:650
+#: chat-window.cpp:651
 msgid "&Previous Tab"
 msgstr "&Prethodni jezičak"
 
-#: chat-window.cpp:654
+#: chat-window.cpp:655
 msgid "&Audio Call"
 msgstr "&Audio poziv"
 
-#: chat-window.cpp:655
+#: chat-window.cpp:656
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Započni audio poziv sa ovim kontaktom"
 
-#: chat-window.cpp:658 chat-window.cpp:888
+#: chat-window.cpp:659 chat-window.cpp:889
 msgid "&Block Contact"
 msgstr "&Blokiraj kontakt"
 
-#: chat-window.cpp:660
+#: chat-window.cpp:661
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
 "receive any messages from this contact"
 msgstr ""
-"Blokiranje znači da vas kontakt više neće videti na vezi i da nećete primati "
-"više nikakve poruke od njega."
+"Blokiranje znači da vas kontakt više neće videti na vezi i da više nećete "
+"primati nikakve poruke od njega."
 
-#: chat-window.cpp:663
+#: chat-window.cpp:664
 msgid "&Send File"
 msgstr "&Pošalji fajl"
 
-#: chat-window.cpp:664
+#: chat-window.cpp:665
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Pošalji fajl kontaktu"
 
-#: chat-window.cpp:667
+#: chat-window.cpp:668
 msgid "&Invite to Chat"
 msgstr "P&ozovi na ćaskanje"
 
-#: chat-window.cpp:668
+#: chat-window.cpp:669
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Pozovi još neki kontakt da se pridruži ćaskanju"
 
-#: chat-window.cpp:671
+#: chat-window.cpp:672
 msgid "&Video Call"
 msgstr "&Video poziv"
 
-#: chat-window.cpp:672
+#: chat-window.cpp:673
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Pokreni video poziv sa ovim kontaktom"
 
-#: chat-window.cpp:675
+#: chat-window.cpp:676
 msgid "Share My &Desktop"
 msgstr "Podeli moju &površ"
 
-#: chat-window.cpp:676
+#: chat-window.cpp:677
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr "Pokreni program koji omogućava kontaktu da vidi moju površ"
 
 # rewrite-msgid: /spelling/spell-checker/
-#: chat-window.cpp:687
+#: chat-window.cpp:688
 msgid "Choose Spelling Language"
 msgstr "Izaberite jezik pravopisara"
 
-#: chat-window.cpp:689
+#: chat-window.cpp:690
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Prethodni razgovori"
 
-#: chat-window.cpp:692
+#: chat-window.cpp:693
 msgid "Account Icon"
 msgstr "Ikona naloga"
 
-#: chat-window.cpp:696
+#: chat-window.cpp:697
 msgid "&Clear View"
 msgstr "&Očisti prikaz"
 
-#: chat-window.cpp:697
+#: chat-window.cpp:698
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr "Očisti sve poruke iz tekućeg jezička za ćaskanje"
 
-#: chat-window.cpp:703
+#: chat-window.cpp:704
 msgid "Send message"
 msgstr "Pošalji poruku"
 
 # >> @title:window
-#: chat-window.cpp:814
+#: chat-window.cpp:815
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Izbor fajlova za slanje primaocu %1"
 
-#: chat-window.cpp:847
+#: chat-window.cpp:848
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
 msgstr "Kuca... %1"
 
-#: chat-window.cpp:849
+#: chat-window.cpp:850
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 unese tekst"
 
-#: chat-window.cpp:881
+#: chat-window.cpp:882
 msgid "&Unblock Contact"
 msgstr "&Odblokiraj kontakt"
 

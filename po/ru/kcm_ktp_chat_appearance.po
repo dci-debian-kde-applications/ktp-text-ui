@@ -2,13 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Yuri Efremov <yur.arh@gmail.com>, 2012, 2013.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-03-09 12:37+0400\n"
-"Last-Translator: Yuri Efremov <yur.arh@gmail.com>\n"
+"PO-Revision-Date: 2013-05-07 09:56+0400\n"
+"Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -24,12 +25,12 @@ msgstr ""
 #: appearance-config.cpp:48
 msgctxt "@title:tab"
 msgid "Normal Chat"
-msgstr ""
+msgstr "Обычный разговор"
 
 #: appearance-config.cpp:52
 msgctxt "@title:tab"
 msgid "Group Chat"
-msgstr ""
+msgstr "Групповой разговор"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: appearance-config.ui:41
@@ -53,9 +54,8 @@ msgstr "Показывать заголовок"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
 #: appearance-config.ui:120
-#, fuzzy
 msgid "Show status changes"
-msgstr "Показывать изменения статуса присутствия:"
+msgstr "Показывать изменения статуса"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
 #: appearance-config.ui:145

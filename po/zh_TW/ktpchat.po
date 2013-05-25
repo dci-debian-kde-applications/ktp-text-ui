@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-11 10:37+0200\n"
+"POT-Creation-Date: 2013-05-17 11:18+0200\n"
 "PO-Revision-Date: 2012-09-20 08:36+0800\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Traditional <zh-l10n@linux.org.tw>\n"
@@ -55,89 +55,89 @@ msgstr "插入搜尋文字..."
 msgid "Case sensitive"
 msgstr "區分大小寫"
 
-#: chat-widget.cpp:535
+#: chat-widget.cpp:543
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
 msgstr "訊息 \"%1\" 傳送失敗，因為遠端聯絡人已被封鎖"
 
-#: chat-widget.cpp:539
+#: chat-widget.cpp:547
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
 msgstr "訊息 \"%1\" 傳送失敗，因為遠端聯絡人已離線"
 
-#: chat-widget.cpp:545
+#: chat-widget.cpp:553
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr "訊息傳送失敗，因為遠端聯絡人已被封鎖"
 
-#: chat-widget.cpp:548
+#: chat-widget.cpp:556
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr "訊息傳送失敗，因為遠端聯絡人已離線"
 
-#: chat-widget.cpp:555
+#: chat-widget.cpp:563
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
 msgstr "訊息 \"%1\" 傳送失敗，因為遠端聯絡人發生問題"
 
-#: chat-widget.cpp:559
+#: chat-widget.cpp:567
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr "訊息傳送失敗，因為遠端聯絡人發生問題"
 
-#: chat-widget.cpp:565
+#: chat-widget.cpp:573
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
 "speak in this room"
 msgstr "訊息 \"%1\" 傳送失敗，因為您沒有權限在此聊天室發言"
 
-#: chat-widget.cpp:569
+#: chat-widget.cpp:577
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
 msgstr "訊息傳送失敗，因為您沒有權限在此聊天室發言"
 
-#: chat-widget.cpp:575
+#: chat-widget.cpp:583
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "訊息 \"%1\" 傳送失敗，因為訊息過長"
 
-#: chat-widget.cpp:579
+#: chat-widget.cpp:587
 msgid "Delivery of a message failed because it was too long"
 msgstr "訊息傳送失敗，因為訊息過長"
 
-#: chat-widget.cpp:585
+#: chat-widget.cpp:593
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "訊息 \"%1\" 傳送失敗：%2"
 
-#: chat-widget.cpp:589
+#: chat-widget.cpp:597
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "訊息傳送失敗：%1"
 
-#: chat-widget.cpp:694
+#: chat-widget.cpp:702
 msgid "You have sent a message"
 msgstr "您已傳送出一個訊息"
 
-#: chat-widget.cpp:742
+#: chat-widget.cpp:750
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 已經離開聊天室"
 
-#: chat-widget.cpp:785
+#: chat-widget.cpp:793
 #, kde-format
 msgid "You are now marked as %1"
 msgstr "您現在標示為 %1"
 
-#: chat-widget.cpp:789
+#: chat-widget.cpp:797
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 目前狀態為%2"
 
-#: chat-widget.cpp:791
+#: chat-widget.cpp:799
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -145,27 +145,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 目前狀態為%2 - %3"
 
-#: chat-widget.cpp:823
+#: chat-widget.cpp:831
 #, kde-format
 msgid "You are now known as %1"
 msgstr "您現在的名稱是 %1"
 
-#: chat-widget.cpp:831
+#: chat-widget.cpp:839
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 現在改名為 %2"
 
-#: chat-widget.cpp:854
+#: chat-widget.cpp:862
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 已被封鎖。"
 
-#: chat-widget.cpp:856
+#: chat-widget.cpp:864
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 已解除封鎖。"
 
-#: chat-widget.cpp:1039
+#: chat-widget.cpp:1047
 msgid "You are now offline"
 msgstr "您現在離線中"
 

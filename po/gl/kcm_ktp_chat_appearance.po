@@ -4,19 +4,20 @@
 # Xosé <xosecalvo@gmail.com>, 2012.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2012, 2013.
 # Miguel Branco <mgl.branco@gmail.com>, 2013.
+# Marce Villarino <mvillarino@kde-espana.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-01-31 08:32+0100\n"
-"Last-Translator: Adrián Chaves Fernández <adriyetichaves@gmail.com>\n"
+"PO-Revision-Date: 2013-04-21 09:30+0200\n"
+"Last-Translator: Marce Villarino <mvillarino@kde-espana.es>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -25,12 +26,12 @@ msgstr ""
 #: appearance-config.cpp:48
 msgctxt "@title:tab"
 msgid "Normal Chat"
-msgstr ""
+msgstr "Conversa normal"
 
 #: appearance-config.cpp:52
 msgctxt "@title:tab"
 msgid "Group Chat"
-msgstr ""
+msgstr "Conversa en grupo "
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: appearance-config.ui:41
@@ -55,7 +56,7 @@ msgstr "Mostrar a cabeceira"
 #. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
 #: appearance-config.ui:120
 msgid "Show status changes"
-msgstr ""
+msgstr "Mostrar os cambios de estado"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
 #: appearance-config.ui:145
@@ -64,15 +65,13 @@ msgstr "Empregar opcións de tipo de letra personalizadas"
 
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
 #: appearance-config.ui:157
-#, fuzzy
 msgid "Select Font:"
-msgstr "Seleccionar o tipo de letra:"
+msgstr "Escoller o tipo de letra:"
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
 #: appearance-config.ui:170
-#, fuzzy
 msgid "Select Size:"
-msgstr "Seleccionar o tamaño:"
+msgstr "Escoller o tamaño:"
 
 #~ msgid "A demo chat"
 #~ msgstr "Unha conversa de demostración"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-04-13 11:41+0200\n"
-"PO-Revision-Date: 2013-03-14 15:52+0100\n"
+"PO-Revision-Date: 2013-05-03 14:47+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -143,13 +143,13 @@ msgstr "Vyberte soubory pro odeslání k %1"
 #, kde-format
 msgctxt "String prepended in window title, arg is contact's name"
 msgid "Typing... %1"
-msgstr "Píše... %1"
+msgstr "%1 právě píše"
 
 #: chat-window.cpp:850
 #, kde-format
 msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
-msgstr "%1 zadal text"
+msgstr "%1 něco napsal"
 
 #: chat-window.cpp:882
 msgid "&Unblock Contact"

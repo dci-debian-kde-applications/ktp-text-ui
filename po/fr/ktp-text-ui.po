@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-04-13 11:41+0200\n"
-"PO-Revision-Date: 2013-02-10 16:57+0100\n"
+"PO-Revision-Date: 2013-04-16 18:00+0200\n"
 "Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -132,7 +132,7 @@ msgstr "Efface tous les messages provenant de l'onglet de discussion en cours"
 
 #: chat-window.cpp:704
 msgid "Send message"
-msgstr ""
+msgstr "Envoyer un message"
 
 #: chat-window.cpp:815
 #, kde-format
