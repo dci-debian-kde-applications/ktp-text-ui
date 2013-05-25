@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-11 10:37+0200\n"
+"POT-Creation-Date: 2013-05-17 11:18+0200\n"
 "PO-Revision-Date: 2012-08-09 10:43+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -56,7 +56,7 @@ msgstr "Keresőszöveg…"
 msgid "Case sensitive"
 msgstr "Nagybetűérzékeny"
 
-#: chat-widget.cpp:535
+#: chat-widget.cpp:543
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
@@ -64,7 +64,7 @@ msgstr ""
 "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel a távoli partner "
 "blokkolva van"
 
-#: chat-widget.cpp:539
+#: chat-widget.cpp:547
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
@@ -72,18 +72,18 @@ msgstr ""
 "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel a távoli partner nem "
 "elérhető"
 
-#: chat-widget.cpp:545
+#: chat-widget.cpp:553
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr ""
 "Nem sikerült kézbesíteni egy üzenetet, mivel a távoli partner nem blokkolva "
 "van"
 
-#: chat-widget.cpp:548
+#: chat-widget.cpp:556
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr ""
 "Nem sikerült kézbesíteni egy üzenetet, mivel a távoli partner nem elérhető"
 
-#: chat-widget.cpp:555
+#: chat-widget.cpp:563
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
@@ -91,12 +91,12 @@ msgstr ""
 "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel a távoli partner "
 "érvénytelen"
 
-#: chat-widget.cpp:559
+#: chat-widget.cpp:567
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr ""
 "Nem sikerült kézbesíteni egy üzenetet, mivel a távoli partner érvénytelen"
 
-#: chat-widget.cpp:565
+#: chat-widget.cpp:573
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -105,7 +105,7 @@ msgstr ""
 "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel nincs joga beszélni ebben "
 "a szobában"
 
-#: chat-widget.cpp:569
+#: chat-widget.cpp:577
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
@@ -113,46 +113,46 @@ msgstr ""
 "Nem sikerült kézbesíteni egy üzenetet, mivel nincs joga beszélni ebben a "
 "szobában"
 
-#: chat-widget.cpp:575
+#: chat-widget.cpp:583
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel az túl hosszú"
 
-#: chat-widget.cpp:579
+#: chat-widget.cpp:587
 msgid "Delivery of a message failed because it was too long"
 msgstr "Nem sikerült kézbesíteni az üzenetet, mivel az túl hosszú"
 
-#: chat-widget.cpp:585
+#: chat-widget.cpp:593
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Nem sikerült kézbesíteni a(z) „%1” üzenetet: %2"
 
-#: chat-widget.cpp:589
+#: chat-widget.cpp:597
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Nem sikerült kézbesíteni az üzenetet: %1"
 
-#: chat-widget.cpp:694
+#: chat-widget.cpp:702
 msgid "You have sent a message"
 msgstr "Üzenetet küldött"
 
-#: chat-widget.cpp:742
+#: chat-widget.cpp:750
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 elhagyta a csevegést"
 
-#: chat-widget.cpp:785
+#: chat-widget.cpp:793
 #, kde-format
 msgid "You are now marked as %1"
 msgstr "Ön most már így van megjelölve: %1"
 
-#: chat-widget.cpp:789
+#: chat-widget.cpp:797
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 %2"
 
-#: chat-widget.cpp:791
+#: chat-widget.cpp:799
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -160,27 +160,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 %2 - %3"
 
-#: chat-widget.cpp:823
+#: chat-widget.cpp:831
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Ön most már ezen a néven ismert: %1"
 
-#: chat-widget.cpp:831
+#: chat-widget.cpp:839
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 most már ezen a néven ismert: %2"
 
-#: chat-widget.cpp:854
+#: chat-widget.cpp:862
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 mostantól blokkolva van."
 
-#: chat-widget.cpp:856
+#: chat-widget.cpp:864
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 mostantól nincs blokkolva."
 
-#: chat-widget.cpp:1039
+#: chat-widget.cpp:1047
 msgid "You are now offline"
 msgstr "Ön most nincs kapcsolatban"
 

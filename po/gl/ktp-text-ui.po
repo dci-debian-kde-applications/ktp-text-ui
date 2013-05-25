@@ -3,20 +3,21 @@
 #
 # Xosé <xosecalvo@gmail.com>, 2012.
 # Miguel Branco <mgl.branco@gmail.com>, 2013.
+# Marce Villarino <mvillarino@kde-espana.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-04-13 11:41+0200\n"
-"PO-Revision-Date: 2013-01-13 16:45+0100\n"
-"Last-Translator: Miguel Branco <mgl.branco@gmail.com>\n"
+"PO-Revision-Date: 2013-04-20 11:19+0200\n"
+"Last-Translator: Marce Villarino <mvillarino@kde-espana.es>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 1.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -127,16 +128,16 @@ msgstr "Icona da conta"
 
 #: chat-window.cpp:697
 msgid "&Clear View"
-msgstr ""
+msgstr "&Limpar a vista"
 
 #: chat-window.cpp:698
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
-msgstr ""
+msgstr "Limpa todas as mensaxes da lapela de chat actual"
 
 #: chat-window.cpp:704
 msgid "Send message"
-msgstr ""
+msgstr "Enviar unha mensaxe"
 
 #: chat-window.cpp:815
 #, kde-format
@@ -161,7 +162,7 @@ msgstr "&Desbloquear este contacto"
 
 #: emoticon-text-edit-action.cpp:49
 msgid "Add Smiley"
-msgstr ""
+msgstr "Engadir unha emoticona"
 
 #: invite-contact-dialog.cpp:50
 msgid "Search in Contacts..."
@@ -169,7 +170,7 @@ msgstr "Buscar nos contactos..."
 
 #: invite-contact-dialog.cpp:54
 msgid "Select Contacts to Invite to Group Chat"
-msgstr ""
+msgstr "Escoller os contactos para convidalos a unha conversa en grupo"
 
 #: main.cpp:43
 msgid "Telepathy Text Ui"

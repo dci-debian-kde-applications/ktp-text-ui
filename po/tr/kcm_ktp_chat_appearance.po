@@ -2,13 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan, 2013.
+# Volkan Gezer <volkangezer@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-03-03 04:33+0100\n"
-"Last-Translator: Volkan\n"
+"PO-Revision-Date: 2013-04-22 02:56+0200\n"
+"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +21,12 @@ msgstr ""
 #: appearance-config.cpp:48
 msgctxt "@title:tab"
 msgid "Normal Chat"
-msgstr ""
+msgstr "Normal Sohbet"
 
 #: appearance-config.cpp:52
 msgctxt "@title:tab"
 msgid "Group Chat"
-msgstr ""
+msgstr "Grup SOhbeti"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: appearance-config.ui:41
@@ -49,10 +50,8 @@ msgstr "Başlığı Göster"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
 #: appearance-config.ui:120
-#, fuzzy
-#| msgid "Show presence changes:"
 msgid "Show status changes"
-msgstr "Durum değişikliklerini göster:"
+msgstr "Durum değişikliklerini göster"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
 #: appearance-config.ui:145

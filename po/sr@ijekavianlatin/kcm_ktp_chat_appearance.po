@@ -52,7 +52,7 @@ msgstr "Prikaži zaglavlje"
 #. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
 #: appearance-config.ui:120
 msgid "Show status changes"
-msgstr "Prikaži promene stanja"
+msgstr "Prikaži promjene stanja"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
 #: appearance-config.ui:145
