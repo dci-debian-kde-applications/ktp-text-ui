@@ -28,7 +28,7 @@ Package: kde-telepathy-text-ui
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
  libktpchat0 (= ${binary:Version}),
- kde-telepathy-data (>= 0.5.1)
+ kde-telepathy-data (>= 0.6.2)
 Recommends: kde-telepathy
 Description: Telepathy text chat UI for the KDE Plasma Desktop
  This package provides a telepathy handler for text channels, a program
