@@ -1,19 +1,16 @@
 ktp-text-ui (0.6.2.1-1) UNRELEASED; urgency=low
 
   [ Ritesh Raj Sarraf ]
-  * [a339a98] Imported Upstream version 0.5.1
-  * [29547c1] Imported Upstream version 0.5.3
   * [e26f6a8] drop patch 03_no_redundant_glib_calls.diff
-  * [0acce52] refresh patches
   * [459ee64] Drop tests, for now, as they are failing
 
   [ Diane Trout ]
-  * [37424da] Imported Upstream version 0.6.1
   * Update watch file as KDE-Telepathy is now in stable release.
   * Bump ktp-common-internals version
   * Plasma-widget-telpathy-chat was moved to ktp-desktop-applet
   * Add telepathy-logger dependency
   * Imported Upstream version 0.6.2.1
+  * Refresh patches
   * Bump ktp-common-internal dependency
   * Set Uploaders to Diane Trout and Michał Zając
   * Update to Standards-Version 3.9.4. No changes needed.
