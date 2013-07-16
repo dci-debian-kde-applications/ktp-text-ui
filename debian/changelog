@@ -17,6 +17,7 @@ ktp-text-ui (0.6.2.1-1) UNRELEASED; urgency=low
   * Add several plugins to kde-telepathy-text-ui.install
   * Add description to 02_ktpchat_soversion.diff
   * Add libktpchat-dev package.
+  * Add libktpchat0.symbols
 
  -- Diane Trout <diane@ghic.org>  Fri, 12 Jul 2013 23:48:53 -0700
 

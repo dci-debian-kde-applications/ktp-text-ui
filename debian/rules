@@ -6,4 +6,4 @@ override_dh_install:
 	rm "debian/kde-telepathy-text-ui/usr/share/kde4/apps/ktelepathy/styles/SimKete.AdiumMessageStyle/Contents/README"
 
 %:
-	dh $@ --parallel --with kde --dbg-package=kde-telepathy-text-ui-dbg
+	dh $@ --parallel --with kde --buildsystem=kde --dbg-package=kde-telepathy-text-ui-dbg
