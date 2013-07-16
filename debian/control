@@ -22,7 +22,8 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE Telepathy text chat functionality shared library
  This package provides a shared library with common functionality
- for handling text chat in KDE Telepathy.
+ for handling text chat in KDE Telepathy, such as Adium theme
+ handling and chat history search.
 
 Package: kde-telepathy-text-ui
 Architecture: any
