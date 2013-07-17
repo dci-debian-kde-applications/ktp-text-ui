@@ -25,14 +25,6 @@ Description: KDE Telepathy text chat functionality shared library
  for handling text chat in KDE Telepathy, such as Adium theme
  handling and chat history search.
 
-Package: libktpchat-dev
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: KDE Telepathy text chat functionality shared library
- This package contains development files for kde-telepathy-text-ui.
- .
- This is primarly for KDE Telepathy theme and filter development.
-
 Package: kde-telepathy-text-ui
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
