@@ -17,20 +17,12 @@ Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-text
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git
 
-Package: libktpchat0
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: KDE Telepathy text chat functionality shared library
- This package provides a shared library with common functionality
- for handling text chat in KDE Telepathy, such as Adium theme
- handling and chat history search.
-
 Package: kde-telepathy-text-ui
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- libktpchat0 (= ${binary:Version}),
  kde-telepathy-data (>= 0.6.2)
 Recommends: kde-telepathy
+Replaces: libktpchat0
 Description: Telepathy text chat UI for the KDE Plasma Desktop
  This package provides a telepathy handler for text channels, a program
  that in other words allows you to chat with your contacts using instant
