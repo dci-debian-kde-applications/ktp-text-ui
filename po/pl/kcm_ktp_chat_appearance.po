@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
 "PO-Revision-Date: 2013-04-01 08:16+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kdei18n-pl-uwagi>\n"
@@ -54,17 +54,17 @@ msgid "Show status changes"
 msgstr "Pokaż zmiany stanu"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
-#: appearance-config.ui:145
+#: appearance-config.ui:151
 msgid "Use Custom Font Settings"
 msgstr "Użyj własnych ustawień czcionki"
 
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
-#: appearance-config.ui:157
+#: appearance-config.ui:163
 msgid "Select Font:"
 msgstr "Wybierz czcionkę: "
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
-#: appearance-config.ui:170
+#: appearance-config.ui:176
 msgid "Select Size:"
 msgstr "Wybierz rozmiar: "
 

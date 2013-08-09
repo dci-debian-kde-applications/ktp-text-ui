@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_appearance\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
 "PO-Revision-Date: 2013-03-23 13:23+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -55,16 +55,16 @@ msgid "Show status changes"
 msgstr "Прикажи промјене стања"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
-#: appearance-config.ui:145
+#: appearance-config.ui:151
 msgid "Use Custom Font Settings"
 msgstr "Посебне поставке за фонт"
 
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
-#: appearance-config.ui:157
+#: appearance-config.ui:163
 msgid "Select Font:"
 msgstr "Изаберите фонт:"
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
-#: appearance-config.ui:170
+#: appearance-config.ui:176
 msgid "Select Size:"
 msgstr "Изаберите величину:"
