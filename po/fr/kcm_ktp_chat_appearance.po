@@ -2,21 +2,25 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Joëlle Cornavin <jcorn@free.fr>, 2011, 2012, 2013.
+# xavier <xavier.besnard@neuf.fr>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_appearance\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-04-15 16:40+0200\n"
-"Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
+"PO-Revision-Date: 2013-06-27 18:02+0200\n"
+"Last-Translator: xavier <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
 
 #: appearance-config.cpp:48
 msgctxt "@title:tab"
@@ -51,20 +55,20 @@ msgstr "Afficher l'en-tête"
 #. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
 #: appearance-config.ui:120
 msgid "Show status changes"
-msgstr "Afficher les changements d'état"
+msgstr "Afficher les modifications d'état"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
-#: appearance-config.ui:145
+#: appearance-config.ui:151
 msgid "Use Custom Font Settings"
-msgstr "Utiliser des paramètres de polices personnalisés"
+msgstr "Utiliser des paramètres personnalisés de polices"
 
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
-#: appearance-config.ui:157
+#: appearance-config.ui:163
 msgid "Select Font:"
 msgstr "Sélectionnez une police :"
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
-#: appearance-config.ui:170
+#: appearance-config.ui:176
 msgid "Select Size:"
 msgstr "Sélectionnez une taille :"
 
