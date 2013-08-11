@@ -1,4 +1,4 @@
-ktp-text-ui (0.6.2.1-1) UNRELEASED; urgency=low
+ktp-text-ui (0.6.3-1) unstable; urgency=low
 
   [ Ritesh Raj Sarraf ]
   * [e26f6a8] drop patch 03_no_redundant_glib_calls.diff
@@ -19,7 +19,12 @@ ktp-text-ui (0.6.2.1-1) UNRELEASED; urgency=low
   * Merge libktpchat0 into ktp-telepathy-text-ui.
   * Override lintian warnings about the libktpchat0 library.
 
- -- Diane Trout <diane@ghic.org>  Fri, 12 Jul 2013 23:48:53 -0700
+  [ Mark Purcell ] 
+  * Imported Upstream version 0.6.3
+  * Add myself to Uploaders
+  * Update Build-Depends: libktpcommoninternalsprivate-dev (>= 0.6.3)
+
+ -- Mark Purcell <msp@debian.org>  Sun, 11 Aug 2013 11:01:09 +1000
 
 ktp-text-ui (0.4.0-1) unstable; urgency=low
 
