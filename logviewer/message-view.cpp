@@ -25,36 +25,52 @@
 
 #include <KDebug>
 
-#include <TelepathyLoggerQt4/LogManager>
-#include <TelepathyLoggerQt4/PendingEvents>
-#include <TelepathyLoggerQt4/TextEvent>
+#include <QLabel>
+#include <QResizeEvent>
+
+#include <KTp/Logger/log-manager.h>
+#include <KTp/Logger/pending-logger-logs.h>
+
 #include <TelepathyQt/Account>
 
 MessageView::MessageView(QWidget *parent) :
-    AdiumThemeView(parent)
+    AdiumThemeView(parent),
+    m_infoLabel(new QLabel(this))
 {
+
+    loadSettings();
+
+    QFont font = m_infoLabel->font();
+    font.setBold(true);
+    m_infoLabel->setFont(font);
+    m_infoLabel->setAlignment(Qt::AlignCenter);
+
     connect(this, SIGNAL(loadFinished(bool)), SLOT(processStoredEvents()));
 }
 
-
-void MessageView::loadLog(const Tp::AccountPtr &account, const Tpl::EntityPtr &entity,
+void MessageView::loadLog(const Tp::AccountPtr &account, const KTp::LogEntity &entity,
                           const Tp::ContactPtr &contact, const QDate &date,
                           const QPair< QDate, QDate > &nearestDates)
 {
-    if (account.isNull() || entity.isNull()) {
+    if (account.isNull() || !entity.isValid()) {
         //note contact can be null
-        kWarning() << "invalid account/contact. Not loading log";
+        showInfoMessage(i18n("Unknown or invalid contact"));
         return;
     }
 
+    m_infoLabel->hide();
     m_account = account;
-    m_entity = entity;
-    m_contact = contact;
+    // FIXME: Workaround for a bug, probably in QGlib which causes that
+    // m_entity = m_entity results in invalid m_entity->m_class being null
+    if (m_entity != entity) {
+        m_entity = entity;
+    }
+    m_contact = m_contact.dynamicCast<Tp::Contact>(contact);
     m_date = date;
     m_prev = nearestDates.first;
     m_next = nearestDates.second;
 
-    if (entity->entityType() == Tpl::EntityTypeRoom) {
+    if (entity.entityType() == Tp::HandleTypeRoom) {
         load(AdiumThemeView::GroupChat);
     } else {
         load(AdiumThemeView::SingleUserChat);
@@ -67,9 +83,24 @@ void MessageView::loadLog(const Tp::AccountPtr &account, const Tpl::EntityPtr &e
                             arg(QString::fromLatin1(m_account->avatar().avatarData.toBase64().data()));
     }
 
-    Tpl::LogManagerPtr logManager = Tpl::LogManager::instance();
-    Tpl::PendingEvents *pendingEvents  = logManager->queryEvents(m_account, m_entity, Tpl::EventTypeMaskText, m_date);
-    connect(pendingEvents, SIGNAL(finished(Tpl::PendingOperation*)), SLOT(onEventsLoaded(Tpl::PendingOperation*)));
+    KTp::LogManager *logManager = KTp::LogManager::instance();
+    KTp::PendingLoggerLogs *pendingLogs = logManager->queryLogs(m_account, m_entity, m_date);
+    connect(pendingLogs, SIGNAL(finished(KTp::PendingLoggerOperation*)), SLOT(onEventsLoaded(KTp::PendingLoggerOperation*)));
+}
+
+void MessageView::showInfoMessage(const QString& message)
+{
+    m_infoLabel->setText(message);
+    m_infoLabel->show();
+    m_infoLabel->raise();
+    m_infoLabel->setGeometry(0, 0, width(), height());
+}
+
+void MessageView::resizeEvent(QResizeEvent* e)
+{
+    m_infoLabel->setGeometry(0, 0, e->size().width(), e->size().height());
+
+    QWebView::resizeEvent(e);
 }
 
 void MessageView::setHighlightText(const QString &text)
@@ -82,89 +113,81 @@ void MessageView::clearHighlightText()
     setHighlightText(QString());
 }
 
-void MessageView::onEventsLoaded(Tpl::PendingOperation *po)
+void MessageView::onEventsLoaded(KTp::PendingLoggerOperation *po)
 {
-    Tpl::PendingEvents *pe = qobject_cast<Tpl::PendingEvents*>(po);
-    m_events << pe->events();
+    KTp::PendingLoggerLogs *pl = qobject_cast<KTp::PendingLoggerLogs*>(po);
+    m_events << pl->logs();
 
     /* Wait with initialization for the first event so that we can know when the chat session started */
     AdiumThemeHeaderInfo headerInfo;
-    headerInfo.setDestinationDisplayName(m_contact.isNull() ? m_entity->alias() : m_contact->alias());
-    headerInfo.setChatName(m_contact.isNull() ? m_entity->alias() : m_contact->alias());
-    headerInfo.setGroupChat(m_entity->entityType() == Tpl::EntityTypeRoom);
+    headerInfo.setDestinationDisplayName(m_contact.isNull() ? m_entity.alias() : m_contact->alias());
+    headerInfo.setChatName(m_contact.isNull() ? m_entity.alias() : m_contact->alias());
+    headerInfo.setGroupChat(m_entity.entityType() == Tp::HandleTypeRoom);
     headerInfo.setSourceName(m_account->displayName());
     headerInfo.setIncomingIconPath(m_contact.isNull() ? QString() : m_contact->avatarData().fileName);
 
-    if (pe->events().count() > 0 && !pe->events().first().isNull()) {
-        headerInfo.setTimeOpened(pe->events().first()->timestamp());
+    if (pl->logs().count() > 0) {
+        headerInfo.setTimeOpened(pl->logs().first().time());
     }
 
     initialise(headerInfo);
 }
 
-bool operator<(const Tpl::EventPtr &e1, const Tpl::EventPtr &e2)
+bool logMessageOlderThan(const KTp::LogMessage &e1, const KTp::LogMessage &e2)
 {
-    return e1->timestamp() < e2->timestamp();
+    return e1.time() < e2.time();
+}
+
+bool logMessageNewerThan(const KTp::LogMessage &e1, const KTp::LogMessage &e2)
+{
+    return e1.time() > e2.time();
 }
 
 void MessageView::processStoredEvents()
 {
+    AdiumThemeStatusInfo prevConversation;
     if (m_prev.isValid()) {
-        AdiumThemeStatusInfo message(AdiumThemeMessageInfo::HistoryStatus);
-        message.setMessage(QString(QLatin1String("<a href=\"#x-prevConversation\">&lt;&lt;&lt; %1</a>")).arg(i18n("Previous conversation")));
-        message.setService(m_account->serviceName());
-        message.setTime(QDateTime(m_prev));
-
-        addStatusMessage(message);
+        prevConversation = AdiumThemeStatusInfo(AdiumThemeMessageInfo::HistoryStatus);
+        prevConversation.setMessage(QString(QLatin1String("<a href=\"#x-prevConversation\">&lt;&lt;&lt; %1</a>")).arg(i18n("Previous conversation")));
+        prevConversation.setService(m_account->serviceName());
+        prevConversation.setTime(QDateTime(m_prev));
     }
 
-    // See https://bugs.kde.org/show_bug.cgi?id=317866
-    // Uses the operator< overload above
-    qSort(m_events);
+    AdiumThemeStatusInfo nextConversation;
+    if (m_next.isValid()) {
+        nextConversation = AdiumThemeStatusInfo(AdiumThemeMessageInfo::HistoryStatus);
+        nextConversation.setMessage(QString(QLatin1String("<a href=\"#x-nextConversation\">%1 &gt;&gt;&gt;</a>")).arg(i18n("Next conversation")));
+        nextConversation.setService(m_account->serviceName());
+        nextConversation.setTime(QDateTime(m_next));
+    }
+
+    if (m_sortMode == MessageView::SortOldestTop) {
+        if (m_prev.isValid()) {
+            addAdiumStatusMessage(prevConversation);
+        }
+        qSort(m_events.begin(), m_events.end(), logMessageOlderThan);
+    } else if (m_sortMode == MessageView::SortNewestTop) {
+        if (m_next.isValid()) {
+            addAdiumStatusMessage(nextConversation);
+        }
+        qSort(m_events.begin(), m_events.end(), logMessageNewerThan);
+    }
+
+    if (m_events.isEmpty()) {
+        showInfoMessage(i18n("There are no logs for this day"));
+    }
 
     while (!m_events.isEmpty()) {
-
-        const Tpl::TextEventPtr textEvent(m_events.takeFirst().staticCast<Tpl::TextEvent>());
-
-        AdiumThemeMessageInfo::MessageType type;
-        QString iconPath;
-
-        if(textEvent->sender()->identifier() == m_account->normalizedName()) {
-            type = AdiumThemeMessageInfo::HistoryLocalToRemote;
-            iconPath = m_accountAvatar;
-        } else {
-            type = AdiumThemeMessageInfo::HistoryRemoteToLocal;
-            /* FIXME Add support for avatars in MUCs */
-            if (m_entity->entityType() == Tpl::EntityTypeContact) {
-                if (m_contact) {
-                    iconPath = m_contact->avatarData().fileName;
-                }
-            }
-        }
-
-        AdiumThemeContentInfo message(type);
-        message.setMessage(KTp::MessageProcessor::instance()->processIncomingMessage(textEvent, m_account, Tp::TextChannelPtr()).finalizedMessage());
-        message.setService(m_account->serviceName());
-        message.setSenderDisplayName(textEvent->sender()->alias());
-        message.setSenderScreenName(textEvent->sender()->identifier());
-        message.setTime(textEvent->timestamp());
-        message.setUserIconPath(iconPath);
-
-        kDebug()    << textEvent->timestamp()
-                    << "from" << textEvent->sender()->identifier()
-                    << "to" << textEvent->receiver()->identifier()
-                    << textEvent->message();
-
-        addContentMessage(message);
+        const KTp::LogMessage msg = m_events.takeFirst();
+        KTp::MessageContext ctx(m_account, Tp::TextChannelPtr());
+        KTp::Message message = KTp::MessageProcessor::instance()->processIncomingMessage(msg, ctx);
+        addMessage(message);
     }
 
-    if (m_next.isValid()) {
-        AdiumThemeStatusInfo message(AdiumThemeMessageInfo::HistoryStatus);
-        message.setMessage(QString(QLatin1String("<a href=\"#x-nextConversation\">%1 &gt;&gt;&gt;</a>")).arg(i18n("Next conversation")));
-        message.setService(m_account->serviceName());
-        message.setTime(QDateTime(m_next));
-
-        addStatusMessage(message);
+    if (m_sortMode == MessageView::SortOldestTop && m_next.isValid()) {
+        addAdiumStatusMessage(nextConversation);
+    } else if (m_sortMode == MessageView::SortNewestTop && m_prev.isValid()) {
+        addAdiumStatusMessage(prevConversation);
     }
 
     /* Can't highlight the text directly, we need to wait for the JavaScript in
@@ -196,9 +219,24 @@ void MessageView::onLinkClicked(const QUrl &link)
     AdiumThemeView::onLinkClicked(link);
 }
 
+void MessageView::loadSettings()
+{
+    const KConfig config(QLatin1String("ktelepathyrc"));
+    const KConfigGroup group = config.group("LogViewer");
+    m_sortMode = static_cast<SortMode>(group.readEntry("SortMode", static_cast<int>(SortOldestTop)));
+}
+
+void MessageView::reloadTheme()
+{
+    loadSettings();
+    loadLog(m_account, m_entity, m_contact, m_date, qMakePair(m_prev, m_next));
+}
 
 void MessageView::doHighlightText()
 {
     findText(QString());
-    findText(m_highlightedText, QWebPage::HighlightAllOccurrences | QWebPage::FindWrapsAroundDocument);
+    if (!m_highlightedText.isEmpty()) {
+        findText(m_highlightedText, QWebPage::HighlightAllOccurrences |
+                                    QWebPage::FindWrapsAroundDocument);
+    }
 }

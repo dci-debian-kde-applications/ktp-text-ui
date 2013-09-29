@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
 "PO-Revision-Date: 2013-04-06 15:59-0400\n"
 "Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
@@ -54,17 +54,17 @@ msgid "Show status changes"
 msgstr "显示状态变化"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
-#: appearance-config.ui:145
+#: appearance-config.ui:151
 msgid "Use Custom Font Settings"
 msgstr "使用自定义字体设置"
 
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
-#: appearance-config.ui:157
+#: appearance-config.ui:163
 msgid "Select Font:"
 msgstr "选择字体："
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
-#: appearance-config.ui:170
+#: appearance-config.ui:176
 msgid "Select Size:"
 msgstr "选择大小："
 

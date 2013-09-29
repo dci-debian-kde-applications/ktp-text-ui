@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 #include "channel-contact-model.h"
+#include "text-chat-config.h"
 
 #include <KDebug>
 #include <KIcon>
@@ -32,7 +33,7 @@ ChannelContactModel::ChannelContactModel(const Tp::TextChannelPtr &channel, QObj
 void ChannelContactModel::setTextChannel(const Tp::TextChannelPtr &channel)
 {
     m_channel = channel;
-    
+
     //remove existing contacts in list
     beginRemoveRows(QModelIndex(), 0, m_contacts.size());
     m_contacts.clear();
@@ -87,7 +88,7 @@ QVariant ChannelContactModel::data(const QModelIndex &index, int role) const
     case Qt::DecorationRole:
     {
         const Tp::ContactPtr contact = m_contacts[row];
-        if (m_channel->chatState(contact) == Tp::ChannelChatStateComposing) {
+        if (TextChatConfig::instance()->showOthersTyping() && (m_channel->chatState(contact) == Tp::ChannelChatStateComposing)) {
             return KIcon(QLatin1String("document-edit"));
 
         }
@@ -154,9 +155,11 @@ void ChannelContactModel::addContacts(const Tp::Contacts &contacts)
         connect(contact.data(), SIGNAL(blockStatusChanged(bool)), SLOT(onContactBlockStatusChanged(bool)));
     }
 
-    beginInsertRows(QModelIndex(), m_contacts.size(), m_contacts.size() + newContacts.size());
-    m_contacts << newContacts;
-    endInsertRows();
+    if (!newContacts.isEmpty()) {
+        beginInsertRows(QModelIndex(), m_contacts.size(), m_contacts.size() + newContacts.size() - 1);
+        m_contacts << newContacts;
+        endInsertRows();
+    }
 }
 
 void ChannelContactModel::removeContacts(const Tp::Contacts &contacts)

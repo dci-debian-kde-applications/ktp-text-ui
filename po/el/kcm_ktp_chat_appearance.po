@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_appearance\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
 "PO-Revision-Date: 2013-03-24 13:17+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -55,17 +55,17 @@ msgid "Show status changes"
 msgstr "Εμφάνιση αλλαγών κατάστασης"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
-#: appearance-config.ui:145
+#: appearance-config.ui:151
 msgid "Use Custom Font Settings"
 msgstr "Χρήση προσαρμοσμένων ρυθμίσεων γραμματοσειρών"
 
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
-#: appearance-config.ui:157
+#: appearance-config.ui:163
 msgid "Select Font:"
 msgstr "Επιλογή γραμματοσειράς:"
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
-#: appearance-config.ui:170
+#: appearance-config.ui:176
 msgid "Select Size:"
 msgstr "Επιλογή μεγέθους:"
 

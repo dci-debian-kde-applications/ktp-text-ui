@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2011  Dominik Schmidt <kde@dominik-schmidt.de>
+    Copyright (C) 2013  Daniel Vrátil <dvratil@redhat.com>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -22,18 +23,11 @@
 
 #include "adium-theme-content-info.h"
 
-#include <TelepathyLoggerQt4/LogManager>
-#include <TelepathyLoggerQt4/Entity>
+#include <KTp/message.h>
 
-#include <TelepathyQt/Types>
-#include <TelepathyQt/Account>
-#include <TelepathyQt/Contact>
-
-
-namespace Tpl {
-    class PendingOperation;
+namespace KTp {
+class PendingLoggerOperation;
 }
-
 
 class LogManager : public QObject
 {
@@ -46,23 +40,34 @@ public:
     bool exists() const;
 
     void setTextChannel(const Tp::AccountPtr &account, const Tp::TextChannelPtr &textChannel);
-    void setFetchAmount(int n);
-    void fetchLast();
+
+    /**
+     * Sets amount of messages to be fetched via @p fetchScrollback()
+     */
+    void setScrollbackLength(int n);
+
+    int scrollbackLength() const;
+
+    /**
+     * Fetches last N message,s as set via setFetchAmount()
+     */
+    void fetchScrollback();
+
+    /**
+     * Fetches last @p n messages
+     */
+    void fetchHistory(int n);
 
 Q_SIGNALS:
-    void fetched(const QList<AdiumThemeContentInfo> &messages);
+    void fetched(const QList<KTp::Message> &messages);
 
 private Q_SLOTS:
-    void onDatesFinished(Tpl::PendingOperation *po);
-    void onEventsFinished(Tpl::PendingOperation *po);
+    void onDatesFinished(KTp::PendingLoggerOperation *po);
+    void onEventsFinished(KTp::PendingLoggerOperation *po);
 
 private:
-    Tp::AccountPtr m_account;
-    Tp::TextChannelPtr m_textChannel;
-    Tpl::EntityPtr m_contactEntity;
-    Tpl::LogManagerPtr m_logManager;
-
-    int m_fetchAmount;
+    class Private;
+    Private * const d;
 };
 
 #endif // LOGMANAGER_H

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-13 11:41+0200\n"
+"POT-Creation-Date: 2013-07-10 00:58+0000\n"
 "PO-Revision-Date: 2013-04-01 08:30+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kdei18n-pl-uwagi>\n"
@@ -59,7 +59,7 @@ msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Rozpocznij rozmowę głosową z tym kontaktem"
 
-#: chat-window.cpp:659 chat-window.cpp:889
+#: chat-window.cpp:659 chat-window.cpp:892
 msgid "&Block Contact"
 msgstr "&Blokuj kontakt"
 
@@ -152,7 +152,7 @@ msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 wpisał tekst"
 
-#: chat-window.cpp:882
+#: chat-window.cpp:885
 msgid "&Unblock Contact"
 msgstr "&Odblokuj kontakt"
 

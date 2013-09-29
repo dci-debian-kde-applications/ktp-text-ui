@@ -1,5 +1,6 @@
 /***************************************************************************
  *   Copyright (C) 2012 by David Edmundson <kde@davidedmundson.co.uk>      *
+ *   Copyright (C) 2012,2013 by Daniel Vrátil <dvratil@redhat.com>         *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -21,18 +22,23 @@
 #define LOGVIEWER_H
 
 #include <KXmlGuiWindow>
-#include <TelepathyLoggerQt4/Types>
+#include <TelepathyQt/Types>
+
+#include "message-view.h"
+
+namespace KTp {
+    class PendingLoggerOperation;
+    class ContactsModel;
+}
 
 namespace Ui {
     class LogViewer;
 }
 
-namespace Tpl {
-    class PendingOperation;
-}
-
+class DatesModel;
 class EntityModel;
-class EntityProxyModel;
+class EntityFilterModel;
+class PersonEntityMergeModel;
 class KMenu;
 
 class LogViewer : public KXmlGuiWindow
@@ -44,11 +50,16 @@ public:
                        const Tp::ChannelFactoryPtr &channelFactory, const Tp::ContactFactoryPtr &contactFactory,
                        QWidget *parent = 0);
     ~LogViewer();
+
 private Q_SLOTS:
     void onAccountManagerReady();
 
-    void onEntitySelected(const QModelIndex &current, const QModelIndex &previous);
-    void onDateSelected();
+    void slotMergeModelInitialized();
+
+    void onEntityListClicked(const QModelIndex &index);
+    void onDatesReceived();
+
+    void slotDateClicked(const QModelIndex &index);
 
     void slotUpdateMainWindow();
     void slotSetConversationDate(const QDate &date);
@@ -56,29 +67,37 @@ private Q_SLOTS:
     void slotShowEntityListContextMenu(const QPoint &coords);
     void slotClearGlobalSearch();
     void slotStartGlobalSearch(const QString &term);
-    void onGlobalSearchFinished(Tpl::PendingOperation *);
+    void onGlobalSearchFinished(KTp::PendingLoggerOperation *);
 
-    void slotClearAccountHistory();
     void slotClearContactHistory();
-    void onLogClearingFinished(Tpl::PendingOperation *);
+    void slotClearAccountHistory();
 
     void slotImportKopeteLogs(bool force = true);
 
     void slotJumpToPrevConversation();
     void slotJumpToNextConversation();
 
+    void slotConfigure();
+    void slotNoLogsForContact();
+
 private:
     void setupActions();
 
     Ui::LogViewer *ui;
     Tp::AccountManagerPtr m_accountManager;
+    DatesModel *m_datesModel;
+    KTp::ContactsModel *m_contactsModel;
     EntityModel *m_entityModel;
-    EntityProxyModel *m_filterModel;
+    PersonEntityMergeModel *m_mergeModel;
+    EntityFilterModel *m_filterModel;
+
+    QPersistentModelIndex m_expandedPersona;
 
     KMenu *m_entityListContextMenu;
 
     QDate m_prevConversationDate;
     QDate m_nextConversationDate;
+
 };
 
 #endif // LOGVIEWER_H

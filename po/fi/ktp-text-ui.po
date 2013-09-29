@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-04-13 11:41+0200\n"
-"PO-Revision-Date: 2013-03-05 23:52+0200\n"
+"POT-Creation-Date: 2013-07-10 00:58+0000\n"
+"PO-Revision-Date: 2013-08-30 21:16+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
 "Language: fi\n"
@@ -24,11 +24,11 @@ msgstr ""
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Tommi Nieminen"
+msgstr "Tommi Nieminen,Lasse Liehu"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "translator@legisign.org"
+msgstr "translator@legisign.org,lasse.liehu@gmail.com"
 
 #: chat-window.cpp:134
 msgid "Close"
@@ -63,7 +63,7 @@ msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Aloita äänipuhelu tämän käyttäjän kanssa"
 
-#: chat-window.cpp:659 chat-window.cpp:889
+#: chat-window.cpp:659 chat-window.cpp:892
 msgid "&Block Contact"
 msgstr "&Estä käyttäjä"
 
@@ -155,7 +155,7 @@ msgctxt "String appended in window title, arg is contact's name"
 msgid "%1 has entered text"
 msgstr "%1 on kirjoittanut tekstiä"
 
-#: chat-window.cpp:882
+#: chat-window.cpp:885
 msgid "&Unblock Contact"
 msgstr "&Poista käyttäjän esto"
 

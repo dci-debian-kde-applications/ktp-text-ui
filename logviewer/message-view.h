@@ -24,48 +24,66 @@
 
 #include <QDate>
 
-#include <TelepathyLoggerQt4/Event>
-#include <TelepathyLoggerQt4/Entity>
-#include <TelepathyLoggerQt4/PendingOperation>
+#include <KTp/Logger/log-entity.h>
+#include <KTp/Logger/log-message.h>
+#include <KTp/Logger/pending-logger-operation.h>
 
+class QLabel;
 
 class MessageView : public AdiumThemeView
 {
     Q_OBJECT
 public:
+    enum SortMode {
+        SortOldestTop,
+        SortNewestTop
+    };
+
     explicit MessageView(QWidget *parent = 0);
 
-    void loadLog(const Tp::AccountPtr &account, const Tpl::EntityPtr &entity,
+    void loadLog(const Tp::AccountPtr &account, const KTp::LogEntity &entity,
                  const Tp::ContactPtr &contact, const QDate &date,
                  const QPair< QDate, QDate > &nearestDates);
 
     void setHighlightText(const QString &text);
     void clearHighlightText();
 
+    void showInfoMessage(const QString &message);
+
 public Q_SLOTS:
     void onLinkClicked(const QUrl &link);
+    void reloadTheme();
 
 private Q_SLOTS:
-    void onEventsLoaded(Tpl::PendingOperation* po);
+    void onEventsLoaded(KTp::PendingLoggerOperation* po);
     void doHighlightText();
     void processStoredEvents();
 
 Q_SIGNALS:
     void conversationSwitchRequested(const QDate &date);
 
+protected:
+    virtual void resizeEvent(QResizeEvent *e);
+
 private:
-    Tpl::EntityPtr m_entity;
+    void loadSettings();
+
+    SortMode m_sortMode;
+
+    KTp::LogEntity m_entity;
     Tp::AccountPtr m_account;
-    Tp::ContactPtr m_contact;
+    KTp::ContactPtr m_contact;
     QDate m_date;
     QDate m_prev;
     QDate m_next;
 
     QString m_highlightedText;
 
-    Tpl::EventPtrList m_events;
+    QList<KTp::LogMessage> m_events;
 
     QString m_accountAvatar;
+
+    QLabel *m_infoLabel;
 };
 
 #endif // MESSAGEVIEW_H

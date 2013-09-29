@@ -1,0 +1,27 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Balázs Úr <urbalazs@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2013-05-30 05:41+0000\n"
+"PO-Revision-Date: 2013-07-03 21:30+0200\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: texttospeech/tts-filter.cpp:42
+msgid "KDE Instant Messaging"
+msgstr "KDE azonnali üzenetküldő"
+
+#: texttospeech/tts-filter.cpp:63
+#, kde-format
+msgid "New message. %1"
+msgstr "Új üzenet. %1"

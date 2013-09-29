@@ -24,10 +24,9 @@
 #include <QAbstractItemModel>
 
 #include <TelepathyQt/Types>
-
-#include <TelepathyLoggerQt4/Entity>
 #include <TelepathyQt/Account>
 
+#include <KTp/types.h>
 
 /**
     Lists all avilable entities.
@@ -37,11 +36,11 @@
       - Qt::DecorationRole - avatar
       - EntityModel::IdRole
       - EntityModel::TypeRole - EntityType (EntityTypeContact/Room/Self/Unknown)
-      - EntityModel::EntityRole - relevant Tpl::EntityPtr
+      - EntityModel::EntityRole - relevant KTp::LogEntity
   */
 
-namespace Tpl{
-    class PendingOperation;
+namespace KTp {
+    class PendingLoggerOperation;
 }
 
 class EntityModelItem;
@@ -54,8 +53,7 @@ public:
         IdRole = Qt::UserRole,
         TypeRole,
         EntityRole,
-        AccountRole,
-        ContactRole
+        AccountRole
     };
 
     explicit EntityModel(QObject *parent = 0);
@@ -65,7 +63,6 @@ public:
 
     int rowCount(const QModelIndex &parent) const;
     QVariant data(const QModelIndex &index, int role) const;
-    Qt::ItemFlags flags(const QModelIndex &index) const;
 
     int columnCount(const QModelIndex &parent = QModelIndex()) const;
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
@@ -73,18 +70,17 @@ public:
 
     bool removeRows(int start, int count, const QModelIndex &parent = QModelIndex());
 
+Q_SIGNALS:
+    void modelInitialized();
+
 private Q_SLOTS:
-    void onEntitiesSearchFinished(Tpl::PendingOperation*);
-    void onEntityContactRetrieved(Tp::PendingOperation*);
+    void onEntitiesSearchFinished(KTp::PendingLoggerOperation*);
 
 private:
-    EntityModelItem *m_rootItem;
+    QMap<QString /* id */,EntityModelItem*> m_items;
+    QList<KTp::PendingLoggerOperation*> m_pendingOperations;
+    Tp::AccountManagerPtr m_accountManager;
 
 };
-
-Q_DECLARE_METATYPE(Tpl::EntityPtr);
-Q_DECLARE_METATYPE(Tp::AccountPtr);
-Q_DECLARE_METATYPE(Tp::ContactPtr);
-
 
 #endif // ENTITYMODEL_H
