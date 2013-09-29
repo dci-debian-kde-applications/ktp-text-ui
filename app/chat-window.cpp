@@ -46,6 +46,7 @@
 #include <KMenu>
 #include <KToolBar>
 #include <KToolInvocation>
+#include <KCModuleProxy>
 
 #include <QEvent>
 #include <QWidgetAction>
@@ -61,6 +62,7 @@
 #include "emoticon-text-edit-action.h"
 #include "invite-contact-dialog.h"
 #include "telepathy-chat-ui.h"
+#include "text-chat-config.h"
 
 #define PREFERRED_RFB_HANDLER "org.freedesktop.Telepathy.Client.krfb_rfb_handler"
 
@@ -318,9 +320,6 @@ void ChatWindow::onCurrentIndexChanged(int index)
         setWindowIcon(currentChatTab->icon());
     }
 
-    //call this to update the "Typing.." in window title
-    onUserTypingChanged(currentChatTab->remoteChatState());
-
     kDebug() << "Current spell dictionary is" << currentChatTab->spellDictionary();
     m_spellDictCombo->setCurrentByDictionary(currentChatTab->spellDictionary());
 
@@ -353,7 +352,19 @@ void ChatWindow::onCurrentIndexChanged(int index)
         setShareDesktopEnabled(false);
         setInviteToChatEnabled(true);
         setBlockEnabled(false);
+    }
 
+    if ( currentChatTab->account()->connection() ) {
+        const QString collab(QLatin1String("infinote"));
+        bool selfCanShare = currentChatTab->account()->connection()->selfContact()->capabilities().streamTubes(collab);
+        if (currentChatTab->isGroupChat()) {
+            // We can always share documents with a group chat if we support the service
+            setCollaborateDocumentEnabled(selfCanShare);
+        }
+        else {
+            bool otherCanShare = currentChatTab->textChannel()->targetContact()->capabilities().streamTubes(collab);
+            setCollaborateDocumentEnabled(selfCanShare && otherCanShare);
+        }
     }
 
     // only show enable the action if there are actually previous converstations
@@ -463,6 +474,21 @@ void ChatWindow::onSearchActionToggled()
     currChat->toggleSearchBar();
 }
 
+void ChatWindow::onCollaborateDocumentTriggered()
+{
+    ChatTab *currChat = qobject_cast<ChatTab*>(m_tabWidget->currentWidget());
+
+    if(!currChat) {
+        return;
+    }
+    if (currChat->isGroupChat()) {
+        offerDocumentToChatroom(currChat->account(), currChat->textChannel()->targetId());
+    }
+    else {
+        offerDocumentToContact(currChat->account(), currChat->textChannel()->targetContact());
+    }
+}
+
 void ChatWindow::onTabStateChanged()
 {
     kDebug();
@@ -473,7 +499,7 @@ void ChatWindow::onTabStateChanged()
         int tabIndex = m_tabWidget->indexOf(sender);
         setTabTextColor(tabIndex, sender->titleColor());
 
-        if (sender->remoteChatState() == Tp::ChannelChatStateComposing) {
+        if (TextChatConfig::instance()->showOthersTyping() && (sender->remoteChatState() == Tp::ChannelChatStateComposing)) {
             setTabIcon(tabIndex, KIcon(QLatin1String("document-edit")));
             if (sender == m_tabWidget->currentWidget()) {
                 windowIcon = KIcon(QLatin1String("document-edit"));
@@ -590,7 +616,13 @@ void ChatWindow::showSettingsDialog()
 
     KSettings::Dialog *dialog = new KSettings::Dialog(this);
 
-    dialog->addModule(QLatin1String("kcm_ktp_chat_appearance"));
+    KPageWidgetItem *configPage = dialog->addModule(QLatin1String("kcm_ktp_chat_appearance"));
+    KCModuleProxy *proxy = qobject_cast<KCModuleProxy*>(configPage->widget());
+    Q_ASSERT(proxy);
+
+    connect(proxy->realModule(), SIGNAL(reloadTheme()),
+            this, SLOT(onReloadTheme()));
+
     dialog->addModule(QLatin1String("kcm_ktp_chat_behavior"));
     dialog->addModule(QLatin1String("kcm_ktp_chat_messages"));
 
@@ -607,7 +639,6 @@ void ChatWindow::removeChatTabSignals(ChatTab *chatTab)
 {
     disconnect(chatTab, SIGNAL(titleChanged(QString)), this, SLOT(onTabTextChanged(QString)));
     disconnect(chatTab, SIGNAL(iconChanged(KIcon)), this, SLOT(onTabIconChanged(KIcon)));
-    disconnect(chatTab, SIGNAL(userTypingChanged(Tp::ChannelChatState)), this, SLOT(onTabStateChanged()));
     disconnect(chatTab, SIGNAL(unreadMessagesChanged()), this, SLOT(onTabStateChanged()));
     disconnect(chatTab, SIGNAL(contactPresenceChanged(Tp::Presence)), this, SLOT(onTabStateChanged()));
     disconnect(chatTab->chatSearchBar(), SIGNAL(enableSearchButtonsSignal(bool)), this, SLOT(onEnableSearchActions(bool)));
@@ -634,7 +665,6 @@ void ChatWindow::setupChatTabSignals(ChatTab *chatTab)
     connect(chatTab, SIGNAL(titleChanged(QString)), this, SLOT(onTabTextChanged(QString)));
     connect(chatTab, SIGNAL(iconChanged(KIcon)), this, SLOT(onTabIconChanged(KIcon)));
     connect(chatTab, SIGNAL(userTypingChanged(Tp::ChannelChatState)), this, SLOT(onTabStateChanged()));
-    connect(chatTab, SIGNAL(userTypingChanged(Tp::ChannelChatState)), this, SLOT(onUserTypingChanged(Tp::ChannelChatState)));
     connect(chatTab, SIGNAL(unreadMessagesChanged()), this, SLOT(onTabStateChanged()));
     connect(chatTab, SIGNAL(contactPresenceChanged(KTp::Presence)), this, SLOT(onTabStateChanged()));
     connect(chatTab->chatSearchBar(), SIGNAL(enableSearchButtonsSignal(bool)), this, SLOT(onEnableSearchActions(bool)));
@@ -676,6 +706,9 @@ void ChatWindow::setupCustomActions()
     KAction *shareDesktopAction = new KAction(KIcon(QLatin1String("krfb")), i18n("Share My &Desktop"), this);
     shareDesktopAction->setToolTip(i18nc("Toolbar icon tooltip", "Start an application that allows this contact to see your desktop"));
     connect(shareDesktopAction, SIGNAL(triggered()), this, SLOT(onShareDesktopTriggered()));
+
+    KAction* collaborateDocumentAction = new KAction(KIcon(QLatin1String("document-share")), i18n("&Collaboratively edit a document"), this);
+    connect(collaborateDocumentAction, SIGNAL(triggered()), this, SLOT(onCollaborateDocumentTriggered()));
 
     m_spellDictCombo = new Sonnet::DictionaryComboBox();
     connect(m_spellDictCombo, SIGNAL(dictionaryChanged(QString)),
@@ -724,6 +757,23 @@ void ChatWindow::setupCustomActions()
     actionCollection()->addAction(QLatin1String("clear-chat-view"), clearViewAction);
     actionCollection()->addAction(QLatin1String("emoticons"), addEmoticonAction);
     actionCollection()->addAction(QLatin1String("send-message"), m_sendMessage);
+    actionCollection()->addAction(QLatin1String("collaborate-document"), collaborateDocumentAction);
+}
+
+void ChatWindow::setCollaborateDocumentEnabled(bool enable)
+{
+    QAction* action = actionCollection()->action(QLatin1String("collaborate-document"));
+
+    if (action) {
+        action->setEnabled(enable);
+        if ( enable ) {
+            action->setToolTip(i18nc("Toolbar icon tooltip", "Edit a plain-text document with this contact in real-time"));
+        }
+        else {
+            action->setToolTip(i18nc("Toolbar icon tooltip for a disabled action", "<p>Both you and the target contact "
+                                     "need to have the <i>kte-collaborative</i> package installed to share documents</p>"));
+        }
+    }
 }
 
 void ChatWindow::setAudioCallEnabled(bool enable)
@@ -826,6 +876,22 @@ void ChatWindow::startFileTransfer(const Tp::AccountPtr& account, const Tp::Cont
     }
 }
 
+void ChatWindow::offerDocumentToContact(const Tp::AccountPtr& account, const Tp::ContactPtr& targetContact)
+{
+    const KUrl url = KFileDialog::getOpenUrl();
+    if ( ! url.isEmpty() ) {
+        KTp::Actions::startCollaborativeEditing(account, targetContact, QList<KUrl>() << url, true);
+    }
+}
+
+void ChatWindow::offerDocumentToChatroom(const Tp::AccountPtr& account, const QString& roomName)
+{
+   const KUrl url = KFileDialog::getOpenUrl();
+    if ( ! url.isEmpty() ) {
+        KTp::Actions::startCollaborativeEditing(account, roomName, QList<KUrl>() << url, true);
+    }
+}
+
 void ChatWindow::startVideoCall(const Tp::AccountPtr& account, const Tp::ContactPtr& contact)
 {
     Tp::PendingChannelRequest* channelRequest = KTp::Actions::startAudioVideoCall(account, contact);
@@ -836,21 +902,6 @@ void ChatWindow::startShareDesktop(const Tp::AccountPtr& account, const Tp::Cont
 {
     Tp::PendingChannelRequest* channelRequest = KTp::Actions::startDesktopSharing(account, contact);
     connect(channelRequest, SIGNAL(finished(Tp::PendingOperation*)), this, SLOT(onGenericOperationFinished(Tp::PendingOperation*)));
-}
-
-void ChatWindow::onUserTypingChanged(Tp::ChannelChatState state)
-{
-    ChatWidget *currChat =  qobject_cast<ChatWidget*>(m_tabWidget->currentWidget());
-    Q_ASSERT(currChat);
-    QString title = currChat->title();
-
-    if (state == Tp::ChannelChatStateComposing) {
-        setWindowTitle(i18nc("String prepended in window title, arg is contact's name", "Typing... %1", title));
-    } else if (state == Tp::ChannelChatStatePaused) {
-        setWindowTitle(i18nc("String appended in window title, arg is contact's name", "%1 has entered text", title));
-    } else {
-        setWindowTitle(title);
-    }
 }
 
 bool ChatWindow::event(QEvent *e)
@@ -954,6 +1005,14 @@ void ChatWindow::updateSendMessageShortcuts()
     for (int i = 0; i < m_tabWidget->count(); i++) {
         ChatTab* tab = qobject_cast<ChatTab*>(m_tabWidget->widget(i));
         tab->updateSendMessageShortcuts(newSendMessageShortcuts);
+    }
+}
+
+void ChatWindow::onReloadTheme()
+{
+    for (int i = 0; i < m_tabWidget->count(); i++) {
+        ChatTab *tab = qobject_cast<ChatTab*>(m_tabWidget->widget(i));
+        tab->reloadTheme();
     }
 }
 

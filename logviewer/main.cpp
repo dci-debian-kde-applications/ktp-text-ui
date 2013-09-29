@@ -25,7 +25,8 @@
 #include "version.h"
 
 #include <TelepathyQt/AccountManager>
-#include <TelepathyLoggerQt4/Init>
+
+#include <KTp/contact-factory.h>
 
 int main(int argc, char *argv[])
 {
@@ -51,7 +52,6 @@ int main(int argc, char *argv[])
     KApplication app;
 
     Tp::registerTypes();
-    Tpl::init();
 
     Tp::AccountFactoryPtr  accountFactory = Tp::AccountFactory::create(
                                                 QDBusConnection::sessionBus(),
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
                                                     << Tp::Connection::FeatureSelfContact
                                                     << Tp::Connection::FeatureRoster);
 
-    Tp::ContactFactoryPtr contactFactory = Tp::ContactFactory::create(
+    Tp::ContactFactoryPtr contactFactory = KTp::ContactFactory::create(
                                                 Tp::Features()  << Tp::Contact::FeatureAlias
                                                     << Tp::Contact::FeatureAvatarData
                                                     << Tp::Contact::FeatureSimplePresence

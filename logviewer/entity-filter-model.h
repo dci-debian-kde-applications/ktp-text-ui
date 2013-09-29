@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2012 by Dan Vratil <dan@progdan.cz>                     *
+ *   Copyright (C) 2012,2013 by Dan Vratil <dan@progdan.cz>                *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,42 +18,35 @@
  ***************************************************************************/
 
 
-#ifndef ENTITY_MODEL_ITEM_H
-#define ENTITY_MODEL_ITEM_H
+#ifndef ENTITY_PROXY_MODEL_H
+#define ENTITY_PROXY_MODEL_H
 
-#include <QVariant>
-#include <QList>
+#include <QSortFilterProxyModel>
 
 #include <TelepathyQt/Types>
-#include <TelepathyLoggerQt4/Entity>
 
-class EntityModelItem
+#include <KTp/Logger/log-entity.h>
+#include <KTp/Logger/log-search-hit.h>
+
+typedef QPair< Tp::AccountPtr, KTp::LogEntity > AccountEntityPair;
+
+class EntityFilterModel : public QSortFilterProxyModel
 {
+    Q_OBJECT
 
 public:
-    EntityModelItem(EntityModelItem *parent = 0);
-    virtual ~EntityModelItem();
+    explicit EntityFilterModel(QObject *parent = 0);
+    virtual ~EntityFilterModel();
 
-    void addItem(EntityModelItem *item);
-    void removeItem(int index);
+    void setSearchHits(const QList<KTp::LogSearchHit> &searchHits);
+    void clearSearchHits();
 
-    EntityModelItem* item(int row) const;
-    EntityModelItem* item(const Tp::AccountPtr &account);
-    int itemCount() const;
-
-    QVariant data(int role) const;
-    void setData(const QVariant &data, int role);
-
-    int row() const;
-    EntityModelItem* parent() const;
+protected:
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const;
 
 private:
-    QList< EntityModelItem* > m_items;
-    EntityModelItem *m_parent;
+    QList<KTp::LogSearchHit> m_searchHits;
 
-    Tp::AccountPtr m_account;
-    Tpl::EntityPtr m_entity;
-    Tp::ContactPtr m_contact;
 };
 
-#endif // ENTITY_MODEL_ITEM_H
+#endif // ENTITY_PROXY_MODEL_H

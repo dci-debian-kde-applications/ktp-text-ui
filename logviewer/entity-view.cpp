@@ -21,10 +21,11 @@
 
 #include <KCmdLineArgs>
 
-#include <TelepathyQt/Account>
-#include <TelepathyLoggerQt4/Entity>
+#include <KTp/Logger/log-entity.h>
 
-#include "entity-model.h"
+#include <TelepathyQt/Account>
+
+#include "person-entity-merge-model.h"
 
 EntityView::EntityView(QWidget *parent) :
     QTreeView(parent)
@@ -41,26 +42,42 @@ void EntityView::rowsInserted(const QModelIndex &parent, int start, int end)
         return;
     }
 
-    if (KCmdLineArgs::parsedArgs()->count() == 2) {
+    QModelIndex selectedIndex;
+    if (KCmdLineArgs::parsedArgs()->count() == 1 && KTp::kpeopleEnabled()) {
+        const QString selectedPersonaId = KCmdLineArgs::parsedArgs()->arg(0);
+        for (int i = start; i <= end; i++) {
+            const QModelIndex index = model()->index(i, 0, parent);
+            if (index.data(KTp::NepomukUriRole).toUrl() == selectedPersonaId) {
+                selectedIndex = index;
+                break;
+            }
+        }
+    } else if (KCmdLineArgs::parsedArgs()->count() == 2) {
         QString selectAccountId = KCmdLineArgs::parsedArgs()->arg(0);
         QString selectContactId = KCmdLineArgs::parsedArgs()->arg(1);
 
         for (int i = start; i <= end; i++) {
             QModelIndex index = model()->index(i, 0, parent);
-            Tp::AccountPtr account = index.data(EntityModel::AccountRole).value<Tp::AccountPtr>();
-            Tpl::EntityPtr contact = index.data(EntityModel::EntityRole).value<Tpl::EntityPtr>();
-
-            if (account.isNull() || contact.isNull()) {
+            Tp::AccountPtr account = index.data(PersonEntityMergeModel::AccountRole).value<Tp::AccountPtr>();
+            KTp::LogEntity entity = index.data(PersonEntityMergeModel::EntityRole).value<KTp::LogEntity>();
+            if (account.isNull() || !entity.isValid()) {
                 continue;
             }
 
-            if (selectAccountId == account->uniqueIdentifier() && selectContactId == contact->identifier()) {
-                setCurrentIndex(index);
-                loadedCurrentContact = true;
+            if (selectAccountId == account->uniqueIdentifier() && selectContactId == entity.id()) {
+                selectedIndex = index;
+                break;
             }
-
         }
     }
 
+    if (selectedIndex.isValid()) {
+        loadedCurrentContact = true;
+        setCurrentIndex(selectedIndex);
+    } else {
+        Q_EMIT noSuchContact();
+    }
+
     expandAll();
+
 }
