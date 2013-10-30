@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-11-01 10:55+0100\n"
+"POT-Creation-Date: 2013-10-14 05:33+0000\n"
 "PO-Revision-Date: 2013-02-11 22:20+0400\n"
 "Last-Translator: Yuri Efremov <yur.arh@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -29,44 +29,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yur.arh@gmail.com"
 
-#: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
+#: adiumxtra-protocol-handler.cpp:93 adiumxtra-protocol-handler.cpp:151
 msgid "Package type not recognized or not supported"
 msgstr "Тип пакета не распознан или не поддерживается"
 
-#: adiumxtra-protocol-handler.cpp:83 adiumxtra-protocol-handler.cpp:152
-#: chat-style-installer.cpp:153 emoticon-set-installer.cpp:126
+#: adiumxtra-protocol-handler.cpp:94 adiumxtra-protocol-handler.cpp:154
 msgid "OK"
 msgstr "ОК"
 
-#: chat-style-installer.cpp:123
+#: chat-style-installer.cpp:132
 #, kde-format
 msgid "Install Chatstyle %1"
 msgstr "Установка стиля окна бесед %1"
 
-#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+#: chat-style-installer.cpp:133 emoticon-set-installer.cpp:115
 msgid "Install"
 msgstr "Установка"
 
-#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+#: chat-style-installer.cpp:133 emoticon-set-installer.cpp:115
 msgid "Cancel"
 msgstr "Отмена"
 
-#: chat-style-installer.cpp:146
+#: chat-style-installer.cpp:156
 #, kde-format
 msgid "Installed Chatstyle %1 successfully."
 msgstr "Стиль окна бесед %1 успешно установлен."
 
-#: chat-style-installer.cpp:150
+#: chat-style-installer.cpp:160
 #, kde-format
 msgid "Installation of Chatstyle %1 failed."
 msgstr "Сбой установки стиля окна бесед %1."
 
-#: emoticon-set-installer.cpp:104
+#: emoticon-set-installer.cpp:114
 #, kde-format
 msgid "Install Emoticonset %1"
 msgstr "Установка набора смайликов %1"
 
-#: emoticon-set-installer.cpp:124
+#: emoticon-set-installer.cpp:135
 #, kde-format
 msgid "Installed Emoticonset %1 successfully."
 msgstr "Набор смайликов %1 успешно установлен."

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-30 05:41+0000\n"
-"PO-Revision-Date: 2013-03-29 07:57+0200\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-09-24 15:45+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -18,14 +18,60 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
 
+#. i18n: ectx: property (windowTitle), widget (QWidget, LatexConfig)
+#: latex/latex-config.ui:14
+msgid "LatexConfig"
+msgstr "Налаштування LaTeX"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: latex/latex-config.ui:20
+msgid "LaTeX header:"
+msgstr "Заголовок LaTeX:"
+
+#. i18n: ectx: property (plainText), widget (QPlainTextEdit, kcfg_LatexHeader)
+#: latex/latex-config.ui:31
+msgid ""
+"\\documentclass{minimal}\n"
+"\\usepackage{color}\n"
+"\\pagestyle{empty}\n"
+"\\color{black}\n"
+msgstr ""
+"\\documentclass{minimal}\n"
+"\\usepackage[T2A]{fontenc}\n"
+"\\usepackage[utf8x]{inputenc}\n"
+"\\usepackage[ukrainian]{babel}\n"
+"\\usepackage{color}\n"
+"\\pagestyle{empty}\n"
+"\\color{black}\n"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: latex/latex-config.ui:38
+msgid "LaTeX command line:"
+msgstr "Командний рядок LaTeX:"
+
+#. i18n: ectx: property (text), widget (KLineEdit, kcfg_LatexCmd)
+#: latex/latex-config.ui:45
+msgid "latex -interaction=batchmode -halt-on-error"
+msgstr "latex -interaction=batchmode -halt-on-error"
+
 #: texttospeech/tts-filter.cpp:42
 msgid "KDE Instant Messaging"
 msgstr "Миттєвий обмін повідомленнями у KDE"
 
 #: texttospeech/tts-filter.cpp:63
 #, kde-format
-msgid "New message. %1"
-msgstr "Нове повідомлення. %1"
+msgctxt "Text to Speech - text message %1 is name, %2 is message"
+msgid "%1 says %2"
+msgstr "%1 повідомлено: %2"
+
+#: texttospeech/tts-filter.cpp:66
+#, kde-format
+msgctxt "Text to Speech - text message %1 is name, %2 is message"
+msgid "%1 %2"
+msgstr "%1: %2"
+
+#~ msgid "New message. %1"
+#~ msgstr "Нове повідомлення. %1"
 
 #~ msgid "Click to view in browser"
 #~ msgstr ""

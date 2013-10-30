@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-17 11:18+0200\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
 "PO-Revision-Date: 2012-10-08 20:30+0300\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -33,9 +33,15 @@ msgstr ""
 "Korrektse teema laadimine nurjus. Paigaldus on katkine. Kontrolli KDE "
 "asukohta. Praegu ootab ees krahh."
 
-#: adium-theme-view.cpp:172
+#: adium-theme-view.cpp:182
 msgid "Missing required file Template.html - check your installation."
 msgstr "Nõutav fail Template.html puudub - kontrolli paigaldust."
+
+#: adium-theme-view.cpp:618
+#, kde-format
+msgctxt "Header at top of conversation view. %1 is the time format"
+msgid "Conversation began %1"
+msgstr ""
 
 #: chat-search-bar.cpp:39
 msgctxt "Next search result"
@@ -55,37 +61,37 @@ msgstr "Kirjuta otsingutekst..."
 msgid "Case sensitive"
 msgstr "Tõstutundlik"
 
-#: chat-widget.cpp:543
+#: chat-widget.cpp:558
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
 msgstr "Sõnumi \"%1\" edastamine nurjus, sest kontakt on blokeeritud"
 
-#: chat-widget.cpp:547
+#: chat-widget.cpp:562
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
 msgstr "Sõnumi \"%1\" edastamine nurjus, sest kontakt ei ole võrgus"
 
-#: chat-widget.cpp:553
+#: chat-widget.cpp:568
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr "Sõnumi edastamine nurjus, sest kontakt on blokeeritud"
 
-#: chat-widget.cpp:556
+#: chat-widget.cpp:571
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr "Sõnumi edastamine nurjus, sest kontakt ei ole võrgus"
 
-#: chat-widget.cpp:563
+#: chat-widget.cpp:578
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
 msgstr "Sõnumi \"%1\" edastamine nurjus, sest kontakt ei ole kehtiv"
 
-#: chat-widget.cpp:567
+#: chat-widget.cpp:582
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr "Sõnumi edastamine nurjus, sest kontakt ei ole kehtiv"
 
-#: chat-widget.cpp:573
+#: chat-widget.cpp:588
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -93,52 +99,57 @@ msgid ""
 msgstr ""
 "Sõnumi \"%1\" edastamine nurjus, sest sul ei ole õigust selles toas kõnelda"
 
-#: chat-widget.cpp:577
+#: chat-widget.cpp:592
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
 msgstr "Sõnumi edastamine nurjus, sest sul ei ole õigust selles toas kõnelda"
 
-#: chat-widget.cpp:583
+#: chat-widget.cpp:598
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Sõnumi \"%1\" edastamine nurjus, sest see oli liiga pikk"
 
-#: chat-widget.cpp:587
+#: chat-widget.cpp:602
 msgid "Delivery of a message failed because it was too long"
 msgstr "Sõnumi edastamine nurjus, sest see oli liiga pikk"
 
-#: chat-widget.cpp:593
+#: chat-widget.cpp:608
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Sõnumi \"%1\" edastamine nurjus: %2"
 
-#: chat-widget.cpp:597
+#: chat-widget.cpp:612
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Sõnumi edastamine nurjus: %1"
 
-#: chat-widget.cpp:702
-msgid "You have sent a message"
-msgstr "Sa saatsid sõnumi"
-
-#: chat-widget.cpp:750
+#: chat-widget.cpp:697 chat-widget.cpp:791
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 lahkus vestlusest"
 
-#: chat-widget.cpp:793
-#, kde-format
+#: chat-widget.cpp:737
+#, fuzzy, kde-format
+#| msgid "You are now marked as %1"
+msgctxt "Your presence status"
 msgid "You are now marked as %1"
 msgstr "Sinu olek on nüüd %1"
 
-#: chat-widget.cpp:797
+#: chat-widget.cpp:741
+#, fuzzy, kde-format
+#| msgid "You are now marked as %1"
+msgctxt "Your presence status with status message"
+msgid "You are now marked as %1 - %2"
+msgstr "Sinu olek on nüüd %1"
+
+#: chat-widget.cpp:747
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 on %2"
 
-#: chat-widget.cpp:799
+#: chat-widget.cpp:749
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -146,27 +157,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 on %2 - %3"
 
-#: chat-widget.cpp:831
+#: chat-widget.cpp:777
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Sa kannad nüüd nime %1"
 
-#: chat-widget.cpp:839
+#: chat-widget.cpp:785
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 kannab nüüd nime %2"
 
-#: chat-widget.cpp:862
+#: chat-widget.cpp:804
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 on nüüd blokeeritud."
 
-#: chat-widget.cpp:864
+#: chat-widget.cpp:806
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 on nüüd blokeerimata."
 
-#: chat-widget.cpp:1047
+#: chat-widget.cpp:1008
 msgid "You are now offline"
 msgstr "Sinu olek on nüüd võrgust väljas"
 
@@ -199,6 +210,9 @@ msgstr "%1 saatis sulle sõnumi"
 #: notify-filter.cpp:89
 msgid "View"
 msgstr "Vaata"
+
+#~ msgid "You have sent a message"
+#~ msgstr "Sa saatsid sõnumi"
 
 #~ msgid "Show format options"
 #~ msgstr "Näita vorminduvalikuid"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-10 00:58+0000\n"
-"PO-Revision-Date: 2013-03-03 14:40+0100\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-09-24 09:50+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
@@ -25,44 +25,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: chat-window.cpp:134
+#: chat-window.cpp:136
 msgid "Close"
 msgstr "Sluiten"
 
-#: chat-window.cpp:135
+#: chat-window.cpp:137
 msgid "Detach Tab"
 msgstr "Tabblad losmaken"
 
-#: chat-window.cpp:136
+#: chat-window.cpp:138
 msgid "Move Tab Left"
 msgstr "Tabblad naar links verplaatsen"
 
-#: chat-window.cpp:137
+#: chat-window.cpp:139
 msgid "Move Tab Right"
 msgstr "Tabblad naar rechts verplaatsen"
 
-#: chat-window.cpp:647
+#: chat-window.cpp:677
 msgid "&Next Tab"
 msgstr "Volge&nde tabblad"
 
-#: chat-window.cpp:651
+#: chat-window.cpp:681
 msgid "&Previous Tab"
 msgstr "&Vorige tabblad"
 
-#: chat-window.cpp:655
+#: chat-window.cpp:685
 msgid "&Audio Call"
 msgstr "&Geluidsoproep"
 
-#: chat-window.cpp:656
+#: chat-window.cpp:686
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Start een geluidsoproep met deze contactpersoon"
 
-#: chat-window.cpp:659 chat-window.cpp:892
+#: chat-window.cpp:689 chat-window.cpp:943
 msgid "&Block Contact"
 msgstr "Contactpersoon &blokkeren"
 
-#: chat-window.cpp:661
+#: chat-window.cpp:691
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -71,89 +71,122 @@ msgstr ""
 "Blokkeren betekent dat deze contactpersoon u niet online zal zien en u "
 "krijgt van deze contactpersoon geen berichten"
 
-#: chat-window.cpp:664
+#: chat-window.cpp:694
 msgid "&Send File"
 msgstr "Be&stand verzenden"
 
-#: chat-window.cpp:665
+#: chat-window.cpp:695
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Stuur een bestand naar contactpersoon"
 
-#: chat-window.cpp:668
+#: chat-window.cpp:698
 msgid "&Invite to Chat"
 msgstr "U&itnodiging voor een chat"
 
-#: chat-window.cpp:669
+#: chat-window.cpp:699
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Nodig een andere contactpersoon uit om mee te doen met deze chat"
 
-#: chat-window.cpp:672
+#: chat-window.cpp:702
 msgid "&Video Call"
 msgstr "&Video-oproep"
 
-#: chat-window.cpp:673
+#: chat-window.cpp:703
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Start een video-oproep met deze contactpersoon"
 
-#: chat-window.cpp:676
+#: chat-window.cpp:706
 msgid "Share My &Desktop"
 msgstr "Mijn bureaublad &delen"
 
-#: chat-window.cpp:677
+#: chat-window.cpp:707
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr ""
 "Start een toepassing die toestaat dat deze contactpersoon uw bureaublad ziet"
 
-#: chat-window.cpp:688
+#: chat-window.cpp:710
+msgid "&Collaboratively edit a document"
+msgstr "&Gezamenlijk een document bewerken"
+
+#: chat-window.cpp:721
 msgid "Choose Spelling Language"
 msgstr "Taal voor spellingcontrole kiezen"
 
-#: chat-window.cpp:690
+#: chat-window.cpp:723
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Vorige gesprekken"
 
-#: chat-window.cpp:693
+#: chat-window.cpp:726
 msgid "Account Icon"
 msgstr "Pictogram voor account"
 
-#: chat-window.cpp:697
+#: chat-window.cpp:730
 msgid "&Clear View"
 msgstr "Weergave wissen"
 
-#: chat-window.cpp:698
+#: chat-window.cpp:731
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr "Alle berichten in het huidige chat-tabblad wissen"
 
-#: chat-window.cpp:704
+#: chat-window.cpp:737
 msgid "Send message"
 msgstr "Bericht verzenden"
 
-#: chat-window.cpp:815
+#: chat-window.cpp:770
+msgctxt "Toolbar icon tooltip"
+msgid "Edit a plain-text document with this contact in real-time"
+msgstr ""
+"Gezamenlijk en tegelijk een document in platte tekst bewerken met deze "
+"contactpersoon"
+
+#: chat-window.cpp:773
+msgctxt "Toolbar icon tooltip for a disabled action"
+msgid ""
+"<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
+"package installed to share documents</p>"
+msgstr ""
+"<p>Zowel u als uw contactpersoon moeten het pakket <i>kte-collaborative</i> "
+"geïnstalleerd hebben om documenten te delen</p>"
+
+#: chat-window.cpp:865
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "De te verzenden bestanden naar %1 kiezen"
 
-#: chat-window.cpp:848
-#, kde-format
-msgctxt "String prepended in window title, arg is contact's name"
-msgid "Typing... %1"
-msgstr "Bezig met typen... %1"
-
-#: chat-window.cpp:850
-#, kde-format
-msgctxt "String appended in window title, arg is contact's name"
-msgid "%1 has entered text"
-msgstr "%1 heeft tekst ingevoerd"
-
-#: chat-window.cpp:885
+#: chat-window.cpp:936
 msgid "&Unblock Contact"
 msgstr "Blokkering van contactpersoon &opheffen"
+
+#. i18n: ectx: Menu (actions)
+#: chatwindow.rc:12
+msgid "&Actions"
+msgstr "&Acties"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: chatwindow.rc:31
+msgid "Main Toolbar"
+msgstr "Hoofdwerkbalk"
+
+#. i18n: ectx: ToolBar (accountIconToolBar)
+#: chatwindow.rc:41
+msgid "Account Icon Toolbar"
+msgstr "Pictogrambalk voor account"
+
+#. i18n: ectx: ToolBar (languageToolBar)
+#: chatwindow.rc:46
+msgid "Language Toolbar"
+msgstr "Werkbalk voor taal"
+
+#. i18n: ectx: ToolBar (emoticonsToolBar)
+#: chatwindow.rc:51
+msgid "Smiley Toolbar"
+msgstr "Werkbalk voor smileys"
 
 #: emoticon-text-edit-action.cpp:49
 msgid "Add Smiley"
@@ -186,3 +219,11 @@ msgstr "Dominik Schmidt"
 #: main.cpp:47
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
+
+#~ msgctxt "String prepended in window title, arg is contact's name"
+#~ msgid "Typing... %1"
+#~ msgstr "Bezig met typen... %1"
+
+#~ msgctxt "String appended in window title, arg is contact's name"
+#~ msgid "%1 has entered text"
+#~ msgstr "%1 heeft tekst ingevoerd"

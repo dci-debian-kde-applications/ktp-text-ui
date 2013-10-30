@@ -2,20 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2012.
-# Balázs Úr <urbalazs@gmail.com>, 2012.
+# Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-17 11:18+0200\n"
-"PO-Revision-Date: 2012-08-09 10:43+0200\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-10-23 11:00+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "NAME OF TRANSLATORS"
@@ -34,9 +34,15 @@ msgstr ""
 "Nem sikerült betölteni érvényes témát. Bizonyosodjon meg róla, hogy előbb a "
 "csevegőablak beállítóprogramját futtatta. Most összeomlok."
 
-#: adium-theme-view.cpp:172
+#: adium-theme-view.cpp:182
 msgid "Missing required file Template.html - check your installation."
 msgstr "Hiányzó Template.html fájl - ellenőrizze a telepítést."
+
+#: adium-theme-view.cpp:618
+#, kde-format
+msgctxt "Header at top of conversation view. %1 is the time format"
+msgid "Conversation began %1"
+msgstr "Párbeszéd kezdődött: %1"
 
 #: chat-search-bar.cpp:39
 msgctxt "Next search result"
@@ -56,7 +62,7 @@ msgstr "Keresőszöveg…"
 msgid "Case sensitive"
 msgstr "Nagybetűérzékeny"
 
-#: chat-widget.cpp:543
+#: chat-widget.cpp:558
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
@@ -64,7 +70,7 @@ msgstr ""
 "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel a távoli partner "
 "blokkolva van"
 
-#: chat-widget.cpp:547
+#: chat-widget.cpp:562
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
@@ -72,18 +78,18 @@ msgstr ""
 "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel a távoli partner nem "
 "elérhető"
 
-#: chat-widget.cpp:553
+#: chat-widget.cpp:568
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr ""
 "Nem sikerült kézbesíteni egy üzenetet, mivel a távoli partner nem blokkolva "
 "van"
 
-#: chat-widget.cpp:556
+#: chat-widget.cpp:571
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr ""
 "Nem sikerült kézbesíteni egy üzenetet, mivel a távoli partner nem elérhető"
 
-#: chat-widget.cpp:563
+#: chat-widget.cpp:578
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
@@ -91,12 +97,12 @@ msgstr ""
 "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel a távoli partner "
 "érvénytelen"
 
-#: chat-widget.cpp:567
+#: chat-widget.cpp:582
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr ""
 "Nem sikerült kézbesíteni egy üzenetet, mivel a távoli partner érvénytelen"
 
-#: chat-widget.cpp:573
+#: chat-widget.cpp:588
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -105,7 +111,7 @@ msgstr ""
 "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel nincs joga beszélni ebben "
 "a szobában"
 
-#: chat-widget.cpp:577
+#: chat-widget.cpp:592
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
@@ -113,46 +119,49 @@ msgstr ""
 "Nem sikerült kézbesíteni egy üzenetet, mivel nincs joga beszélni ebben a "
 "szobában"
 
-#: chat-widget.cpp:583
+#: chat-widget.cpp:598
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Nem sikerült kézbesíteni a(z) „%1” üzenetet, mivel az túl hosszú"
 
-#: chat-widget.cpp:587
+#: chat-widget.cpp:602
 msgid "Delivery of a message failed because it was too long"
 msgstr "Nem sikerült kézbesíteni az üzenetet, mivel az túl hosszú"
 
-#: chat-widget.cpp:593
+#: chat-widget.cpp:608
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Nem sikerült kézbesíteni a(z) „%1” üzenetet: %2"
 
-#: chat-widget.cpp:597
+#: chat-widget.cpp:612
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Nem sikerült kézbesíteni az üzenetet: %1"
 
-#: chat-widget.cpp:702
-msgid "You have sent a message"
-msgstr "Üzenetet küldött"
-
-#: chat-widget.cpp:750
+#: chat-widget.cpp:697 chat-widget.cpp:791
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 elhagyta a csevegést"
 
-#: chat-widget.cpp:793
+#: chat-widget.cpp:737
 #, kde-format
+msgctxt "Your presence status"
 msgid "You are now marked as %1"
 msgstr "Ön most már így van megjelölve: %1"
 
-#: chat-widget.cpp:797
+#: chat-widget.cpp:741
+#, kde-format
+msgctxt "Your presence status with status message"
+msgid "You are now marked as %1 - %2"
+msgstr "Ön most már így van megjelölve: %1 - %2"
+
+#: chat-widget.cpp:747
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 %2"
 
-#: chat-widget.cpp:799
+#: chat-widget.cpp:749
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -160,27 +169,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 %2 - %3"
 
-#: chat-widget.cpp:831
+#: chat-widget.cpp:777
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Ön most már ezen a néven ismert: %1"
 
-#: chat-widget.cpp:839
+#: chat-widget.cpp:785
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 most már ezen a néven ismert: %2"
 
-#: chat-widget.cpp:862
+#: chat-widget.cpp:804
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 mostantól blokkolva van."
 
-#: chat-widget.cpp:864
+#: chat-widget.cpp:806
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 mostantól nincs blokkolva."
 
-#: chat-widget.cpp:1047
+#: chat-widget.cpp:1008
 msgid "You are now offline"
 msgstr "Ön most nincs kapcsolatban"
 
@@ -213,6 +222,9 @@ msgstr "%1 üzenetet küldött"
 #: notify-filter.cpp:89
 msgid "View"
 msgstr "Nézet"
+
+#~ msgid "You have sent a message"
+#~ msgstr "Üzenetet küldött"
 
 #~ msgid "Show format options"
 #~ msgstr "Formázási beállítások megjelenítése"

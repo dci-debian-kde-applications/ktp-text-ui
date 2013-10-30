@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-10 00:58+0000\n"
-"PO-Revision-Date: 2013-03-02 09:33+0200\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-09-24 15:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -26,44 +26,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: chat-window.cpp:134
+#: chat-window.cpp:136
 msgid "Close"
 msgstr "Закрити"
 
-#: chat-window.cpp:135
+#: chat-window.cpp:137
 msgid "Detach Tab"
 msgstr "Від’єднати вкладку"
 
-#: chat-window.cpp:136
+#: chat-window.cpp:138
 msgid "Move Tab Left"
 msgstr "Пересунути вкладку ліворуч"
 
-#: chat-window.cpp:137
+#: chat-window.cpp:139
 msgid "Move Tab Right"
 msgstr "Пересунути вкладку праворуч"
 
-#: chat-window.cpp:647
+#: chat-window.cpp:677
 msgid "&Next Tab"
 msgstr "&Наступна вкладка"
 
-#: chat-window.cpp:651
+#: chat-window.cpp:681
 msgid "&Previous Tab"
 msgstr "&Попередня вкладка"
 
-#: chat-window.cpp:655
+#: chat-window.cpp:685
 msgid "&Audio Call"
 msgstr "&Голосовий виклик"
 
-#: chat-window.cpp:656
+#: chat-window.cpp:686
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Розпочати спілкування з контактом за допомогою звукового зв’язку."
 
-#: chat-window.cpp:659 chat-window.cpp:892
+#: chat-window.cpp:689 chat-window.cpp:943
 msgid "&Block Contact"
 msgstr "&Заблокувати контакт"
 
-#: chat-window.cpp:661
+#: chat-window.cpp:691
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -72,90 +72,124 @@ msgstr ""
 "Блокування означає, що відповідна особа не зможе дізнаватися про те, коли ви "
 "у мережі, а також те, що ви не отримуватимете повідомлень від цієї особи."
 
-#: chat-window.cpp:664
+#: chat-window.cpp:694
 msgid "&Send File"
 msgstr "&Надіслати файли"
 
-#: chat-window.cpp:665
+#: chat-window.cpp:695
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Надіслати цьому контакту файл."
 
-#: chat-window.cpp:668
+#: chat-window.cpp:698
 msgid "&Invite to Chat"
 msgstr "&Запросити до спілкування"
 
-#: chat-window.cpp:669
+#: chat-window.cpp:699
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Запросити власника іншого запису контакту до цього обговорення."
 
-#: chat-window.cpp:672
+#: chat-window.cpp:702
 msgid "&Video Call"
 msgstr "&Відеовиклик"
 
-#: chat-window.cpp:673
+#: chat-window.cpp:703
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Розпочати спілкування з цим контактом за допомогою відеозв’язку."
 
-#: chat-window.cpp:676
+#: chat-window.cpp:706
 msgid "Share My &Desktop"
 msgstr "Оприлюднити мою с&тільницю"
 
-#: chat-window.cpp:677
+#: chat-window.cpp:707
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr ""
 "Запустити програму, за допомогою якої цей контакт зможе бачити те, що "
 "відбувається на вашій стільниці."
 
-#: chat-window.cpp:688
+#: chat-window.cpp:710
+msgid "&Collaboratively edit a document"
+msgstr "Спі&льне редагування документа"
+
+#: chat-window.cpp:721
 msgid "Choose Spelling Language"
 msgstr "Виберіть мову перевірки правопису"
 
-#: chat-window.cpp:690
+#: chat-window.cpp:723
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Попередні сеанси спілкування"
 
-#: chat-window.cpp:693
+#: chat-window.cpp:726
 msgid "Account Icon"
 msgstr "Піктограма облікового запису"
 
-#: chat-window.cpp:697
+#: chat-window.cpp:730
 msgid "&Clear View"
 msgstr "С&порожнити панель перегляду"
 
-#: chat-window.cpp:698
+#: chat-window.cpp:731
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr "Вилучити всі повідомлення з поточної вкладки спілкування"
 
-#: chat-window.cpp:704
+#: chat-window.cpp:737
 msgid "Send message"
 msgstr "Надіслати повідомлення"
 
-#: chat-window.cpp:815
+#: chat-window.cpp:770
+msgctxt "Toolbar icon tooltip"
+msgid "Edit a plain-text document with this contact in real-time"
+msgstr ""
+"Редагувати звичайний текстовий документ з цим контактом у режимі реального "
+"часу"
+
+#: chat-window.cpp:773
+msgctxt "Toolbar icon tooltip for a disabled action"
+msgid ""
+"<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
+"package installed to share documents</p>"
+msgstr ""
+"<p>Щоб ви могли спільно редагувати документи, у вашій операційній системі та "
+"операційній системі вашого контакту має бути встановлено пакунок <i>kte-"
+"collaborative</i>.</p>"
+
+#: chat-window.cpp:865
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Виберіть файли, які слід надіслати %1"
 
-#: chat-window.cpp:848
-#, kde-format
-msgctxt "String prepended in window title, arg is contact's name"
-msgid "Typing... %1"
-msgstr "Створення повідомлення… %1"
-
-#: chat-window.cpp:850
-#, kde-format
-msgctxt "String appended in window title, arg is contact's name"
-msgid "%1 has entered text"
-msgstr "%1 введено повідомлення"
-
-#: chat-window.cpp:885
+#: chat-window.cpp:936
 msgid "&Unblock Contact"
 msgstr "&&Розблокувати контакт"
+
+#. i18n: ectx: Menu (actions)
+#: chatwindow.rc:12
+msgid "&Actions"
+msgstr "&Дії"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: chatwindow.rc:31
+msgid "Main Toolbar"
+msgstr "Головна панель"
+
+#. i18n: ectx: ToolBar (accountIconToolBar)
+#: chatwindow.rc:41
+msgid "Account Icon Toolbar"
+msgstr "Панель піктограм облікових записів"
+
+#. i18n: ectx: ToolBar (languageToolBar)
+#: chatwindow.rc:46
+msgid "Language Toolbar"
+msgstr "Панель мов"
+
+#. i18n: ectx: ToolBar (emoticonsToolBar)
+#: chatwindow.rc:51
+msgid "Smiley Toolbar"
+msgstr "Панель емоційок"
 
 #: emoticon-text-edit-action.cpp:49
 msgid "Add Smiley"
@@ -189,6 +223,14 @@ msgstr "Dominik Schmidt"
 #: main.cpp:47
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
+
+#~ msgctxt "String prepended in window title, arg is contact's name"
+#~ msgid "Typing... %1"
+#~ msgstr "Створення повідомлення… %1"
+
+#~ msgctxt "String appended in window title, arg is contact's name"
+#~ msgid "%1 has entered text"
+#~ msgstr "%1 введено повідомлення"
 
 #~ msgid "Choose a file"
 #~ msgstr "Виберіть файл"

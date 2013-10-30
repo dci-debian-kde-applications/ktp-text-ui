@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_appearance\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-13 05:11+0000\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
 "PO-Revision-Date: 2013-04-08 17:26+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
@@ -21,12 +21,12 @@ msgstr ""
 "X-POT-Import-Date: 2012-12-01 22:21:04+0000\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: appearance-config.cpp:48
+#: appearance-config.cpp:49
 msgctxt "@title:tab"
 msgid "Normal Chat"
 msgstr "Tavallinen keskustelu"
 
-#: appearance-config.cpp:52
+#: appearance-config.cpp:53
 msgctxt "@title:tab"
 msgid "Group Chat"
 msgstr "Ryhmäkeskustelu"
