@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-adiumxtra-protocol-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-11-01 10:55+0100\n"
+"POT-Creation-Date: 2013-10-14 05:33+0000\n"
 "PO-Revision-Date: 2012-03-25 19:32+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -27,44 +27,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pejakm@gmail.com"
 
-#: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
+#: adiumxtra-protocol-handler.cpp:93 adiumxtra-protocol-handler.cpp:151
 msgid "Package type not recognized or not supported"
 msgstr "Тип пакета није препознат или није подржан"
 
-#: adiumxtra-protocol-handler.cpp:83 adiumxtra-protocol-handler.cpp:152
-#: chat-style-installer.cpp:153 emoticon-set-installer.cpp:126
+#: adiumxtra-protocol-handler.cpp:94 adiumxtra-protocol-handler.cpp:154
 msgid "OK"
 msgstr "У реду"
 
-#: chat-style-installer.cpp:123
+#: chat-style-installer.cpp:132
 #, kde-format
 msgid "Install Chatstyle %1"
 msgstr "Инсталирање стила ћаскања %1"
 
-#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+#: chat-style-installer.cpp:133 emoticon-set-installer.cpp:115
 msgid "Install"
 msgstr "Инсталирај"
 
-#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+#: chat-style-installer.cpp:133 emoticon-set-installer.cpp:115
 msgid "Cancel"
 msgstr "Одустани"
 
-#: chat-style-installer.cpp:146
+#: chat-style-installer.cpp:156
 #, kde-format
 msgid "Installed Chatstyle %1 successfully."
 msgstr "Стил ћаскања %1 успјешно инсталиран."
 
-#: chat-style-installer.cpp:150
+#: chat-style-installer.cpp:160
 #, kde-format
 msgid "Installation of Chatstyle %1 failed."
 msgstr "Инсталација стила ћаскања %1 није успјела."
 
-#: emoticon-set-installer.cpp:104
+#: emoticon-set-installer.cpp:114
 #, kde-format
 msgid "Install Emoticonset %1"
 msgstr "Инсталирање комплета емотикона %1"
 
-#: emoticon-set-installer.cpp:124
+#: emoticon-set-installer.cpp:135
 #, kde-format
 msgid "Installed Emoticonset %1 successfully."
 msgstr "Комплет емотикона %1 успјешно инсталиран."

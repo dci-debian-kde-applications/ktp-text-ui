@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-03-28 02:06+0600\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-09-25 03:42+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
 "Language: \n"
@@ -55,6 +55,21 @@ msgstr "Соңғы әңгіменің хаттамасы"
 #: behavior-config.ui:59
 msgid "Show last"
 msgstr "Соңғысын көрсету"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
+#: behavior-config.ui:85
+msgid "User Is Typing"
+msgstr "Пайдаланушы теріп жатыр"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
+#: behavior-config.ui:91
+msgid "Show me when others are typing"
+msgstr "Басқалар теріп жатқанын маған көрсету"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
+#: behavior-config.ui:98
+msgid "Show others when I am typing"
+msgstr "Мен теріп жатқанын басқаларға көрсету"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Соңғы назарда болған терезеде жаңа қойынды"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adiumxtra-protocol-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-11-01 10:55+0100\n"
+"POT-Creation-Date: 2013-10-14 05:33+0000\n"
 "PO-Revision-Date: 2012-03-22 11:32+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -21,44 +21,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com"
 
-#: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
+#: adiumxtra-protocol-handler.cpp:93 adiumxtra-protocol-handler.cpp:151
 msgid "Package type not recognized or not supported"
 msgstr "O tipo de pacote não é reconhecido ou suportado"
 
-#: adiumxtra-protocol-handler.cpp:83 adiumxtra-protocol-handler.cpp:152
-#: chat-style-installer.cpp:153 emoticon-set-installer.cpp:126
+#: adiumxtra-protocol-handler.cpp:94 adiumxtra-protocol-handler.cpp:154
 msgid "OK"
 msgstr "OK"
 
-#: chat-style-installer.cpp:123
+#: chat-style-installer.cpp:132
 #, kde-format
 msgid "Install Chatstyle %1"
 msgstr "Instalar o Estilo de Conversação %1"
 
-#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+#: chat-style-installer.cpp:133 emoticon-set-installer.cpp:115
 msgid "Install"
 msgstr "Instalar"
 
-#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+#: chat-style-installer.cpp:133 emoticon-set-installer.cpp:115
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: chat-style-installer.cpp:146
+#: chat-style-installer.cpp:156
 #, kde-format
 msgid "Installed Chatstyle %1 successfully."
 msgstr "O estilo de conversação %1 foi instalado com sucesso."
 
-#: chat-style-installer.cpp:150
+#: chat-style-installer.cpp:160
 #, kde-format
 msgid "Installation of Chatstyle %1 failed."
 msgstr "A instalação do estilo de conversação %1 foi mal-sucedida."
 
-#: emoticon-set-installer.cpp:104
+#: emoticon-set-installer.cpp:114
 #, kde-format
 msgid "Install Emoticonset %1"
 msgstr "Instalar o Conjunto de Ícones Emotivos %1"
 
-#: emoticon-set-installer.cpp:124
+#: emoticon-set-installer.cpp:135
 #, kde-format
 msgid "Installed Emoticonset %1 successfully."
 msgstr "O conjunto de ícones emotivos %1 foi instalado com sucesso."

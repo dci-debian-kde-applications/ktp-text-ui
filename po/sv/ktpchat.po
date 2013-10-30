@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhall <stefan.asserhall@comhem.se>, 2011, 2012.
+# Stefan Asserhall <stefan.asserhall@comhem.se>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-17 11:18+0200\n"
-"PO-Revision-Date: 2012-08-07 19:39+0200\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-09-24 19:14+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@comhem.se>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -33,9 +33,15 @@ msgstr ""
 "Misslyckades ladda ett giltigt tema. Installationen är felaktig. Kontrollera "
 "sökvägen till KDE. Kommer nu att krascha."
 
-#: adium-theme-view.cpp:172
+#: adium-theme-view.cpp:182
 msgid "Missing required file Template.html - check your installation."
 msgstr "Saknar nödvändig fil Template.html: kontrollera installationen."
+
+#: adium-theme-view.cpp:618
+#, kde-format
+msgctxt "Header at top of conversation view. %1 is the time format"
+msgid "Conversation began %1"
+msgstr "Konversation började %1"
 
 #: chat-search-bar.cpp:39
 msgctxt "Next search result"
@@ -55,7 +61,7 @@ msgstr "Infoga söktext..."
 msgid "Case sensitive"
 msgstr "Skiftlägeskänslig"
 
-#: chat-widget.cpp:543
+#: chat-widget.cpp:558
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
@@ -63,7 +69,7 @@ msgstr ""
 "Leverans av meddelandet \"%1\" misslyckades eftersom fjärrkontakten är "
 "blockerad"
 
-#: chat-widget.cpp:547
+#: chat-widget.cpp:562
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
@@ -71,17 +77,17 @@ msgstr ""
 "Leverans av meddelandet \"%1\" misslyckades eftersom fjärrkontakten är "
 "nerkopplad"
 
-#: chat-widget.cpp:553
+#: chat-widget.cpp:568
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr ""
 "Leverans av ett meddelande misslyckades eftersom fjärrkontakten är blockerad"
 
-#: chat-widget.cpp:556
+#: chat-widget.cpp:571
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr ""
 "Leverans av ett meddelande misslyckades eftersom fjärrkontakten är nerkopplad"
 
-#: chat-widget.cpp:563
+#: chat-widget.cpp:578
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
@@ -89,13 +95,13 @@ msgstr ""
 "Leverans av meddelandet \"%1\" misslyckades eftersom fjärrkontakten inte är "
 "giltig"
 
-#: chat-widget.cpp:567
+#: chat-widget.cpp:582
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr ""
 "Leverans av ett meddelande misslyckades eftersom fjärrkontakten inte är "
 "giltig"
 
-#: chat-widget.cpp:573
+#: chat-widget.cpp:588
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -104,7 +110,7 @@ msgstr ""
 "Leverans av meddelandet \"%1\" misslyckades eftersom du inte har rättighet "
 "att tala i detta rum"
 
-#: chat-widget.cpp:577
+#: chat-widget.cpp:592
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
@@ -112,46 +118,49 @@ msgstr ""
 "Leverans av ett meddelande misslyckades eftersom du inte har rättighet att "
 "tala i detta rum"
 
-#: chat-widget.cpp:583
+#: chat-widget.cpp:598
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Leverans av meddelandet \"%1\" misslyckades eftersom det är för långt"
 
-#: chat-widget.cpp:587
+#: chat-widget.cpp:602
 msgid "Delivery of a message failed because it was too long"
 msgstr "Leverans av ett meddelande misslyckades eftersom det är för långt"
 
-#: chat-widget.cpp:593
+#: chat-widget.cpp:608
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Leverans av meddelandet \"%1\" misslyckades: %2"
 
-#: chat-widget.cpp:597
+#: chat-widget.cpp:612
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Leverans av ett meddelande misslyckades: %1"
 
-#: chat-widget.cpp:702
-msgid "You have sent a message"
-msgstr "Du har skickat ett meddelande"
-
-#: chat-widget.cpp:750
+#: chat-widget.cpp:697 chat-widget.cpp:791
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 har lämnat chatten"
 
-#: chat-widget.cpp:793
+#: chat-widget.cpp:737
 #, kde-format
+msgctxt "Your presence status"
 msgid "You are now marked as %1"
 msgstr "Du anges nu som %1"
 
-#: chat-widget.cpp:797
+#: chat-widget.cpp:741
+#, kde-format
+msgctxt "Your presence status with status message"
+msgid "You are now marked as %1 - %2"
+msgstr "Du anges nu som %1 - %2"
+
+#: chat-widget.cpp:747
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 är %2"
 
-#: chat-widget.cpp:799
+#: chat-widget.cpp:749
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -159,27 +168,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 är %2 - %3"
 
-#: chat-widget.cpp:831
+#: chat-widget.cpp:777
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Du är nu känd som %1"
 
-#: chat-widget.cpp:839
+#: chat-widget.cpp:785
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 är nu känd som %2"
 
-#: chat-widget.cpp:862
+#: chat-widget.cpp:804
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 är nu blockerad"
 
-#: chat-widget.cpp:864
+#: chat-widget.cpp:806
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "Blockering är nu borttagen för %1"
 
-#: chat-widget.cpp:1047
+#: chat-widget.cpp:1008
 msgid "You are now offline"
 msgstr "Du är nu nerkopplad"
 
@@ -212,6 +221,9 @@ msgstr "%1 har skickat dig ett meddelande"
 #: notify-filter.cpp:89
 msgid "View"
 msgstr "Visa"
+
+#~ msgid "You have sent a message"
+#~ msgstr "Du har skickat ett meddelande"
 
 #~ msgid "Show format options"
 #~ msgstr "Visa formateringsalternativ"

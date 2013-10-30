@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-chat-window-config\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
 "PO-Revision-Date: 2011-05-09 19:00+0900\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -54,6 +54,21 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_p1)
 #: behavior-config.ui:59
 msgid "Show last"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
+#: behavior-config.ui:85
+msgid "User Is Typing"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
+#: behavior-config.ui:91
+msgid "Show me when others are typing"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
+#: behavior-config.ui:98
+msgid "Show others when I am typing"
 msgstr ""
 
 #~ msgid "Jabber"

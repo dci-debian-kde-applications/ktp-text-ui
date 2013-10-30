@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extragear-network/ktp-filters.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-30 05:41+0000\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
 "PO-Revision-Date: 2013-03-14 23:19+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -17,14 +17,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
+#. i18n: ectx: property (windowTitle), widget (QWidget, LatexConfig)
+#: latex/latex-config.ui:14
+msgid "LatexConfig"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: latex/latex-config.ui:20
+msgid "LaTeX header:"
+msgstr ""
+
+#. i18n: ectx: property (plainText), widget (QPlainTextEdit, kcfg_LatexHeader)
+#: latex/latex-config.ui:31
+msgid ""
+"\\documentclass{minimal}\n"
+"\\usepackage{color}\n"
+"\\pagestyle{empty}\n"
+"\\color{black}\n"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: latex/latex-config.ui:38
+msgid "LaTeX command line:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KLineEdit, kcfg_LatexCmd)
+#: latex/latex-config.ui:45
+msgid "latex -interaction=batchmode -halt-on-error"
+msgstr ""
+
 #: texttospeech/tts-filter.cpp:42
 msgid "KDE Instant Messaging"
 msgstr "KDE Στιγμιαία μηνύματα"
 
 #: texttospeech/tts-filter.cpp:63
 #, kde-format
-msgid "New message. %1"
-msgstr "Νέο μήνυμα. %1"
+msgctxt "Text to Speech - text message %1 is name, %2 is message"
+msgid "%1 says %2"
+msgstr ""
+
+#: texttospeech/tts-filter.cpp:66
+#, kde-format
+msgctxt "Text to Speech - text message %1 is name, %2 is message"
+msgid "%1 %2"
+msgstr ""
+
+#~ msgid "New message. %1"
+#~ msgstr "Νέο μήνυμα. %1"
 
 #~ msgid "Click to view in browser"
 #~ msgstr "Κλικ για προβολή στον περιηγητή ιστού"

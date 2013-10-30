@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-10 00:58+0000\n"
-"PO-Revision-Date: 2013-05-03 14:47+0200\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-09-03 10:48+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -26,44 +26,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org, tomas.chvatal@gmail.com"
 
-#: chat-window.cpp:134
+#: chat-window.cpp:136
 msgid "Close"
 msgstr "Zavřít"
 
-#: chat-window.cpp:135
+#: chat-window.cpp:137
 msgid "Detach Tab"
 msgstr "Vytrhnout kartu"
 
-#: chat-window.cpp:136
+#: chat-window.cpp:138
 msgid "Move Tab Left"
 msgstr "Přesunout kartu doleva"
 
-#: chat-window.cpp:137
+#: chat-window.cpp:139
 msgid "Move Tab Right"
 msgstr "Přesunout kartu doprava"
 
-#: chat-window.cpp:647
+#: chat-window.cpp:677
 msgid "&Next Tab"
 msgstr "&Následující karta"
 
-#: chat-window.cpp:651
+#: chat-window.cpp:681
 msgid "&Previous Tab"
 msgstr "&Předchozí karta"
 
-#: chat-window.cpp:655
+#: chat-window.cpp:685
 msgid "&Audio Call"
 msgstr "Hl&asový hovor"
 
-#: chat-window.cpp:656
+#: chat-window.cpp:686
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Zahájit zvukový hovor s kontaktem"
 
-#: chat-window.cpp:659 chat-window.cpp:892
+#: chat-window.cpp:689 chat-window.cpp:943
 msgid "&Block Contact"
 msgstr "&Blokovat kontakt"
 
-#: chat-window.cpp:661
+#: chat-window.cpp:691
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -72,88 +72,119 @@ msgstr ""
 "Blokování znamená, že vás kontakt neuvidí online a již od něj neobdržíte "
 "žádné další zprávy"
 
-#: chat-window.cpp:664
+#: chat-window.cpp:694
 msgid "&Send File"
 msgstr "&Poslat soubor"
 
-#: chat-window.cpp:665
+#: chat-window.cpp:695
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Zaslat soubor kontaktu"
 
-#: chat-window.cpp:668
+#: chat-window.cpp:698
 msgid "&Invite to Chat"
 msgstr "&Pozvat k rozhovoru"
 
-#: chat-window.cpp:669
+#: chat-window.cpp:699
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Pozvat další kontakt do rozhovoru"
 
-#: chat-window.cpp:672
+#: chat-window.cpp:702
 msgid "&Video Call"
 msgstr "&Video hovor"
 
-#: chat-window.cpp:673
+#: chat-window.cpp:703
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Zahájit video hovor s kontaktem"
 
-#: chat-window.cpp:676
+#: chat-window.cpp:706
 msgid "Share My &Desktop"
 msgstr "S&dílet plochu"
 
-#: chat-window.cpp:677
+#: chat-window.cpp:707
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr "Spustit aplikaci pro sdílení obrazu vaší pracovní plochy"
 
-#: chat-window.cpp:688
+#: chat-window.cpp:710
+msgid "&Collaboratively edit a document"
+msgstr "Společně upravit do&kument"
+
+#: chat-window.cpp:721
 msgid "Choose Spelling Language"
 msgstr "Zvolte jazyk kontroly pravopisu"
 
-#: chat-window.cpp:690
+#: chat-window.cpp:723
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Předchozí rozhovory"
 
-#: chat-window.cpp:693
+#: chat-window.cpp:726
 msgid "Account Icon"
 msgstr "Ikona účtu"
 
-#: chat-window.cpp:697
+#: chat-window.cpp:730
 msgid "&Clear View"
 msgstr "Vy&čistit pohled"
 
-#: chat-window.cpp:698
+#: chat-window.cpp:731
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr "Vyčistit všechny zprávy z aktuální záložky rozhovoru"
 
-#: chat-window.cpp:704
+#: chat-window.cpp:737
 msgid "Send message"
 msgstr "Poslat správu"
 
-#: chat-window.cpp:815
+#: chat-window.cpp:770
+msgctxt "Toolbar icon tooltip"
+msgid "Edit a plain-text document with this contact in real-time"
+msgstr "Upravovat s tímto kontaktem čistý text v reálném čase"
+
+#: chat-window.cpp:773
+msgctxt "Toolbar icon tooltip for a disabled action"
+msgid ""
+"<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
+"package installed to share documents</p>"
+msgstr ""
+"<p>Abyste mohli sdílet dokumenty, musíte mít vy i váš kontakt mít "
+"nainstalován balíček <i>kte-collaborative</i></p>"
+
+#: chat-window.cpp:865
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Vyberte soubory pro odeslání k %1"
 
-#: chat-window.cpp:848
-#, kde-format
-msgctxt "String prepended in window title, arg is contact's name"
-msgid "Typing... %1"
-msgstr "%1 právě píše"
-
-#: chat-window.cpp:850
-#, kde-format
-msgctxt "String appended in window title, arg is contact's name"
-msgid "%1 has entered text"
-msgstr "%1 něco napsal"
-
-#: chat-window.cpp:885
+#: chat-window.cpp:936
 msgid "&Unblock Contact"
 msgstr "&Odblokovat kontakt"
+
+#. i18n: ectx: Menu (actions)
+#: chatwindow.rc:12
+msgid "&Actions"
+msgstr "Č&innosti"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: chatwindow.rc:31
+msgid "Main Toolbar"
+msgstr "Hlavní nástrojová lišta"
+
+#. i18n: ectx: ToolBar (accountIconToolBar)
+#: chatwindow.rc:41
+msgid "Account Icon Toolbar"
+msgstr "Nástrojová lišta ikon účtu"
+
+#. i18n: ectx: ToolBar (languageToolBar)
+#: chatwindow.rc:46
+msgid "Language Toolbar"
+msgstr "Nástrojová lišta jazyků"
+
+#. i18n: ectx: ToolBar (emoticonsToolBar)
+#: chatwindow.rc:51
+msgid "Smiley Toolbar"
+msgstr "Nástrojová lišta emotikonů"
 
 #: emoticon-text-edit-action.cpp:49
 msgid "Add Smiley"

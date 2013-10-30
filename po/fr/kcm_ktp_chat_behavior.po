@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-chat-window-config\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
 "PO-Revision-Date: 2013-06-28 08:46+0200\n"
 "Last-Translator: xavier <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -61,6 +61,21 @@ msgstr "Revenir à la dernière conversation"
 #: behavior-config.ui:59
 msgid "Show last"
 msgstr "Afficher la dernière"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
+#: behavior-config.ui:85
+msgid "User Is Typing"
+msgstr "L'utilisateur effectue actuellement une saisie"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
+#: behavior-config.ui:91
+msgid "Show me when others are typing"
+msgstr "M'afficher la saisie des autres personnes"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
+#: behavior-config.ui:98
+msgid "Show others when I am typing"
+msgstr "Afficher les autres durant ma saisie"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Un nouvel onglet dans la dernière fenêtre ayant eu le focus"

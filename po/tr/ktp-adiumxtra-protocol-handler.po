@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-11-01 10:55+0100\n"
+"POT-Creation-Date: 2013-10-14 05:33+0000\n"
 "PO-Revision-Date: 2013-03-03 04:42+0100\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -25,44 +25,43 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "volkangezer@mail.com"
 
-#: adiumxtra-protocol-handler.cpp:82 adiumxtra-protocol-handler.cpp:146
+#: adiumxtra-protocol-handler.cpp:93 adiumxtra-protocol-handler.cpp:151
 msgid "Package type not recognized or not supported"
 msgstr "Paket türü tanınamadı veya desteklenmiyor"
 
-#: adiumxtra-protocol-handler.cpp:83 adiumxtra-protocol-handler.cpp:152
-#: chat-style-installer.cpp:153 emoticon-set-installer.cpp:126
+#: adiumxtra-protocol-handler.cpp:94 adiumxtra-protocol-handler.cpp:154
 msgid "OK"
 msgstr "Tamam"
 
-#: chat-style-installer.cpp:123
+#: chat-style-installer.cpp:132
 #, kde-format
 msgid "Install Chatstyle %1"
 msgstr "%1 Sohbet Biçemini Kur"
 
-#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+#: chat-style-installer.cpp:133 emoticon-set-installer.cpp:115
 msgid "Install"
 msgstr "Kur"
 
-#: chat-style-installer.cpp:124 emoticon-set-installer.cpp:105
+#: chat-style-installer.cpp:133 emoticon-set-installer.cpp:115
 msgid "Cancel"
 msgstr "İptal"
 
-#: chat-style-installer.cpp:146
+#: chat-style-installer.cpp:156
 #, kde-format
 msgid "Installed Chatstyle %1 successfully."
 msgstr "%1 Sohbet biçemi başarılı bir şekilde kuruldu."
 
-#: chat-style-installer.cpp:150
+#: chat-style-installer.cpp:160
 #, kde-format
 msgid "Installation of Chatstyle %1 failed."
 msgstr "%1 Sohbet biçemi kurulum işlemi başarısız oldu."
 
-#: emoticon-set-installer.cpp:104
+#: emoticon-set-installer.cpp:114
 #, kde-format
 msgid "Install Emoticonset %1"
 msgstr "%1 İfade Setini Kur"
 
-#: emoticon-set-installer.cpp:124
+#: emoticon-set-installer.cpp:135
 #, kde-format
 msgid "Installed Emoticonset %1 successfully."
 msgstr "%1 İfade seti başarıyla kuruldu."

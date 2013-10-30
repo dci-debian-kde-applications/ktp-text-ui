@@ -2,13 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Yuri Efremov <yur.arh@gmail.com>, 2012, 2013.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-02-14 19:11+0400\n"
-"Last-Translator: Yuri Efremov <yur.arh@gmail.com>\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-09-28 15:25+0400\n"
+"Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -62,6 +63,21 @@ msgstr "Журнал последних бесед"
 #: behavior-config.ui:59
 msgid "Show last"
 msgstr "Показывать последние"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
+#: behavior-config.ui:85
+msgid "User Is Typing"
+msgstr "Пользователь пишет сообщение"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
+#: behavior-config.ui:91
+msgid "Show me when others are typing"
+msgstr "Показывать мне, когда пишут другие"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
+#: behavior-config.ui:98
+msgid "Show others when I am typing"
+msgstr "Показывать другим, когда пишу я"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "В новой вкладке последнего активного окна"

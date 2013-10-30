@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-02-13 08:14-0200\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-09-25 08:58-0300\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
 "Language: pt_BR\n"
@@ -58,3 +58,18 @@ msgstr "Deslocamento das últimas conversas"
 #: behavior-config.ui:59
 msgid "Show last"
 msgstr "Mostrar última"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
+#: behavior-config.ui:85
+msgid "User Is Typing"
+msgstr "O usuário está digitando"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
+#: behavior-config.ui:91
+msgid "Show me when others are typing"
+msgstr "Mostrar para mim quando os outros estiverem digitando"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
+#: behavior-config.ui:98
+msgid "Show others when I am typing"
+msgstr "Mostrar para os outros quando eu estiver digitando"

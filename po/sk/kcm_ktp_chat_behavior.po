@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-02-14 09:22+0100\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-09-27 20:18+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
@@ -56,3 +56,18 @@ msgstr "Posun na posledné rozhovory"
 #: behavior-config.ui:59
 msgid "Show last"
 msgstr "Zobraziť posledné"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
+#: behavior-config.ui:85
+msgid "User Is Typing"
+msgstr "Používateľ píše"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
+#: behavior-config.ui:91
+msgid "Show me when others are typing"
+msgstr "Ukázať ma keď ostatní píšu"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
+#: behavior-config.ui:98
+msgid "Show others when I am typing"
+msgstr "Ukázať ostatných keď ja píšem"

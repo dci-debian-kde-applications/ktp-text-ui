@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-02-13 18:07+0100\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2013-10-15 18:27+0200\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -60,6 +60,21 @@ msgstr "Pomnjene vrstice zadnjega pogovora"
 #: behavior-config.ui:59
 msgid "Show last"
 msgstr "Prikaži zadnje"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
+#: behavior-config.ui:85
+msgid "User Is Typing"
+msgstr "Uporabnik tipka"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
+#: behavior-config.ui:91
+msgid "Show me when others are typing"
+msgstr "Pokaži, ko drugi tipkajo"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
+#: behavior-config.ui:98
+msgid "Show others when I am typing"
+msgstr "Pokaži drugim, da tipkam"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "novem zavihku v zadnjem oknu, ki je bilo v žarišču"
