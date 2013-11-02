@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 9),
  kdelibs5-dev (>= 4:4.6),
  libqtwebkit-dev,
  cmake (>= 2.8),
- libktpcommoninternalsprivate-dev (>= 0.6.3),
+ libktpcommoninternalsprivate-dev (>= 0.7.0),
  libtelepathy-logger-dev,
  libtelepathy-logger-qt4-dev (>= 0.5.60),
  libqjson-dev,
@@ -22,7 +22,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 Package: kde-telepathy-text-ui
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- kde-telepathy-data (>= 0.6.2)
+ kde-telepathy-data (>= 0.7.0)
 Recommends: kde-telepathy
 Replaces: libktpchat0
 Description: Telepathy text chat UI for the KDE Plasma Desktop

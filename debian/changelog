@@ -2,6 +2,7 @@ ktp-text-ui (0.7.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
   * Add libqjson-dev, x11proto-core-dev to Build-Depends.
+  * Bump ktp-common-internals and kde-telepath-data dependencies to 0.7.0
 
  -- Diane Trout <diane@ghic.org>  Tue, 29 Oct 2013 22:27:58 -0700
 
