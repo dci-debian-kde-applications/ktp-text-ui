@@ -1,0 +1,22 @@
+commit bfb273626f542b1826398e87a8099f8cf89a10a4
+Author: Rohan Garg <rohan@kde.org>
+Date:   Tue Oct 29 14:10:57 2013 +0100
+
+    Drop X11/Xproto.h, this seems to have been inherited from Kopete
+    
+    REVIEWED-BY: David Edmundson <david@davidedmundson.co.uk>
+
+diff --git a/filters/latex/latex-filter.cpp b/filters/latex/latex-filter.cpp
+index bb12d1b..c7122ff 100644
+--- a/filters/latex/latex-filter.cpp
++++ b/filters/latex/latex-filter.cpp
+@@ -32,9 +32,6 @@
+ #include <KStandardDirs>
+ #include <KProcess>
+ 
+-#ifndef Q_OS_WIN
+-#include <X11/Xproto.h>
+-#endif
+ LatexFilter::LatexFilter(QObject* parent, const QVariantList &)
+     : AbstractMessageFilter(parent)
+ {

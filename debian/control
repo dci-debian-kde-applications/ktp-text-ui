@@ -12,8 +12,7 @@ Build-Depends: debhelper (>= 9),
  libktpcommoninternalsprivate-dev (>= 0.7.0),
  libtelepathy-logger-dev,
  libtelepathy-logger-qt4-dev (>= 0.5.60),
- libqjson-dev,
- x11proto-core-dev,
+ libqjson-dev
 Standards-Version: 3.9.4
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-text-ui
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git

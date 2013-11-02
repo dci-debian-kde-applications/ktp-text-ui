@@ -1,1 +1,3 @@
 02_ktpchat_soversion.diff
+04_no_require_x11.patch
+
