@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@comhem.se>, 2013.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-09-24 19:13+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@comhem.se>\n"
+"POT-Creation-Date: 2013-07-25 01:34+0000\n"
+"PO-Revision-Date: 2013-07-25 11:45+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -71,3 +71,16 @@ msgstr "%1 %2"
 
 #~ msgid "Click to view in browser"
 #~ msgstr "Klicka för att visa i webbläsare"
+
+#~ msgid ""
+#~ "\\documentclass{standalone}\n"
+#~ "\\usepackage{color}\n"
+#~ "\\usepackage{amsmath,latexsym,amsfonts,amssymb,ulem}\n"
+#~ "\\usepackage{graphicx}\n"
+#~ "\\pagestyle{empty}\n"
+#~ msgstr ""
+#~ "\\documentclass{standalone}\n"
+#~ "\\usepackage{color}\n"
+#~ "\\usepackage{amsmath,latexsym,amsfonts,amssymb,ulem}\n"
+#~ "\\usepackage{graphicx}\n"
+#~ "\\pagestyle{empty}\n"

@@ -25,7 +25,6 @@
 #include "adium-theme-message-info.h"
 #include "adium-theme-status-info.h"
 #include "channel-contact-model.h"
-#include "logmanager.h"
 #include "notify-filter.h"
 #include "text-chat-config.h"
 
@@ -55,6 +54,7 @@
 #include <KTp/presence.h>
 #include <KTp/actions.h>
 #include <KTp/message-processor.h>
+#include <KTp/Logger/scrollback-manager.h>
 
 #include <sonnet/speller.h>
 
@@ -79,7 +79,7 @@ public:
     Tp::AccountPtr account;
     Ui::ChatWidget ui;
     ChannelContactModel *contactModel;
-    LogManager *logManager;
+    ScrollbackManager *logManager;
     QTimer *pausedStateTimer;
     bool logsLoaded;
     uint exchangedMessagesCount;
@@ -104,7 +104,7 @@ ChatWidget::ChatWidget(const Tp::TextChannelPtr & channel, const Tp::AccountPtr 
 {
     d->channel = channel;
     d->account = account;
-    d->logManager = new LogManager(this);
+    d->logManager = new ScrollbackManager(this);
     connect(d->logManager, SIGNAL(fetched(QList<KTp::Message>)), SLOT(onHistoryFetched(QList<KTp::Message>)));
 
     connect(d->account.data(), SIGNAL(currentPresenceChanged(Tp::Presence)),
@@ -133,7 +133,10 @@ ChatWidget::ChatWidget(const Tp::TextChannelPtr & channel, const Tp::AccountPtr 
     QSortFilterProxyModel *sortModel = new QSortFilterProxyModel(this);
     sortModel->setSourceModel(d->contactModel);
     sortModel->setSortRole(Qt::DisplayRole);
+    sortModel->setSortCaseSensitivity(Qt::CaseInsensitive);
+    sortModel->setSortLocaleAware(true);
     sortModel->setDynamicSortFilter(true);
+    sortModel->sort(0);
 
     d->ui.contactsView->setModel(sortModel);
 
@@ -155,8 +158,10 @@ ChatWidget::ChatWidget(const Tp::TextChannelPtr & channel, const Tp::AccountPtr 
     // and our handler checks state of the timer created above.
     loadSpellCheckingOption();
 
-    // make the sendMessageBox a focus proxy for the chatview
+    // make clicking in the main HTML area put focus in the input text box
     d->ui.chatArea->setFocusProxy(d->ui.sendMessageBox);
+    //make activating the tab select the text area
+    setFocusProxy(d->ui.sendMessageBox);
 
     connect(d->ui.sendMessageBox, SIGNAL(returnKeyPressed()), SLOT(sendMessage()));
 
@@ -220,11 +225,8 @@ KIcon ChatWidget::icon() const
         //normal chat - self and one other person.
         if (!d->isGroupChat) {
             //find the other contact which isn't self.
-            Q_FOREACH(const Tp::ContactPtr & contact, d->channel->groupContacts()) {
-                if (contact != d->channel->groupSelfContact()) {
-                    return KTp::Presence(contact->presence()).icon();
-                }
-            }
+            Tp::ContactPtr otherContact = d->channel->targetContact();
+            return KTp::Presence(otherContact->presence()).icon();
         }
         else {
             //group chat
@@ -931,6 +933,8 @@ void ChatWidget::clear()
 {
     // Don't reload logs when re-initializing */
     d->logsLoaded = true;
+    d->exchangedMessagesCount = 0;
+    d->ui.sendMessageBox->clearHistory();
     initChatArea();
 }
 

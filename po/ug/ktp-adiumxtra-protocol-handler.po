@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adiumxtra-protocol-handler\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-10-14 05:33+0000\n"
-"PO-Revision-Date: 2011-05-09 19:00+0900\n"
-"Last-Translator: Sahran <sahran@live.com>\n"
+"POT-Creation-Date: 2013-10-14 01:38+0000\n"
+"PO-Revision-Date: 2013-09-08 07:04+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -40,11 +40,11 @@ msgstr ""
 
 #: chat-style-installer.cpp:133 emoticon-set-installer.cpp:115
 msgid "Install"
-msgstr "ئورنىتىش"
+msgstr "ئورنات"
 
 #: chat-style-installer.cpp:133 emoticon-set-installer.cpp:115
 msgid "Cancel"
-msgstr "ئەمەلدىن قالدۇرۇش"
+msgstr "ئەمەلدىن قالدۇر"
 
 #: chat-style-installer.cpp:156
 #, kde-format
@@ -72,15 +72,15 @@ msgstr ""
 
 #: main.cpp:33
 msgid "Dominik Schmidt"
-msgstr ""
+msgstr "Dominik Schmidt"
 
 #: main.cpp:33 main.cpp:34
 msgid "Developer"
-msgstr ""
+msgstr "ئىجادىيەتچى"
 
 #: main.cpp:34
 msgid "Daniele E. Domenichelli"
-msgstr ""
+msgstr "Daniele E. Domenichelli"
 
 #: main.cpp:39
 msgid "Adium package to install"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-09-24 15:46+0300\n"
+"POT-Creation-Date: 2013-12-17 01:27+0000\n"
+"PO-Revision-Date: 2013-05-21 07:16+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -65,7 +65,7 @@ msgstr "Вкажіть рядок для пошуку…"
 msgid "Case sensitive"
 msgstr "З врахуванням регістру"
 
-#: chat-widget.cpp:558
+#: chat-widget.cpp:560
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
@@ -73,7 +73,7 @@ msgstr ""
 "Не вдалося доправити повідомлення «%1», оскільки віддалений контакт "
 "заблоковано"
 
-#: chat-widget.cpp:562
+#: chat-widget.cpp:564
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
@@ -81,18 +81,18 @@ msgstr ""
 "Не вдалося доправити повідомлення «%1», оскільки віддалений контакт "
 "перебуває поза мережею"
 
-#: chat-widget.cpp:568
+#: chat-widget.cpp:570
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr ""
 "Не вдалося доправити повідомлення, оскільки віддалений контакт заблоковано"
 
-#: chat-widget.cpp:571
+#: chat-widget.cpp:573
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr ""
 "Не вдалося доправити повідомлення, оскільки віддалений контакт перебуває "
 "поза мережею"
 
-#: chat-widget.cpp:578
+#: chat-widget.cpp:580
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
@@ -100,12 +100,12 @@ msgstr ""
 "Не вдалося доправити повідомлення «%1», оскільки віддалений контакт не є "
 "коректним"
 
-#: chat-widget.cpp:582
+#: chat-widget.cpp:584
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr ""
 "Не вдалося доправити повідомлення, оскільки віддалений контакт не є коректним"
 
-#: chat-widget.cpp:588
+#: chat-widget.cpp:590
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -114,7 +114,7 @@ msgstr ""
 "Не вдалося доправити повідомлення «%1», оскільки у вас немає прав доступу до "
 "спілкування у цій кімнаті"
 
-#: chat-widget.cpp:592
+#: chat-widget.cpp:594
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
@@ -122,52 +122,52 @@ msgstr ""
 "Не вдалося доправити повідомлення, оскільки у вас немає прав доступу до "
 "спілкування у цій кімнаті"
 
-#: chat-widget.cpp:598
+#: chat-widget.cpp:600
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr ""
 "Не вдалося доправити повідомлення «%1», оскільки це повідомлення є занадто "
 "довгим"
 
-#: chat-widget.cpp:602
+#: chat-widget.cpp:604
 msgid "Delivery of a message failed because it was too long"
 msgstr ""
 "Не вдалося доправити повідомлення, оскільки це повідомлення є занадто довгим"
 
-#: chat-widget.cpp:608
+#: chat-widget.cpp:610
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Не вдалося доправити повідомлення «%1»: %2"
 
-#: chat-widget.cpp:612
+#: chat-widget.cpp:614
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Не вдалося доправити повідомлення: %1"
 
-#: chat-widget.cpp:697 chat-widget.cpp:791
+#: chat-widget.cpp:699 chat-widget.cpp:793
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 полишив балачку."
 
-#: chat-widget.cpp:737
+#: chat-widget.cpp:739
 #, kde-format
 msgctxt "Your presence status"
 msgid "You are now marked as %1"
 msgstr "Вас тепер позначено міткою %1"
 
-#: chat-widget.cpp:741
+#: chat-widget.cpp:743
 #, kde-format
 msgctxt "Your presence status with status message"
 msgid "You are now marked as %1 - %2"
 msgstr "Вас тепер позначено міткою %1 — %2"
 
-#: chat-widget.cpp:747
+#: chat-widget.cpp:749
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 %2"
 
-#: chat-widget.cpp:749
+#: chat-widget.cpp:751
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -175,27 +175,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 %2 — %3"
 
-#: chat-widget.cpp:777
+#: chat-widget.cpp:779
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Тепер вас показано як %1."
 
-#: chat-widget.cpp:785
+#: chat-widget.cpp:787
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 тепер відомий як %2"
 
-#: chat-widget.cpp:804
+#: chat-widget.cpp:806
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 заблоковано."
 
-#: chat-widget.cpp:806
+#: chat-widget.cpp:808
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 розблоковано."
 
-#: chat-widget.cpp:1008
+#: chat-widget.cpp:1012
 msgid "You are now offline"
 msgstr "Ви перейшли до роботи у автономному режимі"
 
@@ -220,12 +220,12 @@ msgstr "Відтворити"
 msgid "Save as"
 msgstr "Зберегти як"
 
-#: notify-filter.cpp:76
+#: notify-filter.cpp:82
 #, kde-format
 msgid "%1 has sent you a message"
 msgstr "Вам надіслано повідомлення від %1"
 
-#: notify-filter.cpp:89
+#: notify-filter.cpp:95
 msgid "View"
 msgstr "Переглянути"
 

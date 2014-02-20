@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"POT-Creation-Date: 2013-12-21 01:25+0000\n"
 "PO-Revision-Date: 2013-09-25 03:42+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -24,6 +24,11 @@ msgctxt ""
 msgid " message"
 msgid_plural " messages"
 msgstr[0] " хабарлама"
+
+#: behavior-config.cpp:60
+msgctxt "Placeholder for contact name in completion suffix selector"
+msgid "Nickname"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -70,6 +75,21 @@ msgstr "Басқалар теріп жатқанын маған көрсету"
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
 msgstr "Мен теріп жатқанын басқаларға көрсету"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
+#: behavior-config.ui:108
+msgid "Nickname Completion"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: behavior-config.ui:117
+msgid "Complete nicknames to"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: behavior-config.ui:137
+msgid "when I press Tab"
+msgstr ""
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Соңғы назарда болған терезеде жаңа қойынды"

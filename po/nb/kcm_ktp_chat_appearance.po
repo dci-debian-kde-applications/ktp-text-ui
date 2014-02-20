@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-13 05:11+0000\n"
+"POT-Creation-Date: 2013-09-21 01:34+0000\n"
 "PO-Revision-Date: 2013-09-17 14:19+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: appearance-config.cpp:48
+#: appearance-config.cpp:49
 msgctxt "@title:tab"
 msgid "Normal Chat"
 msgstr "Normal prat"
 
-#: appearance-config.cpp:52
+#: appearance-config.cpp:53
 msgctxt "@title:tab"
 msgid "Group Chat"
 msgstr "Gruppeprat"

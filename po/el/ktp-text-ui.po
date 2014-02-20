@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-03-07 22:12+0200\n"
+"POT-Creation-Date: 2013-12-31 01:26+0000\n"
+"PO-Revision-Date: 2013-04-27 19:41+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -27,44 +27,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sstavra@gmail.com"
 
-#: chat-window.cpp:136
+#: chat-window.cpp:140
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: chat-window.cpp:137
+#: chat-window.cpp:141
 msgid "Detach Tab"
 msgstr "Αποκόλληση καρτέλας"
 
-#: chat-window.cpp:138
+#: chat-window.cpp:142
 msgid "Move Tab Left"
 msgstr "Μετακίνηση καρτέλας αριστερά"
 
-#: chat-window.cpp:139
+#: chat-window.cpp:143
 msgid "Move Tab Right"
 msgstr "Μετακίνηση καρτέλας δεξιά"
 
-#: chat-window.cpp:677
+#: chat-window.cpp:678
 msgid "&Next Tab"
 msgstr "Επόμε&νη καρτέλα"
 
-#: chat-window.cpp:681
+#: chat-window.cpp:682
 msgid "&Previous Tab"
 msgstr "&Προηγούμενη καρτέλα"
 
-#: chat-window.cpp:685
+#: chat-window.cpp:686
 msgid "&Audio Call"
 msgstr "&Ηχητική κλήση"
 
-#: chat-window.cpp:686
+#: chat-window.cpp:687
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Έναρξη φωνητικής κλήσης με αυτήν την επαφή"
 
-#: chat-window.cpp:689 chat-window.cpp:943
+#: chat-window.cpp:690 chat-window.cpp:944
 msgid "&Block Contact"
 msgstr "&Φραγή επαφής"
 
-#: chat-window.cpp:691
+#: chat-window.cpp:692
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -73,121 +73,119 @@ msgstr ""
 "Φραγή σημαίνει ότι η επαφή αυτή δεν θα σας βλέπει σε σύνδεση και δεν θα "
 "λαμβάνετε μηνύματα από αυτήν την επαφή"
 
-#: chat-window.cpp:694
+#: chat-window.cpp:695
 msgid "&Send File"
 msgstr "Απο&στολή αρχείου"
 
-#: chat-window.cpp:695
+#: chat-window.cpp:696
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Αποστολή αρχείου στην επαφή αυτή"
 
-#: chat-window.cpp:698
+#: chat-window.cpp:699
 msgid "&Invite to Chat"
 msgstr "Πρόσκληση σε συνομ&ιλία"
 
-#: chat-window.cpp:699
+#: chat-window.cpp:700
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Πρόσκληση σε άλλην επαφή για συμμετοχή σε αυτήν τη συνομιλία"
 
-#: chat-window.cpp:702
+#: chat-window.cpp:703
 msgid "&Video Call"
 msgstr "&Οπτική κλήση"
 
-#: chat-window.cpp:703
+#: chat-window.cpp:704
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Έναρξη οπτική κλήσης με αυτήν την επαφή"
 
-#: chat-window.cpp:706
+#: chat-window.cpp:707
 msgid "Share My &Desktop"
 msgstr "Κοινή χρήση της επιφάνειας εργασίας μου"
 
-#: chat-window.cpp:707
+#: chat-window.cpp:708
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr ""
 "Εκκίνηση εφαρμογής που επιτρέπει στην επαφή αυτή να δει την επιφάνεια "
 "εργασίας σας"
 
-#: chat-window.cpp:710
+#: chat-window.cpp:711
 msgid "&Collaboratively edit a document"
 msgstr ""
 
-#: chat-window.cpp:721
+#: chat-window.cpp:722
 msgid "Choose Spelling Language"
 msgstr "Επιλογή γλώσσας για ορθογραφικά"
 
-#: chat-window.cpp:723
+#: chat-window.cpp:724
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Προηγούμενες συζητήσεις"
 
-#: chat-window.cpp:726
+#: chat-window.cpp:727
 msgid "Account Icon"
 msgstr "Εικονίδιο λογαριασμού"
 
-#: chat-window.cpp:730
+#: chat-window.cpp:731
 msgid "&Clear View"
 msgstr "&Καθαρισμός προβολής"
 
-#: chat-window.cpp:731
+#: chat-window.cpp:732
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr "Καθαρισμός όλων των μηνυμάτων από την τρέχουσα καρτέλα συνομιλίας"
 
-#: chat-window.cpp:737
+#: chat-window.cpp:738
 msgid "Send message"
 msgstr "Αποστολή μηνύματος"
 
-#: chat-window.cpp:770
+#: chat-window.cpp:771
 msgctxt "Toolbar icon tooltip"
 msgid "Edit a plain-text document with this contact in real-time"
 msgstr ""
 
-#: chat-window.cpp:773
+#: chat-window.cpp:774
 msgctxt "Toolbar icon tooltip for a disabled action"
 msgid ""
 "<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
 "package installed to share documents</p>"
 msgstr ""
 
-#: chat-window.cpp:865
+#: chat-window.cpp:866
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Επιλογή αρχείων για αποστολή στο %1"
 
-#: chat-window.cpp:936
+#: chat-window.cpp:937
 msgid "&Unblock Contact"
 msgstr "&Αναίρεση φραγής επαφής"
 
 #. i18n: ectx: Menu (actions)
 #: chatwindow.rc:12
 msgid "&Actions"
-msgstr ""
+msgstr "&Ενέργειες"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: chatwindow.rc:31
 msgid "Main Toolbar"
-msgstr ""
+msgstr "Κύρια γραμμή εργαλείων"
 
 #. i18n: ectx: ToolBar (accountIconToolBar)
 #: chatwindow.rc:41
-#, fuzzy
-#| msgid "Account Icon"
 msgid "Account Icon Toolbar"
-msgstr "Εικονίδιο λογαριασμού"
+msgstr "Γραμμή εργαλείων eικονιδίου λογαριασμού"
 
 #. i18n: ectx: ToolBar (languageToolBar)
 #: chatwindow.rc:46
 msgid "Language Toolbar"
-msgstr ""
+msgstr "Γραμμή εργαλείων γλώσσας"
 
 #. i18n: ectx: ToolBar (emoticonsToolBar)
 #: chatwindow.rc:51
 msgid "Smiley Toolbar"
-msgstr ""
+msgstr "Γραμμή εργαλείων smiley"
 
 #: emoticon-text-edit-action.cpp:49
 msgid "Add Smiley"
@@ -201,23 +199,23 @@ msgstr "Αναζήτηση στις επαφές..."
 msgid "Select Contacts to Invite to Group Chat"
 msgstr "Επιλέγει επαφές για πρόσκληση σε ομαδική συνομιλία"
 
-#: main.cpp:43
+#: main.cpp:42
 msgid "Telepathy Text Ui"
 msgstr "Telepathy Text Ui"
 
-#: main.cpp:45
+#: main.cpp:44
 msgid "David Edmundson"
 msgstr "David Edmundson"
 
-#: main.cpp:45 main.cpp:46 main.cpp:47
+#: main.cpp:44 main.cpp:45 main.cpp:46
 msgid "Developer"
 msgstr "Προγραμματιστής"
 
-#: main.cpp:46
+#: main.cpp:45
 msgid "Dominik Schmidt"
 msgstr "Dominik Schmidt"
 
-#: main.cpp:47
+#: main.cpp:46
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
 

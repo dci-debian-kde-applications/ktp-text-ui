@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-01-10 17:49+0200\n"
+"POT-Creation-Date: 2013-12-17 01:27+0000\n"
+"PO-Revision-Date: 2013-05-25 09:50+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -42,7 +42,7 @@ msgstr "Lipsește fișierul necesar Template.html – verificați-vă instalarea
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
-msgstr ""
+msgstr "Conversație începută %1"
 
 #: chat-search-bar.cpp:39
 msgctxt "Next search result"
@@ -62,14 +62,14 @@ msgstr "Introduceți textul de căutat..."
 msgid "Case sensitive"
 msgstr "Sensibil la registru"
 
-#: chat-widget.cpp:558
+#: chat-widget.cpp:560
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
 msgstr ""
 "Livrarea mesajului „%1” a eșuat din cauză că contactul distant este blocat"
 
-#: chat-widget.cpp:562
+#: chat-widget.cpp:564
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
@@ -77,28 +77,28 @@ msgstr ""
 "Livrarea mesajului „%1” a eșuat din cauză că contactul distant este "
 "deconectat"
 
-#: chat-widget.cpp:568
+#: chat-widget.cpp:570
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr "Livrarea unui mesaj a eșuat din cauză că contactul distant este blocat"
 
-#: chat-widget.cpp:571
+#: chat-widget.cpp:573
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr ""
 "Livrarea unui mesaj a eșuat din cauză că contactul distant este deconectat"
 
-#: chat-widget.cpp:578
+#: chat-widget.cpp:580
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
 msgstr ""
 "Livrarea mesajului „%1” a eșuat din cauză că contactul distant nu este valid"
 
-#: chat-widget.cpp:582
+#: chat-widget.cpp:584
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr ""
 "Livrarea unui mesaj a eșuat din cauză că contactul distant nu este valid"
 
-#: chat-widget.cpp:588
+#: chat-widget.cpp:590
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -107,7 +107,7 @@ msgstr ""
 "Livrarea mesajului „%1” a eșuat din cauză că nu aveți permisiunea să vorbiți "
 "în această cameră"
 
-#: chat-widget.cpp:592
+#: chat-widget.cpp:594
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
@@ -115,51 +115,49 @@ msgstr ""
 "Livrarea unui mesaj a eșuat din cauză că nu aveți permisiunea să vorbiți în "
 "această cameră"
 
-#: chat-widget.cpp:598
+#: chat-widget.cpp:600
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Livrarea mesajului „%1” a eșuat din cauză că era prea lung"
 
-#: chat-widget.cpp:602
+#: chat-widget.cpp:604
 msgid "Delivery of a message failed because it was too long"
 msgstr "Livrarea unui mesaj a eșuat din cauză că era prea lung"
 
-#: chat-widget.cpp:608
+#: chat-widget.cpp:610
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Livrarea mesajului „%1” a eșuat: %2"
 
-#: chat-widget.cpp:612
+#: chat-widget.cpp:614
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Livrarea unui mesaj a eșuat: %1"
 
-#: chat-widget.cpp:697 chat-widget.cpp:791
+#: chat-widget.cpp:699 chat-widget.cpp:793
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 a părăsit discuția"
 
-#: chat-widget.cpp:737
-#, fuzzy, kde-format
-#| msgid "You are now marked as %1"
+#: chat-widget.cpp:739
+#, kde-format
 msgctxt "Your presence status"
 msgid "You are now marked as %1"
 msgstr "Sînteți marcat acum ca %1"
 
-#: chat-widget.cpp:741
-#, fuzzy, kde-format
-#| msgid "You are now marked as %1"
+#: chat-widget.cpp:743
+#, kde-format
 msgctxt "Your presence status with status message"
 msgid "You are now marked as %1 - %2"
-msgstr "Sînteți marcat acum ca %1"
+msgstr "Sînteți marcat acum ca %1 - %2"
 
-#: chat-widget.cpp:747
+#: chat-widget.cpp:749
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 este %2"
 
-#: chat-widget.cpp:749
+#: chat-widget.cpp:751
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -167,27 +165,27 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 este %2 - %3"
 
-#: chat-widget.cpp:777
+#: chat-widget.cpp:779
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Sînteți cunoscut acum ca %1"
 
-#: chat-widget.cpp:785
+#: chat-widget.cpp:787
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 este cunoscut acum ca %2"
 
-#: chat-widget.cpp:804
+#: chat-widget.cpp:806
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 este blocat acum."
 
-#: chat-widget.cpp:806
+#: chat-widget.cpp:808
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "%1 este deblocat acum."
 
-#: chat-widget.cpp:1008
+#: chat-widget.cpp:1012
 msgid "You are now offline"
 msgstr "Sînteți deconectat acum"
 
@@ -212,12 +210,12 @@ msgstr "Redă"
 msgid "Save as"
 msgstr "Salvează ca"
 
-#: notify-filter.cpp:76
+#: notify-filter.cpp:82
 #, kde-format
 msgid "%1 has sent you a message"
 msgstr "%1 v-a trimis un mesaj"
 
-#: notify-filter.cpp:89
+#: notify-filter.cpp:95
 msgid "View"
 msgstr "Vizualizare"
 

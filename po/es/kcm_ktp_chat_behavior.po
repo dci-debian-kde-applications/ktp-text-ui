@@ -3,14 +3,13 @@
 #
 # Kira J. Fernández <kirajfdez@gmail.com>, 2011.
 # Raul Gonzalez <raulgf83@gmail.com>, 2012, 2013.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-10-01 16:44+0200\n"
-"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"POT-Creation-Date: 2013-12-21 01:25+0000\n"
+"PO-Revision-Date: 2013-12-23 21:34+0100\n"
+"Last-Translator: Raul Gonzalez <raulgf83@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -27,6 +26,11 @@ msgid " message"
 msgid_plural " messages"
 msgstr[0] " mensaje"
 msgstr[1] " mensajes"
+
+#: behavior-config.cpp:60
+msgctxt "Placeholder for contact name in completion suffix selector"
+msgid "Nickname"
+msgstr "Apodo"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -73,6 +77,21 @@ msgstr "Mostrarme cuando los demás están escribiendo"
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
 msgstr "Mostrar a los demás cuando estoy escribiendo"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
+#: behavior-config.ui:108
+msgid "Nickname Completion"
+msgstr "Completado de apodo"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: behavior-config.ui:117
+msgid "Complete nicknames to"
+msgstr "Completar los apodos"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: behavior-config.ui:137
+msgid "when I press Tab"
+msgstr "al pulsar el tabulador"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Una pestaña nueva en la última ventana activada"
