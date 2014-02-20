@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-09-24 15:45+0300\n"
+"POT-Creation-Date: 2013-12-21 01:25+0000\n"
+"PO-Revision-Date: 2013-12-21 10:42+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -28,6 +28,11 @@ msgstr[0] " повідомлення"
 msgstr[1] " повідомлення"
 msgstr[2] " повідомлень"
 msgstr[3] " повідомлення"
+
+#: behavior-config.cpp:60
+msgctxt "Placeholder for contact name in completion suffix selector"
+msgid "Nickname"
+msgstr "Псевдонім"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -74,6 +79,21 @@ msgstr "Показувати сповіщення щодо введення по
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
 msgstr "Показувати іншим сповіщення про введення повідомлення вами"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
+#: behavior-config.ui:108
+msgid "Nickname Completion"
+msgstr "Завершення псевдонімів"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: behavior-config.ui:117
+msgid "Complete nicknames to"
+msgstr "Доповнювати псевдоніми до"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: behavior-config.ui:137
+msgid "when I press Tab"
+msgstr ", якщо натиснуто клавішу Tab"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "новій вкладці останнього активного вікна"

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-filters\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-03-10 14:32+0100\n"
+"POT-Creation-Date: 2013-07-25 01:34+0000\n"
+"PO-Revision-Date: 2013-07-27 19:52+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
@@ -21,13 +21,14 @@ msgstr ""
 #. i18n: ectx: property (windowTitle), widget (QWidget, LatexConfig)
 #: latex/latex-config.ui:14
 msgid "LatexConfig"
-msgstr ""
+msgstr "Постава латеха"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: latex/latex-config.ui:20
 msgid "LaTeX header:"
-msgstr ""
+msgstr "Латех заглавље:"
 
+# literal-segment: .*
 #. i18n: ectx: property (plainText), widget (QPlainTextEdit, kcfg_LatexHeader)
 #: latex/latex-config.ui:31
 msgid ""
@@ -36,16 +37,21 @@ msgid ""
 "\\pagestyle{empty}\n"
 "\\color{black}\n"
 msgstr ""
+"\\documentclass{minimal}\n"
+"\\usepackage{color}\n"
+"\\pagestyle{empty}\n"
+"\\color{black}\n"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: latex/latex-config.ui:38
 msgid "LaTeX command line:"
-msgstr ""
+msgstr "Латех командна линија:"
 
+# literal-segment: .*
 #. i18n: ectx: property (text), widget (KLineEdit, kcfg_LatexCmd)
 #: latex/latex-config.ui:45
 msgid "latex -interaction=batchmode -halt-on-error"
-msgstr ""
+msgstr "latex -interaction=batchmode -halt-on-error"
 
 #: texttospeech/tts-filter.cpp:42
 msgid "KDE Instant Messaging"
@@ -55,10 +61,10 @@ msgstr "КДЕ‑ово брзо гласништво"
 #, kde-format
 msgctxt "Text to Speech - text message %1 is name, %2 is message"
 msgid "%1 says %2"
-msgstr ""
+msgstr "%1 каже %2"
 
 #: texttospeech/tts-filter.cpp:66
 #, kde-format
 msgctxt "Text to Speech - text message %1 is name, %2 is message"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2013.
+# Giovanni Sora <g.sora@tiscali.it>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-10-02 13:16+0200\n"
+"POT-Creation-Date: 2013-12-21 01:25+0000\n"
+"PO-Revision-Date: 2014-01-10 13:17+0100\n"
 "Last-Translator: G.Sora <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-l10n-ia@kde.org>\n"
 "Language: ia\n"
@@ -25,6 +25,11 @@ msgid " message"
 msgid_plural " messages"
 msgstr[0] " message"
 msgstr[1] " messages"
+
+#: behavior-config.cpp:60
+msgctxt "Placeholder for contact name in completion suffix selector"
+msgid "Nickname"
+msgstr "Pseudonymo"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -65,9 +70,24 @@ msgstr "Usator es typante"
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
 #: behavior-config.ui:91
 msgid "Show me when others are typing"
-msgstr "Monstra quando alteres es typante"
+msgstr "Monstra a me quando alteres es typante"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
-msgstr "Monstra a alteres quando io es typante"
+msgstr "Monstra a alteres quandoo io es typante"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
+#: behavior-config.ui:108
+msgid "Nickname Completion"
+msgstr "Completion de pseudonymo"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: behavior-config.ui:117
+msgid "Complete nicknames to"
+msgstr "Completa pseudonymo con"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: behavior-config.ui:137
+msgid "when I press Tab"
+msgstr "Quando on pressa Tab"

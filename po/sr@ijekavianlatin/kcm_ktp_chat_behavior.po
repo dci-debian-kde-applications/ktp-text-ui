@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-04-18 13:30+0200\n"
+"POT-Creation-Date: 2013-12-21 01:25+0000\n"
+"PO-Revision-Date: 2013-12-29 10:14+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
@@ -29,6 +29,11 @@ msgstr[0] " poruka"
 msgstr[1] " poruke"
 msgstr[2] " poruka"
 msgstr[3] " poruka"
+
+#: behavior-config.cpp:60
+msgctxt "Placeholder for contact name in completion suffix selector"
+msgid "Nickname"
+msgstr "Nadimak"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -65,14 +70,29 @@ msgstr "Prikaži posljednjih"
 #. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
 #: behavior-config.ui:85
 msgid "User Is Typing"
-msgstr ""
+msgstr "Korisnik kuca"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
 #: behavior-config.ui:91
 msgid "Show me when others are typing"
-msgstr ""
+msgstr "Pokaži kada drugi kucaju"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
-msgstr ""
+msgstr "Pokaži drugima kada ja kucam"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
+#: behavior-config.ui:108
+msgid "Nickname Completion"
+msgstr "Dopuna nadimaka"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: behavior-config.ui:117
+msgid "Complete nicknames to"
+msgstr "Dopunjavaj nadimke do"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: behavior-config.ui:137
+msgid "when I press Tab"
+msgstr "pošto pritisnem Tab"

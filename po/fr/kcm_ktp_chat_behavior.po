@@ -2,15 +2,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Joëlle Cornavin <jcorn@free.fr>, 2011, 2013.
-# xavier <xavier.besnard@neuf.fr>, 2013.
+# xavier <xavier.besnard@neuf.fr>, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-chat-window-config\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-06-28 08:46+0200\n"
-"Last-Translator: xavier <xavier.besnard@neuf.fr>\n"
+"POT-Creation-Date: 2013-12-21 01:25+0000\n"
+"PO-Revision-Date: 2014-01-06 00:37+0100\n"
+"Last-Translator: Maxime Corteel\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -30,6 +30,11 @@ msgid " message"
 msgid_plural " messages"
 msgstr[0] " message"
 msgstr[1] " messages"
+
+#: behavior-config.cpp:60
+msgctxt "Placeholder for contact name in completion suffix selector"
+msgid "Nickname"
+msgstr "Pseudonyme"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -76,6 +81,21 @@ msgstr "M'afficher la saisie des autres personnes"
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
 msgstr "Afficher les autres durant ma saisie"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
+#: behavior-config.ui:108
+msgid "Nickname Completion"
+msgstr "Complètement de pseudonyme"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: behavior-config.ui:117
+msgid "Complete nicknames to"
+msgstr "Compléter les pseudonymes par"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: behavior-config.ui:137
+msgid "when I press Tab"
+msgstr "quand j'appuie sur Tabulation"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Un nouvel onglet dans la dernière fenêtre ayant eu le focus"

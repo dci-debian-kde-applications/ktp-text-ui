@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-02-27 23:23+0200\n"
+"POT-Creation-Date: 2013-12-21 01:25+0000\n"
+"PO-Revision-Date: 2013-04-27 19:40+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -25,6 +25,11 @@ msgid " message"
 msgid_plural " messages"
 msgstr[0] " μήνυμα"
 msgstr[1] " μηνύματα"
+
+#: behavior-config.cpp:60
+msgctxt "Placeholder for contact name in completion suffix selector"
+msgid "Nickname"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -60,16 +65,31 @@ msgstr "Εμφάνιση τελευταίας"
 #. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
 #: behavior-config.ui:85
 msgid "User Is Typing"
-msgstr ""
+msgstr "Ο χρήστης πληκτρολογεί"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
 #: behavior-config.ui:91
 msgid "Show me when others are typing"
-msgstr ""
+msgstr "Να έχω ένδειξη όταν άλλοι πληκτρολογούν"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
+msgstr "Να υπάρχει ένδειξη για άλλους όταν πληκτρολογώ"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
+#: behavior-config.ui:108
+msgid "Nickname Completion"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: behavior-config.ui:117
+msgid "Complete nicknames to"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: behavior-config.ui:137
+msgid "when I press Tab"
 msgstr ""
 
 #~ msgid "A new tab in the last focused window"

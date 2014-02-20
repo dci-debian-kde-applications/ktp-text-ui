@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-chat-window-config\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"POT-Creation-Date: 2013-12-21 01:25+0000\n"
 "PO-Revision-Date: 2011-06-16 17:33+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -26,6 +26,11 @@ msgid " message"
 msgid_plural " messages"
 msgstr[0] ""
 msgstr[1] ""
+
+#: behavior-config.cpp:60
+msgctxt "Placeholder for contact name in completion suffix selector"
+msgid "Nickname"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -71,4 +76,19 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
+#: behavior-config.ui:108
+msgid "Nickname Completion"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: behavior-config.ui:117
+msgid "Complete nicknames to"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: behavior-config.ui:137
+msgid "when I press Tab"
 msgstr ""

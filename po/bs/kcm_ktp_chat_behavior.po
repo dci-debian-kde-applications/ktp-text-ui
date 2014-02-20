@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-09-24 21:56+0100\n"
-"Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
+"POT-Creation-Date: 2013-12-21 01:25+0000\n"
+"PO-Revision-Date: 2014-01-12 22:01+0000\n"
+"Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
 "Language: bs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-21 01:43+0000\n"
-"X-Generator: Launchpad (build 16378)\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2014-01-13 05:52+0000\n"
+"X-Generator: Launchpad (build 16890)\n"
 
 #: behavior-config.cpp:49
 msgctxt ""
@@ -29,6 +29,11 @@ msgid_plural " messages"
 msgstr[0] " poruka"
 msgstr[1] " poruke"
 msgstr[2] " poruka"
+
+#: behavior-config.cpp:60
+msgctxt "Placeholder for contact name in completion suffix selector"
+msgid "Nickname"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -64,14 +69,29 @@ msgstr "Prikaži zadnje"
 #. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
 #: behavior-config.ui:85
 msgid "User Is Typing"
-msgstr "Korisnik tipka"
+msgstr "Korisnik kuca"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
 #: behavior-config.ui:91
 msgid "Show me when others are typing"
-msgstr "Pokaži kada drugi tipkaju"
+msgstr "Pokaži mi kada drugi kucaju"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
-msgstr "Pokaži drugim kada ja tipkam"
+msgstr "Pokaži drugim kada ja kucam"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
+#: behavior-config.ui:108
+msgid "Nickname Completion"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: behavior-config.ui:117
+msgid "Complete nicknames to"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: behavior-config.ui:137
+msgid "when I press Tab"
+msgstr ""

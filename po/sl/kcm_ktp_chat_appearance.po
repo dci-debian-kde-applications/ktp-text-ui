@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-03-17 18:22+0100\n"
+"POT-Creation-Date: 2013-09-21 01:34+0000\n"
+"PO-Revision-Date: 2013-12-01 18:05+0100\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -62,84 +62,9 @@ msgstr "Uporabi nastavitve pisav po meri"
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
 #: appearance-config.ui:163
 msgid "Select Font:"
-msgstr "Izberite pisavo: "
+msgstr "Izberi pisavo:"
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
 #: appearance-config.ui:176
 msgid "Select Size:"
 msgstr "Izberite velikost: "
-
-#~ msgid "A demo chat"
-#~ msgstr "Predstavitveni klepet"
-
-#~ msgid "Jabber"
-#~ msgstr "Jabber"
-
-#~ msgctxt "Example email"
-#~ msgid "ted@example.com"
-#~ msgstr "janez@kde.org"
-
-#~ msgctxt "Example name"
-#~ msgid "Ted"
-#~ msgstr "Janez"
-
-#~ msgctxt "Example message in preview conversation"
-#~ msgid "Ok!"
-#~ msgstr "V redu"
-
-#~ msgctxt "Example email"
-#~ msgid "larry@example.com"
-#~ msgstr "marija@kde.org"
-
-#~ msgctxt "Example name"
-#~ msgid "Larry Demo"
-#~ msgstr "Marija predstavitev"
-
-#~ msgid "Bye Bye"
-#~ msgstr "Nasvidenje"
-
-#~ msgid "Have fun!"
-#~ msgstr "Imejte se lepo!"
-
-#~ msgctxt "Example name"
-#~ msgid "Ted Example"
-#~ msgstr "Janez Novak"
-
-#~ msgid "cya"
-#~ msgstr "se vidimo"
-
-#~ msgctxt "Example message"
-#~ msgid "Ted Example waves."
-#~ msgstr "Janez Novak pomaha."
-
-#~ msgid "Ted Example has left the chat."
-#~ msgstr "Janez Novak je zapustil klepet."
-
-#~ msgctxt "Example message"
-#~ msgid "Hello Ted"
-#~ msgstr "Zdravo Janez"
-
-#~ msgid "What's up?"
-#~ msgstr "Kaj se dogaja?"
-
-#~ msgid ""
-#~ "Check out which cool adium themes work <a href=\"http://community.kde.org/"
-#~ "KTp/Components/Chat_Window/Themes\">here</a>!"
-#~ msgstr ""
-#~ "<a href=\"http://community.kde.org/KTp/Components/Chat_Window/Themes"
-#~ "\">Tukaj</a> lahko preverite katere teme adium so združljive!"
-
-#~ msgid "A different example message"
-#~ msgstr "Drugačen primer sporočila"
-
-#~ msgid "Ted Example is now Away."
-#~ msgstr "Janez Novak je sedaj odsoten."
-
-#~ msgid "Always"
-#~ msgstr "Vedno"
-
-#~ msgid "Never in group chats"
-#~ msgstr "Nikoli v skupinskih klepetih"
-
-#~ msgid "Never"
-#~ msgstr "Nikoli"

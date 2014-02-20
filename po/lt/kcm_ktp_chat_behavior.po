@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"POT-Creation-Date: 2013-12-21 01:25+0000\n"
 "PO-Revision-Date: 2013-04-11 20:19+0300\n"
 "Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -30,6 +30,11 @@ msgstr[0] " pranešimas"
 msgstr[1] " pranešimai"
 msgstr[2] " pranešimų"
 msgstr[3] " pranešimas"
+
+#: behavior-config.cpp:60
+msgctxt "Placeholder for contact name in completion suffix selector"
+msgid "Nickname"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -77,5 +82,17 @@ msgstr ""
 msgid "Show others when I am typing"
 msgstr ""
 
-#~ msgid "A new tab in the last focused window"
-#~ msgstr "Naujoje paskutinio sufokusuoto lango kortelėje"
+#. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
+#: behavior-config.ui:108
+msgid "Nickname Completion"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: behavior-config.ui:117
+msgid "Complete nicknames to"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: behavior-config.ui:137
+msgid "when I press Tab"
+msgstr ""
