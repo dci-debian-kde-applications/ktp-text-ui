@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-25 01:34+0000\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
 "PO-Revision-Date: 2013-11-05 22:47+0100\n"
 "Last-Translator: Marce Villarino <mvillarino@kde-espana.org>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -16,9 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
-"X-Environment: kde\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, LatexConfig)
 #: latex/latex-config.ui:14
@@ -55,7 +52,7 @@ msgstr "latex -interaction=batchmode -halt-on-error"
 
 #: texttospeech/tts-filter.cpp:42
 msgid "KDE Instant Messaging"
-msgstr "Mensaxaría instantánea de KDE"
+msgstr "Mensaxería instantánea de KDE"
 
 #: texttospeech/tts-filter.cpp:63
 #, kde-format
@@ -69,6 +66,8 @@ msgctxt "Text to Speech - text message %1 is name, %2 is message"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#, fuzzy
 #~ msgid "New message. %1"
 #~ msgstr "Nova mensaxe. %1"
+
+#~ msgid "Click to view in browser"
+#~ msgstr "Premer para ver no navegador"

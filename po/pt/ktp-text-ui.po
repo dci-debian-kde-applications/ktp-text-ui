@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-kde-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-31 01:26+0000\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
 "PO-Revision-Date: 2013-08-30 17:55+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -38,28 +38,28 @@ msgstr "Mover a Página para a Esquerda"
 msgid "Move Tab Right"
 msgstr "Mover a Página para a Direita"
 
-#: chat-window.cpp:678
+#: chat-window.cpp:679
 msgid "&Next Tab"
 msgstr "Página Segui&nte"
 
-#: chat-window.cpp:682
+#: chat-window.cpp:683
 msgid "&Previous Tab"
 msgstr "&Página Anterior"
 
-#: chat-window.cpp:686
+#: chat-window.cpp:687
 msgid "&Audio Call"
 msgstr "Ch&amada de Áudio"
 
-#: chat-window.cpp:687
+#: chat-window.cpp:688
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Iniciar uma chamada de áudio com este contacto"
 
-#: chat-window.cpp:690 chat-window.cpp:944
+#: chat-window.cpp:691 chat-window.cpp:945
 msgid "&Block Contact"
 msgstr "&Bloquear o Contacto"
 
-#: chat-window.cpp:692
+#: chat-window.cpp:693
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -68,78 +68,78 @@ msgstr ""
 "O bloqueio significa que este contacto não o irá ver ligado e não irá "
 "receber nenhumas mensagens do mesmo"
 
-#: chat-window.cpp:695
+#: chat-window.cpp:696
 msgid "&Send File"
 msgstr "En&viar o Ficheiro"
 
-#: chat-window.cpp:696
+#: chat-window.cpp:697
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Enviar um ficheiro para este contacto"
 
-#: chat-window.cpp:699
+#: chat-window.cpp:700
 msgid "&Invite to Chat"
 msgstr "Conv&idar para a Conversa"
 
-#: chat-window.cpp:700
+#: chat-window.cpp:701
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Convidar outro contacto para esta conversa"
 
-#: chat-window.cpp:703
+#: chat-window.cpp:704
 msgid "&Video Call"
 msgstr "Chamada de &Vídeo"
 
-#: chat-window.cpp:704
+#: chat-window.cpp:705
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Iniciar uma chamada de vídeo com este contacto"
 
-#: chat-window.cpp:707
+#: chat-window.cpp:708
 msgid "Share My &Desktop"
 msgstr "Partilhar o Meu &Ecrã"
 
-#: chat-window.cpp:708
+#: chat-window.cpp:709
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr "Iniciar uma aplicação que permite a este contacto ver o seu ecrã"
 
-#: chat-window.cpp:711
+#: chat-window.cpp:712
 msgid "&Collaboratively edit a document"
 msgstr "Editar um documento de forma &colaborativa"
 
-#: chat-window.cpp:722
+#: chat-window.cpp:723
 msgid "Choose Spelling Language"
 msgstr "Escolher a Língua do Dicionário"
 
-#: chat-window.cpp:724
+#: chat-window.cpp:725
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Conversas Anteriores"
 
-#: chat-window.cpp:727
+#: chat-window.cpp:728
 msgid "Account Icon"
 msgstr "Ícone da Conta"
 
-#: chat-window.cpp:731
+#: chat-window.cpp:732
 msgid "&Clear View"
 msgstr "&Limpar a Janela"
 
-#: chat-window.cpp:732
+#: chat-window.cpp:733
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr "Limpar todas as mensagens da área de conversação actual"
 
-#: chat-window.cpp:738
+#: chat-window.cpp:739
 msgid "Send message"
 msgstr "Enviar uma mensagem"
 
-#: chat-window.cpp:771
+#: chat-window.cpp:772
 msgctxt "Toolbar icon tooltip"
 msgid "Edit a plain-text document with this contact in real-time"
 msgstr "Editar um documento de texto simples com este contacto em tempo-real"
 
-#: chat-window.cpp:774
+#: chat-window.cpp:775
 msgctxt "Toolbar icon tooltip for a disabled action"
 msgid ""
 "<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
@@ -148,12 +148,12 @@ msgstr ""
 "<p>Tanto você como o contacto de destino precisam de ter o pacote <i>kte-"
 "collaborative</i> instalado para partilhar documentos</p>"
 
-#: chat-window.cpp:866
+#: chat-window.cpp:867
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Escolher os ficheiros a enviar para %1"
 
-#: chat-window.cpp:937
+#: chat-window.cpp:938
 msgid "&Unblock Contact"
 msgstr "Des&bloquear o Contacto"
 
@@ -213,3 +213,11 @@ msgstr "Dominik Schmidt"
 #: main.cpp:46
 msgid "Francesco Nwokeka"
 msgstr "Francesco Nwokeka"
+
+#~ msgctxt "String prepended in window title, arg is contact's name"
+#~ msgid "Typing... %1"
+#~ msgstr "A escrever... %1"
+
+#~ msgctxt "String appended in window title, arg is contact's name"
+#~ msgid "%1 has entered text"
+#~ msgstr "%1 escreveu algum texto"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-21 01:25+0000\n"
-"PO-Revision-Date: 2013-12-24 10:59+0100\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"PO-Revision-Date: 2013-10-15 18:27+0200\n"
 "Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -33,7 +33,7 @@ msgstr[3] " sporočila"
 #: behavior-config.cpp:60
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
-msgstr "Vzdevek"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -84,14 +84,14 @@ msgstr "Pokaži drugim, da tipkam"
 #. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
 #: behavior-config.ui:108
 msgid "Nickname Completion"
-msgstr "Dopolnjevanje vzdevkov"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: behavior-config.ui:117
 msgid "Complete nicknames to"
-msgstr "Dopolni vzdevke do"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: behavior-config.ui:137
 msgid "when I press Tab"
-msgstr ", ko pritisnem tipko Tab"
+msgstr ""

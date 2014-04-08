@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-21 01:34+0000\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
 "PO-Revision-Date: 2013-04-11 20:16+0300\n"
 "Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -69,3 +69,77 @@ msgstr "Pasirinkti šriftą:"
 #: appearance-config.ui:176
 msgid "Select Size:"
 msgstr "Pasirinkite dydį:"
+
+#~ msgid "A demo chat"
+#~ msgstr "Demo pokalbis"
+
+#~ msgid "Jabber"
+#~ msgstr "Jabber"
+
+#~ msgctxt "Example email"
+#~ msgid "ted@example.com"
+#~ msgstr "kde@pavyzdys.com"
+
+#~ msgctxt "Example name"
+#~ msgid "Ted"
+#~ msgstr "Tadas"
+
+#~ msgctxt "Example message in preview conversation"
+#~ msgid "Ok!"
+#~ msgstr "Gerai!"
+
+#~ msgctxt "Example email"
+#~ msgid "larry@example.com"
+#~ msgstr "kde@pavyzdys.com"
+
+#~ msgctxt "Example name"
+#~ msgid "Larry Demo"
+#~ msgstr "Jonas Demo"
+
+#~ msgid "Bye Bye"
+#~ msgstr "Iki"
+
+#~ msgid "Have fun!"
+#~ msgstr "Džiaukitės!"
+
+#~ msgctxt "Example name"
+#~ msgid "Ted Example"
+#~ msgstr "Jonas Pavyzdys"
+
+#~ msgid "cya"
+#~ msgstr "cya"
+
+#~ msgctxt "Example message"
+#~ msgid "Ted Example waves."
+#~ msgstr "Jonas Pavyzdys mojuoja."
+
+#~ msgid "Ted Example has left the chat."
+#~ msgstr "Jonas Pavyzdys paliko pokalbį."
+
+#, fuzzy
+#~| msgid "Hello"
+#~ msgctxt "Example message"
+#~ msgid "Hello Ted"
+#~ msgstr "Labas"
+
+#~ msgid "What's up?"
+#~ msgstr "Kaip sekasi?"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check out which cool adium themes work <a href=\"http://community.kde."
+#~| "org/Real-Time_Communication_and_Collaboration/Components/Chat_Window/"
+#~| "Themes\">here</a>!"
+#~ msgid ""
+#~ "Check out which cool adium themes work <a href=\"http://community.kde.org/"
+#~ "KTp/Components/Chat_Window/Themes\">here</a>!"
+#~ msgstr ""
+#~ "Pažiūrėk gražias adium temas <a href=\"http://community.kde.org/Real-"
+#~ "Time_Communication_and_Collaboration/Components/Chat_Window/Themes\">čia</"
+#~ "a>!"
+
+#~ msgid "A different example message"
+#~ msgstr "Kitokia pavyzdinė žinutė"
+
+#~ msgid "Ted Example is now Away."
+#~ msgstr "Jonas Pavyzdys dabar pasitraukęs."

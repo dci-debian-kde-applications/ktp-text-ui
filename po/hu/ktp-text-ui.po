@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-31 01:26+0000\n"
-"PO-Revision-Date: 2013-10-06 11:36+0200\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"PO-Revision-Date: 2013-10-23 10:57+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -42,28 +42,28 @@ msgstr "Lap mozgatása balra"
 msgid "Move Tab Right"
 msgstr "Lap mozgatása jobbra"
 
-#: chat-window.cpp:678
+#: chat-window.cpp:679
 msgid "&Next Tab"
 msgstr "&Következő lap"
 
-#: chat-window.cpp:682
+#: chat-window.cpp:683
 msgid "&Previous Tab"
 msgstr "E&lőző lap"
 
-#: chat-window.cpp:686
+#: chat-window.cpp:687
 msgid "&Audio Call"
 msgstr "H&anghívás"
 
-#: chat-window.cpp:687
+#: chat-window.cpp:688
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Hanghívás indítása ezzel a partnerrel"
 
-#: chat-window.cpp:690 chat-window.cpp:944
+#: chat-window.cpp:691 chat-window.cpp:945
 msgid "&Block Contact"
 msgstr "Partner b&lokkolása"
 
-#: chat-window.cpp:692
+#: chat-window.cpp:693
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -72,81 +72,81 @@ msgstr ""
 "A blokkolás azt jelenti, hogy a partner nem látja, ha Ön elérhető, és Ön nem "
 "kap egy üzenetet sem ettől a partnertől"
 
-#: chat-window.cpp:695
+#: chat-window.cpp:696
 msgid "&Send File"
 msgstr "Fájl küldé&se"
 
-#: chat-window.cpp:696
+#: chat-window.cpp:697
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Fájl küldése ennek a partnernek"
 
-#: chat-window.cpp:699
+#: chat-window.cpp:700
 msgid "&Invite to Chat"
 msgstr "Me&ghívás csevegésre"
 
-#: chat-window.cpp:700
+#: chat-window.cpp:701
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Más partner meghívása ebbe a csevegésbe"
 
-#: chat-window.cpp:703
+#: chat-window.cpp:704
 msgid "&Video Call"
 msgstr "&Videóhívás"
 
-#: chat-window.cpp:704
+#: chat-window.cpp:705
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Videohívás indítása ezzel a partnerrel"
 
-#: chat-window.cpp:707
+#: chat-window.cpp:708
 msgid "Share My &Desktop"
 msgstr "Az asztalom me&gosztása"
 
-#: chat-window.cpp:708
+#: chat-window.cpp:709
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr ""
 "Elindít egy alkalmazást, amely lehetővé teszi a partnernek az Ön asztalának "
 "megtekintését"
 
-#: chat-window.cpp:711
+#: chat-window.cpp:712
 msgid "&Collaboratively edit a document"
 msgstr "Egy dokumentum &együttműködő szerkesztése"
 
-#: chat-window.cpp:722
+#: chat-window.cpp:723
 msgid "Choose Spelling Language"
 msgstr "Helyesírás-ellenőrzés nyelvének kiválasztása"
 
-#: chat-window.cpp:724
+#: chat-window.cpp:725
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Előző beszélgetések"
 
-#: chat-window.cpp:727
+#: chat-window.cpp:728
 msgid "Account Icon"
 msgstr "Azonosítóikon"
 
-#: chat-window.cpp:731
+#: chat-window.cpp:732
 msgid "&Clear View"
 msgstr "Nézet &törlése"
 
-#: chat-window.cpp:732
+#: chat-window.cpp:733
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr "Minden üzenet törlése a jelenlegi csevegőlapról"
 
-#: chat-window.cpp:738
+#: chat-window.cpp:739
 msgid "Send message"
 msgstr "Üzenet küldése"
 
-#: chat-window.cpp:771
+#: chat-window.cpp:772
 msgctxt "Toolbar icon tooltip"
 msgid "Edit a plain-text document with this contact in real-time"
 msgstr ""
 "Egy egyszerű szöveges dokumentum szerkesztése ezzel a partnerrel valós időben"
 
-#: chat-window.cpp:774
+#: chat-window.cpp:775
 msgctxt "Toolbar icon tooltip for a disabled action"
 msgid ""
 "<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
@@ -155,12 +155,12 @@ msgstr ""
 "<p>Mind önnek, mind a célpartnernek szükséges a <i>kte-collaborative</i> "
 "csomag telepítésének megléte a dokumentumok megosztásához</p>"
 
-#: chat-window.cpp:866
+#: chat-window.cpp:867
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Válassza ki a(z) %1 partnernek küldendő fájlokat"
 
-#: chat-window.cpp:937
+#: chat-window.cpp:938
 msgid "&Unblock Contact"
 msgstr "&Partner blokkolásának feloldása"
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-21 01:25+0000\n"
-"PO-Revision-Date: 2013-04-27 19:40+0200\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"PO-Revision-Date: 2013-02-27 23:23+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -65,17 +65,17 @@ msgstr "Εμφάνιση τελευταίας"
 #. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
 #: behavior-config.ui:85
 msgid "User Is Typing"
-msgstr "Ο χρήστης πληκτρολογεί"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
 #: behavior-config.ui:91
 msgid "Show me when others are typing"
-msgstr "Να έχω ένδειξη όταν άλλοι πληκτρολογούν"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
-msgstr "Να υπάρχει ένδειξη για άλλους όταν πληκτρολογώ"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
 #: behavior-config.ui:108

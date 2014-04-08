@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-21 01:25+0000\n"
-"PO-Revision-Date: 2013-12-25 11:52+0100\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"PO-Revision-Date: 2013-10-05 13:56+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -29,7 +29,7 @@ msgstr[1] " beskeder"
 #: behavior-config.cpp:60
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
-msgstr "Kaldenavn"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -65,7 +65,7 @@ msgstr "Vis seneste"
 #. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
 #: behavior-config.ui:85
 msgid "User Is Typing"
-msgstr "Brugeren skriver"
+msgstr "Brugeren er ved at skrive"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
 #: behavior-config.ui:91
@@ -80,17 +80,17 @@ msgstr "Vis andre når jeg er i gang med at skrive"
 #. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
 #: behavior-config.ui:108
 msgid "Nickname Completion"
-msgstr "Kaldenavnsfuldførelse"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: behavior-config.ui:117
 msgid "Complete nicknames to"
-msgstr "Fuldfør kaldenavne til"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: behavior-config.ui:137
 msgid "when I press Tab"
-msgstr "når jeg trykker på tabulatortasten"
+msgstr ""
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Et nyt faneblad i det senest vindue i fokus"

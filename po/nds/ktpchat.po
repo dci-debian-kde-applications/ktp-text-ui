@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktelepathy_chat_lib\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-17 01:27+0000\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
 "PO-Revision-Date: 2011-06-16 17:32+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -44,14 +44,12 @@ msgstr ""
 
 #: chat-search-bar.cpp:39
 #, fuzzy
-#| msgid "&Next"
 msgctxt "Next search result"
 msgid "&Next"
 msgstr "&Nakamen"
 
 #: chat-search-bar.cpp:40
 #, fuzzy
-#| msgid "&Previous"
 msgctxt "Previous search result"
 msgid "&Previous"
 msgstr "&Verleden"
@@ -133,21 +131,18 @@ msgstr ""
 
 #: chat-widget.cpp:739
 #, fuzzy, kde-format
-#| msgid "You are now marked as away"
 msgctxt "Your presence status"
 msgid "You are now marked as %1"
 msgstr "Du büst nu as \"weg\" markt."
 
 #: chat-widget.cpp:743
 #, fuzzy, kde-format
-#| msgid "You are now marked as away"
 msgctxt "Your presence status with status message"
 msgid "You are now marked as %1 - %2"
 msgstr "Du büst nu as \"weg\" markt."
 
 #: chat-widget.cpp:749
 #, fuzzy, kde-format
-#| msgid "%1 is busy"
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 hett to doon"
@@ -182,7 +177,6 @@ msgstr ""
 
 #: chat-widget.cpp:1012
 #, fuzzy
-#| msgid "You are now known as %1"
 msgid "You are now offline"
 msgstr "Du heet nu %1"
 

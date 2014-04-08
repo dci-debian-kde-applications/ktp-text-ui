@@ -1,13 +1,12 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2012.
 # Burkhard Lück <lueck@hube-lueck.de>, 2011, 2012, 2013.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2011.
-# Markus Slopianka <markus.s@kdemail.net>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktpchat\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-17 01:27+0000\n"
-"PO-Revision-Date: 2013-09-14 23:28+0200\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"PO-Revision-Date: 2013-09-24 17:47+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -217,7 +216,7 @@ msgstr "%1 hat Ihnen eine Nachricht gesendet"
 
 #: notify-filter.cpp:95
 msgid "View"
-msgstr "Anzeigen"
+msgstr "Ansicht"
 
 #~ msgid "You have sent a message"
 #~ msgstr "Sie haben eine Nachricht gesendet"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktelepathy_chat_lib\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-17 01:27+0000\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
 "PO-Revision-Date: 2013-05-21 13:48+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -220,3 +220,10 @@ msgstr "%1 enviou-lhe uma mensagem"
 #: notify-filter.cpp:95
 msgid "View"
 msgstr "Ver"
+
+#~ msgid "Show format options"
+#~ msgstr "Mostrar as opções do formato"
+
+#, fuzzy
+#~ msgid "You have sent a message"
+#~ msgstr "%1 enviou-lhe uma mensagem"
