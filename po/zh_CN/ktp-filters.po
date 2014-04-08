@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-25 01:34+0000\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
 "PO-Revision-Date: 2013-09-29 21:25-0400\n"
 "Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
@@ -20,12 +20,12 @@ msgstr ""
 #. i18n: ectx: property (windowTitle), widget (QWidget, LatexConfig)
 #: latex/latex-config.ui:14
 msgid "LatexConfig"
-msgstr "Latex 设置"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: latex/latex-config.ui:20
 msgid "LaTeX header:"
-msgstr "LaTeX 头"
+msgstr ""
 
 #. i18n: ectx: property (plainText), widget (QPlainTextEdit, kcfg_LatexHeader)
 #: latex/latex-config.ui:31
@@ -35,20 +35,16 @@ msgid ""
 "\\pagestyle{empty}\n"
 "\\color{black}\n"
 msgstr ""
-"\\documentclass{minimal}\n"
-"\\usepackage{color}\n"
-"\\pagestyle{empty}\n"
-"\\color{black}\n"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: latex/latex-config.ui:38
 msgid "LaTeX command line:"
-msgstr "LaTex 命令行："
+msgstr ""
 
 #. i18n: ectx: property (text), widget (KLineEdit, kcfg_LatexCmd)
 #: latex/latex-config.ui:45
 msgid "latex -interaction=batchmode -halt-on-error"
-msgstr "latex -interaction=batchmode -halt-on-error"
+msgstr ""
 
 #: texttospeech/tts-filter.cpp:42
 msgid "KDE Instant Messaging"

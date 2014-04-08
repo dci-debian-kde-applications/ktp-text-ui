@@ -1,68 +1,68 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# A S Alam <aalam@users.sf.net>, 2013.
+# Park Shinjo <peremen@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-21 01:34+0000\n"
-"PO-Revision-Date: 2013-05-04 22:07+0530\n"
-"Last-Translator: A S Alam <aalam@users.sf.net>\n"
-"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
-"Language: pa\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"PO-Revision-Date: 2014-03-09 04:46+0900\n"
+"Last-Translator: Park Shinjo <peremen@gmail.com>\n"
+"Language-Team: Korean <kde@peremen.name>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.5\n"
 
 #: appearance-config.cpp:49
 msgctxt "@title:tab"
 msgid "Normal Chat"
-msgstr "ਸਧਾਰਨ ਗੱਲਬਾਤ"
+msgstr "일반 대화"
 
 #: appearance-config.cpp:53
 msgctxt "@title:tab"
 msgid "Group Chat"
-msgstr "ਗਰੁੱਪ ਗੱਲਬਾਤ"
+msgstr "그룹 대화"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: appearance-config.ui:41
 msgid "Style"
-msgstr "ਸਟਾਈਲ"
+msgstr "스타일"
 
 #. i18n: ectx: property (text), widget (QLabel, styleLabel)
 #: appearance-config.ui:49
 msgid "Message Style:"
-msgstr "ਸੁਨੇਹਾ ਸਟਾਈਲ:"
+msgstr "메시지 스타일:"
 
 #. i18n: ectx: property (text), widget (QLabel, variantLabel)
 #: appearance-config.ui:75
 msgid "Variant:"
-msgstr "ਬਦਲ:"
+msgstr "파생형:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showHeader)
 #: appearance-config.ui:107
 msgid "Show Header"
-msgstr "ਹੈੱਡਰ ਵੇਖਾਓ"
+msgstr "머릿글 보이기"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
 #: appearance-config.ui:120
 msgid "Show status changes"
-msgstr "ਸਥਿਤੀ ਬਦਲਾਅ ਵੇਖਾਓ"
+msgstr "상태 변경 보이기"
 
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
 #: appearance-config.ui:151
 msgid "Use Custom Font Settings"
-msgstr "ਪਸੰਦੀਦਾ ਫੋਂਟ ਸੈਟਿੰਗ ਵਰਤੋਂ"
+msgstr "사용자 정의 글꼴 설정 사용"
 
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
 #: appearance-config.ui:163
 msgid "Select Font:"
-msgstr "ਫੋਂਟ ਚੁਣੋ:"
+msgstr "글꼴 선택:"
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
 #: appearance-config.ui:176
 msgid "Select Size:"
-msgstr "ਆਕਾਰ ਚੁਣੋ:"
+msgstr "크기 선택:"

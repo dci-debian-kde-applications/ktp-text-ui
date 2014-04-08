@@ -6,10 +6,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-17 01:27+0000\n"
-"PO-Revision-Date: 2013-05-21 13:49+0200\n"
-"Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
-"Language-Team: Interlingua <kde-i18n-ia@kde.org>\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"PO-Revision-Date: 2013-10-02 13:41+0200\n"
+"Last-Translator: G.Sora <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-l10n-ia@kde.org>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,7 +41,7 @@ msgstr "File requirite Template.html es mancante - verifica tu installation"
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
-msgstr "Conversation initiava %1"
+msgstr "Conversatio initia %1"
 
 #: chat-search-bar.cpp:39
 msgctxt "Next search result"
@@ -141,13 +141,13 @@ msgstr "%1 ha lassate le conversation in directo."
 #, kde-format
 msgctxt "Your presence status"
 msgid "You are now marked as %1"
-msgstr "Tu ora es marcate como %1"
+msgstr "Tu ora es marcate como %1."
 
 #: chat-widget.cpp:743
 #, kde-format
 msgctxt "Your presence status with status message"
 msgid "You are now marked as %1 - %2"
-msgstr "Tu ora es marcate como %1 - %2"
+msgstr "Tu ora es marcate como %1 -%2"
 
 #: chat-widget.cpp:749
 #, kde-format

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-17 01:27+0000\n"
-"PO-Revision-Date: 2013-05-25 09:50+0300\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"PO-Revision-Date: 2013-01-10 17:49+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -42,7 +42,7 @@ msgstr "Lipsește fișierul necesar Template.html – verificați-vă instalarea
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
-msgstr "Conversație începută %1"
+msgstr ""
 
 #: chat-search-bar.cpp:39
 msgctxt "Next search result"
@@ -140,16 +140,18 @@ msgid "%1 has left the chat"
 msgstr "%1 a părăsit discuția"
 
 #: chat-widget.cpp:739
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "You are now marked as %1"
 msgctxt "Your presence status"
 msgid "You are now marked as %1"
 msgstr "Sînteți marcat acum ca %1"
 
 #: chat-widget.cpp:743
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "You are now marked as %1"
 msgctxt "Your presence status with status message"
 msgid "You are now marked as %1 - %2"
-msgstr "Sînteți marcat acum ca %1 - %2"
+msgstr "Sînteți marcat acum ca %1"
 
 #: chat-widget.cpp:749
 #, kde-format

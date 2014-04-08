@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-31 01:26+0000\n"
+"POT-Creation-Date: 2013-12-17 04:50+0000\n"
 "PO-Revision-Date: 2013-08-31 11:44+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -27,44 +27,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pejakm@gmail.com"
 
-#: chat-window.cpp:140
+#: chat-window.cpp:138
 msgid "Close"
 msgstr "Zatvori"
 
-#: chat-window.cpp:141
+#: chat-window.cpp:139
 msgid "Detach Tab"
 msgstr "Otkači jezičak"
 
-#: chat-window.cpp:142
+#: chat-window.cpp:140
 msgid "Move Tab Left"
 msgstr "Premesti jezičak ulevo"
 
-#: chat-window.cpp:143
+#: chat-window.cpp:141
 msgid "Move Tab Right"
 msgstr "Premesti jezičak udesno"
 
-#: chat-window.cpp:678
+#: chat-window.cpp:680
 msgid "&Next Tab"
 msgstr "&Sledeći jezičak"
 
-#: chat-window.cpp:682
+#: chat-window.cpp:684
 msgid "&Previous Tab"
 msgstr "&Prethodni jezičak"
 
-#: chat-window.cpp:686
+#: chat-window.cpp:688
 msgid "&Audio Call"
 msgstr "&Audio poziv"
 
-#: chat-window.cpp:687
+#: chat-window.cpp:689
 msgctxt "Toolbar icon tooltip"
 msgid "Start an audio call with this contact"
 msgstr "Započni audio poziv sa ovim kontaktom"
 
-#: chat-window.cpp:690 chat-window.cpp:944
+#: chat-window.cpp:692 chat-window.cpp:946
 msgid "&Block Contact"
 msgstr "&Blokiraj kontakt"
 
-#: chat-window.cpp:692
+#: chat-window.cpp:694
 msgctxt "Toolbar icon tooltip"
 msgid ""
 "Blocking means that this contact will not see you online and you will not "
@@ -73,81 +73,81 @@ msgstr ""
 "Blokiranje znači da vas kontakt više neće videti na vezi i da više nećete "
 "primati nikakve poruke od njega."
 
-#: chat-window.cpp:695
+#: chat-window.cpp:697
 msgid "&Send File"
 msgstr "&Pošalji fajl"
 
-#: chat-window.cpp:696
+#: chat-window.cpp:698
 msgctxt "Toolbar icon tooltip"
 msgid "Send a file to this contact"
 msgstr "Pošalji fajl kontaktu"
 
-#: chat-window.cpp:699
+#: chat-window.cpp:701
 msgid "&Invite to Chat"
 msgstr "P&ozovi na ćaskanje"
 
-#: chat-window.cpp:700
+#: chat-window.cpp:702
 msgctxt "Toolbar icon tooltip"
 msgid "Invite another contact to join this chat"
 msgstr "Pozovi još neki kontakt da se pridruži ćaskanju"
 
-#: chat-window.cpp:703
+#: chat-window.cpp:705
 msgid "&Video Call"
 msgstr "&Video poziv"
 
-#: chat-window.cpp:704
+#: chat-window.cpp:706
 msgctxt "Toolbar icon tooltip"
 msgid "Start a video call with this contact"
 msgstr "Pokreni video poziv sa ovim kontaktom"
 
-#: chat-window.cpp:707
+#: chat-window.cpp:709
 msgid "Share My &Desktop"
 msgstr "Podeli moju &površ"
 
-#: chat-window.cpp:708
+#: chat-window.cpp:710
 msgctxt "Toolbar icon tooltip"
 msgid "Start an application that allows this contact to see your desktop"
 msgstr "Pokreni program koji omogućava kontaktu da vidi moju površ"
 
-#: chat-window.cpp:711
+#: chat-window.cpp:713
 msgid "&Collaboratively edit a document"
 msgstr "&Sarađuj na uređivanju dokumenta"
 
 # rewrite-msgid: /spelling/spell-checker/
-#: chat-window.cpp:722
+#: chat-window.cpp:724
 msgid "Choose Spelling Language"
 msgstr "Izaberite jezik pravopisara"
 
-#: chat-window.cpp:724
+#: chat-window.cpp:726
 msgctxt "Action to open the log viewer with a specified contact"
 msgid "&Previous Conversations"
 msgstr "&Prethodni razgovori"
 
-#: chat-window.cpp:727
+#: chat-window.cpp:729
 msgid "Account Icon"
 msgstr "Ikona naloga"
 
-#: chat-window.cpp:731
+#: chat-window.cpp:733
 msgid "&Clear View"
 msgstr "&Očisti prikaz"
 
-#: chat-window.cpp:732
+#: chat-window.cpp:734
 msgctxt "Toolbar icon tooltip"
 msgid "Clear all messages from current chat tab"
 msgstr "Očisti sve poruke iz tekućeg jezička za ćaskanje"
 
-#: chat-window.cpp:738
+#: chat-window.cpp:740
 msgid "Send message"
 msgstr "Pošalji poruku"
 
-#: chat-window.cpp:771
+#: chat-window.cpp:773
 msgctxt "Toolbar icon tooltip"
 msgid "Edit a plain-text document with this contact in real-time"
 msgstr ""
 "Uređujte dokument običnog teksta zajedno sa ovim kontaktom u stvarnom "
 "vremenu."
 
-#: chat-window.cpp:774
+#: chat-window.cpp:776
 msgctxt "Toolbar icon tooltip for a disabled action"
 msgid ""
 "<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
@@ -157,12 +157,12 @@ msgstr ""
 "collaborative</icode> da biste delili dokumente.</p></html>"
 
 # >> @title:window
-#: chat-window.cpp:866
+#: chat-window.cpp:868
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Izbor fajlova za slanje primaocu %1"
 
-#: chat-window.cpp:937
+#: chat-window.cpp:939
 msgid "&Unblock Contact"
 msgstr "&Odblokiraj kontakt"
 
@@ -204,22 +204,22 @@ msgstr "Potraži u kontaktima..."
 msgid "Select Contacts to Invite to Group Chat"
 msgstr "Izbor kontakata za pozivanje u grupno ćaskanje"
 
-#: main.cpp:42
+#: main.cpp:43
 msgid "Telepathy Text Ui"
 msgstr "Telepathy tekstualno sučelje"
 
-#: main.cpp:44
+#: main.cpp:45
 msgid "David Edmundson"
 msgstr "Dejvid Edmundson"
 
-#: main.cpp:44 main.cpp:45 main.cpp:46
+#: main.cpp:45 main.cpp:46 main.cpp:47
 msgid "Developer"
 msgstr "Programer"
 
-#: main.cpp:45
+#: main.cpp:46
 msgid "Dominik Schmidt"
 msgstr "Dominik Šmit"
 
-#: main.cpp:46
+#: main.cpp:47
 msgid "Francesco Nwokeka"
 msgstr "Frančesko Nvokeka"

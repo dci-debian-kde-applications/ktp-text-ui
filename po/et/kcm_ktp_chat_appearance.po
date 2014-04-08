@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-21 01:34+0000\n"
+"POT-Creation-Date: 2013-09-24 05:32+0000\n"
 "PO-Revision-Date: 2012-11-26 17:46+0200\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -60,14 +60,12 @@ msgstr "Kohandatud fondiseadistused"
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
 #: appearance-config.ui:163
 #, fuzzy
-#| msgid "Select Font: "
 msgid "Select Font:"
 msgstr "Font: "
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
 #: appearance-config.ui:176
 #, fuzzy
-#| msgid "Select Size: "
 msgid "Select Size:"
 msgstr "Suurus: "
 

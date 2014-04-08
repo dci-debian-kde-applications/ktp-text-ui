@@ -1,15 +1,14 @@
-# Translation of ktpchat.po to Brazilian Portuguese
-# Copyright (C) 2011-2013 This_file_is_part_of_KDE
+# Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2011, 2012, 2013.
 # Marcus Gama <marcus.gama@gmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: ktpchat\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-17 01:27+0000\n"
-"PO-Revision-Date: 2013-06-08 13:55-0300\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"PO-Revision-Date: 2013-09-25 09:03-0300\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
 "Language: pt_BR\n"
@@ -214,3 +213,9 @@ msgstr "%1 enviou-lhe uma mensagem"
 #: notify-filter.cpp:95
 msgid "View"
 msgstr "Exibir"
+
+#~ msgid "You have sent a message"
+#~ msgstr "Você enviou uma mensagem"
+
+#~ msgid "Show format options"
+#~ msgstr "Mostrar as opções do formato"
