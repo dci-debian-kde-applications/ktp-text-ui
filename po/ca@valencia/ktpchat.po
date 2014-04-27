@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktpchat\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-04-11 06:56+0000\n"
 "PO-Revision-Date: 2013-09-24 13:50+0200\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "txemaq@gmail.com"
 
-#: adium-theme-view.cpp:91
+#: adium-theme-view.cpp:93
 msgid ""
 "Failed to load a valid theme. Your installation is broken. Check your kde "
 "path. Will now crash."
@@ -36,12 +36,12 @@ msgstr ""
 "Ha fallat en carregar un tema vàlid. La instal·lació està trencada. "
 "Comproveu la variable PATH del KDE. Ara acabarà fallant."
 
-#: adium-theme-view.cpp:182
+#: adium-theme-view.cpp:184
 msgid "Missing required file Template.html - check your installation."
 msgstr ""
 "No s'ha trobat el fitxer template.html requerit - Comproveu la instal·lació."
 
-#: adium-theme-view.cpp:618
+#: adium-theme-view.cpp:624
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
@@ -196,24 +196,24 @@ msgstr "%1 ara està desbloquejat."
 msgid "You are now offline"
 msgstr "Ara esteu desconnectat"
 
-#: chat-window-style.cpp:349
+#: chat-window-style.cpp:352
 msgctxt "Normal style variant menu item"
 msgid "Normal"
 msgstr "Normal"
 
-#: chat-window-style.cpp:477
+#: chat-window-style.cpp:486
 msgid "Download"
 msgstr "Descarrega"
 
-#: chat-window-style.cpp:477
+#: chat-window-style.cpp:486
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: chat-window-style.cpp:498
+#: chat-window-style.cpp:507
 msgid "Play"
 msgstr "Reprodueix"
 
-#: chat-window-style.cpp:498
+#: chat-window-style.cpp:507
 msgid "Save as"
 msgstr "Guarda com a"
 

@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: telepathy-chat-window-config\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-06-28 08:46+0200\n"
-"Last-Translator: xavier <xavier.besnard@neuf.fr>\n"
+"PO-Revision-Date: 2014-01-06 00:37+0100\n"
+"Last-Translator: Maxime Corteel\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr[1] " messages"
 #: behavior-config.cpp:60
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
-msgstr ""
+msgstr "Pseudonyme"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -85,17 +85,17 @@ msgstr "Afficher les autres durant ma saisie"
 #. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
 #: behavior-config.ui:108
 msgid "Nickname Completion"
-msgstr ""
+msgstr "Complètement de pseudonyme"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: behavior-config.ui:117
 msgid "Complete nicknames to"
-msgstr ""
+msgstr "Compléter les pseudonymes par"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: behavior-config.ui:137
 msgid "when I press Tab"
-msgstr ""
+msgstr "quand j'appuie sur Tabulation"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Un nouvel onglet dans la dernière fenêtre ayant eu le focus"

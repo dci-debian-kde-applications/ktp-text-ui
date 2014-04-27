@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-04-11 06:56+0000\n"
 "PO-Revision-Date: 2013-09-24 15:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -26,7 +26,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: adium-theme-view.cpp:91
+#: adium-theme-view.cpp:93
 msgid ""
 "Failed to load a valid theme. Your installation is broken. Check your kde "
 "path. Will now crash."
@@ -35,13 +35,13 @@ msgstr ""
 "пошкоджено. Перевірте, чи правильно вказано шлях до каталогів KDE. Програма "
 "завершує роботу у аварійному режимі."
 
-#: adium-theme-view.cpp:182
+#: adium-theme-view.cpp:184
 msgid "Missing required file Template.html - check your installation."
 msgstr ""
 "Не виявлено потрібного програмі файла Template.html. Перевірте, чи "
 "встановлено всі потрібні компоненти."
 
-#: adium-theme-view.cpp:618
+#: adium-theme-view.cpp:624
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
@@ -199,24 +199,24 @@ msgstr "%1 розблоковано."
 msgid "You are now offline"
 msgstr "Ви перейшли до роботи у автономному режимі"
 
-#: chat-window-style.cpp:349
+#: chat-window-style.cpp:352
 msgctxt "Normal style variant menu item"
 msgid "Normal"
 msgstr "Звичайний"
 
-#: chat-window-style.cpp:477
+#: chat-window-style.cpp:486
 msgid "Download"
 msgstr "Звантажити"
 
-#: chat-window-style.cpp:477
+#: chat-window-style.cpp:486
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: chat-window-style.cpp:498
+#: chat-window-style.cpp:507
 msgid "Play"
 msgstr "Відтворити"
 
-#: chat-window-style.cpp:498
+#: chat-window-style.cpp:507
 msgid "Save as"
 msgstr "Зберегти як"
 

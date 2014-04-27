@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Martin Schlander <mschlander@opensuse.org>, 2011, 2012, 2013.
+# Martin Schlander <mschlander@opensuse.org>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-10-05 13:56+0200\n"
+"PO-Revision-Date: 2014-03-23 14:11+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -29,7 +29,7 @@ msgstr[1] " beskeder"
 #: behavior-config.cpp:60
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
-msgstr ""
+msgstr "Kaldenavn"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -80,17 +80,17 @@ msgstr "Vis andre når jeg er i gang med at skrive"
 #. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
 #: behavior-config.ui:108
 msgid "Nickname Completion"
-msgstr ""
+msgstr "Kaldenavnsfuldførelse"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: behavior-config.ui:117
 msgid "Complete nicknames to"
-msgstr ""
+msgstr "Fuldfør kaldenavne til"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: behavior-config.ui:137
 msgid "when I press Tab"
-msgstr ""
+msgstr "når jeg trykker på tabulatortasten"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Et nyt faneblad i det senest vindue i fokus"

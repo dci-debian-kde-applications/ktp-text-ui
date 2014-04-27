@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-04-18 14:04+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2014-01-08 11:38+0100\n"
+"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr[2] " zpráv"
 #: behavior-config.cpp:60
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
-msgstr ""
+msgstr "Přezdívka"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -82,14 +82,14 @@ msgstr "Ukázat ostatním, že píšu"
 #. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
 #: behavior-config.ui:108
 msgid "Nickname Completion"
-msgstr ""
+msgstr "Doplňování přezdívek"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: behavior-config.ui:117
 msgid "Complete nicknames to"
-msgstr ""
+msgstr "Doplnit přezdívky do"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: behavior-config.ui:137
 msgid "when I press Tab"
-msgstr ""
+msgstr "při stisku Tab"

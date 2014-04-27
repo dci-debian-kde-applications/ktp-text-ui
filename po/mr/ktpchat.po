@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-04-11 06:56+0000\n"
 "PO-Revision-Date: 2013-03-22 17:23+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -25,17 +25,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "chetan@kompkin.com"
 
-#: adium-theme-view.cpp:91
+#: adium-theme-view.cpp:93
 msgid ""
 "Failed to load a valid theme. Your installation is broken. Check your kde "
 "path. Will now crash."
 msgstr ""
 
-#: adium-theme-view.cpp:182
+#: adium-theme-view.cpp:184
 msgid "Missing required file Template.html - check your installation."
 msgstr ""
 
-#: adium-theme-view.cpp:618
+#: adium-theme-view.cpp:624
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
@@ -176,24 +176,24 @@ msgstr ""
 msgid "You are now offline"
 msgstr ""
 
-#: chat-window-style.cpp:349
+#: chat-window-style.cpp:352
 msgctxt "Normal style variant menu item"
 msgid "Normal"
 msgstr "सामान्य"
 
-#: chat-window-style.cpp:477
+#: chat-window-style.cpp:486
 msgid "Download"
 msgstr "डाउनलोड"
 
-#: chat-window-style.cpp:477
+#: chat-window-style.cpp:486
 msgid "Cancel"
 msgstr "रद्द करा"
 
-#: chat-window-style.cpp:498
+#: chat-window-style.cpp:507
 msgid "Play"
 msgstr "सुरु करा"
 
-#: chat-window-style.cpp:498
+#: chat-window-style.cpp:507
 msgid "Save as"
 msgstr "असे साठवा"
 

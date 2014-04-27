@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-04-11 06:56+0000\n"
 "PO-Revision-Date: 2013-09-29 21:24-0400\n"
 "Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-i18n-doc@kde.org>\n"
@@ -26,17 +26,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org"
 
-#: adium-theme-view.cpp:91
+#: adium-theme-view.cpp:93
 msgid ""
 "Failed to load a valid theme. Your installation is broken. Check your kde "
 "path. Will now crash."
 msgstr "加载可用主题失败。您的安装已损坏。请检查您的 KDE 路径。现在将会崩溃。"
 
-#: adium-theme-view.cpp:182
+#: adium-theme-view.cpp:184
 msgid "Missing required file Template.html - check your installation."
 msgstr "缺少需要的 Template.html - 请检查您的安装。"
 
-#: adium-theme-view.cpp:618
+#: adium-theme-view.cpp:624
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
@@ -177,24 +177,24 @@ msgstr "%1 已取消屏蔽。"
 msgid "You are now offline"
 msgstr "您已经离线"
 
-#: chat-window-style.cpp:349
+#: chat-window-style.cpp:352
 msgctxt "Normal style variant menu item"
 msgid "Normal"
 msgstr "普通"
 
-#: chat-window-style.cpp:477
+#: chat-window-style.cpp:486
 msgid "Download"
 msgstr "下载"
 
-#: chat-window-style.cpp:477
+#: chat-window-style.cpp:486
 msgid "Cancel"
 msgstr "取消"
 
-#: chat-window-style.cpp:498
+#: chat-window-style.cpp:507
 msgid "Play"
 msgstr "播放"
 
-#: chat-window-style.cpp:498
+#: chat-window-style.cpp:507
 msgid "Save as"
 msgstr "另存为"
 

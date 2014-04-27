@@ -1,7 +1,7 @@
 # Copyright © 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the ktp-text-ui package.
 # Tommi Nieminen <translator@legisign.org>, 2012.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2013.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014.
 #
 # KDE Finnish translation sprint participants:
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-04-17 18:04+0300\n"
+"PO-Revision-Date: 2013-12-21 13:42+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
 "Language: fi\n"
@@ -32,7 +32,7 @@ msgstr[1] " viestiä"
 #: behavior-config.cpp:60
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
-msgstr ""
+msgstr "Nimimerkki"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -83,17 +83,17 @@ msgstr "Näytä muille milloin kirjoitan"
 #. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
 #: behavior-config.ui:108
 msgid "Nickname Completion"
-msgstr ""
+msgstr "Nimimerkkien täydennys"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: behavior-config.ui:117
 msgid "Complete nicknames to"
-msgstr ""
+msgstr "Täydennä nimimerkit muotoon"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: behavior-config.ui:137
 msgid "when I press Tab"
-msgstr ""
+msgstr ", kun painan sarkainta"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Viimeksi kohdistetun ikkunan uuteen välilehteen"
