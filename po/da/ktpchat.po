@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-04-11 06:56+0000\n"
 "PO-Revision-Date: 2013-10-05 14:00+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -25,7 +25,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mschlander@opensuse.org"
 
-#: adium-theme-view.cpp:91
+#: adium-theme-view.cpp:93
 msgid ""
 "Failed to load a valid theme. Your installation is broken. Check your kde "
 "path. Will now crash."
@@ -33,11 +33,11 @@ msgstr ""
 "Kunne ikke indlæse et gyldigt tema. Din installation er defekt. Tjek din KDE-"
 "sti. Vil nu bryde sammen."
 
-#: adium-theme-view.cpp:182
+#: adium-theme-view.cpp:184
 msgid "Missing required file Template.html - check your installation."
 msgstr "Mangler påkrævet fil Template.html - tjek din installation."
 
-#: adium-theme-view.cpp:618
+#: adium-theme-view.cpp:624
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
@@ -188,24 +188,24 @@ msgstr "%1 er nu afblokeret."
 msgid "You are now offline"
 msgstr "Du er nu offline"
 
-#: chat-window-style.cpp:349
+#: chat-window-style.cpp:352
 msgctxt "Normal style variant menu item"
 msgid "Normal"
 msgstr "Normal"
 
-#: chat-window-style.cpp:477
+#: chat-window-style.cpp:486
 msgid "Download"
 msgstr "Download"
 
-#: chat-window-style.cpp:477
+#: chat-window-style.cpp:486
 msgid "Cancel"
 msgstr "Annullér"
 
-#: chat-window-style.cpp:498
+#: chat-window-style.cpp:507
 msgid "Play"
 msgstr "Afspil"
 
-#: chat-window-style.cpp:498
+#: chat-window-style.cpp:507
 msgid "Save as"
 msgstr "Gem som"
 

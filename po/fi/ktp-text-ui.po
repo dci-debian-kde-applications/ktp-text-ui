@@ -1,7 +1,7 @@
 # Copyright © 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the ktp-text-ui package.
 # Tommi Nieminen <translator@legisign.org>, 2012.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013, 2014.
 #
 # KDE Finnish translation sprint participants:
 # Author: Artnay
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-12-22 13:54+0200\n"
+"PO-Revision-Date: 2014-03-31 04:20+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
 "Language: fi\n"
@@ -114,7 +114,7 @@ msgstr "Käynnistä sovellus, joka mahdollistaa tämän käyttäjän nähdä ty�
 
 #: chat-window.cpp:712
 msgid "&Collaboratively edit a document"
-msgstr "&Muokkaa dokumenttia yhdessä"
+msgstr "&Muokkaa tiedostoa yhdessä"
 
 #: chat-window.cpp:723
 msgid "Choose Spelling Language"
@@ -146,7 +146,7 @@ msgstr "Lähetä viesti"
 msgctxt "Toolbar icon tooltip"
 msgid "Edit a plain-text document with this contact in real-time"
 msgstr ""
-"Muokkaa muotoilemattoman tekstin dokumenttia reaaliajassa tämän käyttäjän "
+"Muokkaa muotoilemattoman tekstin tiedostoa reaaliajassa tämän käyttäjän "
 "kanssa"
 
 #: chat-window.cpp:775
@@ -156,7 +156,7 @@ msgid ""
 "package installed to share documents</p>"
 msgstr ""
 "<p>Sekä sinulla että toisella käyttäjällä tarvitsee olla <i>kte-"
-"collaborative</i> asennettuna, jotta voitte jakaa dokumentteja</p>"
+"collaborative</i> asennettuna, jotta voitte jakaa tiedostoja</p>"
 
 #: chat-window.cpp:867
 #, kde-format
