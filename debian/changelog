@@ -1,4 +1,4 @@
-ktp-text-ui (0.8.1-1) UNRELEASED; urgency=low
+ktp-text-ui (0.8.1-1) unstable; urgency=low
 
   * New upstream release
   * Update Standards-Version to 3.9.5. No changes needed.
@@ -6,7 +6,7 @@ ktp-text-ui (0.8.1-1) UNRELEASED; urgency=low
   * Remove 04_no_require_x11.patch
   * Update debian/copyright
 
- -- Diane Trout <diane@ghic.org>  Sun, 27 Apr 2014 12:42:45 -0700
+ -- Diane Trout <diane@ghic.org>  Fri, 16 May 2014 21:06:46 -0700
 
 ktp-text-ui (0.7.0-1) unstable; urgency=low
 
