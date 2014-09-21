@@ -1,14 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Manfred Wiese <m.j.wiese@web.de>, 2014.
+# Sönke Dibbern <s_dibbern@web.de>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2014-03-17 10:11+0100\n"
-"Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
+"PO-Revision-Date: 2014-06-05 17:51+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
 "Language: nds\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +21,12 @@ msgstr ""
 #. i18n: ectx: property (windowTitle), widget (QWidget, LatexConfig)
 #: latex/latex-config.ui:14
 msgid "LatexConfig"
-msgstr ""
+msgstr "LaTeX-Instellen"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: latex/latex-config.ui:20
 msgid "LaTeX header:"
-msgstr ""
+msgstr "LaTeX-Koppreeg:"
 
 #. i18n: ectx: property (plainText), widget (QPlainTextEdit, kcfg_LatexHeader)
 #: latex/latex-config.ui:31
@@ -35,6 +36,10 @@ msgid ""
 "\\pagestyle{empty}\n"
 "\\color{black}\n"
 msgstr ""
+"\\documentclass{minimal}\n"
+"\\usepackage{color}\n"
+"\\pagestyle{empty}\n"
+"\\color{black}\n"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: latex/latex-config.ui:38
@@ -44,7 +49,7 @@ msgstr "LaTeX-Befehlsreeg:"
 #. i18n: ectx: property (text), widget (KLineEdit, kcfg_LatexCmd)
 #: latex/latex-config.ui:45
 msgid "latex -interaction=batchmode -halt-on-error"
-msgstr ""
+msgstr "latex -interaction=batchmode -halt-on-error"
 
 #: texttospeech/tts-filter.cpp:42
 msgid "KDE Instant Messaging"

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Marek Laane <bald@smail.ee>, 2011, 2012, 2013.
+# Marek Laane <bald@smail.ee>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-01-14 20:08+0200\n"
+"PO-Revision-Date: 2014-06-13 13:44+0300\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
 "Language: et\n"
@@ -23,13 +23,13 @@ msgctxt ""
 "spin box. Be sure to include leading space"
 msgid " message"
 msgid_plural " messages"
-msgstr[0] " sõnumit"
+msgstr[0] " sõnum"
 msgstr[1] " sõnumit"
 
 #: behavior-config.cpp:60
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
-msgstr ""
+msgstr "Hüüdnimi"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, newTabGroup)
 #: behavior-config.ui:17
@@ -38,25 +38,21 @@ msgstr "Kaardid"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: behavior-config.ui:23
-#, fuzzy
 msgid "Open new conversations:"
 msgstr "Uued vestlused avatakse:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
 #: behavior-config.ui:30
-#, fuzzy
 msgid "As new windows"
 msgstr "Uues aknas"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
 #: behavior-config.ui:40
-#, fuzzy
 msgid "As tabs in the same window"
-msgstr "Uuel kaardil esimeses aknas"
+msgstr "Kaartidena samas aknas"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, scrollbackGroup)
 #: behavior-config.ui:53
-#, fuzzy
 msgid "Last Conversation Scrollback"
 msgstr "Viimase vestluse ajalugu"
 
@@ -69,32 +65,32 @@ msgstr "Näidatakse viimast"
 #. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
 #: behavior-config.ui:85
 msgid "User Is Typing"
-msgstr ""
+msgstr "Kasutaja kirjutab"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
 #: behavior-config.ui:91
 msgid "Show me when others are typing"
-msgstr ""
+msgstr "Teadaandmine teiste kirjutamisest"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
-msgstr ""
+msgstr "Teadaandmine teistele minu kirjutamisest"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
 #: behavior-config.ui:108
 msgid "Nickname Completion"
-msgstr ""
+msgstr "Hüüdnime lõpetamine"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: behavior-config.ui:117
 msgid "Complete nicknames to"
-msgstr ""
+msgstr "Hüüdnimed lõpetatakse"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: behavior-config.ui:137
 msgid "when I press Tab"
-msgstr ""
+msgstr "tabeldusklahvile vajutamisel"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Uuel kaardil viimati fookuses olnud aknas"

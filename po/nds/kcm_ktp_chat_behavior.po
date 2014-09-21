@@ -2,14 +2,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Manfred Wiese <m.j.wiese@web.de>, 2011, 2014.
+# Sönke Dibbern <s_dibbern@web.de>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-chat-window-config\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2014-03-17 10:47+0100\n"
-"Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
+"PO-Revision-Date: 2014-06-05 16:50+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
 "Language: nds\n"
 "MIME-Version: 1.0\n"
@@ -24,8 +25,8 @@ msgctxt ""
 "spin box. Be sure to include leading space"
 msgid " message"
 msgid_plural " messages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " Naricht"
+msgstr[1] " Narichten"
 
 #: behavior-config.cpp:60
 msgctxt "Placeholder for contact name in completion suffix selector"
@@ -40,7 +41,7 @@ msgstr "Paneels"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: behavior-config.ui:23
 msgid "Open new conversations:"
-msgstr ""
+msgstr "Nieg Klöönsnacks opmaken:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioNew)
 #: behavior-config.ui:30
@@ -50,33 +51,33 @@ msgstr "As nieg Finster"
 #. i18n: ectx: property (text), widget (QRadioButton, radioZero)
 #: behavior-config.ui:40
 msgid "As tabs in the same window"
-msgstr ""
+msgstr "As Paneels binnen dat sülve Finster"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, scrollbackGroup)
 #: behavior-config.ui:53
 msgid "Last Conversation Scrollback"
-msgstr ""
+msgstr "Rullrebeet för verleden Klöönsnack"
 
 #. i18n: First part of &quot;Show last %1 messages&quot; string
 #. i18n: ectx: property (text), widget (QLabel, label_p1)
 #: behavior-config.ui:59
 msgid "Show last"
-msgstr ""
+msgstr "Verleden wiesen"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, typingGroup)
 #: behavior-config.ui:85
 msgid "User Is Typing"
-msgstr ""
+msgstr "Bruker tippt jüst"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowOthersTyping)
 #: behavior-config.ui:91
 msgid "Show me when others are typing"
-msgstr ""
+msgstr "Wiesen, wenn anner Lüüd wat ingeevt"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxShowMeTyping)
 #: behavior-config.ui:98
 msgid "Show others when I am typing"
-msgstr ""
+msgstr "Anner Lüüd wiesen, wenn ik wat ingiff"
 
 #. i18n: ectx: property (title), widget (KButtonGroup, nicknameCompletionGroup)
 #: behavior-config.ui:108
@@ -86,9 +87,9 @@ msgstr "Ökelnaam-Kompletteren"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: behavior-config.ui:117
 msgid "Complete nicknames to"
-msgstr ""
+msgstr "Ökelnaams kompletteren"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: behavior-config.ui:137
 msgid "when I press Tab"
-msgstr ""
+msgstr "wenn ik de Tab-Tast drück"

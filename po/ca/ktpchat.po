@@ -1,15 +1,15 @@
 # Translation of ktpchat.po to Catalan
-# Copyright (C) 2012-2013 This_file_is_part_of_KDE
+# Copyright (C) 2012-2014 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep Ma. Ferrer <txemaq@gmail.com>, 2012, 2013.
+# Josep Ma. Ferrer <txemaq@gmail.com>, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktpchat\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-04-11 06:56+0000\n"
-"PO-Revision-Date: 2013-09-24 13:50+0200\n"
+"PO-Revision-Date: 2014-05-03 12:07+0200\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -39,7 +39,7 @@ msgstr ""
 #: adium-theme-view.cpp:184
 msgid "Missing required file Template.html - check your installation."
 msgstr ""
-"No s'ha trobat el fitxer template.html requerit - Comproveu la instal·lació."
+"No s'ha trobat el fitxer Template.html requerit - Comproveu la instal·lació."
 
 #: adium-theme-view.cpp:624
 #, kde-format

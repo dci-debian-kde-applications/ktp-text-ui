@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2011, 2012, 2013.
+# Yuri Chornoivan <yurchor@ukr.net>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: ktpchat\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-04-11 06:56+0000\n"
-"PO-Revision-Date: 2013-09-24 15:46+0300\n"
+"PO-Revision-Date: 2014-04-22 08:14+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -147,7 +147,7 @@ msgstr "Не вдалося доправити повідомлення: %1"
 #: chat-widget.cpp:699 chat-widget.cpp:793
 #, kde-format
 msgid "%1 has left the chat"
-msgstr "%1 полишив балачку."
+msgstr "%1 полишив спілкування"
 
 #: chat-widget.cpp:739
 #, kde-format

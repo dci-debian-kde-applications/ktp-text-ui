@@ -1,6 +1,7 @@
 /***************************************************************************
  *   Copyright (C) 2010 by David Edmundson <kde@davidedmundson.co.uk>      *
  *   Copyright (C) 2011 by Francesco Nwokeka <francesco.nwokeka@gmail.com> *
+ *   Copyright (C) 2014 by Marcin Ziemiński <zieminn@gmail.com>            *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -22,6 +23,8 @@
 #define CHATWIDGET_H
 
 #include "ktpchat_export.h"
+#include "otr-status.h"
+#include "types.h"
 
 #include <QtCore/QString>
 #include <QtGui/QWidget>
@@ -35,11 +38,13 @@
 
 #include <KTp/presence.h>
 #include <KTp/message.h>
+#include <KTp/OTR/types.h>
 
 class ChatSearchBar;
 class ChatWidgetPrivate;
 class QShowEvent;
 class QKeyEvent;
+class ShareProvider;
 
 class KDE_TELEPATHY_CHAT_EXPORT ChatWidget : public QWidget
 {
@@ -87,6 +92,10 @@ public:
 
     void setSpellDictionary(const QString &dict);
 
+    QString currentKeyboardLayoutLanguage() const;
+
+    void setCurrentKeyboardLayoutLanguage(const QString &language);
+
     void addEmoticonToChat(const QString &emoticon);
 
     /** Returns the chat state of remote contact */
@@ -102,6 +111,21 @@ public:
 
     /** Is this widget visible and in the active window */
     virtual bool isOnTop() const;
+
+    /** Starts otr session */
+    void startOtrSession();
+
+    /** Stops otr session */
+    void stopOtrSession();
+
+    /** Athenticates contact in the context of otr conversation */
+    void authenticateBuddy();
+
+    /** Returns OtrStatus linked to the channel represented by this tab */
+    OtrStatus otrStatus() const;
+
+    /** If block then send message box is disabled */
+    void blockTextInput(bool block);
 
 public Q_SLOTS:
     /** toggle the search bar visibility */
@@ -142,6 +166,14 @@ protected Q_SLOTS:
 
     void onContactAliasChanged(const Tp::ContactPtr &contact, const QString &alias);
 
+    void onContactClientTypesChanged(const Tp::ContactPtr &contact, const QStringList &clientTypes);
+
+    void onParticipantsChanged(Tp::Contacts groupMembersAdded,
+                               Tp::Contacts groupLocalPendingMembersAdded,
+                               Tp::Contacts groupRemotePendingMembersAdded,
+                               Tp::Contacts groupMembersRemoved,
+                               Tp::Channel::GroupMemberChangeDetails details);
+
     void onChannelInvalidated();
 
     void onInputBoxChanged();
@@ -177,6 +209,9 @@ Q_SIGNALS:
     /** Emitted when zoom level in chat view changes */
     void zoomFactorChanged(qreal zoomFactor);
 
+    /** Emitted when OTRTrustLevel changes in the channel */
+    void otrStatusChanged(OtrStatus otrStatus);
+
 private Q_SLOTS:
     /** received when user changes search criteria or when searching for text */
     void findTextInChat(const QString &text, QWebPage::FindFlags flags);
@@ -188,6 +223,25 @@ private Q_SLOTS:
 
     void temporaryFileTransferChannelCreated(Tp::PendingOperation *operation);
     void temporaryFileTransferStateChanged(Tp::FileTransferState, Tp::FileTransferStateChangeReason);
+
+    void onContactsViewContextMenuRequested(const QPoint &point);
+    void onFileTransferMenuActionTriggered();
+    void onMessageWidgetSwitchOnlineActionTriggered();
+    void onOpenContactChatWindowClicked();
+    void onShowContactDetailsClicked();
+    void onShareImageMenuActionTriggered();
+    void onShareProviderFinishedSuccess(ShareProvider *provider, const QString &imageUrl);
+    void onShareProviderFinishedFailure(ShareProvider *provider, const QString &errorMessage);
+    void onSendFileClicked();
+
+    void onOTRTrustLevelChanged(KTp::OTRTrustLevel trustLevel, KTp::OTRTrustLevel previous);
+    void onOTRsessionRefreshed();
+    void onPeerAuthenticationRequestedQA(const QString &question);
+    void onPeerAuthenticationRequestedSS();
+    void onPeerAuthenticationConcluded(bool authenticated);
+    void onPeerAuthenticationInProgress();
+    void onPeerAuthenticationAborted();
+    void onPeerAuthenticationFailed();
 
 private:
     /** connects necessary signals for the channel */
@@ -204,6 +258,9 @@ private:
 
     /** Loads theme into the the AdiumThemeView */
     void initChatArea();
+
+    /** connects necessary signals for the otr proxy channel */
+    void setupOTR();
 
     bool m_previousConversationAvailable;
 

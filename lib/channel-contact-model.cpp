@@ -23,6 +23,10 @@
 #include <KDebug>
 #include <KIcon>
 
+#include <KTp/types.h>
+
+Q_DECLARE_METATYPE(Tp::ContactPtr)
+
 ChannelContactModel::ChannelContactModel(const Tp::TextChannelPtr &channel, QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -75,25 +79,45 @@ int ChannelContactModel::rowCount(const QModelIndex &parent) const
 
 QVariant ChannelContactModel::data(const QModelIndex &index, int role) const
 {
-    if(!index.isValid()) {
+    if (!index.isValid()) {
         return QVariant();
     }
 
     int row = index.row();
 
+    KTp::ContactPtr contact = KTp::ContactPtr::qObjectCast(m_contacts[row]);
+    if (!contact) {
+        return QVariant();
+    }
+
     switch (role) {
     case Qt::DisplayRole:
-        return QVariant(m_contacts[row]->alias());
+        return QVariant(contact->alias());
 
-    case Qt::DecorationRole:
-    {
-        const Tp::ContactPtr contact = m_contacts[row];
-        if (TextChatConfig::instance()->showOthersTyping() && (m_channel->chatState(contact) == Tp::ChannelChatStateComposing)) {
-            return KIcon(QLatin1String("document-edit"));
+    case KTp::ContactClientTypesRole:
+        return contact->clientTypes();
+    case KTp::ContactAvatarPathRole:
+        return contact->avatarData().fileName;
+    case KTp::ContactAvatarPixmapRole:
+        return contact->avatarPixmap();
+    case KTp::ContactGroupsRole:
+        return contact->groups();
 
-        }
-        return KTp::Presence(contact->presence()).icon();
-    }
+    case KTp::ContactPresenceNameRole:
+        return contact->presence().displayString();
+    case KTp::ContactPresenceMessageRole:
+        return contact->presence().statusMessage();
+    case KTp::ContactPresenceTypeRole:
+        return contact->presence().type();
+    case KTp::ContactPresenceIconRole:
+        return contact->presence().iconName();
+
+    case KTp::ContactRole:
+        return QVariant::fromValue(m_contacts[row]);
+
+    case ChannelContactModel::IsTypingRole:
+        return TextChatConfig::instance()->showOthersTyping() && (m_channel->chatState(contact) == Tp::ChannelChatStateComposing);
+
     default:
         return QVariant();
     }
@@ -145,6 +169,16 @@ void ChannelContactModel::onContactBlockStatusChanged(bool blocked)
     Q_EMIT contactBlockStatusChanged(contact, blocked);
 }
 
+void ChannelContactModel::onContactClientTypesChanged(const QStringList &clientTypes)
+{
+    Tp::ContactPtr contact(qobject_cast<Tp::Contact*>(sender()));
+
+    QModelIndex index = createIndex(m_contacts.lastIndexOf(contact), 0);
+    Q_EMIT dataChanged(index, index);
+
+    Q_EMIT contactClientTypesChanged(contact, clientTypes);
+}
+
 void ChannelContactModel::addContacts(const Tp::Contacts &contacts)
 {
     QList<Tp::ContactPtr> newContacts = contacts.toList();
@@ -153,6 +187,10 @@ void ChannelContactModel::addContacts(const Tp::Contacts &contacts)
         connect(contact.data(), SIGNAL(aliasChanged(QString)), SLOT(onContactAliasChanged(QString)));
         connect(contact.data(), SIGNAL(presenceChanged(Tp::Presence)), SLOT(onContactPresenceChanged(Tp::Presence)));
         connect(contact.data(), SIGNAL(blockStatusChanged(bool)), SLOT(onContactBlockStatusChanged(bool)));
+        connect(contact.data(),
+                SIGNAL(clientTypesChanged(QStringList)),
+                SLOT(onContactClientTypesChanged(QStringList)));
+
     }
 
     if (!newContacts.isEmpty()) {

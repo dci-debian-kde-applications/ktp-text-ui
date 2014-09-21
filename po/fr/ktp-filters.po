@@ -46,7 +46,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: latex/latex-config.ui:38
 msgid "LaTeX command line:"
-msgstr "Ligne de commandes LaTeX :"
+msgstr "Ligne de commandes LaTeX :"
 
 #. i18n: ectx: property (text), widget (KLineEdit, kcfg_LatexCmd)
 #: latex/latex-config.ui:45

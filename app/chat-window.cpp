@@ -2,6 +2,7 @@
     Copyright (C) 2010  David Edmundson   <kde@davidedmundson.co.uk>
     Copyright (C) 2011  Dominik Schmidt   <dev@dominik-schmidt.de>
     Copyright (C) 2011  Francesco Nwokeka <francesco.nwokeka@gmail.com>
+    Copyright (C) 2014  Marcin Ziemiński   <zieminn@gmail.com>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -65,6 +66,15 @@
 #include "telepathy-chat-ui.h"
 #include "text-chat-config.h"
 
+#ifdef HAVE_KPEOPLE
+#include <kpeople/widgets/persondetailsdialog.h>
+#include <kpeople/global.h>
+#include <kpeople/persondata.h>
+#endif
+
+#include <KTp/contact-info-dialog.h>
+#include <KTp/OTR/constants.h>
+
 #define PREFERRED_RFB_HANDLER "org.freedesktop.Telepathy.Client.krfb_rfb_handler"
 
 K_GLOBAL_STATIC_WITH_ARGS(KTp::ServiceAvailabilityChecker, s_krfbAvailableChecker,
@@ -72,7 +82,14 @@ K_GLOBAL_STATIC_WITH_ARGS(KTp::ServiceAvailabilityChecker, s_krfbAvailableChecke
 
 ChatWindow::ChatWindow()
     : m_sendMessage(0),
-      m_tabWidget(0)
+      m_tabWidget(0),
+      m_keyboardLayoutInterface(0),
+      m_otrActionMenu(0),
+      m_proxyService(
+              new ProxyService(QDBusConnection::sessionBus(),
+                  KTP_PROXY_BUS_NAME,
+                  KTP_PROXY_SERVICE_OBJECT_PATH,
+                  this))
 {
     //This effectively constructs the s_krfbAvailableChecker object the first
     //time that this code is executed. This is to start the d-bus query early, so
@@ -100,6 +117,11 @@ ChatWindow::ChatWindow()
     KStandardAction::zoomIn(this, SLOT(onZoomIn()), actionCollection());
     KStandardAction::zoomOut(this, SLOT(onZoomOut()), actionCollection());
 
+    m_keyboardLayoutInterface = new QDBusInterface(QLatin1String("org.kde.keyboard"), QLatin1String("/Layouts"),
+						   QLatin1String("org.kde.KeyboardLayouts"), QDBusConnection::sessionBus(), this);
+
+    connect(m_keyboardLayoutInterface, SIGNAL(currentLayoutChanged(QString)), this, SLOT(onKeyboardLayoutChange(QString)));
+
     // set up m_tabWidget
     m_tabWidget = new KTabWidget(this);
     //clicking on the close button can result in the tab bar getting focus, this works round that
@@ -112,7 +134,8 @@ ChatWindow::ChatWindow()
 
     connect(m_tabWidget, SIGNAL(closeRequest(QWidget*)), this, SLOT(destroyTab(QWidget*)));
     connect(m_tabWidget, SIGNAL(currentChanged(int)), this, SLOT(onCurrentIndexChanged(int)));
-    connect(qobject_cast<KTabBar*>(m_tabWidget->tabBar()), SIGNAL(mouseMiddleClick(int)),m_tabWidget, SLOT(removeTab(int)));
+
+    connect(qobject_cast<KTabBar*>(m_tabWidget->tabBar()), SIGNAL(mouseMiddleClick(int)), this, SLOT(onTabMiddleClicked(int)));
     connect(qobject_cast<KTabBar*>(m_tabWidget->tabBar()), SIGNAL(contextMenu(int,QPoint)), SLOT(tabBarContextMenu(int,QPoint)));
 
     setCentralWidget(m_tabWidget);
@@ -120,6 +143,9 @@ ChatWindow::ChatWindow()
     // create custom actions
     // we must do it AFTER m_tabWidget is set up
     setupCustomActions();
+
+    // start otr service and create otr actions for otr popup menu
+    setupOTR();
 
     setupGUI(QSize(460, 440), static_cast<StandardWindowOptions>(Default^StatusBar), QLatin1String("chatwindow.rc"));
 
@@ -179,7 +205,7 @@ ChatTab* ChatWindow::getTab(const Tp::AccountPtr &account, const Tp::TextChannel
     ChatTab *match = 0;
 
     // if targetHandle is None, targetId is also "", therefore we won't be able to find it.
-    if (!incomingTextChannel->targetHandleType() == Tp::HandleTypeNone) {
+    if (incomingTextChannel->targetHandleType() != Tp::HandleTypeNone) {
 
         //loop through all tabs checking for matches
         for (int index = 0; index < m_tabWidget->count() && !match; ++index) {
@@ -203,12 +229,24 @@ ChatTab* ChatWindow::getTab(const Tp::AccountPtr &account, const Tp::TextChannel
 ChatTab *ChatWindow::getCurrentTab()
 {
     return qobject_cast<ChatTab*>(m_tabWidget->currentWidget());
+
+}
+
+QList<ChatTab*> ChatWindow::tabs() const
+{
+    QList<ChatTab*> tabs;
+    tabs.reserve(m_tabWidget->count());
+    for (int i = 0; i < m_tabWidget->count(); ++i) {
+        tabs << qobject_cast<ChatTab*>(m_tabWidget->widget(i));
+    }
+    return tabs;
 }
 
 void ChatWindow::removeTab(ChatTab *tab)
 {
     kDebug();
 
+    tab->stopOtrSession();
     removeChatTabSignals(tab);
 
     m_tabWidget->removePage(tab);
@@ -220,12 +258,23 @@ void ChatWindow::removeTab(ChatTab *tab)
     }
 }
 
+void ChatWindow::onTabMiddleClicked(int index)
+{
+    QWidget *tab = m_tabWidget->widget(index);
+    Q_ASSERT(tab);
+    destroyTab(tab);
+}
+
 void ChatWindow::addTab(ChatTab *tab)
 {
     kDebug();
 
     setupChatTabSignals(tab);
     tab->setZoomFactor(m_zoomFactor);
+
+    QDBusPendingCall dbusPendingCall = m_keyboardLayoutInterface->asyncCall(QLatin1String("getCurrentLayout"));
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(dbusPendingCall, this);
+    connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher*)), this, SLOT(onGetCurrentKeyboardLayoutFinished(QDBusPendingCallWatcher*)));
 
     m_tabWidget->addTab(tab, tab->icon(), tab->title());
     m_tabWidget->setCurrentWidget(tab);
@@ -239,6 +288,10 @@ void ChatWindow::addTab(ChatTab *tab)
 
     tab->setFocus();
     tab->updateSendMessageShortcuts(m_sendMessage->shortcut());
+    // block text input if key is being generated for this account
+    if(m_proxyService->isOngoingGeneration(QDBusObjectPath(tab->account()->objectPath()))) {
+        tab->blockTextInput(true);
+    }
 }
 
 void ChatWindow::destroyTab(QWidget* chatWidget)
@@ -329,6 +382,10 @@ void ChatWindow::onCurrentIndexChanged(int index)
     kDebug() << "Current spell dictionary is" << currentChatTab->spellDictionary();
     m_spellDictCombo->setCurrentByDictionary(currentChatTab->spellDictionary());
 
+    if (currentChatTab->isActiveWindow()) {
+	restoreKeyboardLayout(currentChatTab);
+    }
+
     // when the tab changes I need to "refresh" the window's findNext and findPrev actions
     if (currentChatTab->chatSearchBar()->searchBar()->text().isEmpty()) {
         onEnableSearchActions(false);
@@ -346,16 +403,25 @@ void ChatWindow::onCurrentIndexChanged(int index)
         setFileTransferEnabled(targetContact->fileTransferCapability());
         setVideoCallEnabled(targetContact->videoCallCapability());
         setShareDesktopEnabled(targetContact->streamTubeServicesCapability().contains(QLatin1String("rfb")));
-        setInviteToChatEnabled(true);
+        setInviteToChatEnabled(currentChatTab->account()->capabilities().textChatrooms());
+        setShowInfoEnabled(true);
         toggleBlockButton(targetContact->isBlocked());
     } else {
         setAudioCallEnabled(false);
         setFileTransferEnabled(false);
         setVideoCallEnabled(false);
         setShareDesktopEnabled(false);
-        setInviteToChatEnabled(true);
+        setInviteToChatEnabled(currentChatTab->account()->capabilities().textChatrooms());
         setBlockEnabled(false);
+        setShowInfoEnabled(false);
     }
+
+    onOtrStatusChanged(currentChatTab->otrStatus());
+
+    // Allow "Leaving" rooms only in group chat, and when persistent rooms are enabled
+    actionCollection()->action(QLatin1String("leave-chat"))->setEnabled(currentChatTab->isGroupChat() && TextChatConfig::instance()->dontLeaveGroupChats());
+    // No point having "Close" action with only one tab, it behaves exactly like "Quit"
+    actionCollection()->action(QLatin1String("file_close"))->setVisible(m_tabWidget->count() > 1);
 
     if ( currentChatTab->account()->connection() ) {
         const QString collab(QLatin1String("infinote"));
@@ -426,6 +492,19 @@ void ChatWindow::onGenericOperationFinished(Tp::PendingOperation* op)
     }
 }
 
+void ChatWindow::onGetCurrentKeyboardLayoutFinished(QDBusPendingCallWatcher* watcher)
+{
+    if (!watcher->isError()) {
+	QDBusMessage replyMessage = watcher->reply();
+	ChatTab *chatTab = getCurrentTab();
+	if (chatTab) {
+	    QString layout = replyMessage.arguments().first().toString();
+	    chatTab->setCurrentKeyboardLayoutLanguage(layout);
+	}
+    }
+    watcher->deleteLater();
+}
+
 void ChatWindow::onInviteToChatTriggered()
 {
     ChatTab *currChat = qobject_cast<ChatTab*>(m_tabWidget->currentWidget());
@@ -433,6 +512,17 @@ void ChatWindow::onInviteToChatTriggered()
     InviteContactDialog *dialog = new InviteContactDialog(KTp::accountManager(), currChat->account(), currChat->textChannel(), this);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
+}
+
+void ChatWindow::onKeyboardLayoutChange(const QString& keyboardLayout)
+{
+    ChatTab *currChat = getCurrentTab();
+    if (currChat) {
+	// To prevent keyboard layout change when the ChatWindow is minimized or not active
+	if (currChat->isActiveWindow()) {
+	    currChat->setCurrentKeyboardLayoutLanguage(keyboardLayout);
+	}
+    }
 }
 
 void ChatWindow::onNextTabActionTriggered()
@@ -581,6 +671,42 @@ void ChatWindow::onShareDesktopTriggered()
     startShareDesktop(currChat->account(), currChat->textChannel()->targetContact());
 }
 
+void ChatWindow::onShowInfoTriggered()
+{
+    ChatWidget *currChat =  qobject_cast<ChatWidget*>(m_tabWidget->currentWidget());
+    const Tp::ContactPtr contact = currChat->textChannel()->targetContact();
+
+    if(!currChat || !currChat->account() || !contact) {
+        return;
+    }
+
+    if (KTp::kpeopleEnabled()) {
+        #ifdef HAVE_KPEOPLE
+        QString personId(QLatin1String("ktp://"));
+        personId.append(currChat->account()->uniqueIdentifier());
+        personId.append(QLatin1String("?"));
+        personId.append(contact->id());
+
+        if (!personId.isEmpty()) {
+            KPeople::PersonDetailsDialog *view = new KPeople::PersonDetailsDialog(currChat);
+            KPeople::PersonData *person = new KPeople::PersonData(personId, view);
+            view->setPerson(person);
+            view->setAttribute(Qt::WA_DeleteOnClose);
+            view->show();
+        }
+        #endif
+    } else {
+        KTp::ContactInfoDialog* contactInfoDialog = new KTp::ContactInfoDialog(currChat->account(), contact, currChat);
+        contactInfoDialog->setAttribute(Qt::WA_DeleteOnClose);
+        contactInfoDialog->show();
+    }
+}
+
+void ChatWindow::onOpenContactListTriggered()
+{
+    KToolInvocation::kdeinitExec(QLatin1String("ktp-contactlist"));
+}
+
 void ChatWindow::onOpenLogTriggered()
 {
     int index = m_tabWidget->currentIndex();
@@ -628,6 +754,13 @@ void ChatWindow::showSettingsDialog()
     dialog->addModule(QLatin1String("kcm_ktp_chat_behavior"));
     dialog->addModule(QLatin1String("kcm_ktp_chat_messages"));
 
+    KPageWidgetItem *otrConfigPage = dialog->addModule(QLatin1String("kcm_ktp_chat_otr"));
+    proxy = qobject_cast<KCModuleProxy*>(otrConfigPage->widget());
+    Q_ASSERT(proxy);
+    QVariant value;
+    value.setValue(m_proxyService);
+    proxy->realModule()->setProperty("proxyService", value);
+
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
 }
@@ -642,9 +775,11 @@ void ChatWindow::removeChatTabSignals(ChatTab *chatTab)
     disconnect(chatTab, SIGNAL(titleChanged(QString)), this, SLOT(onTabTextChanged(QString)));
     disconnect(chatTab, SIGNAL(iconChanged(KIcon)), this, SLOT(onTabIconChanged(KIcon)));
     disconnect(chatTab, SIGNAL(unreadMessagesChanged()), this, SLOT(onTabStateChanged()));
-    disconnect(chatTab, SIGNAL(contactPresenceChanged(Tp::Presence)), this, SLOT(onTabStateChanged()));
+    disconnect(chatTab, SIGNAL(contactPresenceChanged(KTp::Presence)), this, SLOT(onTabStateChanged()));
     disconnect(chatTab->chatSearchBar(), SIGNAL(enableSearchButtonsSignal(bool)), this, SLOT(onEnableSearchActions(bool)));
     disconnect(chatTab, SIGNAL(contactBlockStatusChanged(bool)), this, SLOT(toggleBlockButton(bool)));
+    if(chatTab->otrStatus())
+        disconnect(chatTab, SIGNAL(otrStatusChanged(OtrStatus)), this, SLOT(onOtrStatusChanged(OtrStatus)));
 }
 
 void ChatWindow::sendNotificationToUser(ChatWindow::NotificationType type, const QString& errorMsg)
@@ -672,10 +807,15 @@ void ChatWindow::setupChatTabSignals(ChatTab *chatTab)
     connect(chatTab->chatSearchBar(), SIGNAL(enableSearchButtonsSignal(bool)), this, SLOT(onEnableSearchActions(bool)));
     connect(chatTab, SIGNAL(contactBlockStatusChanged(bool)), this, SLOT(toggleBlockButton(bool)));
     connect(chatTab, SIGNAL(zoomFactorChanged(qreal)), this, SLOT(onZoomFactorChanged(qreal)));
+    if(chatTab->otrStatus())
+        connect(chatTab, SIGNAL(otrStatusChanged(OtrStatus)), this, SLOT(onOtrStatusChanged(OtrStatus)));
 }
 
 void ChatWindow::setupCustomActions()
 {
+    KStandardAction::close(this, SLOT(closeCurrentTab()), this);
+    KStandardAction::quit(this, SLOT(close()), this);
+
     KAction *nextTabAction = new KAction(KIcon(QLatin1String("go-next-view")), i18n("&Next Tab"), this);
     nextTabAction->setShortcuts(KStandardShortcut::tabNext());
     connect(nextTabAction, SIGNAL(triggered()), this, SLOT(onNextTabActionTriggered()));
@@ -712,6 +852,12 @@ void ChatWindow::setupCustomActions()
     KAction* collaborateDocumentAction = new KAction(KIcon(QLatin1String("document-share")), i18n("&Collaboratively edit a document"), this);
     connect(collaborateDocumentAction, SIGNAL(triggered()), this, SLOT(onCollaborateDocumentTriggered()));
 
+    KAction* showInfoAction = new KAction(KIcon(QLatin1String("view-pim-contacts")), i18n("&Contact info"), this);
+    connect(showInfoAction, SIGNAL(triggered()), this, SLOT(onShowInfoTriggered()));
+
+    KAction* leaveAction = new KAction(KIcon(QLatin1String("irc-close-channel")), i18n("&Leave room"), this);
+    connect(leaveAction, SIGNAL(triggered()), this, SLOT(onLeaveChannelTriggered()));
+
     m_spellDictCombo = new Sonnet::DictionaryComboBox();
     connect(m_spellDictCombo, SIGNAL(dictionaryChanged(QString)),
             this, SLOT(setTabSpellDictionary(QString)));
@@ -724,6 +870,9 @@ void ChatWindow::setupCustomActions()
 
     KAction *openLogAction = new KAction(KIcon(QLatin1String("view-pim-journal")), i18nc("Action to open the log viewer with a specified contact","&Previous Conversations"), this);
     connect(openLogAction, SIGNAL(triggered()), SLOT(onOpenLogTriggered()));
+
+    KAction *openContactListAction = new KAction(KIcon(QLatin1String("telepathy-kde")), i18nc("Action to open the contact list","Contact &List"), this);
+    connect(openContactListAction, SIGNAL(triggered()), SLOT(onOpenContactListTriggered()));
 
     KAction *accountIconAction = new KAction(KIcon(QLatin1String("telepathy-kde")), i18n("Account Icon"), this);
     m_accountIconLabel = new QLabel(this);
@@ -756,10 +905,159 @@ void ChatWindow::setupCustomActions()
     actionCollection()->addAction(QLatin1String("account-icon"), accountIconAction);
     actionCollection()->addAction(QLatin1String("block-contact"), blockContactAction);
     actionCollection()->addAction(QLatin1String("open-log"), openLogAction);
+    actionCollection()->addAction(QLatin1String("open-contact-list"), openContactListAction);
     actionCollection()->addAction(QLatin1String("clear-chat-view"), clearViewAction);
     actionCollection()->addAction(QLatin1String("emoticons"), addEmoticonAction);
     actionCollection()->addAction(QLatin1String("send-message"), m_sendMessage);
     actionCollection()->addAction(QLatin1String("collaborate-document"), collaborateDocumentAction);
+    actionCollection()->addAction(QLatin1String("contact-info"), showInfoAction);
+    actionCollection()->addAction(QLatin1String("leave-chat"), leaveAction);
+}
+
+
+void ChatWindow::setupOTR()
+{
+    m_otrActionMenu = new KActionMenu(KIcon(QLatin1String("object-unlocked")), i18n("&OTR"), this);
+    m_otrActionMenu->setDelayed(false);
+
+    KAction *startRestartOtrAction = new KAction(KIcon(QLatin1String("object-locked")), i18n("&Start session"), this);
+    startRestartOtrAction->setEnabled(false);
+    connect(startRestartOtrAction, SIGNAL(triggered()), this, SLOT(onStartRestartOtrTriggered()));
+
+    KAction *stopOtrAction = new KAction(KIcon(QLatin1String("object-unlocked")), i18n("&Stop session"), this);
+    stopOtrAction->setEnabled(false);
+    connect(stopOtrAction, SIGNAL(triggered()), this, SLOT(onStopOtrTriggered()));
+
+    KAction *authenticateBuddyAction = new KAction(KIcon(QLatin1String("application-pgp-signature")), i18n("&Authenticate contact"), this);
+    authenticateBuddyAction->setEnabled(false);
+    connect(authenticateBuddyAction, SIGNAL(triggered()), this, SLOT(onAuthenticateBuddyTriggered()));
+
+    m_otrActionMenu->addAction(startRestartOtrAction);
+    m_otrActionMenu->addAction(stopOtrAction);
+    m_otrActionMenu->addAction(authenticateBuddyAction);
+    m_otrActionMenu->setEnabled(false);
+
+    actionCollection()->addAction(QLatin1String("start-restart-otr"), startRestartOtrAction);
+    actionCollection()->addAction(QLatin1String("stop-otr"), stopOtrAction);
+    actionCollection()->addAction(QLatin1String("authenticate-otr"), authenticateBuddyAction);
+    actionCollection()->addAction(QLatin1String("otr-actions"), m_otrActionMenu);
+
+    // private key generation
+    connect(m_proxyService.data(), SIGNAL(keyGenerationStarted(Tp::AccountPtr)),
+            SLOT(onKeyGenerationStarted(Tp::AccountPtr)));
+    connect(m_proxyService.data(), SIGNAL(keyGenerationFinished(Tp::AccountPtr, bool)),
+            SLOT(onKeyGenerationFinished(Tp::AccountPtr, bool)));
+}
+
+void ChatWindow::onOtrStatusChanged(OtrStatus status)
+{
+
+    ChatWidget *chatTab = dynamic_cast<ChatWidget*>(QObject::sender());
+    // in case if this slot is called directly, not by the signal
+    if(!chatTab) {
+        chatTab = getCurrentTab();
+    }
+
+    if(chatTab != getCurrentTab()) {
+        return;
+    }
+
+    // OTR is disabled for this channel
+    if(!status) {
+        m_otrActionMenu->setEnabled(false);
+        m_otrActionMenu->menu()->setIcon(KIcon(QLatin1String("object-unlocked")));
+        return;
+    }
+
+    QAction* srAction = actionCollection()->action(QLatin1String("start-restart-otr"));
+    QAction* stopAction = actionCollection()->action(QLatin1String("stop-otr"));
+    QAction* authenticateBuddyAction = actionCollection()->action(QLatin1String("authenticate-otr"));
+
+    m_otrActionMenu->setEnabled(true);
+
+    switch(status.otrTrustLevel()) {
+
+        case KTp::OTRTrustLevelNotPrivate:
+            m_otrActionMenu->setIcon(KIcon(QLatin1String("object-unlocked")));
+            m_otrActionMenu->setToolTip(i18n("Not private"));
+            srAction->setEnabled(true);
+            srAction->setText(i18n("&Start session"));
+            stopAction->setEnabled(false);
+            authenticateBuddyAction->setEnabled(false);
+            return;
+
+        case KTp::OTRTrustLevelUnverified:
+            m_otrActionMenu->setIcon(KIcon(QLatin1String("object-locked-unverified")));
+            m_otrActionMenu->setToolTip(i18n("Unverified"));
+            srAction->setEnabled(true);
+            srAction->setText(i18n("&Restart session"));
+            stopAction->setEnabled(true);
+            authenticateBuddyAction->setEnabled(true);
+            return;
+
+        case KTp::OTRTrustLevelPrivate:
+            m_otrActionMenu->setIcon(KIcon(QLatin1String("object-locked-verified")));
+            m_otrActionMenu->setToolTip(i18n("Private"));
+            srAction->setEnabled(true);
+            srAction->setText(i18n("&Restart session"));
+            stopAction->setEnabled(true);
+            authenticateBuddyAction->setEnabled(true);
+            return;
+
+        case KTp::OTRTrustLevelFinished:
+            m_otrActionMenu->setIcon(KIcon(QLatin1String("object-locked-finished")));
+            m_otrActionMenu->setToolTip(i18n("Finished"));
+            srAction->setEnabled(true);
+            srAction->setText(i18n("&Restart session"));
+            stopAction->setEnabled(true);
+            authenticateBuddyAction->setEnabled(false);
+            return;
+
+        default: return;
+    }
+}
+
+void ChatWindow::onStartRestartOtrTriggered()
+{
+
+    ChatTab* chat = getCurrentTab();
+    chat->startOtrSession();
+}
+
+void ChatWindow::onStopOtrTriggered() {
+
+    ChatTab* chat = getCurrentTab();
+    chat->stopOtrSession();
+}
+
+void ChatWindow::onAuthenticateBuddyTriggered()
+{
+
+    ChatTab* chat = getCurrentTab();
+    chat->authenticateBuddy();
+}
+
+void ChatWindow::onKeyGenerationStarted(Tp::AccountPtr account)
+{
+    // block user text input for these tabs
+    QList<ChatTab*> allTabs = tabs();
+    Q_FOREACH(ChatTab *ct, allTabs) {
+        if(ct->account()->objectPath() == account->objectPath()) {
+            ct->blockTextInput(true);
+        }
+    }
+}
+
+void ChatWindow::onKeyGenerationFinished(Tp::AccountPtr account, bool error)
+{
+    Q_UNUSED(error);
+    // unblock user text input for these tabs
+    QList<ChatTab*> allTabs = tabs();
+    Q_FOREACH(ChatTab *ct, allTabs) {
+        if(ct->account()->objectPath() == account->objectPath()) {
+            ct->blockTextInput(false);
+        }
+    }
 }
 
 void ChatWindow::setCollaborateDocumentEnabled(bool enable)
@@ -842,6 +1140,15 @@ void ChatWindow::setPreviousConversationsEnabled ( bool enable )
     }
 }
 
+void ChatWindow::setShowInfoEnabled ( bool enable )
+{
+    QAction *action = actionCollection()->action(QLatin1String("contact-info"));
+
+    if (action) {
+        action->setEnabled(enable);
+    }
+}
+
 void ChatWindow::updateAccountIcon()
 {
     int index = m_tabWidget->currentIndex();
@@ -894,6 +1201,18 @@ void ChatWindow::offerDocumentToChatroom(const Tp::AccountPtr& account, const QS
     }
 }
 
+void ChatWindow::restoreKeyboardLayout(ChatTab *chatTab)
+{
+    if (!chatTab) {
+        return;
+    }
+
+    QString currentKeyboardLayout = chatTab->currentKeyboardLayoutLanguage();
+    if (!currentKeyboardLayout.isEmpty()) {
+        m_keyboardLayoutInterface->asyncCall(QLatin1String("setLayout"), currentKeyboardLayout);
+    }
+}
+
 void ChatWindow::startVideoCall(const Tp::AccountPtr& account, const Tp::ContactPtr& contact)
 {
     Tp::PendingChannelRequest* channelRequest = KTp::Actions::startAudioVideoCall(account, contact);
@@ -910,11 +1229,12 @@ bool ChatWindow::event(QEvent *e)
 {
     if (e->type() == QEvent::WindowActivate) {
         //when the window is activated reset the message count on the active tab.
-        ChatWidget *currChat =  qobject_cast<ChatWidget*>(m_tabWidget->currentWidget());
+        ChatTab *currChat =  qobject_cast<ChatTab*>(m_tabWidget->currentWidget());
         //it is (apparently) possible to get a window activation event whilst we're closing down and have no tabs
         //see https://bugs.kde.org/show_bug.cgi?id=322135
         if (currChat) {
             currChat->acknowledgeMessages();
+	    restoreKeyboardLayout(currChat);
         }
     }
 
@@ -1016,6 +1336,14 @@ void ChatWindow::onReloadTheme()
         ChatTab *tab = qobject_cast<ChatTab*>(m_tabWidget->widget(i));
         tab->reloadTheme();
     }
+}
+
+void ChatWindow::onLeaveChannelTriggered()
+{
+    ChatTab *tab = getCurrentTab();
+    tab->stopOtrSession();
+    tab->textChannel()->requestLeave();
+    closeCurrentTab();
 }
 
 #include "chat-window.moc"

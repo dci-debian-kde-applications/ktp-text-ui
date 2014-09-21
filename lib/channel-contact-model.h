@@ -29,6 +29,7 @@
 #include <TelepathyQt/Presence>
 
 #include <KTp/presence.h>
+#include <KTp/types.h>
 
 /** A model of all users in the channel.
   Also acts as a proxy for emiting presence and alias changes of any contacts in the channel
@@ -39,7 +40,12 @@
 class ChannelContactModel : public QAbstractListModel
 {
     Q_OBJECT
+
 public:
+    enum contactRoles {
+        IsTypingRole = KTp::CustomRole
+    };
+
     explicit ChannelContactModel(const Tp::TextChannelPtr &channel, QObject *parent = 0);
 
     void setTextChannel(const Tp::TextChannelPtr &channel);
@@ -53,6 +59,7 @@ Q_SIGNALS:
     void contactPresenceChanged(const Tp::ContactPtr &contact, const KTp::Presence &presence);
     void contactAliasChanged(const Tp::ContactPtr &contact, const QString &alias);
     void contactBlockStatusChanged(const Tp::ContactPtr &contact, bool blocked);
+    void contactClientTypesChanged(const Tp::ContactPtr &contact, const QStringList &clientTypes);
 
 private Q_SLOTS:
     void onGroupMembersChanged(const Tp::Contacts &groupMembersAdded,
@@ -63,6 +70,7 @@ private Q_SLOTS:
     void onContactPresenceChanged(const Tp::Presence &presence);
     void onContactAliasChanged(const QString &alias);
     void onContactBlockStatusChanged(bool blocked);
+    void onContactClientTypesChanged(const QStringList &clientTypes);
     void onChatStateChanged(const Tp::ContactPtr &contact, Tp::ChannelChatState state);
 
 

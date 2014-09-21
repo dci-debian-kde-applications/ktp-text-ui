@@ -40,6 +40,13 @@ class QContextMenuEvent;
 
 class KAction;
 
+class AdiumThemeViewProxy : public QObject
+{
+    Q_OBJECT
+Q_SIGNALS:
+    void viewReady();
+};
+
 class KDE_TELEPATHY_CHAT_EXPORT AdiumThemeView : public KWebView
 {
     Q_OBJECT
@@ -90,17 +97,23 @@ public:
 
     void setShowPresenceChanges(bool showPresenceChanges);
     bool showPresenceChanges() const;
+    void setShowJoinLeaveChanges(bool showJoinLeaveChanges);
+    bool showJoinLeaveChanges() const;
 
     void clear();
 
 public Q_SLOTS:
     void addMessage(const KTp::Message &message);
-    void addStatusMessage(const QString &text, const QDateTime &time=QDateTime::currentDateTime());
+    void addStatusMessage(const QString &text,
+                          const QString &sender=QString(),
+                          const QDateTime &time=QDateTime::currentDateTime());
     void onOpenLinkActionTriggered();
     virtual void onLinkClicked(const QUrl &);
+    void injectProxyIntoJavascript();
 
     void addAdiumContentMessage(const AdiumThemeContentInfo&);
     void addAdiumStatusMessage(const AdiumThemeStatusInfo&);
+    void viewLoadFinished();
 
 protected:
     virtual void contextMenuEvent(QContextMenuEvent *event);
@@ -110,6 +123,7 @@ protected:
 Q_SIGNALS:
     void zoomFactorChanged(qreal zoomFactor);
     void textPasted();
+    void viewReady();
 
 private:
     ChatWindowStyle *m_chatStyle;
@@ -119,6 +133,7 @@ private:
     QString m_fontFamily;
     int m_fontSize;
     bool m_showPresenceChanges;
+    bool m_showJoinLeaveChanges;
 
     QString appendScript(AppendMode mode);
     AppendMode appendMode(const AdiumThemeMessageInfo &message,
@@ -139,8 +154,13 @@ private:
     bool m_displayHeader;
     KAction *m_openLinkAction;
 
+    QString m_service;
+    QString m_serviceIconPath;
 
     bool m_webInspector;
+
+    AdiumThemeViewProxy *jsproxy;
+    QString themeOnLoadJS;
 };
 
 #endif // ADIUMTHEMEVIEW_H

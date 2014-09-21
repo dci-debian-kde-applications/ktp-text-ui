@@ -1,15 +1,15 @@
 # translation of ktp-text-ui.po to Français
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Joëlle Cornavin <jcorn@free.fr>, 2011, 2012, 2013.
+# Joëlle Cornavin <jcorn@free.fr>, 2011, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-09-01 15:17+0200\n"
-"Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
+"PO-Revision-Date: 2014-08-14 11:11+0200\n"
+"Last-Translator: Maxime\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Joëlle Cornavin"
+msgstr "Joëlle Cornavin, Maxime Corteel"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "jcorn@free.fr"
+msgstr "jcorn@free.fr, mcorteel@gmail.com"
 
 #: chat-window.cpp:140
 msgid "Close"
@@ -152,7 +152,7 @@ msgid ""
 "<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
 "package installed to share documents</p>"
 msgstr ""
-"<p>Tant le contact cible que vous devez avoir installé le paquet <i>kte-"
+"<p>Tant le contact cible que vous devez avoir installé le paquet <i>kte-"
 "collaborative</i> pour partager des documents</p>"
 
 #: chat-window.cpp:867
