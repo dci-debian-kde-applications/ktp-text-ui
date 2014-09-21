@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Marek Laane <bald@smail.ee>, 2011, 2012.
+# Marek Laane <bald@smail.ee>, 2011, 2012, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-04-11 06:56+0000\n"
-"PO-Revision-Date: 2012-10-08 20:30+0300\n"
+"PO-Revision-Date: 2014-06-11 03:49+0300\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
 "Language: et\n"
@@ -41,7 +41,7 @@ msgstr "Nõutav fail Template.html puudub - kontrolli paigaldust."
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
-msgstr ""
+msgstr "Vestlus algas %1"
 
 #: chat-search-bar.cpp:39
 msgctxt "Next search result"
@@ -130,18 +130,16 @@ msgid "%1 has left the chat"
 msgstr "%1 lahkus vestlusest"
 
 #: chat-widget.cpp:739
-#, fuzzy, kde-format
-#| msgid "You are now marked as %1"
+#, kde-format
 msgctxt "Your presence status"
 msgid "You are now marked as %1"
 msgstr "Sinu olek on nüüd %1"
 
 #: chat-widget.cpp:743
-#, fuzzy, kde-format
-#| msgid "You are now marked as %1"
+#, kde-format
 msgctxt "Your presence status with status message"
 msgid "You are now marked as %1 - %2"
-msgstr "Sinu olek on nüüd %1"
+msgstr "Sinu olek on nüüd %1 - %2"
 
 #: chat-widget.cpp:749
 #, kde-format

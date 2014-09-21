@@ -1,6 +1,6 @@
 # Translation of kcm_ktp_chat_behavior.po into Serbian.
 # Mladen Pejakovic <pejakm@gmail.com>, 2012.
-# Chusslove Illich <caslav.ilic@gmx.net>, 2013.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"

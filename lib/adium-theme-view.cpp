@@ -56,7 +56,8 @@ AdiumThemeView::AdiumThemeView(QWidget *parent)
         : KWebView(parent),
         // check iconPath docs for minus sign in -KIconLoader::SizeLarge
         m_defaultAvatar(KIconLoader::global()->iconPath(QLatin1String("im-user"),-KIconLoader::SizeLarge)),
-        m_displayHeader(true)
+        m_displayHeader(true),
+        jsproxy(new AdiumThemeViewProxy())
 {
     //blocks QWebView functionality which allows you to change page by dragging a URL onto it.
     setAcceptDrops(false);
@@ -70,7 +71,9 @@ AdiumThemeView::AdiumThemeView(QWidget *parent)
             this, SLOT(onOpenLinkActionTriggered()));
 
     connect(this, SIGNAL(linkClicked(QUrl)), this, SLOT(onLinkClicked(QUrl)));
-
+    connect(page()->mainFrame(), SIGNAL(javaScriptWindowObjectCleared()),
+            this, SLOT(injectProxyIntoJavascript()));
+    connect(jsproxy, SIGNAL(viewReady()), this, SLOT(viewLoadFinished()));
     QWebSettings *ws = settings();
     ws->setAttribute(QWebSettings::ZoomTextOnly, true);
 }
@@ -86,7 +89,7 @@ void AdiumThemeView::load(ChatType chatType) {
         m_chatStyle = ChatWindowStyleManager::self()->getValidStyleFromPool(appearanceConfig.readEntry(QLatin1String("styleName"), "renkoo.AdiumMessageStyle"));
     } else {
         appearanceConfig = config->group("GroupAppearance");
-        m_chatStyle = ChatWindowStyleManager::self()->getValidStyleFromPool(appearanceConfig.readEntry(QLatin1String("styleName"), "SimKete.AdiumMessageStyle"));
+        m_chatStyle = ChatWindowStyleManager::self()->getValidStyleFromPool(appearanceConfig.readEntry(QLatin1String("styleName"), "WoshiChat.AdiumMessageStyle"));
     }
 
     if (m_chatStyle == 0 || !m_chatStyle->isValid()) {
@@ -110,7 +113,7 @@ void AdiumThemeView::load(ChatType chatType) {
         }
     }
 
-    m_displayHeader = appearanceConfig.readEntry("displayHeader", false);
+    m_displayHeader = appearanceConfig.readEntry("displayHeader", true);
 
     //special HTML debug mode. Debugging/Profiling only (or theme creating) should have no visible way to turn this flag on.
     m_webInspector = appearanceConfig.readEntry("debug", false);
@@ -120,8 +123,21 @@ void AdiumThemeView::load(ChatType chatType) {
     m_fontSize = appearanceConfig.readEntry("fontSize", QWebSettings::globalSettings()->fontSize(QWebSettings::DefaultFontSize));
 
     m_showPresenceChanges = appearanceConfig.readEntry("showPresenceChanges", true);
+    m_showJoinLeaveChanges = appearanceConfig.readEntry("showJoinLeaveChanges", true);
 }
 
+void AdiumThemeView::viewLoadFinished()
+{
+    if (themeOnLoadJS.length()) {
+        page()->mainFrame()->evaluateJavaScript(themeOnLoadJS);
+    }
+    viewReady();
+}
+
+void AdiumThemeView::injectProxyIntoJavascript()
+{
+    page()->mainFrame()->addToJavaScriptWindowObject(QLatin1String("AdiumThemeViewProxy"), jsproxy);
+}
 
 void AdiumThemeView::contextMenuEvent(QContextMenuEvent *event)
 {
@@ -175,8 +191,7 @@ void AdiumThemeView::initialise(const AdiumThemeHeaderInfo &chatInfo)
     QString headerHtml;
     QString templateHtml = m_chatStyle->getTemplateHtml();
     QString footerHtml = replaceHeaderKeywords(m_chatStyle->getFooterHtml(), chatInfo);
-    QString extraStyleHtml = m_chatStyle->messageViewVersion() < 3 ? QLatin1String("")
-                                                                   : QLatin1String("@import url( \"main.css\" );");
+    QString extraStyleHtml = QLatin1String("@import url( \"main.css\" );");
     m_lastContent = AdiumThemeContentInfo();
 
     if (templateHtml.isEmpty()) {
@@ -221,6 +236,11 @@ void AdiumThemeView::initialise(const AdiumThemeHeaderInfo &chatInfo)
         settings()->setFontSize(QWebSettings::DefaultFontSize, qFloor(0.5 + m_chatStyle->defaultFontSize() * (QApplication::desktop()->logicalDpiY() / 96.0 )));
     }
 
+    //hidden HTML debugging mode. Should have no visible way to turn it on.
+    if (m_webInspector) {
+        QWebSettings::globalSettings()->setAttribute(QWebSettings::DeveloperExtrasEnabled, true);
+    }
+
     //The templateHtml is in a horrific NSString format.
     //Want to use this rather than roll our own, as that way we can get templates from themes too
     //"%@" is each argument.
@@ -258,14 +278,37 @@ void AdiumThemeView::initialise(const AdiumThemeHeaderInfo &chatInfo)
     index = templateHtml.indexOf(QLatin1String("</head>"));
     templateHtml.insert(index, KTp::MessageProcessor::instance()->header());
 
+    // The purpose of this regular expression is to find the body tag in the template
+    // and make it possible to replace the onload event.
+    // The [^>]* expression is to match things that are not the end tag
+    // the (onload=\"...\")? expression is to make easy for me to do
+    // a string replace and replace the entire onload event (as cap(1).
+    // the trailing ? makes it optional in case a theme doesn't actually
+    // use the onload event.
+    // the inner ([^\"]*) expression attempts to match the javascript
+    // that is actually being called by the onLoad event so after we replace
+    // it with our C++ function that can call whatever javascript code the theme
+    // actually intended.
+    // Note: styles that use \" or > in unexpected places in their body tag will break
+    // this regexp.
+    QRegExp body(QLatin1String("<body[^>]*(onload=\"([^\"]*)\")?[^>]*>"), Qt::CaseInsensitive);
+    const QString onload(QLatin1String(" onload=\"AdiumThemeViewProxy.viewReady();\" "));
+    index = templateHtml.indexOf(body);
+    if (0 <= index ) {
+        if (body.cap(1).length() == 0) {
+            templateHtml.insert(index + 5, onload);
+        } else {
+            themeOnLoadJS = body.cap(2);
+            //kDebug() << "Captured js onLoad" << themeOnLoadJS;
+            templateHtml.replace(body.pos(1), body.cap(1).length(), onload);
+        }
+    }
     //kDebug() << templateHtml;
 
     setHtml(templateHtml);
 
-    //hidden HTML debugging mode. Should have no visible way to turn it on.
-    if (m_webInspector) {
-        QWebSettings::globalSettings()->setAttribute(QWebSettings::DeveloperExtrasEnabled, true);
-    }
+    m_service = chatInfo.service();
+    m_serviceIconPath = chatInfo.serviceIconPath();
 }
 
 void AdiumThemeView::setVariant(const QString &variant)
@@ -343,6 +386,16 @@ bool AdiumThemeView::showPresenceChanges() const
     return m_showPresenceChanges;
 }
 
+void AdiumThemeView::setShowJoinLeaveChanges(bool showLeaveChanges)
+{
+    m_showJoinLeaveChanges = showLeaveChanges;
+}
+
+bool AdiumThemeView::showJoinLeaveChanges() const
+{
+    return m_showJoinLeaveChanges;
+}
+
 bool AdiumThemeView::isHeaderDisplayed() const
 {
     return m_displayHeader;
@@ -363,7 +416,7 @@ void AdiumThemeView::clear()
 void AdiumThemeView::addMessage(const KTp::Message &message)
 {
     if (message.type() == Tp::ChannelTextMessageTypeAction) {
-        addStatusMessage(QString::fromLatin1("%1 %2").arg(message.senderAlias(), message.mainMessagePart()));
+        addStatusMessage(QString::fromLatin1("%1 %2").arg(message.senderAlias(), message.mainMessagePart()), message.senderAlias());
     } else {
         AdiumThemeContentInfo messageInfo;
         if (message.direction() == KTp::Message::RemoteToLocal) {
@@ -398,11 +451,12 @@ void AdiumThemeView::addMessage(const KTp::Message &message)
     }
 }
 
-void AdiumThemeView::addStatusMessage(const QString &text, const QDateTime &time)
+void AdiumThemeView::addStatusMessage(const QString &text, const QString &sender, const QDateTime &time)
 {
     AdiumThemeStatusInfo messageInfo;
     messageInfo.setMessage(text);
     messageInfo.setTime(time);
+    messageInfo.setSender(sender);
 //    messageInfo.setStatus(QLatin1String("error")); //port this?
     addAdiumStatusMessage(messageInfo);
 }
@@ -623,6 +677,12 @@ QString AdiumThemeView::replaceHeaderKeywords(QString htmlTemplate, const AdiumT
     htmlTemplate.replace(QLatin1String("%conversationBegan%"), i18nc("Header at top of conversation view. %1 is the time format",
                                                                      "Conversation began %1", KGlobal::locale()->formatTime(info.timeOpened().time())));
 
+    //KTp-WoshiChat specific hack to make "Joined at" translatable
+    htmlTemplate.replace(QLatin1String("%conversationJoined%"), i18nc("Header at top of conversation view. %1 is the time format",
+                                                                      "Joined at %1", KGlobal::locale()->formatTime(info.timeOpened().time())));
+
+    htmlTemplate.replace(QLatin1String("%groupChatIcon%"), KIconLoader::global()->iconPath(QLatin1String("telepathy-kde"), -48));
+
     //FIXME time fields - remember to do both, steal the complicated one from Kopete code.
     // Look for %timeOpened{X}%
     QRegExp timeRegExp(QLatin1String("%timeOpened\\{([^}]*)\\}%"));
@@ -631,8 +691,10 @@ QString AdiumThemeView::replaceHeaderKeywords(QString htmlTemplate, const AdiumT
         QString timeKeyword = formatTime(timeRegExp.cap(1), info.timeOpened());
         htmlTemplate.replace(pos , timeRegExp.cap(0).length() , timeKeyword);
     }
+    htmlTemplate.replace(QLatin1String("%service%"), info.service());
+    htmlTemplate.replace(QLatin1String("%serviceIconPath%"), info.serviceIconPath());
     htmlTemplate.replace(QLatin1String("%serviceIconImg%"),
-                         QString::fromLatin1("<img src=\"%1\" class=\"serviceIcon\" />").arg(info.serviceIconImg()));
+                         QString::fromLatin1("<img src=\"%1\" class=\"serviceIcon\" />").arg(info.serviceIconPath()));
     return htmlTemplate;
 }
 
@@ -661,7 +723,11 @@ QString AdiumThemeView::replaceContentKeywords(QString& htmlTemplate, const Adiu
 
 QString AdiumThemeView::replaceStatusKeywords(QString &htmlTemplate, const AdiumThemeStatusInfo& info)
 {
+    // status
     htmlTemplate.replace(QLatin1String("%status%"), info.status());
+    // sender
+    htmlTemplate.replace(QLatin1String("%sender%"), info.sender());
+
     return replaceMessageKeywords(htmlTemplate, info);
 }
 
@@ -678,7 +744,7 @@ QString AdiumThemeView::replaceMessageKeywords(QString &htmlTemplate, const Adiu
     htmlTemplate.replace(QLatin1String("%message%"), message);
 
     //service
-    htmlTemplate.replace(QLatin1String("%service%"), info.service());
+    htmlTemplate.replace(QLatin1String("%service%"), m_service);
     //time
     htmlTemplate.replace(QLatin1String("%time%"), KGlobal::locale()->formatLocaleTime(info.time().time()));
     //shortTime

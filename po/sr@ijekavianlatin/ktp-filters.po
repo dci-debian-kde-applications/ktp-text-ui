@@ -1,5 +1,5 @@
 # Translation of ktp-filters.po into Serbian.
-# Chusslove Illich <caslav.ilic@gmx.net>, 2013.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-filters\n"

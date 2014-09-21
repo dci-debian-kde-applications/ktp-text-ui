@@ -1,15 +1,15 @@
 # translation of ktpchat.po to Français
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Joëlle Cornavin <jcorn@free.fr>, 2011, 2012, 2013.
+# Joëlle Cornavin <jcorn@free.fr>, 2011, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ktpchat\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-04-11 06:56+0000\n"
-"PO-Revision-Date: 2013-07-04 18:29+0200\n"
-"Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
+"PO-Revision-Date: 2014-08-14 11:12+0200\n"
+"Last-Translator: Maxime\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Joëlle Cornavin"
+msgstr "Joëlle Cornavin, Maxime Corteel"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "jcon@free.fr"
+msgstr "jcon@free.fr, mcorteel@gmail.com"
 
 #: adium-theme-view.cpp:93
 msgid ""
@@ -47,7 +47,7 @@ msgstr ""
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
-msgstr "Conversation commencée %1"
+msgstr "Conversation commencée %1"
 
 #: chat-search-bar.cpp:39
 msgctxt "Next search result"
@@ -94,7 +94,7 @@ msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
 msgstr ""
 "La remise du message « %1 » a échoué car le contact distant n'est pas "
-"valable "
+"valable "
 
 #: chat-widget.cpp:584
 msgid "Delivery of a message failed because the remote contact is not valid"

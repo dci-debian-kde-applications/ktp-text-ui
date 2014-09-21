@@ -1,5 +1,5 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2012, 2013.
-# Burkhard Lück <lueck@hube-lueck.de>, 2011, 2012, 2013.
+# Burkhard Lück <lueck@hube-lueck.de>, 2011, 2012, 2013, 2014.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2011.
 # Markus Slopianka <markus.s@kdemail.net>, 2013.
 msgid ""
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-09-24 17:44+0200\n"
+"PO-Revision-Date: 2014-09-05 09:33+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -152,7 +152,7 @@ msgid ""
 "package installed to share documents</p>"
 msgstr ""
 "<p>Sowohl Sie als auch der Zielkontakt müssen das Paket <i>kte-"
-"collaborative</i> installiren, um Dokumente gemeinsam zu bearbeiten</p>"
+"collaborative</i> installieren, um Dokumente gemeinsam zu bearbeiten</p>"
 
 #: chat-window.cpp:867
 #, kde-format

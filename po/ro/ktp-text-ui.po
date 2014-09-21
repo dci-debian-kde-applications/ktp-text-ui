@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sergiu Bivol <sergiu@ase.md>, 2012, 2013.
+# Sergiu Bivol <sergiu@ase.md>, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-03-16 12:19+0200\n"
+"PO-Revision-Date: 2014-07-04 14:42+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -110,7 +110,7 @@ msgstr "Pornește o aplicație care va permite acestui contact să vă vadă bir
 
 #: chat-window.cpp:712
 msgid "&Collaboratively edit a document"
-msgstr ""
+msgstr "Redactează un document în &colaborare"
 
 #: chat-window.cpp:723
 msgid "Choose Spelling Language"
@@ -141,7 +141,7 @@ msgstr "Trimite mesaj"
 #: chat-window.cpp:772
 msgctxt "Toolbar icon tooltip"
 msgid "Edit a plain-text document with this contact in real-time"
-msgstr ""
+msgstr "Redactează un document textual simplu în timp real cu acest contact"
 
 #: chat-window.cpp:775
 msgctxt "Toolbar icon tooltip for a disabled action"
@@ -149,6 +149,8 @@ msgid ""
 "<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
 "package installed to share documents</p>"
 msgstr ""
+"<p>Atît dumneavoastră, cît și celălalt contact, trebuie să aveți instalat "
+"pachetul <i>kte-collaborative</i> pentru a partaja documente</p>"
 
 #: chat-window.cpp:867
 #, kde-format
