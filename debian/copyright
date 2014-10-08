@@ -4,44 +4,48 @@ Upstream-Contact: KDE Telepathy Project <kde-telepathy@kde.org>
 Source: http://download.kde.org/unstable/kde-telepathy/
 License: GPL-2+
 
+Files: *
+Copyright: 2010-2014 David Edmundson <kde@davidedmundson.co.uk>
+License: GPL-2+
+
 Files: app/*
        adiumxtra-protocol-handler/*
        config/*
        logviewer/*
-       lib/adium-theme-content-info.*
-       lib/adium-theme-header-info.*
-       lib/adium-theme-message-info.*
-       lib/adium-theme-status-info.*
-       lib/adium-theme-view.*
-       lib/channel-contact-model.*
-       lib/chat-search-bar.*
-       lib/chat-style-plist-file-reader.*
-       lib/chat-text-edit.*
-       lib/chat-widget.*
-       lib/chat-window-style.*
+       lib/*
 Copyright: 2010-2011 Dominik Schmidt <kde@dominik-schmidt.de> <dev@dominik-schmidt.de>
            2010-2012 David Edmundson <kde@davidedmundson.co.uk>
            2011 Francesco Nwokeka <francesco.nwokeka@gmail.com>
            2011 Lasath Fernando <kde@lasath.org>
+           2014 Marcin Ziemiński <zieminn@gmail.com>
            2005 Michaël Larouche <larouche@kde.org>
+           2013 Michael Zanetti <mzanetti@kde.org>
+           2013 Stefan Eggers <coloncolonone@gmail.com>
            2002-2008 the Kopete developers <kopete-devel@kde.org>
 License: GPL-2+
 
-Files: plasmoid/*
-       lib/emoticon-filter.cpp
-       lib/escape-filter.cpp
-       lib/filters.h
-       lib/logmanager.*
-       lib/message.*
-       lib/message-processor.*
-       lib/url-filter.cpp
-Copyright: 2011-2012 Lasath Fernando <kde@lasath.org>
-           2011-2012 David Edmundson <kde@davidedmundson.co.uk>
+Files: image-sharer/*
+       filters/*
+       lib/contact-delegate.cpp
+       lib/contact-delegate.h
+       lib/notify-filter.cpp
+       lib/notify-filter.h
+Copyright: 2014 Ahmed I. Khalil <ahmedibrahimkhali@gmail.com>
+           2011-2014 David Edmundson <davidedmundson@kde.org>
+           2012 Dominik Cermak <d.cermak@arcor.de>
            2011 Dominik Schmidt <kde@dominik-schmidt.de>
+           2013 Gilles Caulier <caulier dot gilles at gmail dot com>
+           2011-2013 Lasath Fernando <kde@lasath.org>
+           2012 Marius Orcsik <marius at habarnam dot ro>
+           2011 Martin Klapetek <martin.klapetek@gmail.com>
+           2008 Vardhman Jain <vardhman at gmail dot com>
 License: LGPL-2.1+
 
 Files: lib/ktpchat_export.h
-       declarative-plugin/ktpchat_export.h
+Copyright: 2007 David Faure <faure@kde.org>
+License: LGPL-2+
+
+Files: lib/ktpchat_export.h
 Copyright: 2007 David Faure <faure@kde.org>
 License: LGPL-2+
 
@@ -64,6 +68,12 @@ License: BSD-3-clause or Academic
 Files: data/styles/renkoo.AdiumMessageStyle/Contents/Resources/Footer.html
 Copyright: 2004-2010 Philip McCarthy
 License: Expat
+
+Files: data/styles/WoshiChat.AdiumMessageStyle/*
+Copyright: 2012 Seth Chisamore
+           2014 Martin Klapetek
+           2014 The KDE Telepathy team
+License: Apache-2.0
 
 Files: po/*
 Copyright: 2012-2013 Adrián Chaves Fernández <adriyetichaves@gmail.com>

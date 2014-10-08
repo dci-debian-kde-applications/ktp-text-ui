@@ -8,6 +8,7 @@ ktp-text-ui (0.8.80-1) UNRELEASED; urgency=medium
   * Change to using .install file and default dh_auto_install behavior
     - this maeks dh_install --list-missing more reliable.
   * Update version number in lintian-override
+  * Update copyright file
 
  -- Diane Trout <diane@ghic.org>  Sun, 21 Sep 2014 11:01:08 -0700
 
