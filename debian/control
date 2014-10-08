@@ -21,7 +21,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 Package: kde-telepathy-text-ui
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- kde-telepathy-data (>= 0.8.1)
+ kde-telepathy-data (>= ${source:Upstream-Version})
 Recommends: kde-telepathy
 Replaces: libktpchat0
 Description: Telepathy text chat UI for the KDE Plasma Desktop
