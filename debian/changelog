@@ -10,6 +10,8 @@ ktp-text-ui (0.8.80-1) UNRELEASED; urgency=medium
   * Update version number in lintian-override
   * Update copyright file
   * Prevent another license file from being installed into usr/lib
+  * Use libjs-jquery (>= 1.7) and libjs-scriptaculous (>= 1.8.2)
+    instead of minimized copies provided by upstream.
 
  -- Diane Trout <diane@ghic.org>  Sun, 21 Sep 2014 11:01:08 -0700
 
