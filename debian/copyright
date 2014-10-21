@@ -45,10 +45,6 @@ Files: lib/ktpchat_export.h
 Copyright: 2007 David Faure <faure@kde.org>
 License: LGPL-2+
 
-Files: lib/ktpchat_export.h
-Copyright: 2007 David Faure <faure@kde.org>
-License: LGPL-2+
-
 Files: cmake/*
 Copyright: 2011 Collabora Ltd
            2010 Dario Freddi <drf@kde.org>
