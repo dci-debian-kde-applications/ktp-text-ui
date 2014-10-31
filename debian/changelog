@@ -1,4 +1,4 @@
-ktp-text-ui (0.9.0-0ubuntu1) UNRELEASED; urgency=medium
+ktp-text-ui (0.9.0-0ubuntu1) vivid; urgency=medium
 
   * New upstream release
   * Merge with Debian git, no changes
