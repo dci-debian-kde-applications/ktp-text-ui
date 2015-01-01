@@ -5,7 +5,7 @@ ktp-text-ui (0.9.0-1) UNRELEASED; urgency=medium
   * Update libktpcommoninternalsprivate-dev build-dep to 0.9.0
   * Update libtelepathy-logger-qt build-dep to 0.8.0
   * Change to using .install file and default dh_auto_install behavior
-    - this maeks dh_install --list-missing more reliable.
+    - this makes dh_install --list-missing more reliable.
   * Update version number in lintian-override
   * Update copyright file
   * Prevent another license file from being installed into usr/lib
