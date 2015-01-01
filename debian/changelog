@@ -2,7 +2,7 @@ ktp-text-ui (0.9.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Update libtelepathy-qt build-dep to 0.9.5
-  * Update libktpcommoninternalsprivate-dev build-dep to 0.8.80
+  * Update libktpcommoninternalsprivate-dev build-dep to 0.9.0
   * Update libtelepathy-logger-qt build-dep to 0.8.0
   * Change kde-telepathy-data dependency to source:Upstream-Version
   * Change to using .install file and default dh_auto_install behavior
