@@ -51,6 +51,7 @@ Copyright: 2011 Collabora Ltd
            2006 Tim Beaulen <tbscope@gmail.com>
            2008 Helio Chissini de Castro <helio@kde.org>
            2010 Dominik Schmidt <kde@dominik-schmidt.de>
+           2012 Raphael Kubo da Costa <rakuco@FreeBSD.org>
 License: BSD-3-clause
 
 Files: data/styles/SimKete.AdiumMessageStyle/*
@@ -70,6 +71,10 @@ Copyright: 2012 Seth Chisamore
            2014 Martin Klapetek
            2014 The KDE Telepathy team
 License: Apache-2.0
+
+Files: data/styles/WoshiChat.AdiumMessageStyle/Contents/Resources/lib/scrollbar.js
+Copyright: 2008 PersonalGrid Corporation <http://personalgrid.com/>
+License: MIT
 
 Files: po/*
 Copyright: 2012-2013 Adrián Chaves Fernández <adriyetichaves@gmail.com>
@@ -95,7 +100,7 @@ Copyright: 2012-2013 Adrián Chaves Fernández <adriyetichaves@gmail.com>
            2012-2014 Freek de Kruijf <freekdekruijf@kde.nl>
            2013-2014 Giovanni Sora <g.sora@tiscali.it>
            2013 Jean Cayron <jean.cayron@base.be>
-           2011-2013 Joëlle Cornavin <jcorn@free.fr>
+           2011-2014 Joëlle Cornavin <jcorn@free.fr>
            2011-2012 Kevin Scannell <kscanne@gmail.com>
            2011-2012 Khoem Sokhem <khoemsokhem@khmeros.info>
            2011-2012 Kira J. Fernandez <kirajfdez@gmail.com>
@@ -109,7 +114,7 @@ Copyright: 2012-2013 Adrián Chaves Fernández <adriyetichaves@gmail.com>
            2011 Manuel Tortosa <manutortosa@chakra-project.org>
            2013 Marce Villarino <mvillarino@kde-espana.org>
            2011-2012 Marcus Gama <marcus.gama@gmail.com>
-           2011-2013 Marek Laane <bald@smail.ee>
+           2011-2014 Marek Laane <bald@smail.ee>
            2013 Markus Slopianka <markus.s@kdemail.net>
            2011-2014 Martin Schlander <mschlander@opensuse.org>
            2013 Miguel Branco <mgl.branco@gmail.com>
@@ -117,14 +122,14 @@ Copyright: 2012-2013 Adrián Chaves Fernández <adriyetichaves@gmail.com>
            2012 Ni Hui <shuizhuyuanluo@126.com>
            2011 Panagiotis Papadopoulos <pano_90@gmx.net>
            2014 Park Shinjo <peremen@gmail.com>
-           2011-2013 Pino Toscano <toscano.pino@tiscali.it>
+           2011-2014 Pino Toscano <toscano.pino@tiscali.it>
            2012-2013 Raul Gonzalez <raulgf83@gmail.com>
            2011 Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>
            2012 Richard Frič <Richard.Fric@kdemail.net>
            2012-2014 Roman Paholík <wizzardsk@gmail.com>
            2011 Sahran <sahran.ug@gmail.com>
            2012-2013 Sairan Kikkarin <sairan@computer.org>
-           2012-2013 Sergiu Bivol <sergiu@ase.md>
+           2012-2014 Sergiu Bivol <sergiu@ase.md>
            2012 Sophea <sophea@khmeros.info>
            2011-2014 Stefan Asserhäll <stefan.asserhall@bredband.net>
            2012-2013 Stelios <sstavra@gmail.com>
@@ -139,6 +144,9 @@ Copyright: 2012-2013 Adrián Chaves Fernández <adriyetichaves@gmail.com>
            2012 Xosé <xosecalvo@gmail.com>
            2011-2014 Yuri Chornoivan <yurchor@ukr.net>
            2012-2013 Yuri Efremov <yur.arh@gmail.com>
+           2014 Steve Allewell <steve.allewell@gmail.com>
+           2014 Maxime Corteel <mcorteel@gmail.com>
+           2014 Sönke Dibbern <s_dibbern@web.de>
 License: GPL-2+
 
 Files: po/ca*/*.po
@@ -411,3 +419,23 @@ License: Apache-2.0
  .
  On Debian systems, the complete text of the Apache version 2.0 license
  can be found in "/usr/share/common-licenses/Apache-2.0".
+
+License: MIT
+  Permission is hereby granted, free of charge, to any person obtaining
+  a copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to
+  the following conditions:
+  .
+  The above copyright notice and this permission notice shall be
+  included in all copies or substantial portions of the Software.
+  .
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+  LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
