@@ -2,30 +2,61 @@ Source: ktp-text-ui
 Section: kde
 Priority: optional
 Maintainer: Debian/Kubuntu KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Diane Trout <diane@ghic.org>, Michał Zając <quintasan@kubuntu.org>, Mark Purcell <msp@debian.org>
-Build-Depends: debhelper (>= 9),
- pkg-kde-tools (>= 0.9),
- libtelepathy-qt4-dev (>= 0.9.5),
- kdelibs5-dev (>= 4:4.6),
- libqtwebkit-dev,
- cmake (>= 2.8),
- libktpcommoninternalsprivate-dev (>= 0.8.80),
- libtelepathy-logger-dev,
- libtelepathy-logger-qt4-dev (>= 0.8.0),
- libqjson-dev
+Uploaders: Diane Trout <diane@ghic.org>,
+           Michał Zając <quintasan@kubuntu.org>,
+           Mark Purcell <msp@debian.org>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               extra-cmake-modules,
+               gettext,
+               kio-dev,
+               libkf5archive-dev,
+               libkf5attica-dev,
+               libkf5auth-dev,
+               libkf5bookmarks-dev,
+               libkf5codecs-dev,
+               libkf5completion-dev,
+               libkf5config-dev,
+               libkf5configwidgets-dev,
+               libkf5coreaddons-dev,
+               libkf5dbusaddons-dev,
+               libkf5emoticons-dev,
+               libkf5globalaccel-dev,
+               libkf5guiaddons-dev,
+               libkf5i18n-dev,
+               libkf5iconthemes-dev,
+               libkf5itemviews-dev,
+               libkf5jobwidgets-dev,
+               libkf5kcmutils-dev,
+               libkf5notifications-dev,
+               libkf5notifyconfig-dev,
+               libkf5service-dev,
+               libkf5solid-dev,
+               libkf5sonnet-dev,
+               libkf5textwidgets-dev,
+               libkf5wallet-dev,
+               libkf5webkit-dev,
+               libkf5widgetsaddons-dev,
+               libkf5windowsystem-dev,
+               libkf5xmlgui-dev,
+               libktp-dev,
+               libqt5webkit5-dev,
+               libtelepathy-qt5-dev,
+               pkg-kde-tools (>> 0.15.15),
+               qtbase5-dev
 Standards-Version: 3.9.5
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-text-ui
-Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git
+Vcs-Git: git://anonscm.debian.org/pkg-kde/applications/ktp-text-ui.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/applications/ktp-text-ui.git
 
 Package: kde-telepathy-text-ui
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends},
- kde-telepathy-data (>= ${source:Upstream-Version}),
- libjs-jquery (>= 1.7),
- libjs-scriptaculous (>= 1.8.2),
+Depends: kde-telepathy-data (>= ${source:Upstream-Version}),
+         libjs-jquery (>= 1.7),
+         libjs-scriptaculous (>= 1.8.2),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Recommends: kde-telepathy
-Replaces: libktpchat0
 Description: Telepathy text chat UI for the KDE Plasma Desktop
  This package provides a telepathy handler for text channels, a program
  that in other words allows you to chat with your contacts using instant
