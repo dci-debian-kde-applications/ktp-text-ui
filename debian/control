@@ -52,7 +52,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/applications/ktp-text-u
 
 Package: kde-telepathy-text-ui
 Architecture: any
-Depends: kde-telepathy-data (>= ${source:Upstream-Version}),
+Depends: kde-telepathy-data,
          libjs-jquery (>= 1.7),
          libjs-scriptaculous (>= 1.8.2),
          ${misc:Depends},
