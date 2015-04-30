@@ -22,9 +22,13 @@ Copyright: 2010-2011 Dominik Schmidt <kde@dominik-schmidt.de> <dev@dominik-schmi
            2013 Michael Zanetti <mzanetti@kde.org>
            2013 Stefan Eggers <coloncolonone@gmail.com>
            2002-2008 the Kopete developers <kopete-devel@kde.org>
+	   2014 Daniel Vrátil <dvratil@redhat.com>
 License: GPL-2+
 
-Files: image-sharer/*
+Files: app/emoticon-text-edit-*
+       app/invite-contact-dialog.*
+       logviewer/logs-import-dialog.*
+       image-sharer/*
        filters/*
        lib/contact-delegate.cpp
        lib/contact-delegate.h
