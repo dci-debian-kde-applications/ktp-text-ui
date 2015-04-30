@@ -3,6 +3,9 @@ Upstream-Name: ktp-text-ui
 Upstream-Contact: KDE Telepathy Project <kde-telepathy@kde.org>
 Source: http://download.kde.org/unstable/kde-telepathy/
 License: GPL-2+
+Files-Excluded:
+   data/styles/WoshiChat.AdiumMessageStyle/Contents/Resources/lib/jquery.min.js
+   data/styles/WoshiChat.AdiumMessageStyle/Contents/Resources/lib/scriptaculous183.js
 
 Files: *
 Copyright: 2010-2014 David Edmundson <kde@davidedmundson.co.uk>
