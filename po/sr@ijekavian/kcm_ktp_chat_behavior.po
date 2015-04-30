@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2013-12-29 10:14+0100\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-05-03 22:24+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: behavior-config.cpp:49
+#: behavior-config.cpp:50
 msgctxt ""
 "Part of config 'show last [spin box] messages' This is the suffix to the "
 "spin box. Be sure to include leading space"
@@ -30,7 +30,7 @@ msgstr[1] " поруке"
 msgstr[2] " порука"
 msgstr[3] " порука"
 
-#: behavior-config.cpp:60
+#: behavior-config.cpp:64
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
 msgstr "Надимак"
@@ -96,3 +96,28 @@ msgstr "Допуњавај надимке до"
 #: behavior-config.ui:137
 msgid "when I press Tab"
 msgstr "пошто притиснем Tab"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup)
+#: behavior-config.ui:147
+msgid "Image Sharing"
+msgstr "Дељење слика"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: behavior-config.ui:156
+msgid "Image Sharing Service"
+msgstr "Сервис за дељење слика"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: behavior-config.ui:179
+msgid "Works when dragging an image to the Chat Window"
+msgstr "Активира се по превлачењу слике на прозор за ћаскање"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupChatsGroup)
+#: behavior-config.ui:195
+msgid "Group Chats"
+msgstr "Групна ћаскања"
+
+#. i18n: ectx: property (text), widget (QCheckBox, dontLeaveGroupChats)
+#: behavior-config.ui:207
+msgid "Stay connected to group chat even when tab is closed"
+msgstr "Остани у групном ћаскању и када се језичак затвори"

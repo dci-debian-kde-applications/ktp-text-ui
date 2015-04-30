@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
 "PO-Revision-Date: 2013-07-26 17:34+0200\n"
 "Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -52,6 +52,10 @@ msgstr "Ligne de commandes LaTeX :"
 #: latex/latex-config.ui:45
 msgid "latex -interaction=batchmode -halt-on-error"
 msgstr "latex -interaction = batchmode -halt-on-error"
+
+#: otr/otr-filter.cpp:35
+msgid "<i>Encrypted message</i>"
+msgstr ""
 
 #: texttospeech/tts-filter.cpp:42
 msgid "KDE Instant Messaging"

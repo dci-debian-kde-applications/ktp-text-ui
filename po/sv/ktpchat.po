@@ -1,20 +1,20 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhall <stefan.asserhall@bredband.net>, 2011, 2012, 2013.
+# Stefan Asserhall <stefan.asserhall@bredband.net>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-04-11 06:56+0000\n"
-"PO-Revision-Date: 2013-09-24 19:14+0200\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-08-29 06:55+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 msgctxt "NAME OF TRANSLATORS"
@@ -25,7 +25,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
-#: adium-theme-view.cpp:93
+#: adium-theme-view.cpp:96
 msgid ""
 "Failed to load a valid theme. Your installation is broken. Check your kde "
 "path. Will now crash."
@@ -33,15 +33,225 @@ msgstr ""
 "Misslyckades ladda ett giltigt tema. Installationen är felaktig. Kontrollera "
 "sökvägen till KDE. Kommer nu att krascha."
 
-#: adium-theme-view.cpp:184
+#: adium-theme-view.cpp:199
 msgid "Missing required file Template.html - check your installation."
 msgstr "Saknar nödvändig fil Template.html: kontrollera installationen."
 
-#: adium-theme-view.cpp:624
+#: adium-theme-view.cpp:678
 #, kde-format
 msgctxt "Header at top of conversation view. %1 is the time format"
 msgid "Conversation began %1"
 msgstr "Konversation började %1"
+
+#: adium-theme-view.cpp:682
+#, kde-format
+msgctxt "Header at top of conversation view. %1 is the time format"
+msgid "Joined at %1"
+msgstr "Gick med %1"
+
+#: authenticationwizard.cpp:44
+msgctxt "@title"
+msgid "Authenticating contact..."
+msgstr "Kontrollerar kontaktens behörighet..."
+
+#: authenticationwizard.cpp:95
+#, kde-format
+msgid "Waiting for <b>%1</b>..."
+msgstr "Väntar på <b>%1</b>..."
+
+#: authenticationwizard.cpp:96
+msgid "Checking if answers match..."
+msgstr "Kontrollerar om svaren stämmer..."
+
+#: authenticationwizard.cpp:138
+msgctxt "@title"
+msgid "Select authentication method"
+msgstr "Välj metod för behörighetskontroll"
+
+#: authenticationwizard.cpp:140
+msgid "Question and Answer"
+msgstr "Frågor och svar"
+
+#: authenticationwizard.cpp:141
+msgid "Shared Secret"
+msgstr "Delad hemlighet"
+
+#: authenticationwizard.cpp:142
+msgid "Manual fingerprint verification"
+msgstr "Manuell verifiering av fingeravtryck"
+
+#: authenticationwizard.cpp:173
+msgctxt "@title"
+msgid "Question and Answer"
+msgstr "Frågor och svar"
+
+#: authenticationwizard.cpp:175
+#, kde-format
+msgctxt "@info"
+msgid "Enter a question that only <b>%1</b> is able to answer:"
+msgstr "Skriv in en fråga som bara <b>%1</b> kan besvara:"
+
+#: authenticationwizard.cpp:180
+msgctxt "@info"
+msgid "Enter the answer to your question:"
+msgstr "Skriv in svaret på frågan:"
+
+#: authenticationwizard.cpp:184
+#, kde-format
+msgctxt "@info"
+msgid "Authentication with <b>%1</b>"
+msgstr "Behörighetskontroll med <b>%1</b>"
+
+#: authenticationwizard.cpp:185
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<b>%1</b> would like to verify your authentication.Please answer the "
+"following question in the field below:"
+msgstr ""
+"<b>%1</b> skulle vilja verifiera din behörighet. Svara på följande fråga i "
+"fältet nedan:"
+
+#: authenticationwizard.cpp:214
+msgctxt "@title"
+msgid "Shared Secret"
+msgstr "Delad hemlighet"
+
+#: authenticationwizard.cpp:216
+#, kde-format
+msgctxt "@info"
+msgid "Enter a secret passphrase known only to you and <b>%1</b>:"
+msgstr ""
+"Skriv in en hemlig lösenordsfras som bara är känd för dig och <b>%1</b>:"
+
+#: authenticationwizard.cpp:218
+#, kde-format
+msgctxt "@title"
+msgid "Authentication with <b>%1</b>"
+msgstr "Behörighetskontroll med <b>%1</b>"
+
+#: authenticationwizard.cpp:219
+#, kde-format
+msgctxt "@info"
+msgid "Enter the secret passphrase known only to you and <b>%1</b>:"
+msgstr "Skriv in den hemliga lösenordsfrasen bara känd av dig och <b>%1</b>:"
+
+#: authenticationwizard.cpp:233
+msgctxt "@title"
+msgid "Manual Verification"
+msgstr "Manuell verifikation"
+
+#: authenticationwizard.cpp:239
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Contact <b>%1</b> via another secure channel and verify that the following "
+"fingerprint is correct:"
+msgstr ""
+"Kontakta <b>%1</b> via en annan säker kanal och verifiera att följande "
+"fingeravtryck är korrekt:"
+
+#: authenticationwizard.cpp:248
+msgctxt "@item:inlistbox ...verified that"
+msgid "I have not"
+msgstr "Jag har inte"
+
+#: authenticationwizard.cpp:249
+msgctxt "@item:inlistbox ...verified that"
+msgid "I have"
+msgstr "Jag har"
+
+#: authenticationwizard.cpp:259
+#, kde-format
+msgctxt "@info:label I have..."
+msgid "verified that this is in fact the correct fingerprint for <b>%1</b>."
+msgstr ""
+"verifierat att det här verkligen är det korrekta fingeravtrycket för <b>%1</"
+"b>."
+
+#: authenticationwizard.cpp:375
+msgid "Authentication successful"
+msgstr "Behörighetskontroll lyckades"
+
+#: authenticationwizard.cpp:379 authenticationwizard.cpp:387
+#, kde-format
+msgid ""
+"The authentication with <b>%1</b> has been completed successfully. The "
+"conversation is now secure."
+msgstr ""
+"Behörighetskontrollen med <b>%1</b> har slutförts med lyckat resultat. "
+"Konversationen är nu säker."
+
+#: authenticationwizard.cpp:383
+#, kde-format
+msgid ""
+"<b>%1</b> has successfully authenticated you. You may want to authenticate "
+"this contact as well by asking your own question."
+msgstr ""
+"<b>%1</b> har kontrollerat din behörighet med lyckat resultat. Du kanske "
+"också bör kontrollera den här kontaktens behörighet genom att ställa en egen "
+"fråga."
+
+#: authenticationwizard.cpp:391
+msgid "Authentication failed"
+msgstr "Behörighetskontroll misslyckades"
+
+#: authenticationwizard.cpp:392
+#, kde-format
+msgid ""
+"The authentication with <b>%1</b> has failed. To make sure you are not "
+"talking to an imposter, try again using the manual fingerprint verification "
+"method. Note that the conversation is now insecure."
+msgstr ""
+"Behörighetskontrollen med <b>%1</b> har misslyckats. För att vara säker på "
+"att du inte samtalar med en bedragare, försök igen genom att använda den "
+"manuella fingeravtrycksmetoden. Observera att konversationen nu inte är "
+"säker."
+
+#: authenticationwizard.cpp:414
+msgid "Authentication aborted"
+msgstr "Behörighetskontroll avbruten"
+
+#: authenticationwizard.cpp:415
+#, kde-format
+msgid ""
+"<b>%1</b> has aborted the authentication process. To make sure you are not "
+"talking to an imposter, try again using the manual fingerprint verification "
+"method."
+msgstr ""
+"<b>%1</b> har avbrutit behörighetskontrollprocessen.  För att vara säker på "
+"att du inte samtalar med en bedragare, försök igen genom att använda den "
+"manuella fingeravtrycksmetoden."
+
+#: authenticationwizard.cpp:424
+#, kde-format
+msgid ""
+"Ask <b>%1</b> a question, the answer to which is known only to you and them. "
+"If the answer does not match, you may be talking to an imposter."
+msgstr ""
+"Ställ en fråga till <b>%1</b>, som bara du och den personen känner till "
+"svaret på. Om svaret inte stämmer, kanske du samtalar med en bedragare."
+
+#: authenticationwizard.cpp:427
+#, kde-format
+msgid ""
+"Pick a secret known only to you and <b>%1</b>. If the secret does not match, "
+"you may be talking to an imposter. Do not send the secret through the chat "
+"window, or this authentication method could be compromised with ease."
+msgstr ""
+"Välj en hemlighet som bara är känd av dig och <b>%1</b>. Om hemligheterna "
+"inte stämmer, kanske du samtalar med en bedragare. Skicka inte hemligheten "
+"via chattfönstret, annars kan den här behörighetskontrollmetoden enkelt "
+"äventyras."
+
+#: authenticationwizard.cpp:431
+#, kde-format
+msgid ""
+"Verify <b>%1's</b> fingerprint manually. For example via a phone call or "
+"signed (and verified) email."
+msgstr ""
+"Verifiera fingeravtrycket för <b>%1</b> manuellt, exempelvis via ett "
+"telefonsamtal eller signerad (och verifierad) e-post."
 
 #: chat-search-bar.cpp:39
 msgctxt "Next search result"
@@ -61,7 +271,93 @@ msgstr "Infoga söktext..."
 msgid "Case sensitive"
 msgstr "Skiftlägeskänslig"
 
-#: chat-widget.cpp:560
+#: chat-widget.cpp:161
+msgid "Open chat window"
+msgstr "Öppna chattfönster"
+
+#: chat-widget.cpp:165
+msgid "Send file"
+msgstr "Skicka fil"
+
+#: chat-widget.cpp:169
+msgid "Show info..."
+msgstr "Visa information..."
+
+#: chat-widget.cpp:183
+msgid "Share Image"
+msgstr "Dela bild"
+
+#: chat-widget.cpp:185 chat-widget.cpp:461
+msgid "Send File"
+msgstr "Skicka fil"
+
+#: chat-widget.cpp:203
+#, kde-format
+msgid ""
+"Your message cannot be sent because the account %1 is offline. Please try "
+"again when the account is connected again."
+msgstr ""
+"Meddelandet kan inte skickas eftersom kontot %1 är nerkopplat. Försök igen "
+"när kontot är anslutet igen."
+
+#: chat-widget.cpp:208
+#, kde-format
+msgid "Connect %1"
+msgstr "Anslut %1"
+
+#: chat-widget.cpp:446
+#, kde-format
+msgid "Share Image via %1"
+msgstr "Dela bild via %1"
+
+#: chat-widget.cpp:456
+msgid "Send Image via File Transfer"
+msgstr "Skicka bild via filöverföring"
+
+#: chat-widget.cpp:693
+#, kde-format
+msgid "Attempting to start a private OTR session with %1"
+msgstr "Försöker starta en privat OTR-session med %1"
+
+#: chat-widget.cpp:696
+#, kde-format
+msgid "Attempting to restart a private OTR session with %1"
+msgstr "Försöker starta om en privat OTR-session med %1"
+
+#: chat-widget.cpp:716
+msgid "Terminating OTR session"
+msgstr "Avslutar OTR-session"
+
+#: chat-widget.cpp:764
+msgid "The OTR session is now unverified"
+msgstr "OTR-sessionen är nu overifierad"
+
+#: chat-widget.cpp:767
+msgid "Unverified OTR session started"
+msgstr "Overifierad OTR-session startad"
+
+#: chat-widget.cpp:775
+msgid "The OTR session is now private"
+msgstr "OTR-sessionen är nu privat"
+
+#: chat-widget.cpp:778
+msgid "Private OTR session started"
+msgstr "Privat OTR-session startad"
+
+#: chat-widget.cpp:785
+#, kde-format
+msgid "%1 has ended the OTR session. You should do the same"
+msgstr "%1 har avslutat OTR-sessionen. Du bör göra detsamma."
+
+#: chat-widget.cpp:801
+msgid "Successfully refreshed private OTR session"
+msgstr "Uppdaterade privat OTR-session med lyckat resultat"
+
+#: chat-widget.cpp:802
+msgid "Successfully refreshed unverified OTR session"
+msgstr "Uppdaterade overifierad OTR-session med lyckat resultat"
+
+#: chat-widget.cpp:903
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is blocked"
@@ -69,7 +365,7 @@ msgstr ""
 "Leverans av meddelandet \"%1\" misslyckades eftersom fjärrkontakten är "
 "blockerad"
 
-#: chat-widget.cpp:564
+#: chat-widget.cpp:907
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is offline"
@@ -77,17 +373,17 @@ msgstr ""
 "Leverans av meddelandet \"%1\" misslyckades eftersom fjärrkontakten är "
 "nerkopplad"
 
-#: chat-widget.cpp:570
+#: chat-widget.cpp:913
 msgid "Delivery of a message failed because the remote contact is blocked"
 msgstr ""
 "Leverans av ett meddelande misslyckades eftersom fjärrkontakten är blockerad"
 
-#: chat-widget.cpp:573
+#: chat-widget.cpp:916
 msgid "Delivery of a message failed because the remote contact is offline"
 msgstr ""
 "Leverans av ett meddelande misslyckades eftersom fjärrkontakten är nerkopplad"
 
-#: chat-widget.cpp:580
+#: chat-widget.cpp:923
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because the remote contact is not valid"
@@ -95,13 +391,13 @@ msgstr ""
 "Leverans av meddelandet \"%1\" misslyckades eftersom fjärrkontakten inte är "
 "giltig"
 
-#: chat-widget.cpp:584
+#: chat-widget.cpp:927
 msgid "Delivery of a message failed because the remote contact is not valid"
 msgstr ""
 "Leverans av ett meddelande misslyckades eftersom fjärrkontakten inte är "
 "giltig"
 
-#: chat-widget.cpp:590
+#: chat-widget.cpp:933
 #, kde-format
 msgid ""
 "Delivery of the message \"%1\" failed because you do not have permission to "
@@ -110,7 +406,7 @@ msgstr ""
 "Leverans av meddelandet \"%1\" misslyckades eftersom du inte har rättighet "
 "att tala i detta rum"
 
-#: chat-widget.cpp:594
+#: chat-widget.cpp:937
 msgid ""
 "Delivery of a message failed because you do not have permission to speak in "
 "this room"
@@ -118,49 +414,59 @@ msgstr ""
 "Leverans av ett meddelande misslyckades eftersom du inte har rättighet att "
 "tala i detta rum"
 
-#: chat-widget.cpp:600
+#: chat-widget.cpp:943
 #, kde-format
 msgid "Delivery of the message \"%1\" failed because it was too long"
 msgstr "Leverans av meddelandet \"%1\" misslyckades eftersom det är för långt"
 
-#: chat-widget.cpp:604
+#: chat-widget.cpp:947
 msgid "Delivery of a message failed because it was too long"
 msgstr "Leverans av ett meddelande misslyckades eftersom det är för långt"
 
-#: chat-widget.cpp:610
+#: chat-widget.cpp:953
 #, kde-format
 msgid "Delivery of the message \"%1\" failed: %2"
 msgstr "Leverans av meddelandet \"%1\" misslyckades: %2"
 
-#: chat-widget.cpp:614
+#: chat-widget.cpp:957
 #, kde-format
 msgid "Delivery of a message failed: %1"
 msgstr "Leverans av ett meddelande misslyckades: %1"
 
-#: chat-widget.cpp:699 chat-widget.cpp:793
+#: chat-widget.cpp:1020
+#, kde-format
+msgid ""
+"%1 has already closed his/her private connection to you. Your message was "
+"not sent. Either end your private conversation, or restart it."
+msgstr ""
+"%1 har redan stängt sin privata anslutning till dig. Ditt meddelande "
+"skickades inte. Avsluta antingen den privata konversationen eller starta om "
+"den."
+
+#: chat-widget.cpp:1061 chat-widget.cpp:1154
 #, kde-format
 msgid "%1 has left the chat"
 msgstr "%1 har lämnat chatten"
 
-#: chat-widget.cpp:739
+#: chat-widget.cpp:1100
 #, kde-format
 msgctxt "Your presence status"
 msgid "You are now marked as %1"
 msgstr "Du anges nu som %1"
 
-#: chat-widget.cpp:743
+#: chat-widget.cpp:1104
 #, kde-format
 msgctxt "Your presence status with status message"
 msgid "You are now marked as %1 - %2"
 msgstr "Du anges nu som %1 - %2"
 
-#: chat-widget.cpp:749
+#: chat-widget.cpp:1110
 #, kde-format
 msgctxt "User's name, with their new presence status (i.e online/away)"
 msgid "%1 is %2"
 msgstr "%1 är %2"
 
-#: chat-widget.cpp:751
+#: chat-widget.cpp:1112
 #, kde-format
 msgctxt ""
 "User's name, with their new presence status (i.e online/away) and a "
@@ -168,29 +474,43 @@ msgctxt ""
 msgid "%1 is %2 - %3"
 msgstr "%1 är %2 - %3"
 
-#: chat-widget.cpp:779
+#: chat-widget.cpp:1140
 #, kde-format
 msgid "You are now known as %1"
 msgstr "Du är nu känd som %1"
 
-#: chat-widget.cpp:787
+#: chat-widget.cpp:1148
 #, kde-format
 msgid "%1 is now known as %2"
 msgstr "%1 är nu känd som %2"
 
-#: chat-widget.cpp:806
+#: chat-widget.cpp:1167
 #, kde-format
 msgid "%1 is now blocked."
 msgstr "%1 är nu blockerad"
 
-#: chat-widget.cpp:808
+#: chat-widget.cpp:1169
 #, kde-format
 msgid "%1 is now unblocked."
 msgstr "Blockering är nu borttagen för %1"
 
-#: chat-widget.cpp:1012
+#: chat-widget.cpp:1198
+#, kde-format
+msgid "%1 has joined the chat"
+msgstr "%1 har gått med i chatten"
+
+#: chat-widget.cpp:1239 chat-widget.cpp:1406
+msgid "Group Chat"
+msgstr "Gruppchatt"
+
+#: chat-widget.cpp:1458
 msgid "You are now offline"
 msgstr "Du är nu nerkopplad"
+
+#: chat-widget.cpp:1539
+#, kde-format
+msgid "Uploading Image has Failed with Error: %1"
+msgstr "Uppladdning av bild har misslyckats med felet: %1"
 
 #: chat-window-style.cpp:352
 msgctxt "Normal style variant menu item"
@@ -213,14 +533,87 @@ msgstr "Spela"
 msgid "Save as"
 msgstr "Spara som"
 
+#. i18n: ectx: property (windowTitle), widget (QWidget, KeyGenDialog)
+#: keygendialog.ui:14
+msgid "Please Wait"
+msgstr "Vänta"
+
+#. i18n: ectx: property (text), widget (QLabel, lbText)
+#: keygendialog.ui:32
+msgid "Please wait while generating the private key"
+msgstr "Vänta medan den privata nyckeln skapas"
+
+#. i18n: ectx: property (text), widget (QLabel, lbTime)
+#: keygendialog.ui:49
+msgid "TextLabel"
+msgstr "Textetikett"
+
 #: notify-filter.cpp:82
 #, kde-format
 msgid "%1 has sent you a message"
 msgstr "%1 har skickat dig ett meddelande"
 
-#: notify-filter.cpp:95
+#: notify-filter.cpp:95 otr-notifications.cpp:49
 msgid "View"
 msgstr "Visa"
+
+#: otr-notifications.cpp:63
+#, kde-format
+msgid "Private OTR session started with %1"
+msgstr "Privat OTR-session startad med %1"
+
+#: otr-notifications.cpp:65
+#, kde-format
+msgid "Unverified OTR session started with %1"
+msgstr "Overifierad OTR-session startad med %1"
+
+#: otr-notifications.cpp:79
+#, kde-format
+msgid "Finished OTR session with %1"
+msgstr "Avslutade OTR-session med %1"
+
+#: otr-notifications.cpp:91
+#, kde-format
+msgid "%1 has requested your authentication"
+msgstr "%1 har begärt behörighetskontroll av dig"
+
+#: otr-notifications.cpp:105
+#, kde-format
+msgid "Authentication with %1 completed successfully"
+msgstr "Behörighetskontroll med %1 slutförd med lyckat resultat"
+
+#: otr-notifications.cpp:107 otr-notifications.cpp:134
+#, kde-format
+msgid "Authentication with %1 failed"
+msgstr "Behörighetskontroll med %1 misslyckades"
+
+#: otr-notifications.cpp:121
+#, kde-format
+msgid "Authentication with %1 was aborted"
+msgstr "Behörighetskontroll med %1 avbröts"
+
+#: proxy-service.cpp:40
+#, kde-format
+msgid "Generating the private key for %1..."
+msgstr "Skapar den privata nyckeln för %1..."
+
+#: proxy-service.cpp:41
+msgid "This may take some time"
+msgstr "Det kan ta en stund"
+
+#: proxy-service.cpp:43
+msgid "Please wait"
+msgstr "Vänta"
+
+#: proxy-service.cpp:76
+#, kde-format
+msgid "Could not generate a private key for %1"
+msgstr "Kunde inte skapa privat nyckel för %1"
+
+#: proxy-service.cpp:78
+#, kde-format
+msgid "Finished generating the private key for %1"
+msgstr "Färdig med att skapa privat nyckel för %1"
 
 #~ msgid "You have sent a message"
 #~ msgstr "Du har skickat ett meddelande"
@@ -230,10 +623,6 @@ msgstr "Visa"
 
 #~ msgid "Connection closed"
 #~ msgstr "Anslutning stängd"
-
-#~ msgctxt "Connected to IM service"
-#~ msgid "Connected"
-#~ msgstr "Ansluten"
 
 #~ msgid "&Send"
 #~ msgstr "&Skicka"

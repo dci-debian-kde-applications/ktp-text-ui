@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-07-26 18:50+0300\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-08-31 14:28+0300\n"
+"Last-Translator: Larso\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -49,6 +49,10 @@ msgstr "LaTeX-komento:"
 #: latex/latex-config.ui:45
 msgid "latex -interaction=batchmode -halt-on-error"
 msgstr "latex -interaction=batchmode -halt-on-error"
+
+#: otr/otr-filter.cpp:35
+msgid "<i>Encrypted message</i>"
+msgstr "<i>Salattu viesti</i>"
 
 #: texttospeech/tts-filter.cpp:42
 msgid "KDE Instant Messaging"

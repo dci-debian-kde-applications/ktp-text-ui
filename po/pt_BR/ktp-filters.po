@@ -1,14 +1,14 @@
 # Translation of ktp-filters.po to Brazilian Portuguese
-# Copyright (C) 2013 This_file_is_part_of_KDE
+# Copyright (C) 2013-2014 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# André Marcelo Alvarenga <alvarenga@kde.org>, 2013.
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2013, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: ktp-filters\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-09-25 09:01-0300\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-09-19 13:36-0300\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
 "Language: pt_BR\n"
@@ -51,6 +51,10 @@ msgstr "Linha de comando LaTeX:"
 msgid "latex -interaction=batchmode -halt-on-error"
 msgstr "latex -interaction=batchmode -halt-on-error"
 
+#: otr/otr-filter.cpp:35
+msgid "<i>Encrypted message</i>"
+msgstr "<i>Mensagem criptografada</i>"
+
 #: texttospeech/tts-filter.cpp:42
 msgid "KDE Instant Messaging"
 msgstr "Mensagens Instantâneas do KDE"
@@ -59,16 +63,10 @@ msgstr "Mensagens Instantâneas do KDE"
 #, kde-format
 msgctxt "Text to Speech - text message %1 is name, %2 is message"
 msgid "%1 says %2"
-msgstr "%1 diz: %2"
+msgstr "%1 diz %2"
 
 #: texttospeech/tts-filter.cpp:66
 #, kde-format
 msgctxt "Text to Speech - text message %1 is name, %2 is message"
 msgid "%1 %2"
 msgstr "%1 %2"
-
-#~ msgid "New message. %1"
-#~ msgstr "Nova mensagem. %1"
-
-#~ msgid "Click to view in browser"
-#~ msgstr "Clique para ver no navegador"

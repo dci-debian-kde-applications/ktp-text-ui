@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-chat-window-config\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
 "PO-Revision-Date: 2014-06-05 16:42+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -35,37 +35,42 @@ msgid "Style"
 msgstr "Stil"
 
 #. i18n: ectx: property (text), widget (QLabel, styleLabel)
-#: appearance-config.ui:49
+#: appearance-config.ui:52
 msgid "Message Style:"
 msgstr "Narichtenstil:"
 
 #. i18n: ectx: property (text), widget (QLabel, variantLabel)
-#: appearance-config.ui:75
+#: appearance-config.ui:78
 msgid "Variant:"
 msgstr "Variant:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showHeader)
-#: appearance-config.ui:107
+#: appearance-config.ui:113
 msgid "Show Header"
 msgstr "Koppreeg &wiesen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showPresenceCheckBox)
-#: appearance-config.ui:120
+#: appearance-config.ui:129
 msgid "Show status changes"
 msgstr "Statusännern wiesen"
 
+#. i18n: ectx: property (text), widget (QCheckBox, showJoinLeaveCheckBox)
+#: appearance-config.ui:142
+msgid "Show when contacts join/leave chat"
+msgstr "Wiesen, wenn Kontakten na den Klönruum rinkaamt/dor rut gaht"
+
 #. i18n: ectx: property (title), widget (QGroupBox, customFontBox)
-#: appearance-config.ui:151
+#: appearance-config.ui:170
 msgid "Use Custom Font Settings"
 msgstr "Egen Schriftinstellen bruken"
 
 #. i18n: ectx: property (text), widget (QLabel, fontFamilyLabel)
-#: appearance-config.ui:163
+#: appearance-config.ui:184
 msgid "Select Font:"
 msgstr "Schriftoort utsöken: "
 
 #. i18n: ectx: property (text), widget (QLabel, fontSizeLabel)
-#: appearance-config.ui:176
+#: appearance-config.ui:194
 msgid "Select Size:"
 msgstr "Grött utsöken: "
 
