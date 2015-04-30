@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2013.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-24 05:32+0000\n"
-"PO-Revision-Date: 2013-09-24 19:13+0200\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-08-27 19:56+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, LatexConfig)
 #: latex/latex-config.ui:14
@@ -50,6 +50,10 @@ msgstr "Latex-kommandorad:"
 msgid "latex -interaction=batchmode -halt-on-error"
 msgstr "latex -interaction=batchmode -halt-on-error"
 
+#: otr/otr-filter.cpp:35
+msgid "<i>Encrypted message</i>"
+msgstr "<i>Krypterat meddelande</i>"
+
 #: texttospeech/tts-filter.cpp:42
 msgid "KDE Instant Messaging"
 msgstr "KDE:s direktmeddelanden"
@@ -71,3 +75,16 @@ msgstr "%1 %2"
 
 #~ msgid "Click to view in browser"
 #~ msgstr "Klicka för att visa i webbläsare"
+
+#~ msgid ""
+#~ "\\documentclass{standalone}\n"
+#~ "\\usepackage{color}\n"
+#~ "\\usepackage{amsmath,latexsym,amsfonts,amssymb,ulem}\n"
+#~ "\\usepackage{graphicx}\n"
+#~ "\\pagestyle{empty}\n"
+#~ msgstr ""
+#~ "\\documentclass{standalone}\n"
+#~ "\\usepackage{color}\n"
+#~ "\\usepackage{amsmath,latexsym,amsfonts,amssymb,ulem}\n"
+#~ "\\usepackage{graphicx}\n"
+#~ "\\pagestyle{empty}\n"

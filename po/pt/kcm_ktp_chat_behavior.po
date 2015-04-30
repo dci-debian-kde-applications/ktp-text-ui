@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
 "PO-Revision-Date: 2014-03-15 13:13+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: Tab\n"
 
-#: behavior-config.cpp:49
+#: behavior-config.cpp:50
 msgctxt ""
 "Part of config 'show last [spin box] messages' This is the suffix to the "
 "spin box. Be sure to include leading space"
@@ -27,7 +27,7 @@ msgid_plural " messages"
 msgstr[0] " mensagem"
 msgstr[1] " mensagens"
 
-#: behavior-config.cpp:60
+#: behavior-config.cpp:64
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
 msgstr "Alcunha"
@@ -92,3 +92,28 @@ msgstr "Completar as alcunhas para"
 #: behavior-config.ui:137
 msgid "when I press Tab"
 msgstr "quando carrego em Tab"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup)
+#: behavior-config.ui:147
+msgid "Image Sharing"
+msgstr "Partilha de Imagens"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: behavior-config.ui:156
+msgid "Image Sharing Service"
+msgstr "Serviço de Partilha de Imagens"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: behavior-config.ui:179
+msgid "Works when dragging an image to the Chat Window"
+msgstr "Funciona quando arrastar uma imagem para a Janela de Conversação"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupChatsGroup)
+#: behavior-config.ui:195
+msgid "Group Chats"
+msgstr "Conversas em Grupo"
+
+#. i18n: ectx: property (text), widget (QCheckBox, dontLeaveGroupChats)
+#: behavior-config.ui:207
+msgid "Stay connected to group chat even when tab is closed"
+msgstr "Manter-se ligado à conversa em grupo mesmo se fechar a página"

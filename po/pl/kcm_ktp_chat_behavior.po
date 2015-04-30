@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2014-03-12 18:25+0100\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-09-19 15:47+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: behavior-config.cpp:49
+#: behavior-config.cpp:50
 msgctxt ""
 "Part of config 'show last [spin box] messages' This is the suffix to the "
 "spin box. Be sure to include leading space"
@@ -28,7 +28,7 @@ msgstr[0] " wiadomość"
 msgstr[1] " wiadomości"
 msgstr[2] " wiadomości"
 
-#: behavior-config.cpp:60
+#: behavior-config.cpp:64
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
 msgstr "Pseudonim"
@@ -93,6 +93,31 @@ msgstr "Uzupełniaj pseudonimy do"
 #: behavior-config.ui:137
 msgid "when I press Tab"
 msgstr "gdy nacisnę Tab"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup)
+#: behavior-config.ui:147
+msgid "Image Sharing"
+msgstr "Udostępnianie obrazów"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: behavior-config.ui:156
+msgid "Image Sharing Service"
+msgstr "Usługa udostępniania obrazów"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: behavior-config.ui:179
+msgid "Works when dragging an image to the Chat Window"
+msgstr "Działa przy przeciąganiu obrazów do okna rozmowy"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupChatsGroup)
+#: behavior-config.ui:195
+msgid "Group Chats"
+msgstr "Rozmowy grupowe"
+
+#. i18n: ectx: property (text), widget (QCheckBox, dontLeaveGroupChats)
+#: behavior-config.ui:207
+msgid "Stay connected to group chat even when tab is closed"
+msgstr "Pozostań połączonym do rozmowy grupowej także po zamknięciu karty"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Nowej karcie w oknie z uaktywnieniem"

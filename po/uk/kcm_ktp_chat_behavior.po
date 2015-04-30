@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_ktp_chat_behavior\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2014-03-12 21:10+0200\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-09-17 18:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: behavior-config.cpp:49
+#: behavior-config.cpp:50
 msgctxt ""
 "Part of config 'show last [spin box] messages' This is the suffix to the "
 "spin box. Be sure to include leading space"
@@ -29,7 +29,7 @@ msgstr[1] " повідомлення"
 msgstr[2] " повідомлень"
 msgstr[3] " повідомлення"
 
-#: behavior-config.cpp:60
+#: behavior-config.cpp:64
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
 msgstr "Псевдонім"
@@ -94,6 +94,32 @@ msgstr "Доповнювати псевдоніми до"
 #: behavior-config.ui:137
 msgid "when I press Tab"
 msgstr ", якщо натиснуто клавішу Tab"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup)
+#: behavior-config.ui:147
+msgid "Image Sharing"
+msgstr "Оприлюднення зображень"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: behavior-config.ui:156
+msgid "Image Sharing Service"
+msgstr "Служба оприлюднення зображень"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: behavior-config.ui:179
+msgid "Works when dragging an image to the Chat Window"
+msgstr "Працює, якщо перетягти зображення до вікна спілкування"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupChatsGroup)
+#: behavior-config.ui:195
+msgid "Group Chats"
+msgstr "Групове спілкування"
+
+#. i18n: ectx: property (text), widget (QCheckBox, dontLeaveGroupChats)
+#: behavior-config.ui:207
+msgid "Stay connected to group chat even when tab is closed"
+msgstr ""
+"Не розривати з’єднання з груповим спілкуванням, навіть якщо вкладку закрито"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "новій вкладці останнього активного вікна"

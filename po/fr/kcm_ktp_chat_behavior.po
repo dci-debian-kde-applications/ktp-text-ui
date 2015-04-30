@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-chat-window-config\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
-"PO-Revision-Date: 2014-01-06 00:37+0100\n"
-"Last-Translator: Maxime Corteel\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-08-13 00:55+0200\n"
+"Last-Translator: Maxime\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: behavior-config.cpp:49
+#: behavior-config.cpp:50
 msgctxt ""
 "Part of config 'show last [spin box] messages' This is the suffix to the "
 "spin box. Be sure to include leading space"
@@ -31,7 +31,7 @@ msgid_plural " messages"
 msgstr[0] " message"
 msgstr[1] " messages"
 
-#: behavior-config.cpp:60
+#: behavior-config.cpp:64
 msgctxt "Placeholder for contact name in completion suffix selector"
 msgid "Nickname"
 msgstr "Pseudonyme"
@@ -96,6 +96,32 @@ msgstr "Compléter les pseudonymes par"
 #: behavior-config.ui:137
 msgid "when I press Tab"
 msgstr "quand j'appuie sur Tabulation"
+
+#. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup)
+#: behavior-config.ui:147
+msgid "Image Sharing"
+msgstr "Partage d'images"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: behavior-config.ui:156
+msgid "Image Sharing Service"
+msgstr "Service de partage d'images"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: behavior-config.ui:179
+msgid "Works when dragging an image to the Chat Window"
+msgstr ""
+"Fonctionne lorsqu'une image est glissée dans la fenêtre de conversation"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupChatsGroup)
+#: behavior-config.ui:195
+msgid "Group Chats"
+msgstr "Conversation de groupe"
+
+#. i18n: ectx: property (text), widget (QCheckBox, dontLeaveGroupChats)
+#: behavior-config.ui:207
+msgid "Stay connected to group chat even when tab is closed"
+msgstr "Rester connecter aux conversations de groupe une fois l'onglet fermé"
 
 #~ msgid "A new tab in the last focused window"
 #~ msgstr "Un nouvel onglet dans la dernière fenêtre ayant eu le focus"
