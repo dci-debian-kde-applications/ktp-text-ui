@@ -1,8 +1,12 @@
-ktp-text-ui (15.04.0-0ubuntu1) UNRELEASED; urgency=medium
+ktp-text-ui (4:15.04.1-0ubuntu1) UNRELEASED; urgency=medium
 
+  [ Harald Sitter ]
   * KDE Frameworks 5 port
 
- -- Harald Sitter <sitter@kde.org>  Mon, 09 Mar 2015 11:22:13 +0100
+  [ Scarlett Clark ]
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 13 May 2015 22:39:46 -0700
 
 ktp-text-ui (0.9.0-0ubuntu1) vivid; urgency=medium
 
