@@ -19,17 +19,18 @@
 */
 #include "emoticon-text-edit-action.h"
 #include "emoticon-text-edit-selector.h"
-#include <KLocale>
 
-#include <KMenu>
+#include <KLocalizedString>
 
+
+#include <QMenu>
 #include <QWidgetAction>
 
 class EmoticonTextEditAction::EmoticonTextEditActionPrivate
 {
 public:
   EmoticonTextEditActionPrivate() {
-    emoticonMenu = new KMenu();
+    emoticonMenu = new QMenu();
     selector = new EmoticonTextEditSelector( emoticonMenu );
     QWidgetAction *action = new QWidgetAction( emoticonMenu );
     action->setDefaultWidget( selector );
@@ -41,7 +42,7 @@ public:
     delete emoticonMenu;
   }
 
-  KMenu *emoticonMenu;
+  QMenu *emoticonMenu;
   EmoticonTextEditSelector *selector;
 };
 
@@ -49,8 +50,7 @@ EmoticonTextEditAction::EmoticonTextEditAction( QObject * parent )
   : KActionMenu( i18n( "Add Smiley" ), parent ), d( new EmoticonTextEditActionPrivate() )
 {
   setMenu( d->emoticonMenu );
-  setIcon( KIcon( QLatin1String( "face-smile" ) ) );
-  setShortcutConfigurable( false );
+  setIcon( QIcon::fromTheme( QStringLiteral( "face-smile" ) ) );
   setDelayed( false );
   connect( d->selector, SIGNAL(itemSelected(QString)),
            this, SIGNAL(emoticonActivated(QString)) );
@@ -61,5 +61,3 @@ EmoticonTextEditAction::~EmoticonTextEditAction()
 {
   delete d;
 }
-
-#include "emoticon-text-edit-action.moc"

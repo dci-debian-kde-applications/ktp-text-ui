@@ -1,5 +1,6 @@
-include_directories (${KTP_INCLUDE_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/image-sharer)
+
+add_definitions(-DTRANSLATION_DOMAIN=\"ktpchat\")
 
 set(ktpchat_SRCS
         chat-widget.cpp
@@ -21,6 +22,7 @@ set(ktpchat_SRCS
         otr-status.cpp
         authenticationwizard.cpp
         otr-notifications.cpp
+        ktp-debug.cpp
         )
 
 set(ktpchat_UI
@@ -28,20 +30,30 @@ set(ktpchat_UI
     keygendialog.ui
 )
 
-kde4_add_ui_files(ktpchat_SRCS ${ktpchat_UI})
+ki18n_wrap_ui(ktpchat_SRCS ${ktpchat_UI})
 
-kde4_add_library(ktpchat SHARED ${ktpchat_SRCS})
+add_library(ktpchat SHARED ${ktpchat_SRCS})
 
 target_link_libraries(ktpchat
-    ${KDE4_KDECORE_LIBS}
-    ${KDE4_KIO_LIBS}
-    ${KDE4_KDEUI_LIBS}
-    ${TELEPATHY_QT4_LIBRARIES}
-    ${KDE4_KDEWEBKIT_LIBRARY}
-    ${KDE4_KEMOTICONS_LIBS}
-    ${KTP_LIBRARIES}
-    ${KTP_LOGGER_LIBRARIES}
-    ${KTP_OTR_LIBRARIES}
+    KF5::KIOWidgets
+    KF5::KIOCore
+    KF5::I18n
+    KF5::WebKit
+    KF5::Emoticons
+    KF5::IconThemes
+    KF5::Archive
+    KF5::SonnetCore
+    KF5::Notifications
+    KF5::TextWidgets
+    KF5::ConfigCore
+    KF5::ConfigWidgets
+    KF5::WindowSystem
+    KF5::XmlGui #for KActionCollection
+    KTp::CommonInternals
+    KTp::Logger
+    KTp::OTR
+    KTp::Widgets
+    Qt5::WebKitWidgets
     ktpimagesharer
 )
 install(TARGETS ktpchat ${INSTALL_TARGETS_DEFAULT_ARGS})

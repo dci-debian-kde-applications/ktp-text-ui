@@ -25,32 +25,33 @@
 #include "adium-theme-status-info.h"
 #include "chat-window-style-manager.h"
 #include "chat-window-style.h"
+#include "ktp-debug.h"
 
 #include <KTp/message-processor.h>
 
 #include <QtCore/QFile>
 #include <QtCore/QTextCodec>
-#include <QtGui/QContextMenuEvent>
-#include <QtGui/QFontDatabase>
-#include <QtGui/QMenu>
-#include <QtGui/QDesktopWidget>
-#include <QtWebKit/QWebFrame>
-#include <QtWebKit/QWebElement>
-#include <QtWebKit/QWebInspector>
-#include <QtWebKit/QWebSettings>
+#include <QContextMenuEvent>
+#include <QFontDatabase>
+#include <QMenu>
+#include <QDesktopWidget>
+#include <QWebFrame>
+#include <QWebElement>
+#include <QWebInspector>
+#include <QWebSettings>
 #include <QApplication>
+#include <QAction>
+#include <QLocale>
 
-#include <KAction>
-#include <KDebug>
 #include <KEmoticonsTheme>
-#include <KGlobal>
-#include <KStandardDirs>
+#include <KSharedConfig>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KMessageBox>
 #include <KToolInvocation>
 #include <KIconLoader>
 #include <KProtocolInfo>
+#include <KLocalizedString>
 
 AdiumThemeView::AdiumThemeView(QWidget *parent)
         : KWebView(parent),
@@ -66,7 +67,7 @@ AdiumThemeView::AdiumThemeView(QWidget *parent)
     page()->setLinkDelegationPolicy(QWebPage::DelegateAllLinks);
 
     QAction *defaultOpenLinkAction = pageAction(QWebPage::OpenLink);
-    m_openLinkAction = new KAction(defaultOpenLinkAction->text(), this);
+    m_openLinkAction = new QAction(defaultOpenLinkAction->text(), this);
     connect(m_openLinkAction, SIGNAL(triggered()),
             this, SLOT(onOpenLinkActionTriggered()));
 
@@ -227,7 +228,7 @@ void AdiumThemeView::initialise(const AdiumThemeHeaderInfo &chatInfo)
     } else {
         // FIXME: we should inform the user if the chatStyle want's to use a fontFamily which is not present on the system
         QFontDatabase fontDB = QFontDatabase();
-        kDebug() << "Theme font installed: " << m_chatStyle->defaultFontFamily()
+        qCDebug(KTP_TEXTUI_LIB) << "Theme font installed: " << m_chatStyle->defaultFontFamily()
         << fontDB.families().contains(m_chatStyle->defaultFontFamily());
 
         // use theme fontFamily/Size, if not existent, it falls back to systems default font
@@ -299,11 +300,11 @@ void AdiumThemeView::initialise(const AdiumThemeHeaderInfo &chatInfo)
             templateHtml.insert(index + 5, onload);
         } else {
             themeOnLoadJS = body.cap(2);
-            //kDebug() << "Captured js onLoad" << themeOnLoadJS;
+            //qCDebug(KTP_TEXTUI_LIB) << "Captured js onLoad" << themeOnLoadJS;
             templateHtml.replace(body.pos(1), body.cap(1).length(), onload);
         }
     }
-    //kDebug() << templateHtml;
+    //qCDebug(KTP_TEXTUI_LIB) << templateHtml;
 
     setHtml(templateHtml);
 
@@ -349,7 +350,7 @@ QString AdiumThemeView::fontFamily()
 
 void AdiumThemeView::setFontFamily(QString fontFamily)
 {
-    kDebug();
+    qCDebug(KTP_TEXTUI_LIB);
     m_fontFamily = fontFamily;
 }
 
@@ -360,13 +361,13 @@ int AdiumThemeView::fontSize()
 
 void AdiumThemeView::setFontSize(int fontSize)
 {
-    kDebug();
+    qCDebug(KTP_TEXTUI_LIB);
     m_fontSize = fontSize;
 }
 
 void AdiumThemeView::setUseCustomFont(bool useCustomFont)
 {
-    kDebug();
+    qCDebug(KTP_TEXTUI_LIB);
     m_useCustomFont = useCustomFont;
 }
 
@@ -377,7 +378,7 @@ bool AdiumThemeView::isCustomFont() const
 
 void AdiumThemeView::setShowPresenceChanges(bool showPresenceChanges)
 {
-    kDebug();
+    qCDebug(KTP_TEXTUI_LIB);
     m_showPresenceChanges = showPresenceChanges;
 }
 
@@ -516,7 +517,7 @@ void AdiumThemeView::addAdiumContentMessage(const AdiumThemeContentInfo &content
         }
         break;
     default:
-        kWarning() << "Unexpected message type to addContentMessage";
+        qCWarning(KTP_TEXTUI_LIB) << "Unexpected message type to addContentMessage";
     }
 
     replaceContentKeywords(styleHtml, message);
@@ -554,7 +555,7 @@ void AdiumThemeView::addAdiumStatusMessage(const AdiumThemeStatusInfo& statusMes
         styleHtml = m_chatStyle->getStatusHistoryHtml();
         break;
     default:
-        kWarning() << "Unexpected message type to addStatusMessage";
+        qCWarning(KTP_TEXTUI_LIB) << "Unexpected message type to addStatusMessage";
     }
 
     replaceStatusKeywords(styleHtml, message);
@@ -573,28 +574,28 @@ QString AdiumThemeView::appendScript(AdiumThemeView::AppendMode mode)
     //escape quotes, and merge HTML onto one line.
     switch (mode) {
     case AppendMessageWithScroll:
-        kDebug() << "AppendMessageWithScroll";
+        qCDebug(KTP_TEXTUI_LIB) << "AppendMessageWithScroll";
         return QLatin1String("checkIfScrollToBottomIsNeeded(); appendMessage(\"%1\"); scrollToBottomIfNeeded(); false;");
     case AppendNextMessageWithScroll:
-        kDebug() << "AppendNextMessageWithScroll";
+        qCDebug(KTP_TEXTUI_LIB) << "AppendNextMessageWithScroll";
         return QLatin1String("checkIfScrollToBottomIsNeeded(); appendNextMessage(\"%1\"); scrollToBottomIfNeeded(); false;");
     case AppendMessage:
-        kDebug() << "AppendMessage";
+        qCDebug(KTP_TEXTUI_LIB) << "AppendMessage";
         return QLatin1String("appendMessage(\"%1\"); false;");
     case AppendNextMessage:
-        kDebug() << "AppendNextMessage";
+        qCDebug(KTP_TEXTUI_LIB) << "AppendNextMessage";
         return QLatin1String("appendNextMessage(\"%1\"); false;");
     case AppendMessageNoScroll:
-        kDebug() << "AppendMessageNoScroll";
+        qCDebug(KTP_TEXTUI_LIB) << "AppendMessageNoScroll";
         return QLatin1String("appendMessageNoScroll(\"%1\"); false;");
     case AppendNextMessageNoScroll:
-        kDebug() << "AppendNextMessageNoScroll";
+        qCDebug(KTP_TEXTUI_LIB) << "AppendNextMessageNoScroll";
         return QLatin1String("appendNextMessageNoScroll(\"%1\"); false;");
     case ReplaceLastMessage:
-        kDebug() << "ReplaceLastMessage";
+        qCDebug(KTP_TEXTUI_LIB) << "ReplaceLastMessage";
         return QLatin1String("replaceLastMessage(\"%1\"); false");
     default:
-        kWarning() << "Unhandled append mode!";
+        qCWarning(KTP_TEXTUI_LIB) << "Unhandled append mode!";
         return QLatin1String("%1");
     }
 }
@@ -670,16 +671,16 @@ QString AdiumThemeView::replaceHeaderKeywords(QString htmlTemplate, const AdiumT
     htmlTemplate.replace(QLatin1String("%destinationDisplayName%"), info.destinationDisplayName());
     htmlTemplate.replace(QLatin1String("%incomingIconPath%"), (!info.incomingIconPath().isEmpty() ? info.incomingIconPath().toString() : m_defaultAvatar));
     htmlTemplate.replace(QLatin1String("%outgoingIconPath%"), (!info.outgoingIconPath().isEmpty() ? info.outgoingIconPath().toString() : m_defaultAvatar));
-    htmlTemplate.replace(QLatin1String("%timeOpened%"), KGlobal::locale()->formatTime(info.timeOpened().time()));
-    htmlTemplate.replace(QLatin1String("%dateOpened%"), KGlobal::locale()->formatDate(info.timeOpened().date(), KLocale::LongDate));
+    htmlTemplate.replace(QLatin1String("%timeOpened%"), QLocale::system().toString(info.timeOpened().time()));
+    htmlTemplate.replace(QLatin1String("%dateOpened%"), QLocale::system().toString(info.timeOpened().date(), QLocale::LongFormat));
 
     //KTp-Renkoo specific hack to make "Conversation Began" translatable
     htmlTemplate.replace(QLatin1String("%conversationBegan%"), i18nc("Header at top of conversation view. %1 is the time format",
-                                                                     "Conversation began %1", KGlobal::locale()->formatTime(info.timeOpened().time())));
+                                                                     "Conversation began %1", QLocale::system().toString(info.timeOpened().time())));
 
     //KTp-WoshiChat specific hack to make "Joined at" translatable
     htmlTemplate.replace(QLatin1String("%conversationJoined%"), i18nc("Header at top of conversation view. %1 is the time format",
-                                                                      "Joined at %1", KGlobal::locale()->formatTime(info.timeOpened().time())));
+                                                                      "Joined at %1", QLocale::system().toString(info.timeOpened().time())));
 
     htmlTemplate.replace(QLatin1String("%groupChatIcon%"), KIconLoader::global()->iconPath(QLatin1String("telepathy-kde"), -48));
 
@@ -746,9 +747,9 @@ QString AdiumThemeView::replaceMessageKeywords(QString &htmlTemplate, const Adiu
     //service
     htmlTemplate.replace(QLatin1String("%service%"), m_service);
     //time
-    htmlTemplate.replace(QLatin1String("%time%"), KGlobal::locale()->formatLocaleTime(info.time().time()));
+    htmlTemplate.replace(QLatin1String("%time%"), QLocale::system().toString(info.time().time()));
     //shortTime
-    htmlTemplate.replace(QLatin1String("%shortTime%"), KGlobal::locale()->formatLocaleTime(info.time().time(), KLocale::TimeWithoutSeconds | KLocale::TimeWithoutAmPm));
+    htmlTemplate.replace(QLatin1String("%shortTime%"), QLocale::system().toString(info.time().time(), QLocale::ShortFormat));
     //time{X}
     QRegExp timeRegExp(QLatin1String("%time\\{([^}]*)\\}%"));
     int pos = 0;
@@ -840,5 +841,3 @@ const QString AdiumThemeView::variantPath() const
 {
     return m_variantPath;
 }
-
-

@@ -28,7 +28,7 @@
 #include <QHBoxLayout>
 
 // Use a static for this as calls to the KEmoticons constructor are expensive.
-K_GLOBAL_STATIC( KEmoticons, sEmoticons )
+Q_GLOBAL_STATIC( KEmoticons, sEmoticons )
 
 EmoticonTextEditItem::EmoticonTextEditItem(const QString &emoticonText, const QString &pixmapPath, QListWidget *parent)
   : QListWidgetItem( parent )
@@ -130,5 +130,3 @@ void EmoticonTextEditSelector::slotEmoticonClicked(QListWidgetItem*item)
     parentWidget()->close();
   }
 }
-
-#include "emoticon-text-edit-selector.moc"

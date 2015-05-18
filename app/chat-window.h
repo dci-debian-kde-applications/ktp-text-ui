@@ -26,18 +26,19 @@
 #include "proxy-service.h"
 
 #include <KXmlGuiWindow>
-#include <KTabWidget>
-#include <KAction>
 #include <KActionMenu>
+
+#include <QTabWidget>
+#include <QAction>
 
 namespace Sonnet {
     class DictionaryComboBox;
 }
 
-class KIcon;
 class ChatTab;
 class QLabel;
 class QDBusPendingCallWatcher;
+class MiddleMouseButtonHandler;
 
 class ChatWindow : public KXmlGuiWindow
 {
@@ -54,7 +55,7 @@ public:
 
     void destroyTab(ChatTab *tab);
     void setTabText(int index, const QString &newTitle);
-    void setTabIcon(int index, const KIcon &newIcon);
+    void setTabIcon(int index, const QIcon &newIcon);
     void setTabTextColor(int index,const QColor &color);
 
     /** retrieves tab with given textChannel if it exists
@@ -76,14 +77,14 @@ Q_SIGNALS:
     void detachRequested(ChatTab *tab);
 
 public Q_SLOTS:
-    void destroyTab(QWidget *chatWidget);
+    void destroyTab(int index);
 
 protected:
     virtual bool event(QEvent *e);
 
 
 private Q_SLOTS:
-    void tabBarContextMenu(int  index, const QPoint &  globalPos);
+    void tabBarContextMenu(const QPoint &globalPos);
     void closeCurrentTab();
     void onAudioCallTriggered();                                /** start an audio call */
     void onBlockContactTriggered();                             /** Blocks contact */
@@ -102,7 +103,7 @@ private Q_SLOTS:
     void onSearchActionToggled();                               /** toggle search bar visibility */
     void onTabStateChanged();
     void onTabTextChanged(const QString &newTitle);
-    void onTabIconChanged(const KIcon &newIcon);
+    void onTabIconChanged(const QIcon &newIcon);
     void onVideoCallTriggered();                                /** start a video call */
     void onUnblockContactTriggered();                           /** Unblocks contact when already blocked */
     void onShareDesktopTriggered();                             /** start a desktop share */
@@ -214,9 +215,9 @@ private:
      */
     void restoreKeyboardLayout(ChatTab *chatTab);
 
-    KAction *m_sendMessage;
+    QAction *m_sendMessage;
 
-    KTabWidget *m_tabWidget;
+    MiddleMouseButtonHandler *m_tabWidget;
 
     QDBusInterface *m_keyboardLayoutInterface;
     Sonnet::DictionaryComboBox *m_spellDictCombo;

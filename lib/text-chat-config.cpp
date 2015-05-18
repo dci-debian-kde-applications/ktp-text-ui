@@ -242,5 +242,5 @@ TextChatConfig::TextChatConfig() :
     d->m_imageShareServiceType = static_cast<ShareProvider::ShareService>(shareServiceType);
 }
 
-
-#include "text-chat-config.moc"
+TextChatConfig::~TextChatConfig()
+{}

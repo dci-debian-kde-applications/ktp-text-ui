@@ -23,11 +23,11 @@
 
 #include "defines.h"
 
-#include <KTabWidget>
-#include <KDebug>
+#include <QTabWidget>
 #include <QStackedWidget>
-#include <KDE/KColorScheme>
-#include <KDE/KWindowSystem>
+
+#include <KColorScheme>
+#include <KWindowSystem>
 
 #include <TelepathyQt/Account>
 #include <TelepathyQt/TextChannel>
@@ -70,11 +70,11 @@ ChatWindow* ChatTab::chatWindow() const
 
 void ChatTab::showOnTop()
 {
-    kDebug() << "Show this widget on top" << title();
     if (m_chatWindow) {
         m_chatWindow->focusChat(this);
     } else {
-        kError() << "Attempting to focus chatTab without chatWindow being set!";
+        //FIXME: remove?
+        qCritical() << "Attempting to focus chatTab without chatWindow being set!";
     }
 
     m_chatWindow->raise();

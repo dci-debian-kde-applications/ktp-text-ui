@@ -26,9 +26,8 @@
 #include <QWidget>
 #include <QObject>
 
-#include <KAboutData>
-#include <KComponentData>
 #include <KNotification>
+#include <KLocalizedString>
 
 namespace OTRNotifications
 {
@@ -43,8 +42,7 @@ namespace OTRNotifications
                 | KNotification::CloseWhenWidgetActivated
                 | KNotification::CloseOnTimeout);
 
-        KAboutData telepathySharedAboutData("ktelepathy", 0, KLocalizedString(), 0);
-        notification->setComponentData(KComponentData(telepathySharedAboutData));
+        notification->setComponentName(QStringLiteral("ktelepathy"));
 
         notification->setActions(QStringList(i18n("View")));
 
