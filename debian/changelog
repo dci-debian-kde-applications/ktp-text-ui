@@ -1,4 +1,4 @@
-ktp-text-ui (0.9.0+dfsg-1) UNRELEASED; urgency=medium
+ktp-text-ui (0.9.0+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
   * Update libtelepathy-qt build-dep to 0.9.5
@@ -16,8 +16,8 @@ ktp-text-ui (0.9.0+dfsg-1) UNRELEASED; urgency=medium
   * Update Standards-Version to 3.9.6. No changes needed.
   * Build dfsg version to remove minimized js source files:
     jquery.min.js and scriptaculous183.js
-    
- -- Diane Trout <diane@ghic.org>  Sun, 21 Sep 2014 11:01:08 -0700
+
+ -- Diane Trout <diane@ghic.org>  Wed, 20 May 2015 22:26:23 -0700
 
 ktp-text-ui (0.8.1-1) unstable; urgency=low
 
