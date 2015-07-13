@@ -20,41 +20,33 @@
 
 #include "chat-style-plist-file-reader.h"
 
-#include <KDebug>
-#include <KTemporaryFile>
+#include <QTemporaryFile>
+
 #include <KArchiveFile>
 #include <KEmoticons>
 #include <KArchiveDirectory>
 #include <KNotification>
-#include <KLocale>
-#include <KAboutData>
-#include <KComponentData>
+#include <KLocalizedString>
 
 // FIXME: Part of a hack to let adiumxtra-protocol-handler use the main ktelepathy.notifyrc because
 // the string freeze does not permit adding a new notifyrc only for adiumxtra-protocol-handler.
 // Remove this after 0.7 is released.
-static KComponentData ktelepathyComponentData() {
-    KAboutData telepathySharedAboutData("ktelepathy",0,KLocalizedString(),0);
-    return KComponentData(telepathySharedAboutData);
+static QString ktelepathyComponentName() {
+    return QStringLiteral("ktelepathy");
 }
 
-EmoticonSetInstaller::EmoticonSetInstaller(KArchive *archive, KTemporaryFile *tmpFile)
+EmoticonSetInstaller::EmoticonSetInstaller(KArchive *archive, QTemporaryFile *tmpFile)
 {
-    kDebug();
-
     m_archive = archive;
     m_tmpFile = tmpFile;
 }
 
 EmoticonSetInstaller::~EmoticonSetInstaller()
 {
-    kDebug();
 }
 
 BundleInstaller::BundleStatus EmoticonSetInstaller::validate()
 {
-    kDebug();
-
     KArchiveEntry *currentEntry = 0L;
     KArchiveDirectory* currentDir = 0L;
     if(m_archive == 0) exit(1);
@@ -66,12 +58,10 @@ BundleInstaller::BundleStatus EmoticonSetInstaller::validate()
     QStringList::ConstIterator entriesIt;
     for (entriesIt = entries.begin(); entriesIt != entries.end(); ++entriesIt) {
         currentEntry = const_cast<KArchiveEntry*>(rootDir->entry(*entriesIt));
-        kDebug() << "Current entry name: " << currentEntry->name();
         if (currentEntry->isDirectory()) {
             currentDir = dynamic_cast<KArchiveDirectory*>(currentEntry);
             if (currentDir) {
                 if (currentDir->entry(QString::fromUtf8("Emoticons.plist"))) {
-                   kDebug() << "Emoticons.plist found";
                    QString currentItem = currentEntry->name();
                    if(m_bundleName.isEmpty() && currentItem.endsWith(QLatin1String(".AdiumEmoticonset"))) {
                        m_bundleName = currentItem.remove(QLatin1String(".AdiumEmoticonset"));
@@ -87,15 +77,11 @@ BundleInstaller::BundleStatus EmoticonSetInstaller::validate()
 
 QString EmoticonSetInstaller::bundleName() const
 {
-    kDebug();
-
     return m_bundleName;
 }
 
 BundleInstaller::BundleStatus EmoticonSetInstaller::install()
 {
-    kDebug();
-
     KEmoticons emoticons;
     emoticons.installTheme(m_tmpFile->fileName());
 
@@ -108,8 +94,6 @@ BundleInstaller::BundleStatus EmoticonSetInstaller::install()
 
 void EmoticonSetInstaller::showRequest()
 {
-    kDebug();
-
     KNotification *notification = new KNotification(QLatin1String("emoticonsRequest"), NULL, KNotification::Persistent);
     notification->setText( i18n("Install Emoticonset %1", this->bundleName()) );
     notification->setActions( QStringList() << i18n("Install") << i18n("Cancel") );
@@ -123,17 +107,15 @@ void EmoticonSetInstaller::showRequest()
     QObject::connect(notification, SIGNAL(action2Activated()), this, SLOT(ignoreRequest()));
     QObject::connect(notification, SIGNAL(action2Activated()), notification, SLOT(close()));
 
-    notification->setComponentData(ktelepathyComponentData());
+    notification->setComponentName(ktelepathyComponentName());
     notification->sendEvent();
 }
 
 void EmoticonSetInstaller::showResult()
 {
-    kDebug();
-
     KNotification *notification = new KNotification(QLatin1String("emoticonsSuccess"));
     notification->setText( i18n("Installed Emoticonset %1 successfully.", this->bundleName()) );
-    notification->setComponentData(ktelepathyComponentData());
+    notification->setComponentName(ktelepathyComponentName());
     notification->sendEvent();
 
     Q_EMIT showedResult();
@@ -141,7 +123,7 @@ void EmoticonSetInstaller::showResult()
 
 void EmoticonSetInstaller::ignoreRequest()
 {
-    kDebug();
-
     Q_EMIT ignoredRequest();
 }
+
+#include "emoticon-set-installer.moc"

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Web Shortcuts
+Name[ast]=Atayos web
 Name[bs]=Web prečice
 Name[ca]=Dreceres web
 Name[ca@valencia]=Dreceres web
@@ -25,6 +26,7 @@ Name[nb]=Nettsnarveier
 Name[nds]=Söökafkörten
 Name[nl]=Websnelkoppelingen
 Name[nn]=Vevsnarvegar
+Name[pa]=ਵੈੱਬ ਸ਼ਾਰਟਕੱਟ
 Name[pl]=Skróty sieciowe
 Name[pt]=Atalhos Web
 Name[pt_BR]=Atalhos da Internet
@@ -39,6 +41,7 @@ Name[sr@ijekavianlatin]=Veb prečice
 Name[sr@latin]=Veb prečice
 Name[sv]=Webbgenvägar
 Name[tr]=Web Kısa Yolları
+Name[ug]=تور تېزلەتمىسى
 Name[uk]=Вебскорочення
 Name[wa]=Rascourtis waibe
 Name[x-test]=xxWeb Shortcutsxx

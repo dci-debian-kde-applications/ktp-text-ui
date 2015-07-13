@@ -20,26 +20,26 @@
 #include "imgursharer.h"
 
 #include <QString>
-#include <KUrl>
-#include <QDebug>
-
-#include <qjson/parser.h>
-
+#include <QtCore/qjsondocument.h>
+#include <QtCore/qjsonobject.h>
+#include <QUrl>
+#include <QUrlQuery>
 
 // Taken from "share" Data Engine
 // key associated with plasma-devel@kde.org
 // thanks to Alan Schaaf of Imgur (alan@imgur.com)
-static const QString apiKey = QLatin1String("d0757bc2e94a0d4652f28079a0be9379");
+static const QString apiKey = QStringLiteral("d0757bc2e94a0d4652f28079a0be9379");
 
 ImgurSharer::ImgurSharer(const QString& contentPath): AbstractSharer(contentPath)
 {
 }
 
 
-KUrl ImgurSharer::url() const
+QUrl ImgurSharer::url() const
 {
-    KUrl url(QLatin1String("https://api.imgur.com/2/upload.json"));
-    url.addQueryItem(QLatin1String("key"), apiKey);
+    QUrl url(QStringLiteral("https://api.imgur.com/2/upload.json"));
+    QUrlQuery query(url);
+    query.addQueryItem(QStringLiteral("key"), apiKey);
     return url;
 }
 
@@ -53,16 +53,19 @@ QByteArray ImgurSharer::postBody(const QByteArray &imageData)
 
 void ImgurSharer::parseResponse(const QByteArray& responseData)
 {
-    QJson::Parser parser;
-    bool ok = false;
-    QVariantMap resultMap = parser.parse(responseData, &ok).toMap();
-    if ( resultMap.contains(QLatin1String("error")) ) {
+    QJsonDocument parser;
+    QJsonParseError error;
+    QJsonObject resultMap = parser.fromJson(responseData, &error).object();
+    if (error.error) {
         m_hasError = true;
-        QVariantMap errorMap = resultMap[QLatin1String("error")].toMap();
+        m_errorMessage = error.errorString();
+    } else if ( resultMap.contains(QLatin1String("error")) ) {
+        m_hasError = true;
+        QJsonObject errorMap = resultMap[QLatin1String("error")].toObject();
         m_errorMessage = errorMap[QLatin1String("message")].toString();
     } else {
-        QVariantMap uploadMap = resultMap[QLatin1String("upload")].toMap();
-        QVariantMap linksMap = uploadMap[QLatin1String("links")].toMap();
-        m_imageUrl = KUrl(linksMap[QLatin1String("original")].toString());
+        QJsonObject uploadMap = resultMap[QLatin1String("upload")].toObject();
+        QJsonObject linksMap = uploadMap[QLatin1String("links")].toObject();
+        m_imageUrl = QUrl::fromUserInput(linksMap[QLatin1String("original")].toString());
     }
 }

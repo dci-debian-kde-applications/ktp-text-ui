@@ -21,18 +21,15 @@
 #include "ui_behavior-config.h"
 #include "message-view.h"
 
-#include <KDE/KConfig>
-#include <KDE/KConfigGroup>
-#include <KDE/KDebug>
+#include <KConfig>
+#include <KConfigGroup>
 
 K_PLUGIN_FACTORY(KCMTelepathyLogViewerBehaviorConfigFactory, registerPlugin<BehaviorConfig>();)
-K_EXPORT_PLUGIN(KCMTelepathyLogViewerBehaviorConfigFactory("ktp_logviewer_behavior", "kcm_ktp_logviewer_behavior"))
 
 BehaviorConfig::BehaviorConfig(QWidget *parent, const QVariantList& args)
-    : KCModule(KCMTelepathyLogViewerBehaviorConfigFactory::componentData(), parent, args)
+    : KCModule(parent, args)
     , ui(new Ui::BehaviorConfig())
 {
-
     ui->setupUi(this);
 
     ui->sortButtonGroup->setId(ui->sortOldestOnTop, MessageView::SortOldestTop);
@@ -61,8 +58,6 @@ void BehaviorConfig::load()
 
 void BehaviorConfig::save()
 {
-    kDebug();
-
     KConfig config(QLatin1String("ktelepathyrc"));
     KConfigGroup group = config.group("LogViewer");
     group.writeEntry(QLatin1String("SortMode"), ui->sortButtonGroup->checkedId());
@@ -88,4 +83,4 @@ void BehaviorConfig::onRadioChanged()
     Q_EMIT changed(true);
 }
 
-#include "ui_behavior-config.h"
+#include "behavior-config.moc"

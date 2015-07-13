@@ -17,21 +17,25 @@
 
 #include "proxy-service.h"
 #include "ui_keygendialog.h"
+#include "ktp-debug.h"
 
 #include <KTp/OTR/proxy-service-interface.h>
 
 #include <QMap>
 #include <QScopedPointer>
 #include <QCloseEvent>
-#include <KDebug>
-#include <KDialog>
-#include <KLocale>
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
+#include <QPushButton>
 
-class KeyGenDialog : public KDialog
+#include <KLocalizedString>
+
+class KeyGenDialog : public QDialog
 {
     public:
         KeyGenDialog(const QString &accountName, QWidget *parent = 0)
-            : KDialog(parent),
+            : QDialog(parent),
             blocked(true),
             accountName(accountName)
         {
@@ -39,15 +43,24 @@ class KeyGenDialog : public KDialog
             ui.setupUi(widget);
             ui.lbText->setText(i18n("Generating the private key for %1...", accountName));
             ui.lbTime->setText(i18n("This may take some time"));
-            setMainWidget(widget);
-            this->setCaption(i18n("Please wait"));
-            this->setButtons(KDialog::Ok);
-            this->enableButton(KDialog::Ok, false);
-            ui.keyIcon->setPixmap(KIcon(QLatin1String("dialog-password")).pixmap( 48, 48 ));
+
+            QVBoxLayout *mainLayout = new QVBoxLayout(this);
+            setLayout(mainLayout);
+            mainLayout->addWidget(widget);
+
+            buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok, this);
+            buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
+            mainLayout->addWidget(buttonBox);
+            connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+            connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
+            this->setWindowTitle(i18n("Please wait"));
+
+            ui.keyIcon->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-password")).pixmap( 48, 48 ));
         }
         ~KeyGenDialog()
         {
-            kDebug() << "Destructing";
+            qCDebug(KTP_TEXTUI_LIB) << "Destructing";
         }
 
         void block()
@@ -77,13 +90,15 @@ class KeyGenDialog : public KDialog
             } else {
                 ui.lbText->setText(i18n("Finished generating the private key for %1", accountName));
             }
-            this->enableButton(KDialog::Ok, true);
+            buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
+
         }
 
     private:
         bool blocked;
         const QString accountName;
         Ui::KeyGenDialog ui;
+        QDialogButtonBox *buttonBox;
 
 };
 
@@ -142,7 +157,7 @@ QString ProxyService::fingerprintForAccount(const QDBusObjectPath& account) cons
     if(rep.isValid()) {
         return rep.value();
     } else {
-        kWarning() << "Could not get fingerprint of account: " << account.path() <<
+        qCWarning(KTP_TEXTUI_LIB) << "Could not get fingerprint of account: " << account.path() <<
             " due to: " << rep.error().message();
         return QLatin1String("");
     }
@@ -155,7 +170,7 @@ KTp::FingerprintInfoList ProxyService::knownFingerprints(const QDBusObjectPath &
     if(fpsRep.isValid()) {
         return fpsRep.value();
     } else {
-        kWarning() << "Could not get known fingerprints for account: " << account.path() <<
+        qCWarning(KTP_TEXTUI_LIB) << "Could not get known fingerprints for account: " << account.path() <<
             " due to: " << fpsRep.error().message();
         return KTp::FingerprintInfoList();
     }
@@ -168,7 +183,7 @@ bool ProxyService::trustFingerprint(const QDBusObjectPath &account, const QStrin
     if(res.isValid()) {
         return true;
     } else {
-        kWarning() << "Could not trust fingerprint " << fingerprint << " for account: " << account.path() <<
+        qCWarning(KTP_TEXTUI_LIB) << "Could not trust fingerprint " << fingerprint << " for account: " << account.path() <<
             " due to: " << res.error().message();
         return false;
     }
@@ -181,7 +196,7 @@ bool ProxyService::forgetFingerprint(const QDBusObjectPath &account, const QStri
     if(res.isValid()) {
         return true;
     } else {
-        kWarning() << "Could not forget fingerprint " << fingerprint << " for account: " << account.path() <<
+        qCWarning(KTP_TEXTUI_LIB) << "Could not forget fingerprint " << fingerprint << " for account: " << account.path() <<
             " due to: " << res.error().message();
         return false;
     }
@@ -199,7 +214,7 @@ Tp::PendingOperation* ProxyService::setOTRPolicy(uint policy)
 
 void ProxyService::onKeyGenerationStarted(const QDBusObjectPath &accountPath)
 {
-    kDebug();
+    qCDebug(KTP_TEXTUI_LIB);
     KeyGenDialog *dialog = new KeyGenDialog(
                 d->am->accountForObjectPath(accountPath.path())->normalizedName(),
                 d->parent);
@@ -219,8 +234,7 @@ void ProxyService::onKeyGenerationFinished(const QDBusObjectPath &accountPath, b
     }
     it.value()->setFinished(error);
     it.value()->unblock();
-    connect(it.value(), SIGNAL(closeClicked()), SLOT(onDialogClosed()));
-    connect(it.value(), SIGNAL(okClicked()), SLOT(onDialogClosed()));
+    connect(it.value(), SIGNAL(finished(int)), SLOT(onDialogClosed()));
 
     Q_EMIT keyGenerationFinished(d->am->accountForObjectPath(accountPath.path()), error);
 }
@@ -231,7 +245,8 @@ void ProxyService::onDialogClosed()
     for(QMap<QString, KeyGenDialog*>::iterator it = d->dialogs.begin(); it != d->dialogs.end(); ++it) {
         if(it.value() == dialog) {
             d->dialogs.erase(it);
-            dialog->delayedDestruct();
+            dialog->hide();
+            dialog->deleteLater();
             return;
         }
     }

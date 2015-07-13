@@ -21,18 +21,15 @@
 #include <QStringBuilder>
 #include <QRegExp>
 #include <QImageReader>
+#include <QUrl>
 
 #include <KPluginFactory>
-#include <KDebug>
-#include <KUrl>
 #include <KLocalizedString>
 
 class ImagesFilter::Private {
 public:
     QList<QByteArray> formats;
 };
-
-static const KCatalogLoader loader(QLatin1String("ktp-filters"));
 
 ImagesFilter::ImagesFilter (QObject* parent, const QVariantList&) :
     KTp::AbstractMessageFilter (parent), d(new Private)
@@ -48,16 +45,15 @@ ImagesFilter::~ImagesFilter()
 void ImagesFilter::filterMessage(KTp::Message &message, const KTp::MessageContext &context)
 {
     Q_UNUSED(context)
-    kDebug() << message.property("Urls").toList().size();
     Q_FOREACH (const QVariant &var, message.property("Urls").toList()) {
-        const KUrl url = qvariant_cast<KUrl>(var);
-        QString fileName = url.fileName().toLower();
+        const QUrl url = qvariant_cast<QUrl>(var);
+        QString fileName = url.adjusted(QUrl::StripTrailingSlash).fileName().toLower();
 
         //get everything after the . The +1 means we don't include the . character
         QString extension = fileName.mid(fileName.lastIndexOf(QLatin1Char('.'))+1);
 
         if (!fileName.isNull() && d->formats.contains(extension.toUtf8())) {
-            QString href = QString::fromAscii(url.toEncoded());
+            QString href = QString::fromLatin1(url.toEncoded());
             message.appendMessagePart(
                 QLatin1Literal("<br/><a href=\"") % href % QLatin1Literal("\">") %
                     QLatin1Literal("<img src=\"") %
@@ -70,4 +66,5 @@ void ImagesFilter::filterMessage(KTp::Message &message, const KTp::MessageContex
 }
 
 K_PLUGIN_FACTORY(MessageFilterFactory, registerPlugin<ImagesFilter>();)
-K_EXPORT_PLUGIN(MessageFilterFactory("ktptextui_message_filter_images"))
+
+#include "images-filter.moc"

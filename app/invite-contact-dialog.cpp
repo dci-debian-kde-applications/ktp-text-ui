@@ -24,10 +24,12 @@
 
 #include <QtCore/QPointer>
 
-#include <KDE/KLineEdit>
-#include <KDE/KPushButton>
-#include <KDE/KLocalizedString>
-#include <KDE/KDebug>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
+
+#include <KLocalizedString>
 
 #include <TelepathyQt/Contact>
 #include <TelepathyQt/TextChannel>
@@ -39,32 +41,36 @@
 #include <KTp/Widgets/contact-grid-widget.h>
 
 InviteContactDialog::InviteContactDialog(const Tp::AccountManagerPtr &accountManager, const Tp::AccountPtr &account, const Tp::TextChannelPtr &channel, QWidget *parent) :
-    KDialog(parent),
+    QDialog(parent),
     m_account(account),
     m_channel(channel),
-    m_contactsModel(new KTp::ContactsListModel(this))
+    m_contactsModel(new KTp::ContactsListModel(this)),
+    m_buttonBox(new QDialogButtonBox(QDialogButtonBox::Ok, this))
 {
     resize(500,450);
 
     m_contactsModel->setAccountManager(accountManager);
 
     m_contactGridWidget = new KTp::ContactGridWidget(m_contactsModel, this);
-    m_contactGridWidget->contactFilterLineEdit()->setClickMessage(i18n("Search in Contacts..."));
+    m_contactGridWidget->contactFilterLineEdit()->setPlaceholderText(i18n("Search in Contacts..."));
     m_contactGridWidget->filter()->setPresenceTypeFilterFlags(KTp::ContactsFilterModel::ShowOnlyConnected);
     m_contactGridWidget->filter()->setAccountFilter(account);
     m_contactGridWidget->setSelectionMode(QAbstractItemView::MultiSelection);
 
-    setMainWidget(m_contactGridWidget);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->addWidget(m_contactGridWidget);
+    mainLayout->addWidget(m_buttonBox);
+
     setWindowTitle(i18n("Select Contacts to Invite to Group Chat"));
 
     connect(m_contactGridWidget,
             SIGNAL(selectionChanged(Tp::AccountPtr,KTp::ContactPtr)),
             SLOT(onChanged()));
 
-    button(KDialog::Ok)->setDisabled(true);
+    m_buttonBox->button(QDialogButtonBox::Ok)->setDisabled(true);
 
-    connect(this, SIGNAL(okClicked()), SLOT(onOkClicked()));
-    connect(this, SIGNAL(rejected()), SLOT(close()));
+    connect(m_buttonBox->button(QDialogButtonBox::Ok), &QAbstractButton::clicked, this, &InviteContactDialog::onOkClicked);
+    connect(m_buttonBox, &QDialogButtonBox::rejected, this, &InviteContactDialog::close);
 }
 
 Tp::AccountPtr InviteContactDialog::account() const
@@ -103,5 +109,5 @@ void InviteContactDialog::onOkClicked()
 
 void InviteContactDialog::onChanged()
 {
-    button(KDialog::Ok)->setEnabled(m_contactGridWidget->hasSelection());
+    m_buttonBox->button(QDialogButtonBox::Ok)->setEnabled(m_contactGridWidget->hasSelection());
 }
