@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Text To Speech
+Name[ast]=Testu a voz
 Name[bs]=Tekst u govor
 Name[ca]=Text a veu
 Name[ca@valencia]=Text a veu
@@ -23,6 +24,7 @@ Name[mr]=पाठ्य-ते-भाष्य
 Name[nb]=Tekst til tale
 Name[nds]=Vörleser
 Name[nl]=Tekst-naar-spraak
+Name[pa]=ਸ਼ਬਦ ਤੋਂ ਬੋਲੀ
 Name[pl]=Tekst-na-mowę
 Name[pt]=Texto para Fala
 Name[pt_BR]=Sintetizador de voz

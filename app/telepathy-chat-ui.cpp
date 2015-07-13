@@ -26,10 +26,11 @@
 #include "text-chat-config.h"
 #include "defines.h"
 
-#include <KDebug>
 #include <KConfigGroup>
 #include <KWindowSystem>
-#include <KGlobal>
+
+#include <QDebug>
+#include <QEventLoopLocker>
 
 #include <TelepathyQt/ChannelClassSpec>
 #include <TelepathyQt/TextChannel>
@@ -37,6 +38,10 @@
 #include <TelepathyQt/ChannelRequestHints>
 
 #include <KTp/message-processor.h>
+
+#include <KAboutData>
+#include <KLocalizedString>
+#include "../ktptextui_version.h"
 
 
 inline Tp::ChannelClassSpecList channelClassList()
@@ -47,11 +52,25 @@ inline Tp::ChannelClassSpecList channelClassList()
 }
 
 
-TelepathyChatUi::TelepathyChatUi()
-    : KTp::TelepathyHandlerApplication(true, -1, -1),
+TelepathyChatUi::TelepathyChatUi(int &argc, char *argv[])
+    : KTp::TelepathyHandlerApplication(argc, argv, -1, -1),
       AbstractClientHandler(channelClassList())
 {
-    kDebug();
+    // We need to set up KAboutData in here, before the ChatWindow gets created,
+    // otherwise the Settings and Help menu will not have the Application Name
+    // set and will contain just "ktp-text-ui".
+    KAboutData aboutData("ktp-text-ui", i18n("Chat Application"), QStringLiteral(KTP_TEXT_UI_VERSION_STRING));
+    aboutData.addAuthor(i18n("David Edmundson"), i18n("Developer"), "david@davidedmundson.co.uk");
+    aboutData.addAuthor(i18n("Marcin Ziemiński"), i18n("Developer"), "zieminn@gmail.com");
+    aboutData.addAuthor(i18n("Dominik Schmidt"), i18n("Past Developer"), "kde@dominik-schmidt.de");
+    aboutData.addAuthor(i18n("Francesco Nwokeka"), i18n("Past Developer"), "francesco.nwokeka@gmail.com");
+    aboutData.setProductName("telepathy/text-ui"); //set the correct name for bug reporting
+    aboutData.setLicense(KAboutLicense::GPL_V2);
+
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("telepathy-kde")));
+    KAboutData::setApplicationData(aboutData);
+
+    m_eventLoopLocker = 0;
     m_notifyFilter = new NotifyFilter;
     ChatWindow *window = createWindow();
     window->show();
@@ -114,7 +133,6 @@ void TelepathyChatUi::handleChannels(const Tp::MethodInvocationContextPtr<> & co
         const QDateTime &userActionTime,
         const Tp::AbstractClientHandler::HandlerInfo &handlerInfo)
 {
-    kDebug();
     Q_UNUSED(connection);
     Q_UNUSED(userActionTime);
     Q_UNUSED(handlerInfo);
@@ -138,12 +156,11 @@ void TelepathyChatUi::handleChannels(const Tp::MethodInvocationContextPtr<> & co
 
     //find the relevant channelRequest
     Q_FOREACH(const Tp::ChannelRequestPtr channelRequest, channelRequests) {
-        kDebug() << channelRequest->hints().allHints();
         windowRaise = !channelRequest->hints().hint(QLatin1String("org.kde.telepathy"), QLatin1String("suppressWindowRaise")).toBool();
     }
 
-    kDebug() << "Incomming channel" << textChannel->targetId();
-    kDebug() << "raise window hint set to: " << windowRaise;
+    qDebug() << "Incomming channel" << textChannel->targetId();
+    qDebug() << "raise window hint set to: " << windowRaise;
 
     Tp::TextChannelPtr oldTextChannel;
     const bool isKnown = isHiddenChannel(account, textChannel, &oldTextChannel);
@@ -231,7 +248,6 @@ bool TelepathyChatUi::bypassApproval() const
 
 void TelepathyChatUi::onTabAboutToClose(ChatTab *tab)
 {
-    kDebug() << tab;
     const Tp::TextChannelPtr channel = tab->textChannel();
 
     // Close 1-on-1 chats, but keep group chats opened if user has configured so
@@ -257,27 +273,26 @@ void TelepathyChatUi::onWindowAboutToClose(ChatWindow* window)
 
 void TelepathyChatUi::takeChannel(const Tp::TextChannelPtr& channel, const Tp::AccountPtr& account, bool ref)
 {
-    kDebug() << channel->targetId();
     m_channelAccountMap.insert(channel, account);
     connectChannelNotifications(channel, true);
     connectAccountNotifications(account, true);
 
-    if (ref) {
-        KGlobal::ref();
+    if (ref && !m_eventLoopLocker) {
+        m_eventLoopLocker = new QEventLoopLocker();
     }
 }
 
 void TelepathyChatUi::releaseChannel(const Tp::TextChannelPtr& channel, const Tp::AccountPtr& account, bool unref)
 {
-    kDebug() << channel->targetId();
     m_channelAccountMap.remove(channel);
     connectChannelNotifications(channel, false);
     if (m_channelAccountMap.keys(account).count() == 0) {
         connectAccountNotifications(account, false);
     }
 
-    if (unref) {
-        KGlobal::deref();
+    if (unref && m_eventLoopLocker) {
+        delete m_eventLoopLocker;
+        m_eventLoopLocker = 0;
     }
 }
 

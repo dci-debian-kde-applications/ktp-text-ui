@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Text Formatting
+Name[ast]=Formatéu del testu
 Name[bs]=Formatiranje teksta
 Name[ca]=Formatació de text
 Name[ca@valencia]=Formatació de text
@@ -24,6 +25,7 @@ Name[mr]=मजकूर फॉर्मेटिंग
 Name[nb]=Tekstformatering
 Name[nds]=Textformateren
 Name[nl]=Tekstopmaak
+Name[pa]=ਟੈਕਸਟ ਫਾਰਮੈਟ
 Name[pl]=Formatowanie tekstu
 Name[pt]=Formatação do Texto
 Name[pt_BR]=Formatação do texto
@@ -37,6 +39,7 @@ Name[sr@ijekavianlatin]=Formatiranje teksta
 Name[sr@latin]=Formatiranje teksta
 Name[sv]=Textformatering
 Name[tr]=Metin Biçimlendirme
+Name[ug]=تېكىست فورماتى
 Name[uk]=Форматування тексту
 Name[x-test]=xxText Formattingxx
 Name[zh_CN]=文本格式化

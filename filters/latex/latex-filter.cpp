@@ -27,10 +27,10 @@
 
 #include <QImage>
 #include <QTextDocument>
+#include <QDebug>
+#include <QTemporaryFile>
 
 #include <KPluginFactory>
-#include <KDebug>
-#include <KStandardDirs>
 #include <KProcess>
 
 LatexFilter::LatexFilter(QObject* parent, const QVariantList &)
@@ -69,7 +69,7 @@ void LatexFilter::filterMessage(KTp::Message &message, const KTp::MessageContext
         handleLatex(formula) %
         QLatin1Literal("\" style=\"max-width:100%;margin-top:3px\"") %
         QLatin1Literal("alt=\"") %
-        Qt::escape(formula) %
+        QString(formula).toHtmlEscaped() %
         QLatin1Literal("\" isEmotion=\"true\"/>"));
 
         int length = rg.matchedLength();
@@ -90,18 +90,16 @@ QString LatexFilter::handleLatex(const QString &latexFormula)
                     .arg(latexFormula));
     latexText.append(QLatin1String("\\end{document}"));
 
-    KTemporaryFile texFile;
-    texFile.setPrefix(QLatin1String("ktplatex-"));
-    texFile.setSuffix(QLatin1String(".tex"));
+    QTemporaryFile texFile(QStringLiteral("ktplatex-XXXXXX.tex"));
     if (!texFile.open()) {
-      kError() << "Cannot create the TeX file";
-      return QString();
+        qCritical() << "Cannot create the TeX file";
+        return QString();
     }
-    texFile.write(latexText.toAscii());
+    texFile.write(latexText.toLatin1());
     texFile.close();
 
     if (LatexConfig::latexCmd().isEmpty()) {
-        kError() << "No TeX compiler set!";
+        qCritical() << "No TeX compiler set!";
         return QString();
     }
     const QStringList latexCmd = LatexConfig::latexCmd().split(QRegExp(QLatin1String("\\s+")));
@@ -110,28 +108,28 @@ QString LatexFilter::handleLatex(const QString &latexFormula)
     Q_FOREACH(const QString &cmd, latexCmd.mid(1, latexCmd.size())) {
         latexArgs << cmd;
     }
-    const KStandardDirs outputDir;
-    latexArgs << QString(QLatin1String("-output-directory=%1")).arg(outputDir.resourceDirs("tmp").first());
+
+    latexArgs << QStringLiteral("-output-directory=%1").arg(QStandardPaths::standardLocations(QStandardPaths::TempLocation).first());
     latexArgs << texFile.fileName();
 
-    if (KStandardDirs::findExe(latexCmd.first()).isEmpty()) {
-        kError() << "Cannot find the TeX" << latexCmd.first() << " program.\n;"
+    if (QStandardPaths::findExecutable(latexCmd.first()).isEmpty()) {
+        qCritical() << "Cannot find the TeX" << latexCmd.first() << " program.\n;"
                  << "Please get the software from http://tug.org/texlive/"
                  << "or from your distribution's package manager.";
         return QString();
     }
 
-    kDebug() << "Running " << latexCmd.first() << latexArgs;
+    qDebug() << "Running " << latexCmd.first() << latexArgs;
 
     KProcess p;
     p.execute(latexCmd.first(), latexArgs);
     if (p.exitCode()) {
-        kError() << "Error compiling the TeX text";
+        qCritical() << "Error compiling the TeX text";
         return QString();
     }
 
-    if (KStandardDirs::findExe(QLatin1String("dvipng")).isEmpty()) {
-        kError() << "Cannot find the TeX 'dvipng' program.\n;"
+    if (QStandardPaths::findExecutable(QLatin1String("dvipng")).isEmpty()) {
+        qCritical() << "Cannot find the TeX 'dvipng' program.\n;"
                  << "Please get the software from http://tug.org/texlive/"
                  << "or from your distribution's package manager.";
         return QString();
@@ -146,11 +144,11 @@ QString LatexFilter::handleLatex(const QString &latexFormula)
     dvipngArgs << QString(QLatin1String("-o%1")).arg(imageFile);
     dvipngArgs << dviFile;
 
-    kDebug() << "Rendering dvipng" << dvipngArgs;
+    qDebug() << "Rendering dvipng" << dvipngArgs;
 
     p.execute(QLatin1String("dvipng"), dvipngArgs);
     if (p.exitCode()){
-        kError() << "Error rendering the image to PNG";
+        qCritical() << "Error rendering the image to PNG";
         return QString();
     }
 
@@ -165,7 +163,7 @@ QString LatexFilter::handleLatex(const QString &latexFormula)
     QFile::remove(texFile.fileName().replace(QLatin1String(".tex"), QLatin1String(".aux")));
     QFile::remove(texFile.fileName().replace(QLatin1String(".tex"), QLatin1String(".log")));
 
-    return QString::fromAscii(image.toBase64());
+    return QString::fromLatin1(image.toBase64());
 }
 
 bool LatexFilter::isSafe(const QString &latexFormula)
@@ -183,4 +181,5 @@ LatexFilter::~LatexFilter()
 }
 
 K_PLUGIN_FACTORY(MessageFilterFactory, registerPlugin<LatexFilter>();)
-K_EXPORT_PLUGIN(MessageFilterFactory("ktptextui_message_filter_latex"))
+
+#include "latex-filter.moc"

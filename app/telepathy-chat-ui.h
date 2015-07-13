@@ -36,12 +36,13 @@ class ReceivedMessage;
 
 class ChatTab;
 class ChatWindow;
+class QEventLoopLocker;
 
 class TelepathyChatUi : public KTp::TelepathyHandlerApplication, public Tp::AbstractClientHandler
 {
     Q_OBJECT
 public:
-    TelepathyChatUi();
+    TelepathyChatUi(int& argc, char* argv[]);
     ~TelepathyChatUi();
 
     virtual void handleChannels(const Tp::MethodInvocationContextPtr<> & context,
@@ -77,6 +78,7 @@ private:
 
     QHash<Tp::TextChannelPtr, Tp::AccountPtr> m_channelAccountMap;
     KTp::AbstractMessageFilter *m_notifyFilter;
+    QEventLoopLocker *m_eventLoopLocker;
 };
 
 #endif // TELEPATHYCHATUI_H

@@ -17,39 +17,55 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA            *
  ***************************************************************************/
 
-#include <KUniqueApplication>
-#include <KCmdLineArgs>
+#include <QApplication>
+#include <QCommandLineParser>
+
 #include <KAboutData>
+#include <KLocalizedString>
+#include <KDBusService>
 
 #include "log-viewer.h"
-#include "version.h"
+#include "../ktptextui_version.h"
+#include "debug.h"
 
 #include <TelepathyQt/AccountManager>
 
 #include <KTp/contact-factory.h>
 
+Q_LOGGING_CATEGORY(KTP_LOGVIEWER, "ktp-logviewer")
+
 int main(int argc, char *argv[])
 {
+    QApplication app(argc, argv);
+    KLocalizedString::setApplicationDomain("ktp-log-viewer");
+
     KAboutData aboutData("ktp-log-viewer",
-                         0,
-                         ki18n("KDE IM Log Viewer"),
-                         KTP_TEXT_UI_VERSION);
-    aboutData.addAuthor(ki18n("David Edmundson"), ki18n("Developer"), "kde@davidedmundson.co.uk");
-    aboutData.addAuthor(ki18n("Daniele E. Domenichelli"), ki18n("Developer"), "daniele.domenichelli@gmail.com");
-    aboutData.addAuthor(ki18n("Dan Vrátil"), ki18n("Developer"), "dvratil@redhat.com");
+                         i18n("KDE IM Log Viewer"),
+                         QStringLiteral(KTP_TEXT_UI_VERSION_STRING));
+    aboutData.addAuthor(i18n("David Edmundson"), i18n("Developer"), "kde@davidedmundson.co.uk");
+    aboutData.addAuthor(i18n("Daniele E. Domenichelli"), i18n("Developer"), "daniele.domenichelli@gmail.com");
+    aboutData.addAuthor(i18n("Dan Vrátil"), i18n("Developer"), "dvratil@redhat.com");
     aboutData.setProductName("telepathy/log-viewer"); //set the correct name for bug reporting
-    aboutData.setProgramIconName(QLatin1String("documentation"));
-    aboutData.setLicense(KAboutData::License_GPL_V2);
+    aboutData.setOrganizationDomain(QByteArray("kde.org"));
+    aboutData.setLicense(KAboutLicense::GPL_V2);
 
-    KCmdLineArgs::init(argc, argv, &aboutData);
+    KAboutData::setApplicationData(aboutData);
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("documentation")));
 
-    KCmdLineOptions options;
-    options.add("+accountID", ki18n("The UID of the account to preselect"));
-    options.add("+contactID", ki18n("The UID of the contact to preselect"));
+    // register to DBus
+    const KDBusService dbusService(KDBusService::Multiple);
 
-    KCmdLineArgs::addCmdLineOptions(options);
+    QCommandLineParser parser;
+    parser.addHelpOption();
+    parser.addVersionOption();
 
-    KApplication app;
+    QCommandLineOption accountId(QStringLiteral("accountID"), i18n("The UID of the account to preselect"));
+    QCommandLineOption contactId(QStringLiteral("contactID"), i18n("The UID of the contact to preselect"));
+
+    parser.addOption(accountId);
+    parser.addOption(contactId);
+
+    parser.process(app);
 
     Tp::registerTypes();
 

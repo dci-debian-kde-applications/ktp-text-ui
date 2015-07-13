@@ -17,13 +17,13 @@
 */
 
 #include "urlexpansion-filter.h"
+#include <QtCore/qjsondocument.h>
 
-#include<QFile>
+#include <QFile>
+#include <QStandardPaths>
+#include <QUrlQuery>
 
 #include <KPluginFactory>
-#include <KDE/KStandardDirs>
-
-#include <qjson/parser.h>
 
 class UrlExpansionFilter::Private
 {
@@ -48,25 +48,28 @@ UrlExpansionFilter::~UrlExpansionFilter()
 
 void UrlExpansionFilter::getSupportedServices()
 {
-    QFile servicesFile(KGlobal::dirs()->findResource("data", QLatin1String("ktelepathy/longurlServices.json")));
-    servicesFile.open(QIODevice::ReadOnly);
-    QVariantMap response = QJson::Parser().parse(&servicesFile).toMap();
+    QFile servicesFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("ktelepathy/longurlServices.json")));
+    bool b = servicesFile.open(QIODevice::ReadOnly);
+    Q_ASSERT(b);
+    QVariantMap response = QJsonDocument::fromJson(servicesFile.readAll()).toVariant().toMap();
     d->supportedServices = response.uniqueKeys();
 }
 
-void UrlExpansionFilter::addExpandedUrl(KTp::Message &message, const KUrl &url)
+void UrlExpansionFilter::addExpandedUrl(KTp::Message &message, const QUrl &url)
 {
     d->requestCounter++;
-    QString urlId = QString((QLatin1String("url") + QString::number(d->requestCounter)));
-    QString callbackFunction = QString((QLatin1String("expandUrlCallbacks.") + urlId));
-    KUrl request = KUrl(QLatin1String("http://api.longurl.org/v2/expand"));
-    request.addQueryItem(QLatin1String("url"), url.url());
-    request.addQueryItem(QLatin1String("format"), QLatin1String("json"));
-    request.addQueryItem(QLatin1String("callback"), callbackFunction);
-    request.addQueryItem(QLatin1String("user-agent"), QLatin1String("KTp"));
+    QString urlId = QString((QStringLiteral("url") + QString::number(d->requestCounter)));
+    QString callbackFunction = QString((QStringLiteral("expandUrlCallbacks.") + urlId));
+    QUrl request = QUrl::fromUserInput(QStringLiteral("http://api.longurl.org/v2/expand"));
+
+    QUrlQuery query(request);
+    query.addQueryItem(QStringLiteral("url"), url.url());
+    query.addQueryItem(QStringLiteral("format"), QStringLiteral("json"));
+    query.addQueryItem(QStringLiteral("callback"), callbackFunction);
+    query.addQueryItem(QStringLiteral("user-agent"), QStringLiteral("KTp"));
 
     message.appendMessagePart(QString::fromLatin1("<p id = \"%1\">Redirects to </p>").arg(urlId));
-    message.appendScript(QString::fromLatin1("showShortUrl(\"%1\",\"%2\");").arg(request.prettyUrl(),urlId));
+    message.appendScript(QString::fromLatin1("showShortUrl(\"%1\",\"%2\");").arg(request.toString(), urlId));
 }
 
 void UrlExpansionFilter::filterMessage(KTp::Message &message, const KTp::MessageContext &context)
@@ -77,9 +80,9 @@ void UrlExpansionFilter::filterMessage(KTp::Message &message, const KTp::Message
     }
 
     Q_FOREACH (const QVariant &var, message.property("Urls").toList()) {
-        KUrl url = qvariant_cast<KUrl>(var);
+        QUrl url = qvariant_cast<QUrl>(var);
 
-        if (!url.path().isEmpty() && QString::compare(url.path(),QLatin1String("/")) && d->supportedServices.contains(url.host())) {
+        if (!url.path().isEmpty() && QString::compare(url.path(), QLatin1String("/")) && d->supportedServices.contains(url.host())) {
             addExpandedUrl(message, url);
         }
     }
@@ -87,8 +90,9 @@ void UrlExpansionFilter::filterMessage(KTp::Message &message, const KTp::Message
 
 QStringList UrlExpansionFilter::requiredScripts()
 {
-    return QStringList() << QLatin1String("ktelepathy/longurl.js");
+    return QStringList() << QStringLiteral("ktelepathy/longurl.js");
 }
 
 K_PLUGIN_FACTORY(MessageFilterFactory, registerPlugin<UrlExpansionFilter>();)
-K_EXPORT_PLUGIN(MessageFilterFactory("ktptextui_message_filter_urlexpansion"))
+
+#include "urlexpansion-filter.moc"

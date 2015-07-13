@@ -31,24 +31,26 @@
 #include "contact-delegate.h"
 #include "authenticationwizard.h"
 #include "otr-notifications.h"
+#include "ktp-debug.h"
 
-#include <QtGui/QKeyEvent>
-#include <QtGui/QAction>
-#include <QtGui/QMenu>
+#include <QKeyEvent>
+#include <QAction>
+#include <QMenu>
 #include <QSortFilterProxyModel>
+#include <QMimeType>
+#include <QMimeDatabase>
+#include <QLineEdit>
+#include <QColorDialog>
+#include <QTemporaryFile>
+#include <QFileDialog>
 
-#include <KColorDialog>
 #include <KNotification>
 #include <KAboutData>
-#include <KComponentData>
-#include <KDebug>
 #include <KColorScheme>
-#include <KLineEdit>
-#include <KMimeType>
-#include <KTemporaryFile>
-#include <KFileDialog>
 #include <KMessageWidget>
 #include <KMessageBox>
+#include <KIconLoader>
+#include <KLocalizedString>
 
 #include <TelepathyQt/Account>
 #include <TelepathyQt/Message>
@@ -63,7 +65,7 @@
 #include <KTp/actions.h>
 #include <KTp/message-processor.h>
 #include <KTp/Logger/scrollback-manager.h>
-#include <KTp/contact-info-dialog.h>
+#include <KTp/Widgets/contact-info-dialog.h>
 #include <KTp/OTR/channel-adapter.h>
 #include <KTp/OTR/utils.h>
 
@@ -120,16 +122,15 @@ public:
 
     QList< Tp::OutgoingFileTransferChannelPtr > tmpFileTransfers;
 
-    KComponentData telepathyComponentData();
+    static QString telepathyComponentName();
     KTp::AbstractMessageFilter *notifyFilter;
 };
 
 
 //FIXME I would like this to be part of the main KDE Telepathy library as a static function somewhere.
-KComponentData ChatWidgetPrivate::telepathyComponentData()
+QString ChatWidgetPrivate::telepathyComponentName()
 {
-    KAboutData telepathySharedAboutData("ktelepathy",0,KLocalizedString(),0);
-    return KComponentData(telepathySharedAboutData);
+    return QStringLiteral("ktelepathy");
 }
 
 ChatWidget::ChatWidget(const Tp::TextChannelPtr & channel, const Tp::AccountPtr &account, QWidget *parent)
@@ -148,20 +149,17 @@ ChatWidget::ChatWidget(const Tp::TextChannelPtr & channel, const Tp::AccountPtr 
     connect(d->shareProvider, SIGNAL(finishedSuccess(ShareProvider*,QString)), this, SLOT(onShareProviderFinishedSuccess(ShareProvider*,QString)));
     connect(d->shareProvider, SIGNAL(finishedError(ShareProvider*,QString)), this, SLOT(onShareProviderFinishedFailure(ShareProvider*,QString)));
 
-    //load translations for this library. keep this before any i18n() calls in library code
-    KGlobal::locale()->insertCatalog(QLatin1String("ktpchat"));
-
     d->chatViewInitialized = false;
     d->isGroupChat = (channel->targetHandleType() == Tp::HandleTypeContact ? false : true);
 
     d->ui.setupUi(this);
     if (d->isGroupChat) {
         d->contactsMenu = new QMenu(this);
-        QAction *action = d->contactsMenu->addAction(KIcon::fromTheme(QLatin1String("text-x-generic")),
+        QAction *action = d->contactsMenu->addAction(QIcon::fromTheme(QLatin1String("text-x-generic")),
                                    i18n("Open chat window"),
                                    this, SLOT(onOpenContactChatWindowClicked()));
         action->setObjectName(QLatin1String("OpenChatWindowAction"));
-        action = d->contactsMenu->addAction(KIcon::fromTheme(QLatin1String("mail-attachment")),
+        action = d->contactsMenu->addAction(QIcon::fromTheme(QLatin1String("mail-attachment")),
                                             i18n("Send file"),
                                             this, SLOT(onSendFileClicked()));
         action->setObjectName(QLatin1String("SendFileAction"));
@@ -180,9 +178,9 @@ ChatWidget::ChatWidget(const Tp::TextChannelPtr & channel, const Tp::AccountPtr 
 
     d->fileResourceTransferMenu = new QMenu(this);
     // This action's text is going to be changed in the dropEvent method to add the destination image service.
-    d->shareImageMenuAction = new QAction(KIcon::fromTheme(QLatin1String("insert-image")), i18n("Share Image"), this);
+    d->shareImageMenuAction = new QAction(QIcon::fromTheme(QLatin1String("insert-image")), i18n("Share Image"), this);
     connect(d->shareImageMenuAction, SIGNAL(triggered(bool)), this, SLOT(onShareImageMenuActionTriggered()));
-    d->fileTransferMenuAction = new QAction(KIcon::fromTheme(QLatin1String("mail-attachment")), i18n("Send File"), this);
+    d->fileTransferMenuAction = new QAction(QIcon::fromTheme(QLatin1String("mail-attachment")), i18n("Send File"), this);
 
     d->fileTransferMenuAction->setEnabled(targetContact && targetContact->fileTransferCapability());
     d->fileResourceTransferMenu->addAction(d->fileTransferMenuAction);
@@ -203,6 +201,7 @@ ChatWidget::ChatWidget(const Tp::TextChannelPtr & channel, const Tp::AccountPtr 
     d->ui.messageWidget->setText(i18n("Your message cannot be sent because the account %1 is offline. Please try again when the account is connected again.", d->account->displayName()));
     d->ui.messageWidget->setMessageType(KMessageWidget::Warning);
     d->ui.messageWidget->setCloseButtonVisible(true);
+    d->ui.messageWidget->setWordWrap(true);
     // Hide for the first time
     d->ui.messageWidget->hide();
     d->messageWidgetSwitchOnlineAction = new QAction(i18n("Connect %1", d->account->displayName()), d->ui.messageWidget);
@@ -302,14 +301,14 @@ Tp::AccountPtr ChatWidget::account() const
     return d->account;
 }
 
-KIcon ChatWidget::icon() const
+QIcon ChatWidget::icon() const
 {
     if (!d->isGroupChat) {
         if (d->account->currentPresence() != Tp::Presence::offline()) {
             //normal chat - self and one other person.
             //find the other contact which isn't self.
             Tp::ContactPtr otherContact = d->channel->textChannel()->targetContact();
-            KIcon presenceIcon = KTp::Presence(otherContact->presence()).icon();
+            QIcon presenceIcon = KTp::Presence(otherContact->presence()).icon();
 
             if (otherContact->clientTypes().contains(QLatin1String("phone"))) {
                 //we paint a warning symbol in the right-bottom corner
@@ -317,7 +316,7 @@ KIcon ChatWidget::icon() const
                 QPixmap pixmap = presenceIcon.pixmap(32, 32);
                 QPainter painter(&pixmap);
                 painter.drawPixmap(8, 8, 24, 24, phonePixmap);
-                return KIcon(pixmap);
+                return QIcon(pixmap);
             }
             return presenceIcon;
         } else {
@@ -326,16 +325,16 @@ KIcon ChatWidget::icon() const
     } else {
         //group chat
         if (d->account->currentPresence() != Tp::Presence::offline()) {
-            return KIcon(groupChatOnlineIcon);
+            return QIcon::fromTheme(groupChatOnlineIcon);
         } else {
-            return KIcon(groupChatOfflineIcon);
+            return QIcon::fromTheme(groupChatOfflineIcon);
         }
     }
 }
 
-KIcon ChatWidget::accountIcon() const
+QIcon ChatWidget::accountIcon() const
 {
-    return KIcon(d->account->iconName());
+    return QIcon::fromTheme(d->account->iconName());
 }
 
 bool ChatWidget::isGroupChat() const
@@ -411,7 +410,7 @@ void ChatWidget::temporaryFileTransferStateChanged(Tp::FileTransferState state, 
         QString localFile = QUrl(channel->uri()).toLocalFile();
         if (QFile::exists(localFile)) {
             QFile::remove(localFile);
-            kDebug() << "File" << localFile << "removed";
+            qCDebug(KTP_TEXTUI_LIB) << "File" << localFile << "removed";
         }
 
         d->tmpFileTransfers.removeAll(Tp::OutgoingFileTransferChannelPtr(channel));
@@ -450,8 +449,8 @@ void ChatWidget::dropEvent(QDropEvent *e)
         Q_FOREACH(const QUrl &url, data->urls()) {
             if (url.isLocalFile()) {
 		 // Not sure if this the best way to determine the MIME type of the file
-		 KMimeType::Ptr ptr = KMimeType::findByUrl(url);
-		 QString mime       = ptr->name();
+        QMimeDatabase db;
+        QString mime = db.mimeTypeForUrl(url).name();
 		 if (mime.startsWith(QLatin1String("image/"))) {
 		    d->fileTransferMenuAction->setText(i18n("Send Image via File Transfer"));
 		    d->fileResourceTransferMenu->addAction(d->shareImageMenuAction);
@@ -477,9 +476,7 @@ void ChatWidget::dropEvent(QDropEvent *e)
     } else if (data->hasImage()) {
         QImage image = qvariant_cast<QImage>(data->imageData());
 
-        KTemporaryFile tmpFile;
-        tmpFile.setPrefix(d->account->displayName() + QLatin1String("-"));
-        tmpFile.setSuffix(QLatin1String(".png"));
+        QTemporaryFile tmpFile(d->account->displayName() + QStringLiteral("-XXXXXX.png"));
         tmpFile.setAutoRemove(false);
         if (!tmpFile.open()) {
             return;
@@ -493,7 +490,7 @@ void ChatWidget::dropEvent(QDropEvent *e)
 	d->fileToTransferPath = tmpFile.fileName();
 	d->fileResourceTransferMenu->popup(mapToGlobal(e->pos()));
 
-        kDebug() << "Starting Uploading of" << tmpFile.fileName();
+        qCDebug(KTP_TEXTUI_LIB) << "Starting Uploading of" << tmpFile.fileName();
         e->acceptProposedAction();
     }
 
@@ -527,12 +524,12 @@ QColor ChatWidget::titleColor() const
     KColorScheme scheme(QPalette::Active, KColorScheme::Window);
 
     if (TextChatConfig::instance()->showOthersTyping() && (d->remoteContactChatState == Tp::ChannelChatStateComposing)) {
-        kDebug() << "remote is typing";
+        qCDebug(KTP_TEXTUI_LIB) << "remote is typing";
         return scheme.foreground(KColorScheme::PositiveText).color();
     }
 
     if (unreadMessageCount() > 0 && !isOnTop()) {
-        kDebug() << "unread messages";
+        qCDebug(KTP_TEXTUI_LIB) << "unread messages";
         return scheme.foreground(KColorScheme::ActiveText).color();
     }
 
@@ -605,7 +602,7 @@ void ChatWidget::onHistoryFetched(const QList<KTp::Message> &messages)
 {
     d->chatViewInitialized = true;
 
-    kDebug() << "found" << messages.count() << "messages in history";
+    qCDebug(KTP_TEXTUI_LIB) << "found" << messages.count() << "messages in history";
     if (!messages.isEmpty()) {
         QDate date = messages.first().time().date();
         Q_FOREACH(const KTp::Message &message, messages) {
@@ -635,7 +632,7 @@ int ChatWidget::unreadMessageCount() const
 
 void ChatWidget::acknowledgeMessages()
 {
-    kDebug();
+    qCDebug(KTP_TEXTUI_LIB);
     //if we're not initialised we can't have shown anything, even if we are on top, therefore ignore all requests to do so
     if (d->chatViewInitialized) {
         //acknowledge everything in the message queue.
@@ -647,14 +644,14 @@ void ChatWidget::acknowledgeMessages()
     }
 }
 
-void ChatWidget::updateSendMessageShortcuts(const KShortcut &shortcuts)
+void ChatWidget::updateSendMessageShortcuts(const QKeySequence &shortcuts)
 {
     d->ui.sendMessageBox->setSendMessageShortcuts(shortcuts);
 }
 
 bool ChatWidget::isOnTop() const
 {
-    kDebug() << ( isActiveWindow() && isVisible() );
+    qCDebug(KTP_TEXTUI_LIB) << ( isActiveWindow() && isVisible() );
     return ( isActiveWindow() && isVisible() );
 }
 
@@ -699,7 +696,7 @@ void ChatWidget::startOtrSession()
 
 void ChatWidget::stopOtrSession()
 {
-    kDebug();
+    qCDebug(KTP_TEXTUI_LIB);
     if(!d->channel->isOTRsuppored() || d->channel->otrTrustLevel() == KTp::OTRTrustLevelNotPrivate) {
         return;
     }
@@ -731,7 +728,7 @@ void ChatWidget::authenticateBuddy()
 
 void ChatWidget::setupOTR()
 {
-    kDebug();
+    qCDebug(KTP_TEXTUI_LIB);
 
     connect(d->channel.data(), SIGNAL(otrTrustLevelChanged(KTp::OTRTrustLevel, KTp::OTRTrustLevel)),
             SLOT(onOTRTrustLevelChanged(KTp::OTRTrustLevel, KTp::OTRTrustLevel)));
@@ -755,7 +752,11 @@ void ChatWidget::setupOTR()
 
 void ChatWidget::onOTRTrustLevelChanged(KTp::OTRTrustLevel trustLevel, KTp::OTRTrustLevel previous)
 {
-    kDebug();
+    qCDebug(KTP_TEXTUI_LIB);
+
+    if (trustLevel == previous) {
+        return;
+    }
 
     d->hasNewOTRstatus = true;
     switch(trustLevel) {
@@ -870,8 +871,6 @@ void ChatWidget::onPeerAuthenticationFailed()
 
 void ChatWidget::handleIncomingMessage(const Tp::ReceivedMessage &message, bool alreadyNotified)
 {
-    kDebug() << title() << message.text();
-
     if (d->chatViewInitialized) {
 
         d->exchangedMessagesCount++;
@@ -892,7 +891,7 @@ void ChatWidget::handleIncomingMessage(const Tp::ReceivedMessage &message, bool 
             Tp::ReceivedMessage::DeliveryDetails reportDetails = message.deliveryDetails();
 
             if (reportDetails.hasDebugMessage()) {
-                kDebug() << "delivery report debug message: " << reportDetails.debugMessage();
+                qCDebug(KTP_TEXTUI_LIB) << "delivery report debug message: " << reportDetails.debugMessage();
             }
 
             if (reportDetails.isError()) {
@@ -960,7 +959,7 @@ void ChatWidget::handleIncomingMessage(const Tp::ReceivedMessage &message, bool 
                 }
             } else {
                 //TODO: handle delivery reports properly
-                kWarning() << "Ignoring delivery report";
+                qCWarning(KTP_TEXTUI_LIB) << "Ignoring delivery report";
                 d->channel->acknowledge(QList<Tp::ReceivedMessage>() << message);
                 return;
             }
@@ -1551,12 +1550,10 @@ void ChatWidget::onSendFileClicked()
 {
     const KTp::ContactPtr contact = d->contactsMenu->property("Contact").value<KTp::ContactPtr>();
     Q_ASSERT(!contact.isNull());
-    const QString filename = KFileDialog::getOpenFileName();
+    const QString filename = QFileDialog::getOpenFileName();
     if (filename.isEmpty() || !QFile::exists(filename)) {
         return;
     }
 
     KTp::Actions::startFileTransfer(d->account, contact, filename);
 }
-
-#include "chat-widget.moc"

@@ -17,22 +17,21 @@
 
 #include "chat-window-style.h"
 #include "chat-style-plist-file-reader.h"
+#include "ktp-debug.h"
 
 // Qt includes
-#include <QtCore/QFile>
-#include <QtCore/QDir>
-#include <QtCore/QHash>
-#include <QtCore/QStringList>
-#include <QtCore/QTextCodec>
-#include <QtCore/QTextStream>
-#include <QtCore/qmath.h>
+#include <QFile>
+#include <QDir>
+#include <QHash>
+#include <QStringList>
+#include <QTextCodec>
+#include <QTextStream>
+#include <qmath.h>
+#include <QStandardPaths>
 #include <QFont>
+#include <QFontDatabase>
 
-// KDE includes
-#include <KDebug>
-#include <KLocale>
-#include <KStandardDirs>
-#include <KGlobalSettings>
+#include <KLocalizedString>
 
 class ChatWindowStyle::Private
 {
@@ -56,12 +55,12 @@ ChatWindowStyle::ChatWindowStyle(const QString &styleId, StyleBuildMode styleBui
 {
     init(styleId, styleBuildMode);
 
-    kDebug() << "Style" << styleId << ":";
-    kDebug() << "messageViewVersion is" << d->messageViewVersion;
-    kDebug() << "disableCombineConsecutive is" << d->disableCombineConsecutive;
-    kDebug() << "hasCustomTemplateHtml is" << d->hasCustomTemplateHtml;
+    qCDebug(KTP_TEXTUI_LIB) << "Style" << styleId << ":";
+    qCDebug(KTP_TEXTUI_LIB) << "messageViewVersion is" << d->messageViewVersion;
+    qCDebug(KTP_TEXTUI_LIB) << "disableCombineConsecutive is" << d->disableCombineConsecutive;
+    qCDebug(KTP_TEXTUI_LIB) << "hasCustomTemplateHtml is" << d->hasCustomTemplateHtml;
     if (d->messageViewVersion < 3) {
-        kWarning() << "Style" << styleId << "is legacy";
+        qCWarning(KTP_TEXTUI_LIB) << "Style" << styleId << "is legacy";
     }
 
 }
@@ -76,20 +75,21 @@ ChatWindowStyle::ChatWindowStyle(const QString &styleId, const QString &variantP
 
 void ChatWindowStyle::init(const QString &styleId, StyleBuildMode styleBuildMode)
 {
-    QStringList styleDirs = KGlobal::dirs()->findDirs("data",
-        QString(QLatin1String("ktelepathy/styles/%1/Contents/Resources/")).arg(styleId)
-    );
+    QStringList styleDirs = QStandardPaths::locateAll(
+        QStandardPaths::GenericDataLocation,
+        QStringLiteral("ktelepathy/styles/%1/Contents/Resources/").arg(styleId),
+        QStandardPaths::LocateDirectory);
 
     if (styleDirs.isEmpty()) {
-        kDebug() << "Failed to find style" << styleId;
+        qCDebug(KTP_TEXTUI_LIB) << "Failed to find style" << styleId;
         return;
     }
     d->styleId = styleId;
     if (styleDirs.count() > 1) {
-        kDebug() << "found several styles with the same name. using first";
+        qCDebug(KTP_TEXTUI_LIB) << "found several styles with the same name. using first";
     }
     d->baseHref = styleDirs.at(0);
-    kDebug() << "Using style:" << d->baseHref;
+    qCDebug(KTP_TEXTUI_LIB) << "Using style:" << d->baseHref;
     readStyleFiles();
     if (styleBuildMode & StyleBuildNormal) {
         listVariants();
@@ -351,14 +351,14 @@ void ChatWindowStyle::readStyleFiles()
         // If name is still empty we use "Normal"
         d->defaultVariantName = i18nc("Normal style variant menu item", "Normal");
     }
-    kDebug() << "defaultVariantName = " << d->defaultVariantName;
-    d->defaultFontFamily  = plistReader.defaultFontFamily().isEmpty() ? KGlobalSettings::generalFont().family()
+    qCDebug(KTP_TEXTUI_LIB) << "defaultVariantName = " << d->defaultVariantName;
+    d->defaultFontFamily  = plistReader.defaultFontFamily().isEmpty() ? QFontDatabase::systemFont(QFontDatabase::GeneralFont).family()
                                                                       : plistReader.defaultFontFamily();
 
     // If the theme has no default font size, use the system font size, but since that is in points (pt), we need to convert
     // it to pixel size (and using pixelSize() does not work if the QFont was not set up using setPixelSize), so we use the
     // rough conversion ratio 4/3 and floor the number
-    d->defaultFontSize    = plistReader.defaultFontSize() == 0 ? qFloor(KGlobalSettings::generalFont().pointSizeF() * (4.0/3.0))
+    d->defaultFontSize    = plistReader.defaultFontSize() == 0 ? qFloor(QFontDatabase::systemFont(QFontDatabase::GeneralFont).pointSizeF() * (4.0/3.0))
                                                                : plistReader.defaultFontSize();
     d->disableCombineConsecutive = plistReader.disableCombineConsecutive();
     d->messageViewVersion = plistReader.messageViewVersion();
@@ -408,12 +408,12 @@ void ChatWindowStyle::readStyleFiles()
             headerStream.setCodec(QTextCodec::codecForName("UTF-8"));
             QString data = headerStream.readAll();
             if(!data.isEmpty()) {
-                //kDebug() << fileName << "was found!";
+                //qCDebug(KTP_TEXTUI_LIB) << fileName << "was found!";
                 setContent( templateFiles.key(fileName), data);
             } else {
-                kDebug() << fileName << "was not found!";
+                qCDebug(KTP_TEXTUI_LIB) << fileName << "was not found!";
             }
-            //kDebug() << fileName << content(templateFiles.key(fileName));
+            //qCDebug(KTP_TEXTUI_LIB) << fileName << content(templateFiles.key(fileName));
             fileAccess.close();
         }
     }
@@ -450,7 +450,7 @@ void ChatWindowStyle::readStyleFiles()
     if (content(Template).isEmpty())
     {
         d->hasCustomTemplateHtml = false;
-        QString templateFileName(KGlobal::dirs()->findResource("data", QLatin1String("ktelepathy/Template.html")));
+        QString templateFileName(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("ktelepathy/Template.html")));
 
         if (!templateFileName.isEmpty() && QFile::exists(templateFileName)) {
             fileAccess.setFileName(templateFileName);

@@ -28,7 +28,7 @@
 // Qt includes
 
 #include <QByteArray>
-#include <QString>
+#include <QUrl>
 
 class MPForm
 {
@@ -43,11 +43,11 @@ public:
 
     bool addPair(const QString& name, const QString& value, const QString& type);
     bool addFile(const QString& name, const QString& path);
-    bool addFile(const QString& name, const QString& filePath, const QByteArray& fileData);
+    bool addFile(const QString& name, const QUrl& filePath, const QByteArray& fileData);
 
-    QString    contentType() const;
+    QByteArray contentType() const;
     QByteArray formData()    const;
-    QString    boundary()    const;
+    QByteArray boundary()    const;
 
 private:
 
