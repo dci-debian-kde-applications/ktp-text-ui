@@ -1,6 +1,7 @@
 ktp-text-ui (0.9.0+dfsg-1) UNRELEASED; urgency=medium
 
   * Update Diane Trout's email address.
+  * Update watch file for KTp's move to Applications
 
  -- Diane Trout <diane@debian.org>  Sun, 12 Jul 2015 21:15:11 -0700
 
