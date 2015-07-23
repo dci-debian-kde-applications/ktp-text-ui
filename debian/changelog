@@ -3,6 +3,8 @@ ktp-text-ui (15.04.3-1) UNRELEASED; urgency=medium
   * Update Diane Trout's email address.
   * Update watch file for KTp's move to Applications
   * New upstream release.
+  * Update build-depends for KF5 and rename of
+    libktpcommoninternalsprivate-dev to libktp-dev
 
  -- Diane Trout <diane@debian.org>  Sun, 12 Jul 2015 21:15:11 -0700
 
