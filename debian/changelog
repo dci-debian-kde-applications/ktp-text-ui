@@ -14,6 +14,7 @@ ktp-text-ui (15.04.3-1) UNRELEASED; urgency=medium
     - Update debian/rules
   * Remove kde-telepathy-text-ui.links scriptaculous was removed and
     jquery is being handled by kde-telepathy-text-ui.linktree
+  * Update install paths for KF5 locations.
 
  -- Diane Trout <diane@debian.org>  Sun, 12 Jul 2015 21:15:11 -0700
 
