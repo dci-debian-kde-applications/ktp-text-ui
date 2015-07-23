@@ -15,6 +15,8 @@ ktp-text-ui (15.04.3-1) UNRELEASED; urgency=medium
   * Remove kde-telepathy-text-ui.links scriptaculous was removed and
     jquery is being handled by kde-telepathy-text-ui.linktree
   * Update install paths for KF5 locations.
+  * Don't apply 02_ktpchat_soversion.diff
+    Remove diffs no longer being applied.
 
  -- Diane Trout <diane@debian.org>  Sun, 12 Jul 2015 21:15:11 -0700
 
