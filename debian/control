@@ -41,7 +41,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
  kde-telepathy-data (>= 0.8.1),
  libjs-jquery (>= 1.7),
- libjs-scriptaculous (>= 1.8.2),
 Recommends: kde-telepathy
 Replaces: libktpchat0
 Description: Telepathy text chat UI for the KDE Plasma Desktop
