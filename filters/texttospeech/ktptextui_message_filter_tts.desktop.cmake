@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Text To Speech
+Name[ar]=نطق النّصّ
 Name[ast]=Testu a voz
 Name[bs]=Tekst u govor
 Name[ca]=Text a veu
@@ -45,6 +46,7 @@ Name[zh_CN]=文本到语音
 Name[zh_TW]=文字轉語音
 Encoding=UTF-8
 Comment=Read out incoming messages using text-to-speech service
+Comment[ar]=اقرأ الرّسائل القادمة بخدمة نطق النّصّ
 Comment[bs]=Čitaj ulazne poruke pomoću usluge konverzije teksta u govor
 Comment[ca]=Llegeix els missatges entrats utilitzant el servei de text a veu
 Comment[ca@valencia]=Llig els missatges entrats utilitzant el servei de text a veu
