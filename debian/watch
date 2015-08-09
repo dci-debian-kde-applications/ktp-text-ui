@@ -1,3 +1,4 @@
 version=3
 opts=dversionmangle=s/\+dfsg//,repacksuffix=+dfsg \
 http://download.kde.org/stable/applications/([\d.]+)/src/ktp-text-ui-([\d.]+).tar.(?:bz2|xz)
+http://download.kde.org/unstable/applications/([\d.]+)/src/ktp-text-ui-([\d.]+).tar.(?:bz2|xz)
