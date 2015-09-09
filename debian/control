@@ -55,6 +55,7 @@ Architecture: any
 Depends: kde-telepathy-data,
          libjs-jquery (>= 1.7),
          libjs-scriptaculous (>= 1.8.2),
+         libkf5emoticons-bin,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: kde-telepathy
