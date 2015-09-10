@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Text Formatting
+Name[ar]=تنسيق النّصّ
 Name[ast]=Formatéu del testu
 Name[bs]=Formatiranje teksta
 Name[ca]=Formatació de text
@@ -28,7 +29,7 @@ Name[nl]=Tekstopmaak
 Name[pa]=ਟੈਕਸਟ ਫਾਰਮੈਟ
 Name[pl]=Formatowanie tekstu
 Name[pt]=Formatação do Texto
-Name[pt_BR]=Formatação do texto
+Name[pt_BR]=Formatação de texto
 Name[ro]=Formatarea textului
 Name[ru]=Форматирование текста
 Name[sk]=Formátovanie textu

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Plugins
+Name[ar]=الملحقات
 Name[ast]=Complementos
 Name[bs]=Dodaci
 Name[ca]=Connectors
@@ -50,6 +51,7 @@ Name[zh_TW]=外掛程式
 Type=Service
 Exec=kcmshell4 kcm_ktp_message_filters
 Comment=How to deal with extra information obtained from messages
+Comment[ar]=كيفيّة التّعامل مع المعلومات الإضافيّة المحصول عليها من الرّسائل
 Comment[bs]=Kako raditi s dodatnim informacijama koje se dobijaju od poruka
 Comment[ca]=Com tractar la informació extra obtinguda dels missatges
 Comment[ca@valencia]=Com tractar la informació extra obtinguda dels missatges
@@ -75,7 +77,7 @@ Comment[nl]=Hoe te handelen met extra informatie verkregen uit berichten
 Comment[pa]=ਸੁਨੇਹਿਆਂ ਨੂੰ ਪ੍ਰਾਪਤ ਵਾਧੂ ਜਾਣਕਾਰੀ ਨਾਲ ਕਿਵੇਂ ਨਿਪਟਿਆ ਜਾਵੇ
 Comment[pl]=Sposób radzenia sobie z dodatkowymi informacjami uzyskanymi z wiadomości
 Comment[pt]=Como lidar com a informação extra obtida a partir das mensagens
-Comment[pt_BR]=Como lidar com informações adicionais obtidas a partir de mensagens
+Comment[pt_BR]=Como tratar as informações extras recebidas com as mensagens
 Comment[ro]=Cum să procedați cu informațiile suplimentare obținute din mesaje
 Comment[ru]=Обработка дополнительных данных в сообщениях
 Comment[sk]=Ako sa vysporiadať s dodatočnými informáciami získanými zo správ

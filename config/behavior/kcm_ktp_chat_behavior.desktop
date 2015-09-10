@@ -12,6 +12,7 @@ X-KDE-RootOnly=false
 Categories=Qt;KDE;X-KDE-settings-network;
 
 Name=Chat Tab Behavior
+Name[ar]=سلوك لسان الدّردشة
 Name[ast]=Comportamientu de la llingüeta de charra
 Name[bs]=Ponašanje kartice za ćaskanje
 Name[ca]=Comportament de la pestanya de xat
@@ -39,7 +40,7 @@ Name[nl]=Gedrag van tabblad Chat
 Name[pa]=ਗੱਲਬਾਤ ਟੈਬ ਰਵੱਈਆ
 Name[pl]=Zachowanie karty rozmowy
 Name[pt]=Comportamento da Página de Conversação
-Name[pt_BR]=Comportamento da aba de bate-papo
+Name[pt_BR]=Comportamento da aba de conversas
 Name[ro]=Comportamentul filelor de discuție
 Name[ru]=Поведение вкладок общения
 Name[sk]=Správanie karty rozhovoru
