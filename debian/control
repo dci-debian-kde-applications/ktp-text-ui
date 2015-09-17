@@ -33,7 +33,7 @@ Build-Depends: cmake (>= 2.8.12~),
                libtelepathy-logger-qt4-dev (>= 0.8.0),
                libtelepathy-qt4-dev (>= 0.9.5),
                pkg-kde-tools (>= 0.9)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-text-ui
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-text-ui.git
