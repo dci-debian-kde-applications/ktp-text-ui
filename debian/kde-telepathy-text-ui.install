@@ -1,4 +1,4 @@
-usr/share/applications/org.kde.ktplogviewer.desktop
+usr/share/applications/ktp-log-viewer.desktop
 usr/share/dbus-1/services/org.freedesktop.Telepathy.Client.KTp.TextUi.service
 usr/share/kservices5/adiumxtra.protocol
 usr/share/kservices5/kcm_ktp*.desktop

@@ -18,6 +18,7 @@ ktp-text-ui (15.04.3-1) UNRELEASED; urgency=medium
   * Don't apply 02_ktpchat_soversion.diff
     Remove diffs no longer being applied.
   * Add KDE's unstable download url to watch file
+  * Update filename for log viewer ro ktp-log-viewer.desktop
 
  -- Diane Trout <diane@debian.org>  Sun, 12 Jul 2015 21:15:11 -0700
 
