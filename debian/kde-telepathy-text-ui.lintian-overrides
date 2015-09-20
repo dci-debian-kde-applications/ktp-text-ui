@@ -1,2 +1,5 @@
-kde-telepathy-text-ui: package-name-doesnt-match-sonames libktpchat0
-kde-telepathy-text-ui: no-symbols-control-file usr/lib/libktpchat.so.0.8.80
+# these really should be treated as plugins.
+kde-telepathy-text-ui: package-name-doesnt-match-sonames libktpchat libktpimagesharer
+kde-telepathy-text-ui: no-symbols-control-file usr/lib/*/libktpchat.so
+kde-telepathy-text-ui: no-symbols-control-file usr/lib/*/libktpimagesharer.so
+kde-telepathy-text-ui: postinst-must-call-ldconfig usr/lib/*/libktpimagesharer.so

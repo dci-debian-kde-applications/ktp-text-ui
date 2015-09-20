@@ -20,6 +20,7 @@ ktp-text-ui (15.08.1-1) UNRELEASED; urgency=medium
   * Add KDE's unstable download url to watch file
   * Update filename for log viewer ro ktp-log-viewer.desktop
   * Use dh-linktree to use to replace jquery.js files.
+  * Update lintian-overrides for move to multiarch.
 
  -- Diane Trout <diane@debian.org>  Sun, 12 Jul 2015 21:15:11 -0700
 
