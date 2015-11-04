@@ -1,4 +1,4 @@
-ktp-text-ui (15.08.1-1) UNRELEASED; urgency=medium
+ktp-text-ui (15.08.2-1) UNRELEASED; urgency=medium
 
   * Update Diane Trout's email address.
   * Update watch file for KTp's move to Applications
@@ -24,7 +24,7 @@ ktp-text-ui (15.08.1-1) UNRELEASED; urgency=medium
   * Update lintian-overrides for move to multiarch.
   * Update Build-Depends to use telepathy-qt5-dev
 
- -- Diane Trout <diane@debian.org>  Sun, 12 Jul 2015 21:15:11 -0700
+ -- Diane Trout <diane@debian.org>  Tue, 03 Nov 2015 22:19:16 -0800
 
 ktp-text-ui (0.9.0+dfsg-1) unstable; urgency=medium
 
