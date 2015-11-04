@@ -18,7 +18,6 @@ ktp-text-ui (15.08.2-1) UNRELEASED; urgency=medium
   * Don't apply 02_ktpchat_soversion.diff
     Remove diffs no longer being applied.
   * Add KDE's unstable download url to watch file
-  * Update filename for log viewer ro ktp-log-viewer.desktop
   * Use dh-linktree to use to replace jquery.js files.
   * Add dependency on libjs-jquery to provide replacement jquery.js
   * Update lintian-overrides for move to multiarch.
