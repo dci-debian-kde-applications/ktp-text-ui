@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8.12)
 # KDE Application Version, managed by release script
 set(KDE_APPLICATIONS_VERSION_MAJOR "15")
 set(KDE_APPLICATIONS_VERSION_MINOR "08")
-set(KDE_APPLICATIONS_VERSION_MICRO "1")
+set(KDE_APPLICATIONS_VERSION_MICRO "2")
 set(KTP_TEXT_UI_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
 set(KTP_MESSAGE_FILTER_FRAMEWORK_VERSION "5")
 set(IS_KTP_INTERNAL_MODULE TRUE)
@@ -13,7 +13,10 @@ set(IS_KTP_INTERNAL_MODULE TRUE)
 find_package(ECM 1.3.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
-find_package (KF5 REQUIRED COMPONENTS Archive Sonnet WidgetsAddons Service Emoticons KIO KCMUtils NotifyConfig Notifications I18n WebKit WindowSystem XmlGui ItemViews TextWidgets IconThemes)
+find_package (KF5 REQUIRED COMPONENTS Archive Sonnet WidgetsAddons Service Emoticons
+                                      KIO KCMUtils NotifyConfig Notifications I18n
+                                      WebKit WindowSystem XmlGui ItemViews TextWidgets
+                                      IconThemes DBusAddons)
 find_package (Qt5 REQUIRED COMPONENTS WebKitWidgets)
 find_package (KTp REQUIRED)
 
