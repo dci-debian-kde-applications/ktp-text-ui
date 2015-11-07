@@ -1,6 +1,5 @@
 ktp-text-ui (15.08.2-1) UNRELEASED; urgency=medium
 
-  * Update Diane Trout's email address.
   * Update watch file for KTp's move to Applications
   * New upstream release.
   * Update build-depends for KF5 and rename of
