@@ -1,7 +1,7 @@
 ktp-text-ui (15.08.2-1) UNRELEASED; urgency=medium
 
   * Update watch file for KTp's move to Applications
-  * New upstream release.
+  * New upstream release. (Closes: #784489)
   * Update build-depends for KF5 and rename of
     libktpcommoninternalsprivate-dev to libktp-dev
   * Update copyright file
