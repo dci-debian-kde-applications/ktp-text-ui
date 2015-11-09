@@ -1,4 +1,4 @@
-ktp-text-ui (15.08.2-1~) UNRELEASED; urgency=medium
+ktp-text-ui (15.08.3-1~) UNRELEASED; urgency=medium
 
   [ Diane Trout ]
   * New upstream release.
@@ -23,8 +23,9 @@ ktp-text-ui (15.08.2-1~) UNRELEASED; urgency=medium
   * New upstream release (15.08.1).
   * Bump Standards-Version to 3.9.6.
   * New upstream release (15.08.2).
+  * New upstream release (15.08.3).
 
- -- Maximiliano Curia <maxy@debian.org>  Mon, 12 Oct 2015 15:24:34 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 09 Nov 2015 09:39:33 +0100
 
 ktp-text-ui (0.8.1-1) unstable; urgency=low
 
