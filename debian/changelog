@@ -1,4 +1,4 @@
-ktp-text-ui (15.08.2-1) UNRELEASED; urgency=medium
+ktp-text-ui (15.08.2-1) unstable; urgency=medium
 
   * Update watch file for KTp's move to Applications
   * New upstream release. (Closes: #784489)
@@ -22,7 +22,7 @@ ktp-text-ui (15.08.2-1) UNRELEASED; urgency=medium
   * Update lintian-overrides for move to multiarch.
   * Update Build-Depends to use telepathy-qt5-dev
 
- -- Diane Trout <diane@debian.org>  Tue, 03 Nov 2015 22:19:16 -0800
+ -- Diane Trout <diane@ghic.org>  Sat, 07 Nov 2015 11:02:45 -0800
 
 ktp-text-ui (0.9.0+dfsg-1) unstable; urgency=medium
 
