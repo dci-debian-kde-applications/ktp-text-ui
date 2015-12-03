@@ -1,3 +1,9 @@
+ktp-text-ui (15.08.3-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Diane Trout <diane@ghic.org>  Wed, 02 Dec 2015 23:33:23 -0800
+
 ktp-text-ui (15.08.2-1) unstable; urgency=medium
 
   * Update watch file for KTp's move to Applications
