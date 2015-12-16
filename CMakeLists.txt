@@ -4,8 +4,8 @@ cmake_minimum_required(VERSION 2.8.12)
 
 # KDE Application Version, managed by release script
 set(KDE_APPLICATIONS_VERSION_MAJOR "15")
-set(KDE_APPLICATIONS_VERSION_MINOR "08")
-set(KDE_APPLICATIONS_VERSION_MICRO "3")
+set(KDE_APPLICATIONS_VERSION_MINOR "12")
+set(KDE_APPLICATIONS_VERSION_MICRO "0")
 set(KTP_TEXT_UI_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
 set(KTP_MESSAGE_FILTER_FRAMEWORK_VERSION "5")
 set(IS_KTP_INTERNAL_MODULE TRUE)
@@ -18,6 +18,10 @@ find_package (KF5 REQUIRED COMPONENTS Archive Sonnet WidgetsAddons Service Emoti
                                       WebKit WindowSystem XmlGui ItemViews TextWidgets
                                       IconThemes DBusAddons)
 find_package (Qt5 REQUIRED COMPONENTS WebKitWidgets)
+find_package(Qt5 ${QT_REQUIRED_VERSION} OPTIONAL_COMPONENTS TextToSpeech)
+if (NOT Qt5TextToSpeech_FOUND)
+    message(STATUS "Qt5TextToSpeech not found, speech features will be disabled")
+endif()
 find_package (KTp REQUIRED)
 
 find_package (KF5People)
