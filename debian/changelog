@@ -1,10 +1,10 @@
-ktp-text-ui (15.08.3-1) UNRELEASED; urgency=medium
+ktp-text-ui (15.08.3-1) unstable; urgency=medium
 
   * New upstream release.
   * Use version of libkf5emoticons that forces emoticons-bin dependency
     (Closes: #805453)
 
- -- Diane Trout <diane@ghic.org>  Wed, 02 Dec 2015 23:33:23 -0800
+ -- Diane Trout <diane@ghic.org>  Sat, 05 Dec 2015 11:08:11 -0800
 
 ktp-text-ui (15.08.2-1) unstable; urgency=medium
 
