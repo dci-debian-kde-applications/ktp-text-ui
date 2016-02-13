@@ -1,6 +1,6 @@
 ktp-text-ui (15.12.1-2~) UNRELEASED; urgency=medium
 
-  * 
+  * Bump build dependencies.
 
  -- Maximiliano Curia <maxy@debian.org>  Sat, 13 Feb 2016 08:32:46 +0100
 
