@@ -1,8 +1,5 @@
+# these really should be treated as plugins.
 kde-telepathy-text-ui: package-name-doesnt-match-sonames libktpchat libktpimagesharer
-kde-telepathy-text-ui: shlib-without-versioned-soname usr/lib/*/libktpimagesharer.so libktpimagesharer.so
-kde-telepathy-text-ui: shlib-without-versioned-soname usr/lib/*/libktpchat.so libktpchat.so
+kde-telepathy-text-ui: no-symbols-control-file usr/lib/*/libktpchat.so
+kde-telepathy-text-ui: no-symbols-control-file usr/lib/*/libktpimagesharer.so
 kde-telepathy-text-ui: postinst-must-call-ldconfig usr/lib/*/libktpimagesharer.so
-# jquery actually likes to break API, so using the shared version can
-# potentially have adverse side effects without anyone noticing due to
-# incompatibility. too much overhead for very little gain.
-kde-telepathy-text-ui: embedded-javascript-library usr/share/ktelepathy/styles/WoshiChat.AdiumMessageStyle/Contents/Resources/lib/jquery.js please use libjs-jquery
