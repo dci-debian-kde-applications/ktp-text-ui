@@ -2,7 +2,8 @@ ktp-text-ui (4:15.12.1-1ubuntu1) UNRELEASED; urgency=medium
 
   * Merged with Debian
     - Added epoch which only seems to be used in Kubuntu
-  * New upstream release 
+  * New upstream release
+  * Added lintian overrides to ignore warnings about privite libs
 
  -- Clive Johnston <clivejo@aol.com>  Mon, 15 Feb 2016 21:19:13 +0000
 
