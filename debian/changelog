@@ -1,11 +1,11 @@
-ktp-text-ui (4:15.12.1-1ubuntu1) UNRELEASED; urgency=medium
+ktp-text-ui (4:15.12.1-1ubuntu1) xenial; urgency=medium
 
   * Merged with Debian
     - Added epoch which only seems to be used in Kubuntu
   * New upstream release
   * Added lintian overrides to ignore warnings about privite libs
 
- -- Clive Johnston <clivejo@aol.com>  Mon, 15 Feb 2016 21:19:13 +0000
+ -- Clive Johnston <clivejo@aol.com>  Wed, 09 Mar 2016 11:22:38 +0100
 
 ktp-text-ui (15.12.1-1) experimental; urgency=medium
 
