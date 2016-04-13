@@ -1,3 +1,12 @@
+ktp-text-ui (15.12.3-1~1.gbp45600f) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @45600fb62730b18bd8020c5fc5665ade40163d85 **
+
+  * Bump Standards-Version to 3.9.8
+  * Update build-deps and deps with the info from cmake
+
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Wed, 13 Apr 2016 11:52:35 +0200
+
 ktp-text-ui (15.08.3-1) unstable; urgency=medium
 
   * New upstream release.
