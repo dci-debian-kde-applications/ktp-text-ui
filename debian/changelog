@@ -1,11 +1,12 @@
-ktp-text-ui (15.12.3-1~1.gbp45600f) UNRELEASED; urgency=medium
+ktp-text-ui (16.04.0-1~1.gbpa284d1) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @45600fb62730b18bd8020c5fc5665ade40163d85 **
+  ** SNAPSHOT build @a284d1312050ab097f315e58622c998a4286340a **
 
   * Bump Standards-Version to 3.9.8
   * Update build-deps and deps with the info from cmake
+  * Add a .gitattributes file to use dpkg-mergechangelogs
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Wed, 13 Apr 2016 11:52:35 +0200
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Sat, 23 Apr 2016 11:31:58 +0200
 
 ktp-text-ui (15.12.1-2) experimental; urgency=medium
 
