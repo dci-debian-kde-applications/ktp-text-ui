@@ -1,5 +1,8 @@
-ktp-text-ui (16.04.1-1~1.gbp16ac6d) UNRELEASED; urgency=medium
+ktp-text-ui (16.04.1-1~2.gbp642bfa) UNRELEASED; urgency=medium
 
+  ** SNAPSHOT build @642bfac7709a02b0bed476a5b5635228e5458639 **
+
+  [ Automatic packaging ]
   ** SNAPSHOT build @16ac6d91bec145f21d91ebbdfcbee089020f8921 **
 
   * Bump Standards-Version to 3.9.8
@@ -7,7 +10,10 @@ ktp-text-ui (16.04.1-1~1.gbp16ac6d) UNRELEASED; urgency=medium
   * Add a .gitattributes file to use dpkg-mergechangelogs
   * UNRELEASED
 
- -- Automatic packaging <jenkins@amadeus.gnuservers.com.ar>  Tue, 10 May 2016 21:50:16 +0200
+  [ Maximiliano Curia ]
+  * Add new lintian-override for the private library
+
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Wed, 11 May 2016 22:50:13 +0200
 
 ktp-text-ui (15.12.1-2) experimental; urgency=medium
 
