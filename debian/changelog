@@ -1,10 +1,11 @@
-ktp-text-ui (16.04.3-1~1.gbpded105) UNRELEASED; urgency=medium
+ktp-text-ui (16.08.0-1~1.gbp522d7f) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @ded1053559212e2e3d724db812a1d02b0c32e0b3 **
+  ** SNAPSHOT build @522d7ffc5b7d721a83bc8a1e4c2df24d46c7892e **
 
   * UNRELEASED
+  * UNRELEASED
 
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Tue, 12 Jul 2016 21:50:13 +0200
+ -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Thu, 18 Aug 2016 21:50:14 +0200
 
 ktp-text-ui (16.04.2-1) experimental; urgency=medium
 
