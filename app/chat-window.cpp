@@ -439,7 +439,7 @@ void ChatWindow::onCurrentIndexChanged(int index)
     onOtrStatusChanged(currentChatTab->otrStatus());
 
     // Allow "Leaving" rooms only in group chat, and when persistent rooms are enabled
-    actionCollection()->action(QLatin1String("leave-chat"))->setEnabled(currentChatTab->isGroupChat() && TextChatConfig::instance()->dontLeaveGroupChats());
+    actionCollection()->action(QLatin1String("leave-chat"))->setEnabled(currentChatTab->isGroupChat());
     // No point having "Close" action with only one tab, it behaves exactly like "Quit"
     actionCollection()->action(QLatin1String("file_close"))->setVisible(m_tabWidget->count() > 1);
 
@@ -1205,7 +1205,7 @@ void ChatWindow::startFileTransfer(const Tp::AccountPtr& account, const Tp::Cont
 
 void ChatWindow::offerDocumentToContact(const Tp::AccountPtr& account, const Tp::ContactPtr& targetContact)
 {
-    const QUrl url = QFileDialog::getOpenFileName();
+    const QUrl url = QUrl::fromLocalFile(QFileDialog::getOpenFileName());
     if ( ! url.isEmpty() ) {
         KTp::Actions::startCollaborativeEditing(account, targetContact, QList<QUrl>() << url, true);
     }
@@ -1213,7 +1213,7 @@ void ChatWindow::offerDocumentToContact(const Tp::AccountPtr& account, const Tp:
 
 void ChatWindow::offerDocumentToChatroom(const Tp::AccountPtr& account, const QString& roomName)
 {
-   const QUrl url = QFileDialog::getOpenFileName();
+    const QUrl url = QUrl::fromLocalFile(QFileDialog::getOpenFileName());
     if ( ! url.isEmpty() ) {
         KTp::Actions::startCollaborativeEditing(account, roomName, QList<QUrl>() << url, true);
     }
