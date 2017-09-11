@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Text To Speech
 Name[ar]=نطق النّصّ
-Name[ast]=Testu a voz
 Name[bs]=Tekst u govor
 Name[ca]=Text a veu
 Name[ca@valencia]=Text a veu
@@ -25,6 +24,7 @@ Name[mr]=पाठ्य-ते-भाष्य
 Name[nb]=Tekst til tale
 Name[nds]=Vörleser
 Name[nl]=Tekst-naar-spraak
+Name[nn]=Tekst til tale
 Name[pa]=ਸ਼ਬਦ ਤੋਂ ਬੋਲੀ
 Name[pl]=Tekst-na-mowę
 Name[pt]=Texto para Fala
@@ -69,6 +69,7 @@ Comment[lt]=Skaityti gaunamas žinutes naudojant tekstas-į-kalbą paslaugą
 Comment[nb]=Les opp innkommende meldinger med tekst-til-tale-tjeneste
 Comment[nds]=Rinkamen Narichten mit den Vörleesdeenst vörlesen laten
 Comment[nl]=Spreek het inkomende bericht uit met de tekst-tot-spraak-dienst
+Comment[nn]=Les opp innkommande meldingar med talesyntese
 Comment[pl]=Odczytuj przychodzące wiadomości używając usługi tekstu-na-mowę
 Comment[pt]=Ler as mensagens recebidas com o serviço de texto-para-fala
 Comment[pt_BR]=Lê as mensagens recebidas usando o serviço de sintetizador de voz

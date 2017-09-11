@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Volkan Gezer <volkangezer@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: extragear-network-kde4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-11-19 20:16+0100\n"
+"PO-Revision-Date: 2015-05-19 10:32+0000\n"
+"Last-Translator: Necdet <necdetyucel@gmail.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/projects/p/extragear-"
+"network-k-tr/language/tr/)\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Volkan Gezer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "volkangezer@gmail.com"
+
+#: chat-window.cpp:201
+#, kde-format
+msgid "Close"
+msgstr "Kapat"
+
+#: chat-window.cpp:202
+#, kde-format
+msgid "Detach Tab"
+msgstr "Sekmeyi Ayır"
+
+#: chat-window.cpp:203
+#, kde-format
+msgid "Move Tab Left"
+msgstr "Sekmeyi Sola Taşı"
+
+#: chat-window.cpp:204
+#, kde-format
+msgid "Move Tab Right"
+msgstr "Sekmeyi Sağa Taşı"
+
+#: chat-window.cpp:834
+#, kde-format
+msgid "&Next Tab"
+msgstr "&Sonraki Sekme"
+
+#: chat-window.cpp:838
+#, kde-format
+msgid "&Previous Tab"
+msgstr "&Önceki Sekme"
+
+#: chat-window.cpp:842
+#, kde-format
+msgid "&Audio Call"
+msgstr "&Sesli Arama"
+
+#: chat-window.cpp:843
+#, kde-format
+msgctxt "Toolbar icon tooltip"
+msgid "Start an audio call with this contact"
+msgstr "Bu kişiyle bir sesli arama başlat"
+
+#: chat-window.cpp:846 chat-window.cpp:1282
+#, kde-format
+msgid "&Block Contact"
+msgstr "Kişiyi &Engelle"
+
+#: chat-window.cpp:848
+#, kde-format
+msgctxt "Toolbar icon tooltip"
+msgid ""
+"Blocking means that this contact will not see you online and you will not "
+"receive any messages from this contact"
+msgstr ""
+"Kişiyi engellemek, bu kişinin çevrimiçi olduğunuzu görememesi ve bu kişiden "
+"herhangi bir ileti alamayacağınız anlamına gelmektedir."
+
+#: chat-window.cpp:851
+#, kde-format
+msgid "&Send File"
+msgstr "&Dosya Gönder"
+
+#: chat-window.cpp:852
+#, kde-format
+msgctxt "Toolbar icon tooltip"
+msgid "Send a file to this contact"
+msgstr "Bu kişiye bir dosya gönder"
+
+#: chat-window.cpp:855
+#, kde-format
+msgid "&Invite to Chat"
+msgstr "&Sohbete Davet Et"
+
+#: chat-window.cpp:856
+#, kde-format
+msgctxt "Toolbar icon tooltip"
+msgid "Invite another contact to join this chat"
+msgstr "Bu sohbete katılması için başka bir kişi davet et"
+
+#: chat-window.cpp:859
+#, kde-format
+msgid "&Video Call"
+msgstr "&Görüntülü Arama"
+
+#: chat-window.cpp:860
+#, kde-format
+msgctxt "Toolbar icon tooltip"
+msgid "Start a video call with this contact"
+msgstr "Bu kişiyle bir görüntülü arama başlat"
+
+#: chat-window.cpp:863
+#, kde-format
+msgid "Share My &Desktop"
+msgstr "&Masaüstümü Paylaş"
+
+#: chat-window.cpp:864
+#, kde-format
+msgctxt "Toolbar icon tooltip"
+msgid "Start an application that allows this contact to see your desktop"
+msgstr "Bu kişinin masaüstünüzü görmesine izin veren bir uygulama başlat"
+
+#: chat-window.cpp:867
+#, kde-format
+msgid "&Collaboratively edit a document"
+msgstr "&Bir belgeyi ortak düzenle"
+
+#: chat-window.cpp:870
+#, kde-format
+msgid "&Contact info"
+msgstr "&Bağlantı bilgisi"
+
+#: chat-window.cpp:873
+#, kde-format
+msgid "&Leave room"
+msgstr "&Odadan çık"
+
+#: chat-window.cpp:884
+#, kde-format
+msgid "Choose Spelling Language"
+msgstr "Yazım Denetim Dilini Seç"
+
+#: chat-window.cpp:886
+#, kde-format
+msgctxt "Action to open the log viewer with a specified contact"
+msgid "&Previous Conversations"
+msgstr "&Önceki Konuşmalar"
+
+#: chat-window.cpp:889
+#, kde-format
+msgctxt "Action to open the contact list"
+msgid "Contact &List"
+msgstr "Arkadaş &Listesi"
+
+#: chat-window.cpp:894
+#, kde-format
+msgid "Account Icon"
+msgstr "Hesap Simgesi"
+
+#: chat-window.cpp:898
+#, kde-format
+msgid "&Clear View"
+msgstr "&Görünümü Temizle"
+
+#: chat-window.cpp:899
+#, kde-format
+msgctxt "Toolbar icon tooltip"
+msgid "Clear all messages from current chat tab"
+msgstr "Geçerli sohbet sekmesindeki tüm iletileri temizle"
+
+#: chat-window.cpp:905
+#, kde-format
+msgid "Send message"
+msgstr "İleti gönder"
+
+#: chat-window.cpp:936
+#, kde-format
+msgid "&OTR"
+msgstr "&OTR"
+
+#: chat-window.cpp:939 chat-window.cpp:1000
+#, kde-format
+msgid "&Start session"
+msgstr "Oturum &başlat"
+
+#: chat-window.cpp:943
+#, kde-format
+msgid "&Stop session"
+msgstr "Oturumu &sonlandır"
+
+#: chat-window.cpp:947
+#, kde-format
+msgid "&Authenticate contact"
+msgstr "&Bağlantının kimlik kanıtlamasını yap"
+
+#: chat-window.cpp:998
+#, kde-format
+msgid "Not private"
+msgstr "Gizli değil"
+
+#: chat-window.cpp:1007
+#, kde-format
+msgid "Unverified"
+msgstr "Doğrulanmamış"
+
+#: chat-window.cpp:1009 chat-window.cpp:1018 chat-window.cpp:1027
+#, kde-format
+msgid "&Restart session"
+msgstr "&Oturumu yeniden başlat"
+
+#: chat-window.cpp:1016
+#, kde-format
+msgid "Private"
+msgstr "Gizli"
+
+#: chat-window.cpp:1025
+#, kde-format
+msgid "Finished"
+msgstr "Tamamlanmış"
+
+#: chat-window.cpp:1086
+#, kde-format
+msgctxt "Toolbar icon tooltip"
+msgid "Edit a plain-text document with this contact in real-time"
+msgstr "Bu kişiyle eşzamanlı olarak düz bir metin belgesi düzenle"
+
+#: chat-window.cpp:1089
+#, kde-format
+msgctxt "Toolbar icon tooltip for a disabled action"
+msgid ""
+"<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
+"package installed to share documents</p>"
+msgstr ""
+"<p>Belge paylaşımı için hem sizin hem de hedef kişinin <i>kte-collaborative</"
+"i> paketini kurmuş olması gereklidir</p>"
+
+#: chat-window.cpp:1188
+#, kde-format
+msgid "Choose files to send to %1"
+msgstr "%1 kişisine gönderilecek dosyaları seçin"
+
+#: chat-window.cpp:1275
+#, kde-format
+msgid "&Unblock Contact"
+msgstr "&Kişi Engelini Kaldır"
+
+#. i18n: ectx: Menu (conversation)
+#: chatwindow.rc:11
+#, kde-format
+msgid "&Conversation"
+msgstr "&Konuşma"
+
+#. i18n: ectx: Menu (actions)
+#: chatwindow.rc:24
+#, kde-format
+msgid "&Actions"
+msgstr "&Eylemler"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: chatwindow.rc:41
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Ana Araç Çubuğu"
+
+#. i18n: ectx: ToolBar (accountIconToolBar)
+#: chatwindow.rc:53
+#, kde-format
+msgid "Account Icon Toolbar"
+msgstr "Hesap Simgesi Araç Çubuğu"
+
+#. i18n: ectx: ToolBar (languageToolBar)
+#: chatwindow.rc:58
+#, kde-format
+msgid "Language Toolbar"
+msgstr "Dil Araç Çubuğu"
+
+#. i18n: ectx: ToolBar (emoticonsToolBar)
+#: chatwindow.rc:63
+#, kde-format
+msgid "Smiley Toolbar"
+msgstr "Yüz İfadeleri Araç Çubuğu"
+
+#: emoticon-text-edit-action.cpp:51
+#, kde-format
+msgid "Add Smiley"
+msgstr "Gülümseme Ekle"
+
+#: invite-contact-dialog.cpp:55
+#, kde-format
+msgid "Search in Contacts..."
+msgstr "Kişilerde Ara..."
+
+#: invite-contact-dialog.cpp:64
+#, kde-format
+msgid "Select Contacts to Invite to Group Chat"
+msgstr "Grup Sohbetine Davet Edilecek Kişileri Seçin"
+
+#: telepathy-chat-ui.cpp:62
+#, kde-format
+msgid "Chat Application"
+msgstr "Sohbet Uygulaması"
+
+#: telepathy-chat-ui.cpp:63
+#, kde-format
+msgid "David Edmundson"
+msgstr "David Edmundson"
+
+#: telepathy-chat-ui.cpp:63 telepathy-chat-ui.cpp:64
+#, kde-format
+msgid "Developer"
+msgstr "Geliştirici"
+
+#: telepathy-chat-ui.cpp:64
+#, kde-format
+msgid "Marcin Ziemiński"
+msgstr "Marcin Ziemiński"
+
+#: telepathy-chat-ui.cpp:65
+#, kde-format
+msgid "Dominik Schmidt"
+msgstr "Dominik Schmidt"
+
+#: telepathy-chat-ui.cpp:65 telepathy-chat-ui.cpp:66
+#, kde-format
+msgid "Past Developer"
+msgstr "Eski Geliştirici"
+
+#: telepathy-chat-ui.cpp:66
+#, kde-format
+msgid "Francesco Nwokeka"
+msgstr "Francesco Nwokeka"
