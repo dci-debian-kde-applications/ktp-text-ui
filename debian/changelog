@@ -1,12 +1,17 @@
-ktp-text-ui (16.08.1-1~1.gbp5c160f) UNRELEASED; urgency=medium
+ktp-text-ui (17.08.1-1~) UNRELEASED; urgency=medium
 
+  [ Maximiliano Curia ]
   ** SNAPSHOT build @5c160ff89ee380c8fb8f4bd464eaca3d5156900e **
 
   * UNRELEASED
   * UNRELEASED
   * UNRELEASED
+  * New upstream release (17.08.1).
 
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Thu, 08 Sep 2016 21:50:43 +0200
+  [ Automatic packaging ]
+  * Update changelog for 16.08.1-1~1.gbp5c160f release
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 11 Sep 2017 16:29:35 +0200
 
 ktp-text-ui (16.04.2-1) experimental; urgency=medium
 
