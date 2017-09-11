@@ -18,6 +18,7 @@ Build-Depends: cmake (>= 2.8.12~),
                libkf5iconthemes-dev,
                libkf5itemviews-dev,
                libkf5kcmutils-dev,
+               libkf5kio-dev,
                libkf5notifications-dev,
                libkf5notifyconfig-dev,
                libkf5people-dev,
@@ -38,6 +39,7 @@ Build-Depends: cmake (>= 2.8.12~),
                libtelepathy-qt5-dev (>= 0.9.5),
                pkg-kde-tools (>= 0.9),
                qtbase5-dev,
+               qtwebengine5-dev (>= 5.7.0~),
 Standards-Version: 4.1.0
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-text-ui
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/applications/ktp-text-ui.git
