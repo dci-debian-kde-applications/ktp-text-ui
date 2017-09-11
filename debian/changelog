@@ -1,15 +1,6 @@
 ktp-text-ui (17.08.1-1~) UNRELEASED; urgency=medium
 
-  [ Maximiliano Curia ]
-  ** SNAPSHOT build @5c160ff89ee380c8fb8f4bd464eaca3d5156900e **
-
-  * UNRELEASED
-  * UNRELEASED
-  * UNRELEASED
   * New upstream release (17.08.1).
-
-  [ Automatic packaging ]
-  * Update changelog for 16.08.1-1~1.gbp5c160f release
 
  -- Maximiliano Curia <maxy@debian.org>  Mon, 11 Sep 2017 16:29:35 +0200
 
