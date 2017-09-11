@@ -50,8 +50,9 @@ Depends: kde-telepathy-data (>= 0.8.1),
          libjs-jquery (>= 1.7),
          ${misc:Depends},
          ${shlibs:Depends},
+Breaks: ${kde-l10n:all}
+Replaces: libktpchat0, ${kde-l10n:all}
 Recommends: kde-telepathy
-Replaces: libktpchat0
 Description: Telepathy text chat UI for the KDE Plasma Desktop
  This package provides a telepathy handler for text channels, a program
  that in other words allows you to chat with your contacts using instant
