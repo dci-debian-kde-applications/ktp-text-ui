@@ -3,7 +3,7 @@ project(ktp-text-ui)
 cmake_minimum_required(VERSION 2.8.12)
 
 # KDE Application Version, managed by release script
-set(KDE_APPLICATIONS_VERSION_MAJOR "16")
+set(KDE_APPLICATIONS_VERSION_MAJOR "17")
 set(KDE_APPLICATIONS_VERSION_MINOR "08")
 set(KDE_APPLICATIONS_VERSION_MICRO "1")
 set(KTP_TEXT_UI_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
@@ -15,9 +15,10 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package (KF5 REQUIRED COMPONENTS Archive Sonnet WidgetsAddons Service Emoticons
                                       KIO KCMUtils NotifyConfig Notifications I18n
-                                      WebKit WindowSystem XmlGui ItemViews TextWidgets
+                                      WindowSystem XmlGui ItemViews TextWidgets
                                       IconThemes DBusAddons)
-find_package (Qt5 REQUIRED COMPONENTS WebKitWidgets)
+set(QT_REQUIRED_VERSION 5.7.0)
+find_package(Qt5 ${QT_REQUIRED_VERSION} REQUIRED COMPONENTS WebEngine WebEngineWidgets)
 find_package(Qt5 ${QT_REQUIRED_VERSION} OPTIONAL_COMPONENTS TextToSpeech)
 if (NOT Qt5TextToSpeech_FOUND)
     message(STATUS "Qt5TextToSpeech not found, speech features will be disabled")
@@ -54,3 +55,4 @@ ecm_setup_version(${KTP_TEXT_UI_VERSION} VARIABLE_PREFIX KTP_TEXT_UI
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/ktptextui_version.h")
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+ki18n_install(po)

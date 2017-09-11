@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Icon=mail-encrypt
+Icon=mail-encrypted
 StartupNotify=true
 Terminal=false
 X-DBUS-StartupType=
@@ -11,7 +11,7 @@ X-KDE-RootOnly=false
 Categories=Qt;KDE;X-KDE-settings-network;
 
 Comment=Encrypt chat sessions with Off-The-Record encryption
-Comment[ast]=Cifra les sesiones de charra col cifráu OTR
+Comment[ast]=Cifra sesiones de charra col cifráu OTR
 Comment[bs]=Šifrirajte sesije časkanja sa Off-The-Record šifrovanjem
 Comment[ca]=Encripta les sessions de xat amb l'encriptatge «Off-The-Record»
 Comment[ca@valencia]=Encripta les sessions de xat amb l'encriptatge «Off-The-Record»
@@ -64,6 +64,7 @@ Name[fi]=OTR
 Name[fr]=OTR
 Name[gl]=OTR
 Name[hu]=OTR
+Name[ia]=OTR
 Name[it]=OTR
 Name[ko]=OTR
 Name[nb]=OTR
