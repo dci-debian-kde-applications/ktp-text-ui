@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Diane Trout <diane@ghic.org>,
            Michał Zając <quintasan@kubuntu.org>,
-           Mark Purcell <msp@debian.org>
+           Mark Purcell <msp@debian.org>,
 Build-Depends: cmake (>= 2.8.12~),
                debhelper (>= 9),
                dh-linktree,
@@ -37,7 +37,7 @@ Build-Depends: cmake (>= 2.8.12~),
                libtelepathy-logger-qt-dev (>= 0.8.0),
                libtelepathy-qt5-dev (>= 0.9.5),
                pkg-kde-tools (>= 0.9),
-               qtbase5-dev
+               qtbase5-dev,
 Standards-Version: 4.1.0
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-text-ui
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/applications/ktp-text-ui.git
@@ -48,7 +48,7 @@ Architecture: any
 Depends: kde-telepathy-data (>= 0.8.1),
          libjs-jquery (>= 1.7),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Recommends: kde-telepathy
 Replaces: libktpchat0
 Description: Telepathy text chat UI for the KDE Plasma Desktop
