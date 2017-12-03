@@ -1,12 +1,12 @@
 # Translation of ktp-text-ui.po into Serbian.
 # Mladen Pejakovic <pejakm@gmail.com>, 2012.
-# Chusslove Illich <caslav.ilic@gmx.net>, 2012, 2013, 2014, 2015, 2016.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2012, 2013, 2014, 2015, 2016, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-text-ui\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2016-11-19 20:16+0100\n"
-"PO-Revision-Date: 2016-03-20 15:25+0100\n"
+"PO-Revision-Date: 2017-09-28 18:00+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
@@ -247,8 +247,8 @@ msgid ""
 "<p>Both you and the target contact need to have the <i>kte-collaborative</i> "
 "package installed to share documents</p>"
 msgstr ""
-"<html><p>И ви и циљни контакт морате да имате инсталиран пакет <icode>kte-"
-"collaborative</icode> да бисте делили документе.</p></html>"
+"<p>И ви и циљни контакт морате да имате инсталиран пакет <tt>kte-"
+"collaborative</tt> да бисте делили документе.</p>"
 
 # >> @title:window
 #: chat-window.cpp:1188

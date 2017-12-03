@@ -5,14 +5,14 @@
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2012, 2015, 2017.
 # Miguel Branco <mgl.branco@gmail.com>, 2013.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2017-03-14 08:19+0100\n"
-"PO-Revision-Date: 2017-02-04 09:45+0100\n"
-"Last-Translator: Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail."
-"com>\n"
+"PO-Revision-Date: 2017-10-17 19:32+0100\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <kde-i18n-doc@kde.org>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
@@ -235,9 +235,9 @@ msgid ""
 "talking to an imposter, try again using the manual fingerprint verification "
 "method."
 msgstr ""
-"<b>%1</b> abortou o proceso de autenticación. Para garantir que non está a "
-"falar cun impostor probe de novo a empregar o método de comprobación manual "
-"da pegada  dixital."
+"<b>%1</b> interrompeu o proceso de autenticación. Para garantir que non está "
+"a falar cun impostor probe de novo a empregar o método de comprobación "
+"manual da pegada  dixital."
 
 #: authenticationwizard.cpp:429
 #, kde-format
@@ -354,7 +354,7 @@ msgstr "Intentando reiniciar unha sesión OTR privada con %1…"
 #: chat-widget.cpp:713
 #, kde-format
 msgid "Terminating OTR session"
-msgstr "Rematou a sesión OTR privada."
+msgstr "Terminou a sesión OTR privada."
 
 #: chat-widget.cpp:765
 #, kde-format
@@ -517,12 +517,12 @@ msgstr "A %1 coñéceselle agora como %2"
 #: chat-widget.cpp:1166
 #, kde-format
 msgid "%1 is now blocked."
-msgstr "%1 está agora bloqueado"
+msgstr "%1 está agora bloqueado."
 
 #: chat-widget.cpp:1168
 #, kde-format
 msgid "%1 is now unblocked."
-msgstr "%1 está agora desbloqueado"
+msgstr "%1 está agora desbloqueado."
 
 #: chat-widget.cpp:1197
 #, kde-format
