@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2013, 2014, 2015.
+# Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2013, 2014, 2015, 2017.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2016-11-19 20:16+0100\n"
-"PO-Revision-Date: 2015-02-13 15:21+0100\n"
+"PO-Revision-Date: 2017-09-12 12:36+0100\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -270,25 +270,25 @@ msgstr "Č&innosti"
 #: chatwindow.rc:41
 #, kde-format
 msgid "Main Toolbar"
-msgstr "Hlavní nástrojová lišta"
+msgstr "Hlavní panel nástrojů"
 
 #. i18n: ectx: ToolBar (accountIconToolBar)
 #: chatwindow.rc:53
 #, kde-format
 msgid "Account Icon Toolbar"
-msgstr "Nástrojová lišta ikon účtu"
+msgstr "Panel nástrojů ikon účtu"
 
 #. i18n: ectx: ToolBar (languageToolBar)
 #: chatwindow.rc:58
 #, kde-format
 msgid "Language Toolbar"
-msgstr "Nástrojová lišta jazyků"
+msgstr "Panel nástrojů jazyků"
 
 #. i18n: ectx: ToolBar (emoticonsToolBar)
 #: chatwindow.rc:63
 #, kde-format
 msgid "Smiley Toolbar"
-msgstr "Nástrojová lišta emotikonů"
+msgstr "Panel nástrojů emotikonů"
 
 #: emoticon-text-edit-action.cpp:51
 #, kde-format
