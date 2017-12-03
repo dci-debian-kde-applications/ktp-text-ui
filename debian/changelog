@@ -1,3 +1,10 @@
+ktp-text-ui (17.08.3-0r1) UNRELEASED; urgency=medium
+
+  [ Pino Toscano ]
+  * New upstream release.
+
+ -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Dec 2017 15:19:33 +0100
+
 ktp-text-ui (17.08.1-1) experimental; urgency=medium
 
   * New upstream release (17.08.1).
