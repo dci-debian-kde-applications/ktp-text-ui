@@ -17,6 +17,8 @@ ktp-text-ui (17.08.3-0r1) UNRELEASED; urgency=medium
     - remove the libjs-jquery build dependency, as it is not needed during
       build
   * Update lintian overrides.
+  * Adjust l10npkgs_firstversion_ok to the version where kde-l10n will
+    drop translations.
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Dec 2017 15:19:33 +0100
 
